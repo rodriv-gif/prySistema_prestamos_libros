@@ -63,9 +63,39 @@ namespace prySistema_prestamos_libros.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contenedor {
+            get {
+                object obj = ResourceManager.GetObject("contenedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logol {
             get {
                 object obj = ResourceManager.GetObject("logol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nuevo_registro {
+            get {
+                object obj = ResourceManager.GetObject("Nuevo registro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_06_27_at_21_44_27 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-06-27 at 21.44.27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
