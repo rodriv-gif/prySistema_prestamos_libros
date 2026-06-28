@@ -1,6 +1,6 @@
 ﻿namespace prySistema_prestamos_libros
 {
-    partial class frmformulario_de_libros
+    partial class frmLibrosRegistro
     {
         /// <summary>
         /// Required designer variable.
@@ -59,62 +59,62 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.imagen2222;
-            pictureBox1.Location = new Point(12, 36);
+            pictureBox1.Image = Properties.Resources.contenerdorGrupo;
+            pictureBox1.Location = new Point(62, 96);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1299, 246);
+            pictureBox1.Size = new Size(1302, 234);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.imagen2222;
-            pictureBox2.Location = new Point(12, 310);
+            pictureBox2.Image = Properties.Resources.contenedorgroupCompac;
+            pictureBox2.Location = new Point(62, 375);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1299, 198);
+            pictureBox2.Size = new Size(1302, 137);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(756, 190);
+            textBox6.Location = new Point(871, 262);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(282, 27);
             textBox6.TabIndex = 23;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(756, 103);
+            textBox5.Location = new Point(871, 161);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(282, 27);
             textBox5.TabIndex = 22;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(438, 190);
+            textBox4.Location = new Point(507, 262);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(263, 27);
             textBox4.TabIndex = 21;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(438, 103);
+            textBox3.Location = new Point(507, 161);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(263, 27);
             textBox3.TabIndex = 20;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(41, 190);
+            textBox2.Location = new Point(96, 262);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(306, 27);
             textBox2.TabIndex = 19;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(42, 103);
+            textBox1.Location = new Point(96, 161);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(305, 27);
             textBox1.TabIndex = 18;
@@ -122,7 +122,8 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(756, 161);
+            label6.BackColor = Color.FromArgb(250, 247, 242);
+            label6.Location = new Point(871, 227);
             label6.Name = "label6";
             label6.Size = new Size(56, 20);
             label6.TabIndex = 17;
@@ -131,7 +132,8 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(756, 80);
+            label5.BackColor = Color.FromArgb(250, 247, 242);
+            label5.Location = new Point(871, 135);
             label5.Name = "label5";
             label5.Size = new Size(140, 20);
             label5.TabIndex = 16;
@@ -140,7 +142,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(438, 161);
+            label4.BackColor = Color.FromArgb(250, 247, 242);
+            label4.Location = new Point(518, 227);
             label4.Name = "label4";
             label4.Size = new Size(74, 20);
             label4.TabIndex = 15;
@@ -149,7 +152,8 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(438, 80);
+            label3.BackColor = Color.FromArgb(250, 247, 242);
+            label3.Location = new Point(507, 138);
             label3.Name = "label3";
             label3.Size = new Size(107, 20);
             label3.TabIndex = 14;
@@ -158,7 +162,8 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(42, 161);
+            label2.BackColor = Color.FromArgb(250, 247, 242);
+            label2.Location = new Point(96, 227);
             label2.Name = "label2";
             label2.Size = new Size(65, 20);
             label2.TabIndex = 13;
@@ -167,7 +172,8 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(42, 80);
+            label1.BackColor = Color.FromArgb(250, 247, 242);
+            label1.Location = new Point(96, 135);
             label1.Name = "label1";
             label1.Size = new Size(41, 20);
             label1.TabIndex = 12;
@@ -176,7 +182,8 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(725, 375);
+            label9.BackColor = Color.FromArgb(250, 247, 242);
+            label9.Location = new Point(871, 426);
             label9.Name = "label9";
             label9.Size = new Size(126, 20);
             label9.TabIndex = 29;
@@ -185,7 +192,8 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(385, 375);
+            label8.BackColor = Color.FromArgb(250, 247, 242);
+            label8.Location = new Point(492, 426);
             label8.Name = "label8";
             label8.Size = new Size(122, 20);
             label8.TabIndex = 28;
@@ -194,7 +202,8 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(45, 375);
+            label7.BackColor = Color.FromArgb(250, 247, 242);
+            label7.Location = new Point(96, 426);
             label7.Name = "label7";
             label7.Size = new Size(80, 20);
             label7.TabIndex = 27;
@@ -202,39 +211,43 @@
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(725, 411);
+            textBox9.Location = new Point(871, 449);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(270, 27);
             textBox9.TabIndex = 26;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(385, 411);
+            textBox8.Location = new Point(490, 449);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(280, 27);
             textBox8.TabIndex = 25;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(45, 411);
+            textBox7.Location = new Point(96, 449);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(269, 27);
             textBox7.TabIndex = 24;
             // 
             // btnguardar
             // 
-            btnguardar.Location = new Point(342, 602);
+            btnguardar.BackColor = Color.FromArgb(201, 168, 76);
+            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnguardar.ForeColor = Color.FromArgb(17, 30, 71);
+            btnguardar.Location = new Point(367, 587);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(150, 45);
             btnguardar.TabIndex = 32;
             btnguardar.Text = "Guardar";
-            btnguardar.UseVisualStyleBackColor = true;
+            btnguardar.UseVisualStyleBackColor = false;
             // 
             // btncancelar
             // 
             btncancelar.BackColor = Color.FromArgb(242, 196, 196);
+            btncancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
-            btncancelar.Location = new Point(871, 602);
+            btncancelar.Location = new Point(944, 587);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(150, 45);
             btncancelar.TabIndex = 31;
@@ -244,8 +257,9 @@
             // btnlimpiar
             // 
             btnlimpiar.BackColor = Color.FromArgb(107, 122, 153);
+            btnlimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnlimpiar.ForeColor = Color.FromArgb(250, 247, 242);
-            btnlimpiar.Location = new Point(600, 602);
+            btnlimpiar.Location = new Point(651, 587);
             btnlimpiar.Name = "btnlimpiar";
             btnlimpiar.Size = new Size(150, 45);
             btnlimpiar.TabIndex = 30;
@@ -255,26 +269,30 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(41, 36);
+            label10.BackColor = Color.FromArgb(250, 247, 242);
+            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(71, 103);
             label10.Name = "label10";
-            label10.Size = new Size(108, 20);
+            label10.Size = new Size(129, 23);
             label10.TabIndex = 33;
             label10.Text = "Datos del libro";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(45, 310);
+            label11.BackColor = Color.FromArgb(250, 247, 242);
+            label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(66, 384);
             label11.Name = "label11";
-            label11.Size = new Size(112, 20);
+            label11.Size = new Size(134, 23);
             label11.TabIndex = 34;
             label11.Text = "Datos del autor";
             // 
-            // frmformulario_de_libros
+            // frmLibrosRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1341, 724);
+            ClientSize = new Size(1430, 848);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(btnguardar);
@@ -300,7 +318,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Name = "frmformulario_de_libros";
+            Name = "frmLibrosRegistro";
             Text = "Formularios de libros";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

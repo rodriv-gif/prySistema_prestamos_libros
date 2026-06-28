@@ -63,9 +63,9 @@ namespace prySistema_prestamos_libros.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imagen2222 {
+        internal static System.Drawing.Bitmap contenedorgroupCompac {
             get {
-                object obj = ResourceManager.GetObject("imagen2222", resourceCulture);
+                object obj = ResourceManager.GetObject("contenedorgroupCompac", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace prySistema_prestamos_libros.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imagen22221 {
+        internal static System.Drawing.Bitmap contenerdorGrupo {
             get {
-                object obj = ResourceManager.GetObject("imagen22221", resourceCulture);
+                object obj = ResourceManager.GetObject("contenerdorGrupo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

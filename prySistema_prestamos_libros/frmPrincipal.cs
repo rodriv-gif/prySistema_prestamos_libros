@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace prySistema_prestamos_libros
 {
-    public partial class frmgestion_de_libros : Form
+    public partial class frmPrincipal : Form
     {
-        public frmgestion_de_libros()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
