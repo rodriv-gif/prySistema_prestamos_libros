@@ -15,6 +15,11 @@ namespace prySistema_prestamos_libros
             Application.Run(new frmPrincipal());
             Application.Run(new frmPrestamos());
             Application.Run(new frmDevolucion());
+            Application.Run(new frmTrabajadorGestion());
+            Application.Run(new frmTrabajadorRegistro());
+            Application.Run(new frmGestionLibros());
+            Application.Run(new frmLibrosRegistro());
+            Application.Run(new frmRegistrarEjemplar());
             Application.Run(new frmGestionEjemplares());
 
         }

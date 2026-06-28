@@ -86,7 +86,7 @@
             button1.Name = "button1";
             button1.Size = new Size(149, 45);
             button1.TabIndex = 7;
-            button1.Text = "Limpiar";
+            button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
             // 
             // button2
