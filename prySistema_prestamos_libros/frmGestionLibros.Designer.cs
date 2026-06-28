@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionLibros));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             textBox1 = new TextBox();
-            btndardebaja = new Button();
-            button1 = new Button();
-            button2 = new Button();
             dataGridView1 = new DataGridView();
+            btn1 = new Button();
+            btn2 = new Button();
+            btn3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -42,9 +43,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.contenerdorGrupo;
-            pictureBox1.Location = new Point(33, 28);
+            pictureBox1.Location = new Point(29, 21);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1367, 797);
+            pictureBox1.Size = new Size(1196, 598);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -53,75 +55,90 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(78, 83);
+            label1.Location = new Point(68, 62);
             label1.Name = "label1";
-            label1.Size = new Size(196, 23);
+            label1.Size = new Size(157, 19);
             label1.TabIndex = 1;
             label1.Text = "Buscar por ISBN o Titulo";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(78, 109);
+            textBox1.Location = new Point(68, 82);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(277, 30);
+            textBox1.Size = new Size(243, 26);
             textBox1.TabIndex = 2;
-            // 
-            // btndardebaja
-            // 
-            btndardebaja.BackColor = Color.FromArgb(242, 196, 196);
-            btndardebaja.Location = new Point(1187, 91);
-            btndardebaja.Name = "btndardebaja";
-            btndardebaja.Size = new Size(149, 45);
-            btndardebaja.TabIndex = 5;
-            btndardebaja.Text = "Dar de baja";
-            btndardebaja.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(107, 122, 153);
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(250, 247, 242);
-            button1.Location = new Point(966, 91);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 45);
-            button1.TabIndex = 7;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(201, 168, 76);
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.FromArgb(17, 30, 71);
-            button2.Location = new Point(712, 91);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 45);
-            button2.TabIndex = 8;
-            button2.Text = "Nuevo registro";
-            button2.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(65, 206);
+            dataGridView1.Location = new Point(57, 154);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1299, 568);
+            dataGridView1.Size = new Size(1137, 426);
             dataGridView1.TabIndex = 9;
+            // 
+            // btn1
+            // 
+            btn1.BackColor = Color.FromArgb(201, 168, 76);
+            btn1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1.ForeColor = Color.FromArgb(17, 30, 71);
+            btn1.Image = Properties.Resources.Nuevo_registro;
+            btn1.ImageAlign = ContentAlignment.MiddleLeft;
+            btn1.Location = new Point(633, 72);
+            btn1.Margin = new Padding(3, 2, 3, 2);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(150, 45);
+            btn1.TabIndex = 14;
+            btn1.Text = "Nuevo registro";
+            btn1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn1.UseVisualStyleBackColor = false;
+            // 
+            // btn2
+            // 
+            btn2.BackColor = Color.FromArgb(107, 122, 153);
+            btn2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn2.ForeColor = Color.FromArgb(250, 247, 242);
+            btn2.Image = (Image)resources.GetObject("btn2.Image");
+            btn2.ImageAlign = ContentAlignment.MiddleLeft;
+            btn2.Location = new Point(823, 72);
+            btn2.Margin = new Padding(3, 2, 3, 2);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(150, 45);
+            btn2.TabIndex = 15;
+            btn2.Text = "Editar";
+            btn2.UseVisualStyleBackColor = false;
+            // 
+            // btn3
+            // 
+            btn3.BackColor = Color.FromArgb(242, 196, 196);
+            btn3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn3.ForeColor = Color.FromArgb(122, 32, 32);
+            btn3.Image = (Image)resources.GetObject("btn3.Image");
+            btn3.ImageAlign = ContentAlignment.MiddleLeft;
+            btn3.Location = new Point(1005, 72);
+            btn3.Margin = new Padding(3, 2, 3, 2);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(150, 45);
+            btn3.TabIndex = 16;
+            btn3.Text = "Dar de baja";
+            btn3.UseVisualStyleBackColor = false;
             // 
             // frmGestionLibros
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 848);
+            ClientSize = new Size(1199, 562);
+            Controls.Add(btn3);
+            Controls.Add(btn2);
+            Controls.Add(btn1);
             Controls.Add(dataGridView1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btndardebaja);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmGestionLibros";
             Text = "Gestión de libros";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -135,9 +152,9 @@
         private PictureBox pictureBox1;
         private Label label1;
         private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private Button btndardebaja;
         private DataGridView dataGridView1;
+        private Button btn1;
+        private Button btn2;
+        private Button btn3;
     }
 }

@@ -99,15 +99,5 @@ namespace prySistema_prestamos_libros.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2026_06_27_at_21_44_27 {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2026-06-27 at 21.44.27", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
