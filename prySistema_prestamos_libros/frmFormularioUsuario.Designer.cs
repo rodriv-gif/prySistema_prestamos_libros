@@ -213,6 +213,8 @@
             // 
             button2.BackColor = Color.FromArgb(201, 168, 76);
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button2.Image = Properties.Resources.Guardar;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(348, 667);
             button2.Name = "button2";
             button2.Size = new Size(150, 45);
@@ -225,6 +227,8 @@
             button3.BackColor = Color.FromArgb(107, 122, 153);
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button3.ForeColor = Color.White;
+            button3.Image = Properties.Resources.Limpiar;
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
             button3.Location = new Point(627, 667);
             button3.Name = "button3";
             button3.Size = new Size(150, 45);
@@ -237,6 +241,8 @@
             button4.BackColor = Color.FromArgb(242, 196, 196);
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(122, 32, 32);
+            button4.Image = Properties.Resources.Cancelar1_0;
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
             button4.Location = new Point(890, 671);
             button4.Name = "button4";
             button4.Size = new Size(150, 45);
