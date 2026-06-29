@@ -46,9 +46,13 @@
             label3 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
+            panel4 = new Panel();
+            label5 = new Label();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlSuperior.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // pnlMenu
@@ -253,10 +257,31 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(250, 247, 242);
+            panel3.Controls.Add(panel4);
             panel3.Location = new Point(435, 131);
             panel3.Name = "panel3";
             panel3.Size = new Size(1448, 895);
             panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label5);
+            panel4.Location = new Point(73, 85);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1305, 302);
+            panel4.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(250, 247, 242);
+            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(27, 46, 107);
+            label5.Location = new Point(248, 97);
+            label5.Name = "label5";
+            label5.Size = new Size(771, 54);
+            label5.TabIndex = 3;
+            label5.Text = "Bienvenido Aministrador / Bibliotecario";
             // 
             // frmPrincipal
             // 
@@ -274,6 +299,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlSuperior.ResumeLayout(false);
             pnlSuperior.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -297,5 +325,7 @@
         private Label label4;
         private Button button8;
         private Panel panel3;
+        private Panel panel4;
+        private Label label5;
     }
 }
