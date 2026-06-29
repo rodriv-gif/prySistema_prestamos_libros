@@ -45,7 +45,7 @@
             pcb11.Image = Properties.Resources.contenerdorGrupo;
             pcb11.Location = new Point(31, 27);
             pcb11.Name = "pcb11";
-            pcb11.Size = new Size(1196, 598);
+            pcb11.Size = new Size(1367, 797);
             pcb11.SizeMode = PictureBoxSizeMode.StretchImage;
             pcb11.TabIndex = 2;
             pcb11.TabStop = false;
@@ -58,24 +58,24 @@
             lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(68, 62);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(124, 21);
+            lblBuscar.Size = new Size(156, 28);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar por titulo";
             // 
             // txtBuscarTitulo
             // 
-            txtBuscarTitulo.Location = new Point(68, 86);
+            txtBuscarTitulo.Location = new Point(68, 93);
             txtBuscarTitulo.Name = "txtBuscarTitulo";
-            txtBuscarTitulo.Size = new Size(313, 29);
+            txtBuscarTitulo.Size = new Size(313, 34);
             txtBuscarTitulo.TabIndex = 3;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(57, 154);
+            dataGridView1.Location = new Point(86, 180);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1223, 487);
+            dataGridView1.Size = new Size(1249, 568);
             dataGridView1.TabIndex = 6;
             // 
             // btn1
@@ -126,10 +126,10 @@
             // 
             // frmGestionEjemplares
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1199, 562);
+            ClientSize = new Size(1430, 848);
             Controls.Add(btn3);
             Controls.Add(btn2);
             Controls.Add(btn1);

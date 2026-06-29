@@ -178,7 +178,7 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(17, 30, 71);
-            button1.Location = new Point(297, 625);
+            button1.Location = new Point(319, 597);
             button1.Name = "button1";
             button1.Size = new Size(150, 45);
             button1.TabIndex = 16;
@@ -193,7 +193,7 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(250, 247, 242);
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(547, 625);
+            button2.Location = new Point(600, 597);
             button2.Name = "button2";
             button2.Size = new Size(150, 45);
             button2.TabIndex = 17;
@@ -208,7 +208,7 @@
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(122, 32, 32);
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(797, 625);
+            button3.Location = new Point(876, 597);
             button3.Name = "button3";
             button3.Size = new Size(150, 45);
             button3.TabIndex = 18;

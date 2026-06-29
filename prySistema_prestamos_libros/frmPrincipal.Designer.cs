@@ -88,7 +88,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(201, 168, 76);
-            label4.Location = new Point(144, 518);
+            label4.Location = new Point(172, 518);
             label4.Name = "label4";
             label4.Size = new Size(106, 28);
             label4.TabIndex = 10;
@@ -134,7 +134,7 @@
             pictureBox1.Image = Properties.Resources.logol;
             pictureBox1.Location = new Point(62, 11);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(282, 280);
+            pictureBox1.Size = new Size(280, 280);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -234,11 +234,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(201, 168, 76);
-            label3.Location = new Point(29, 59);
+            label3.Location = new Point(29, 58);
             label3.Name = "label3";
-            label3.Size = new Size(335, 28);
+            label3.Size = new Size(302, 25);
             label3.TabIndex = 11;
             label3.Text = "Inicio: Administrador/Bibiotecario";
             // 
