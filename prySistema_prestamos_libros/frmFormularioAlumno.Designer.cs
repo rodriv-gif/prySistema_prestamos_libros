@@ -108,6 +108,8 @@
             btnlimpiar.BackColor = Color.FromArgb(107, 122, 153);
             btnlimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnlimpiar.ForeColor = Color.FromArgb(250, 247, 242);
+            btnlimpiar.Image = Properties.Resources.Limpiar;
+            btnlimpiar.ImageAlign = ContentAlignment.MiddleLeft;
             btnlimpiar.Location = new Point(633, 728);
             btnlimpiar.Name = "btnlimpiar";
             btnlimpiar.Size = new Size(150, 45);
@@ -120,6 +122,8 @@
             btncancelar.BackColor = Color.FromArgb(242, 196, 196);
             btncancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
+            btncancelar.Image = Properties.Resources.Cancelar1_0;
+            btncancelar.ImageAlign = ContentAlignment.MiddleLeft;
             btncancelar.Location = new Point(984, 728);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(150, 45);
@@ -132,6 +136,8 @@
             btnguardar.BackColor = Color.FromArgb(201, 168, 76);
             btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnguardar.ForeColor = Color.FromArgb(17, 30, 71);
+            btnguardar.Image = Properties.Resources.Guardar;
+            btnguardar.ImageAlign = ContentAlignment.MiddleLeft;
             btnguardar.Location = new Point(305, 728);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(150, 45);

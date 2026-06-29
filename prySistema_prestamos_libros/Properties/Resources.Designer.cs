@@ -63,6 +63,16 @@ namespace prySistema_prestamos_libros.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancelar1_0 {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar1.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap contenedorgroupCompac {
             get {
                 object obj = ResourceManager.GetObject("contenedorgroupCompac", resourceCulture);
@@ -76,6 +86,26 @@ namespace prySistema_prestamos_libros.Properties {
         internal static System.Drawing.Bitmap contenerdorGrupo {
             get {
                 object obj = ResourceManager.GetObject("contenerdorGrupo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guardar {
+            get {
+                object obj = ResourceManager.GetObject("Guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limpiar {
+            get {
+                object obj = ResourceManager.GetObject("Limpiar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
