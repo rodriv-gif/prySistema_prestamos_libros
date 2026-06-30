@@ -32,12 +32,12 @@
             pcb11 = new PictureBox();
             lblBuscar = new Label();
             txtBuscarTitulo = new TextBox();
-            dataGridView1 = new DataGridView();
+            dgbEjemplares = new DataGridView();
             btn1 = new Button();
             btn2 = new Button();
             btn3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pcb11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgbEjemplares).BeginInit();
             SuspendLayout();
             // 
             // pcb11
@@ -54,29 +54,30 @@
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
-            lblBuscar.Font = new Font("Segoe UI", 12F);
+            lblBuscar.Font = new Font("Segoe UI", 10.2F);
             lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(68, 62);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(156, 28);
+            lblBuscar.Size = new Size(136, 23);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar por titulo";
             // 
             // txtBuscarTitulo
             // 
             txtBuscarTitulo.Location = new Point(68, 93);
+            txtBuscarTitulo.Multiline = true;
             txtBuscarTitulo.Name = "txtBuscarTitulo";
-            txtBuscarTitulo.Size = new Size(313, 34);
+            txtBuscarTitulo.Size = new Size(313, 29);
             txtBuscarTitulo.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgbEjemplares
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(86, 180);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1249, 568);
-            dataGridView1.TabIndex = 6;
+            dgbEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgbEjemplares.Location = new Point(86, 180);
+            dgbEjemplares.Name = "dgbEjemplares";
+            dgbEjemplares.RowHeadersWidth = 51;
+            dgbEjemplares.Size = new Size(1249, 568);
+            dgbEjemplares.TabIndex = 6;
             // 
             // btn1
             // 
@@ -133,7 +134,7 @@
             Controls.Add(btn3);
             Controls.Add(btn2);
             Controls.Add(btn1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgbEjemplares);
             Controls.Add(txtBuscarTitulo);
             Controls.Add(lblBuscar);
             Controls.Add(pcb11);
@@ -143,7 +144,7 @@
             Name = "frmGestionEjemplares";
             Text = "Gestion de ejemplares";
             ((System.ComponentModel.ISupportInitialize)pcb11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgbEjemplares).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,7 +153,7 @@
         private PictureBox pcb11;
         private TextBox txtBuscarTitulo;
         private Label lblBuscar;
-        private DataGridView dataGridView1;
+        private DataGridView dgbEjemplares;
         private Button btn1;
         private Button btn2;
         private Button btn3;

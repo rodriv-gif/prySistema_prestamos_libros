@@ -1,6 +1,6 @@
 ﻿namespace prySistema_prestamos_libros
 {
-    partial class frmRegistrarEjemplar
+    partial class frmFormularioEjemplares
     {
         /// <summary>
         /// Required designer variable.
@@ -35,16 +35,16 @@
             label4 = new Label();
             label5 = new Label();
             label7 = new Label();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            numericUpDown1 = new NumericUpDown();
-            comboBox2 = new ComboBox();
+            cmbLibro = new ComboBox();
+            txtLocalizacion = new TextBox();
+            dtpFechaAdquisicion = new DateTimePicker();
+            nudCantidad = new NumericUpDown();
+            txtEstado = new ComboBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pcb1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
             // pcb1
@@ -129,48 +129,49 @@
             label7.TabIndex = 9;
             label7.Text = "Estado";
             // 
-            // comboBox1
+            // cmbLibro
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(98, 262);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(224, 36);
-            comboBox1.TabIndex = 10;
+            cmbLibro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbLibro.FormattingEnabled = true;
+            cmbLibro.Location = new Point(98, 262);
+            cmbLibro.Name = "cmbLibro";
+            cmbLibro.Size = new Size(224, 36);
+            cmbLibro.TabIndex = 10;
             // 
-            // textBox1
+            // txtLocalizacion
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.ForeColor = Color.FromArgb(31, 31, 31);
-            textBox1.Location = new Point(525, 262);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(523, 34);
-            textBox1.TabIndex = 11;
+            txtLocalizacion.BackColor = Color.White;
+            txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
+            txtLocalizacion.Location = new Point(525, 262);
+            txtLocalizacion.Multiline = true;
+            txtLocalizacion.Name = "txtLocalizacion";
+            txtLocalizacion.Size = new Size(523, 29);
+            txtLocalizacion.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dtpFechaAdquisicion
             // 
-            dateTimePicker1.CalendarForeColor = SystemColors.ControlLightLight;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(98, 360);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(224, 34);
-            dateTimePicker1.TabIndex = 13;
+            dtpFechaAdquisicion.CalendarForeColor = SystemColors.ControlLightLight;
+            dtpFechaAdquisicion.Format = DateTimePickerFormat.Short;
+            dtpFechaAdquisicion.Location = new Point(98, 360);
+            dtpFechaAdquisicion.Name = "dtpFechaAdquisicion";
+            dtpFechaAdquisicion.Size = new Size(224, 34);
+            dtpFechaAdquisicion.TabIndex = 13;
             // 
-            // numericUpDown1
+            // nudCantidad
             // 
-            numericUpDown1.Location = new Point(526, 364);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(224, 34);
-            numericUpDown1.TabIndex = 14;
+            nudCantidad.Location = new Point(526, 364);
+            nudCantidad.Name = "nudCantidad";
+            nudCantidad.Size = new Size(224, 34);
+            nudCantidad.TabIndex = 14;
             // 
-            // comboBox2
+            // txtEstado
             // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(826, 360);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(224, 36);
-            comboBox2.TabIndex = 15;
+            txtEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            txtEstado.FormattingEnabled = true;
+            txtEstado.Location = new Point(826, 360);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(224, 36);
+            txtEstado.TabIndex = 15;
             // 
             // button1
             // 
@@ -215,7 +216,7 @@
             button3.Text = "Cancelar";
             button3.UseVisualStyleBackColor = false;
             // 
-            // frmRegistrarEjemplar
+            // frmFormularioEjemplares
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -224,11 +225,11 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(txtEstado);
+            Controls.Add(nudCantidad);
+            Controls.Add(dtpFechaAdquisicion);
+            Controls.Add(txtLocalizacion);
+            Controls.Add(cmbLibro);
             Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -239,10 +240,10 @@
             Font = new Font("Segoe UI", 12F);
             ForeColor = SystemColors.ControlText;
             Margin = new Padding(4);
-            Name = "frmRegistrarEjemplar";
+            Name = "frmFormularioEjemplares";
             Text = "Gestion de ejemplares";
             ((System.ComponentModel.ISupportInitialize)pcb1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -255,11 +256,11 @@
         private Label label4;
         private Label label5;
         private Label label7;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private DateTimePicker dateTimePicker1;
-        private NumericUpDown numericUpDown1;
-        private ComboBox comboBox2;
+        private ComboBox cmbLibro;
+        private TextBox txtLocalizacion;
+        private DateTimePicker dtpFechaAdquisicion;
+        private NumericUpDown nudCantidad;
+        private ComboBox txtEstado;
         private Button button1;
         private Button button2;
         private Button button3;

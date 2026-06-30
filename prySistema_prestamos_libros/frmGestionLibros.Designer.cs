@@ -32,12 +32,12 @@
             pictureBox1 = new PictureBox();
             iblBuscar = new Label();
             txtBuscarLibro = new TextBox();
-            dgvLibro = new DataGridView();
+            dgvLibros = new DataGridView();
             btnNuevoRegistro = new Button();
             btnEditar = new Button();
             btnDarBaja = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvLibro).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLibros).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -70,14 +70,14 @@
             txtBuscarLibro.Size = new Size(220, 30);
             txtBuscarLibro.TabIndex = 2;
             // 
-            // dgvLibro
+            // dgvLibros
             // 
-            dgvLibro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibro.Location = new Point(65, 205);
-            dgvLibro.Name = "dgvLibro";
-            dgvLibro.RowHeadersWidth = 51;
-            dgvLibro.Size = new Size(1249, 568);
-            dgvLibro.TabIndex = 9;
+            dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLibros.Location = new Point(65, 205);
+            dgvLibros.Name = "dgvLibros";
+            dgvLibros.RowHeadersWidth = 51;
+            dgvLibros.Size = new Size(1249, 568);
+            dgvLibros.TabIndex = 9;
             // 
             // btnNuevoRegistro
             // 
@@ -130,14 +130,14 @@
             Controls.Add(btnDarBaja);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevoRegistro);
-            Controls.Add(dgvLibro);
+            Controls.Add(dgvLibros);
             Controls.Add(txtBuscarLibro);
             Controls.Add(iblBuscar);
             Controls.Add(pictureBox1);
             Name = "frmGestionLibros";
             Text = "frmGestiónLibros";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvLibro).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLibros).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,7 +147,7 @@
         private PictureBox pictureBox1;
         private Label iblBuscar;
         private TextBox txtBuscarLibro;
-        private DataGridView dgvLibro;
+        private DataGridView dgvLibros;
         private Button btnNuevoRegistro;
         private Button btnEditar;
         private Button btnDarBaja;

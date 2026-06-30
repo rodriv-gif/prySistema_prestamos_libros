@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace prySistema_prestamos_libros
 {
-    public partial class frmLibrosRegistro : Form
+    public partial class frmFormularioEjemplares : Form
     {
-        public frmLibrosRegistro()
+        public frmFormularioEjemplares()
         {
             InitializeComponent();
         }

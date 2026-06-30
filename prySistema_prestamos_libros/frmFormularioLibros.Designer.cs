@@ -1,6 +1,6 @@
 ﻿namespace prySistema_prestamos_libros
 {
-    partial class frmLibrosRegistro
+    partial class frmFormularioLibros
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtIdioma = new TextBox();
+            txtNumPaginas = new TextBox();
+            txtCategoria = new TextBox();
+            txtTitulo = new TextBox();
+            txtEditorial = new TextBox();
+            txtISBN = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -45,9 +45,9 @@
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            txtApMaternoAutor = new TextBox();
+            txtApPaternoAutor = new TextBox();
+            txtNombreAutor = new TextBox();
             btnguardar = new Button();
             btncancelar = new Button();
             btnlimpiar = new Button();
@@ -77,47 +77,53 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // textBox6
+            // txtIdioma
             // 
-            textBox6.Location = new Point(871, 262);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(282, 27);
-            textBox6.TabIndex = 23;
+            txtIdioma.Location = new Point(871, 262);
+            txtIdioma.Multiline = true;
+            txtIdioma.Name = "txtIdioma";
+            txtIdioma.Size = new Size(249, 30);
+            txtIdioma.TabIndex = 23;
             // 
-            // textBox5
+            // txtNumPaginas
             // 
-            textBox5.Location = new Point(871, 161);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(282, 27);
-            textBox5.TabIndex = 22;
+            txtNumPaginas.Location = new Point(871, 161);
+            txtNumPaginas.Multiline = true;
+            txtNumPaginas.Name = "txtNumPaginas";
+            txtNumPaginas.Size = new Size(249, 30);
+            txtNumPaginas.TabIndex = 22;
             // 
-            // textBox4
+            // txtCategoria
             // 
-            textBox4.Location = new Point(507, 262);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(263, 27);
-            textBox4.TabIndex = 21;
+            txtCategoria.Location = new Point(507, 262);
+            txtCategoria.Multiline = true;
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(249, 30);
+            txtCategoria.TabIndex = 21;
             // 
-            // textBox3
+            // txtTitulo
             // 
-            textBox3.Location = new Point(507, 161);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(263, 27);
-            textBox3.TabIndex = 20;
+            txtTitulo.Location = new Point(507, 161);
+            txtTitulo.Multiline = true;
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(249, 30);
+            txtTitulo.TabIndex = 20;
             // 
-            // textBox2
+            // txtEditorial
             // 
-            textBox2.Location = new Point(96, 262);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(306, 27);
-            textBox2.TabIndex = 19;
+            txtEditorial.Location = new Point(96, 262);
+            txtEditorial.Multiline = true;
+            txtEditorial.Name = "txtEditorial";
+            txtEditorial.Size = new Size(249, 30);
+            txtEditorial.TabIndex = 19;
             // 
-            // textBox1
+            // txtISBN
             // 
-            textBox1.Location = new Point(96, 161);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(305, 27);
-            textBox1.TabIndex = 18;
+            txtISBN.Location = new Point(96, 161);
+            txtISBN.Multiline = true;
+            txtISBN.Name = "txtISBN";
+            txtISBN.Size = new Size(249, 30);
+            txtISBN.TabIndex = 18;
             // 
             // label6
             // 
@@ -209,26 +215,29 @@
             label7.TabIndex = 27;
             label7.Text = "Nombre(s)";
             // 
-            // textBox9
+            // txtApMaternoAutor
             // 
-            textBox9.Location = new Point(871, 449);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(270, 27);
-            textBox9.TabIndex = 26;
+            txtApMaternoAutor.Location = new Point(871, 449);
+            txtApMaternoAutor.Multiline = true;
+            txtApMaternoAutor.Name = "txtApMaternoAutor";
+            txtApMaternoAutor.Size = new Size(249, 30);
+            txtApMaternoAutor.TabIndex = 26;
             // 
-            // textBox8
+            // txtApPaternoAutor
             // 
-            textBox8.Location = new Point(490, 449);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(280, 27);
-            textBox8.TabIndex = 25;
+            txtApPaternoAutor.Location = new Point(490, 449);
+            txtApPaternoAutor.Multiline = true;
+            txtApPaternoAutor.Name = "txtApPaternoAutor";
+            txtApPaternoAutor.Size = new Size(249, 30);
+            txtApPaternoAutor.TabIndex = 25;
             // 
-            // textBox7
+            // txtNombreAutor
             // 
-            textBox7.Location = new Point(96, 449);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(269, 27);
-            textBox7.TabIndex = 24;
+            txtNombreAutor.Location = new Point(96, 449);
+            txtNombreAutor.Multiline = true;
+            txtNombreAutor.Name = "txtNombreAutor";
+            txtNombreAutor.Size = new Size(249, 30);
+            txtNombreAutor.TabIndex = 24;
             // 
             // btnguardar
             // 
@@ -296,7 +305,7 @@
             label11.TabIndex = 34;
             label11.Text = "Datos del autor";
             // 
-            // frmLibrosRegistro
+            // frmFormularioLibros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -309,15 +318,15 @@
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtApMaternoAutor);
+            Controls.Add(txtApPaternoAutor);
+            Controls.Add(txtNombreAutor);
+            Controls.Add(txtIdioma);
+            Controls.Add(txtNumPaginas);
+            Controls.Add(txtCategoria);
+            Controls.Add(txtTitulo);
+            Controls.Add(txtEditorial);
+            Controls.Add(txtISBN);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -326,7 +335,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Name = "frmLibrosRegistro";
+            Name = "frmFormularioLibros";
             Text = "Formularios de libros";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -338,12 +347,13 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private TextBox txtIdioma;
         private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtNumPaginas;
+        private TextBox txtCategoria;
+        private TextBox txtTitulo;
+        private TextBox txtEditorial;
+        private TextBox txtISBN;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -353,9 +363,9 @@
         private Label label9;
         private Label label8;
         private Label label7;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox txtApMaternoAutor;
+        private TextBox txtApPaternoAutor;
+        private TextBox txtNombreAutor;
         private Button btnguardar;
         private Button btncancelar;
         private Button btnlimpiar;
