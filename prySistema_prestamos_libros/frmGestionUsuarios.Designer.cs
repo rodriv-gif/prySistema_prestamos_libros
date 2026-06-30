@@ -28,101 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionUsuarios));
             pictureBox1 = new PictureBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            dataGridView1 = new DataGridView();
+            lblBuscarNumero = new Label();
+            txtBuscarUsuario = new TextBox();
+            btnNuevoRegistroUsuario = new Button();
+            btnEditarUsuario = new Button();
+            btnDarBajaUsuario = new Button();
+            dgvUsuarios = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.contenerdorGrupo;
-            pictureBox1.Location = new Point(33, 28);
+            pictureBox1.Location = new Point(29, 21);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1367, 797);
+            pictureBox1.Size = new Size(1300, 717);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblBuscarNumero
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F);
-            label1.Location = new Point(78, 83);
-            label1.Name = "label1";
-            label1.Size = new Size(239, 23);
-            label1.TabIndex = 1;
-            label1.Text = "Buscar por numero de control";
+            lblBuscarNumero.AutoSize = true;
+            lblBuscarNumero.Font = new Font("Segoe UI", 10.2F);
+            lblBuscarNumero.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBuscarNumero.Location = new Point(68, 62);
+            lblBuscarNumero.Name = "lblBuscarNumero";
+            lblBuscarNumero.Size = new Size(192, 19);
+            lblBuscarNumero.TabIndex = 1;
+            lblBuscarNumero.Text = "Buscar por numero de control";
             // 
-            // textBox1
+            // txtBuscarUsuario
             // 
-            textBox1.Location = new Point(78, 109);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(277, 27);
-            textBox1.TabIndex = 2;
+            txtBuscarUsuario.BackColor = Color.White;
+            txtBuscarUsuario.Location = new Point(68, 82);
+            txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
+            txtBuscarUsuario.Name = "txtBuscarUsuario";
+            txtBuscarUsuario.Size = new Size(242, 23);
+            txtBuscarUsuario.TabIndex = 2;
             // 
-            // button1
+            // btnNuevoRegistroUsuario
             // 
-            button1.BackColor = Color.FromArgb(201, 168, 76);
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(17, 30, 71);
-            button1.Location = new Point(712, 91);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 45);
-            button1.TabIndex = 3;
-            button1.Text = "Nuevo registro";
-            button1.UseVisualStyleBackColor = false;
+            btnNuevoRegistroUsuario.BackColor = Color.FromArgb(201, 168, 76);
+            btnNuevoRegistroUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnNuevoRegistroUsuario.ForeColor = Color.FromArgb(17, 30, 71);
+            btnNuevoRegistroUsuario.Image = (Image)resources.GetObject("btnNuevoRegistroUsuario.Image");
+            btnNuevoRegistroUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevoRegistroUsuario.Location = new Point(623, 68);
+            btnNuevoRegistroUsuario.Margin = new Padding(3, 2, 3, 2);
+            btnNuevoRegistroUsuario.Name = "btnNuevoRegistroUsuario";
+            btnNuevoRegistroUsuario.Size = new Size(150, 45);
+            btnNuevoRegistroUsuario.TabIndex = 3;
+            btnNuevoRegistroUsuario.Text = "Nuevo registro";
+            btnNuevoRegistroUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNuevoRegistroUsuario.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEditarUsuario
             // 
-            button2.BackColor = Color.FromArgb(107, 122, 153);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(966, 91);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 45);
-            button2.TabIndex = 4;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
+            btnEditarUsuario.BackColor = Color.FromArgb(107, 122, 153);
+            btnEditarUsuario.ForeColor = Color.White;
+            btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
+            btnEditarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditarUsuario.Location = new Point(845, 68);
+            btnEditarUsuario.Margin = new Padding(3, 2, 3, 2);
+            btnEditarUsuario.Name = "btnEditarUsuario";
+            btnEditarUsuario.Size = new Size(150, 45);
+            btnEditarUsuario.TabIndex = 4;
+            btnEditarUsuario.Text = "Editar";
+            btnEditarUsuario.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDarBajaUsuario
             // 
-            button3.BackColor = Color.FromArgb(242, 196, 196);
-            button3.Location = new Point(1187, 91);
-            button3.Name = "button3";
-            button3.Size = new Size(149, 45);
-            button3.TabIndex = 5;
-            button3.Text = "Dar de baja";
-            button3.UseVisualStyleBackColor = false;
+            btnDarBajaUsuario.BackColor = Color.FromArgb(242, 196, 196);
+            btnDarBajaUsuario.Image = (Image)resources.GetObject("btnDarBajaUsuario.Image");
+            btnDarBajaUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDarBajaUsuario.Location = new Point(1039, 68);
+            btnDarBajaUsuario.Margin = new Padding(3, 2, 3, 2);
+            btnDarBajaUsuario.Name = "btnDarBajaUsuario";
+            btnDarBajaUsuario.Size = new Size(150, 45);
+            btnDarBajaUsuario.TabIndex = 5;
+            btnDarBajaUsuario.Text = "Dar de baja";
+            btnDarBajaUsuario.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvUsuarios
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(65, 206);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1299, 568);
-            dataGridView1.TabIndex = 6;
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(57, 154);
+            dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.RowHeadersWidth = 51;
+            dgvUsuarios.Size = new Size(1249, 568);
+            dgvUsuarios.TabIndex = 6;
             // 
             // frmGestionUsuarios
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 848);
-            Controls.Add(dataGridView1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            ClientSize = new Size(1370, 749);
+            Controls.Add(dgvUsuarios);
+            Controls.Add(btnDarBajaUsuario);
+            Controls.Add(btnEditarUsuario);
+            Controls.Add(btnNuevoRegistroUsuario);
+            Controls.Add(txtBuscarUsuario);
+            Controls.Add(lblBuscarNumero);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmGestionUsuarios";
             Text = "Gestion de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,11 +147,11 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label label1;
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private DataGridView dataGridView1;
+        private Label lblBuscarNumero;
+        private TextBox txtBuscarUsuario;
+        private Button btnNuevoRegistroUsuario;
+        private Button btnEditarUsuario;
+        private Button btnDarBajaUsuario;
+        private DataGridView dgvUsuarios;
     }
 }
