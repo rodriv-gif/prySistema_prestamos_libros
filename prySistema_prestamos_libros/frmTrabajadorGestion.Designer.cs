@@ -107,7 +107,7 @@
             iblBuscar.AutoSize = true;
             iblBuscar.BackColor = Color.White;
             iblBuscar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iblBuscar.ForeColor = Color.FromArgb(201, 168, 76);
+            iblBuscar.ForeColor = Color.Black;
             iblBuscar.Location = new Point(64, 75);
             iblBuscar.Name = "iblBuscar";
             iblBuscar.Size = new Size(239, 23);
