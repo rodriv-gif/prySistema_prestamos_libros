@@ -28,81 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
+            pcbLogo = new PictureBox();
+            lblUsuario = new Label();
+            lblContraseña = new Label();
             btnAcceder = new Button();
             btnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(310, 318);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(330, 38);
-            textBox1.TabIndex = 0;
+            txtUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Location = new Point(364, 329);
+            txtUsuario.Multiline = true;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(224, 28);
+            txtUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(310, 416);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(330, 38);
-            textBox2.TabIndex = 1;
+            txtContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.Location = new Point(364, 416);
+            txtContraseña.Multiline = true;
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(224, 28);
+            txtContraseña.TabIndex = 1;
             // 
-            // pictureBox1
+            // pcbLogo
             // 
-            pictureBox1.Image = Properties.Resources.logol;
-            pictureBox1.Location = new Point(344, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(259, 252);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            pcbLogo.Image = Properties.Resources.logol;
+            pcbLogo.Location = new Point(344, 12);
+            pcbLogo.Name = "pcbLogo";
+            pcbLogo.Size = new Size(280, 280);
+            pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbLogo.TabIndex = 2;
+            pcbLogo.TabStop = false;
             // 
-            // label1
+            // lblUsuario
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(419, 284);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 31);
-            label1.TabIndex = 3;
-            label1.Text = "Usuario";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.FromArgb(17, 30, 71);
+            lblUsuario.Location = new Point(437, 295);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(92, 31);
+            lblUsuario.TabIndex = 3;
+            lblUsuario.Text = "Usuario";
             // 
-            // label2
+            // lblContraseña
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(419, 382);
-            label2.Name = "label2";
-            label2.Size = new Size(129, 31);
-            label2.TabIndex = 4;
-            label2.Text = "Contraseña";
+            lblContraseña.AutoSize = true;
+            lblContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblContraseña.ForeColor = Color.FromArgb(17, 30, 71);
+            lblContraseña.Location = new Point(418, 382);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(129, 31);
+            lblContraseña.TabIndex = 4;
+            lblContraseña.Text = "Contraseña";
             // 
             // btnAcceder
             // 
-            btnAcceder.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAcceder.BackColor = Color.FromArgb(27, 46, 107);
+            btnAcceder.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAcceder.ForeColor = Color.FromArgb(201, 168, 76);
             btnAcceder.Location = new Point(259, 498);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(150, 45);
             btnAcceder.TabIndex = 5;
             btnAcceder.Text = "Acceder";
-            btnAcceder.UseVisualStyleBackColor = true;
+            btnAcceder.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
-            btnSalir.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalir.BackColor = Color.FromArgb(242, 196, 196);
+            btnSalir.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalir.ForeColor = Color.FromArgb(122, 32, 32);
             btnSalir.Location = new Point(528, 498);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(150, 45);
             btnSalir.TabIndex = 6;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             // 
             // frmLogin
             // 
@@ -112,25 +120,25 @@
             ClientSize = new Size(976, 618);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(lblContraseña);
+            Controls.Add(lblUsuario);
+            Controls.Add(pcbLogo);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
             Name = "frmLogin";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
+        private PictureBox pcbLogo;
+        private Label lblUsuario;
+        private Label lblContraseña;
         private Button btnAcceder;
         private Button btnSalir;
     }

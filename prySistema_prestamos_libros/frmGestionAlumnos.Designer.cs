@@ -29,105 +29,107 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
+            btnNuevoRegistro = new Button();
+            btnEditar = new Button();
+            btnDarBaja = new Button();
+            lblBuscar = new Label();
+            txtBuscarAlumno = new TextBox();
+            dgvAlumnos = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox1.Location = new Point(43, 34);
+            pictureBox1.Location = new Point(30, 25);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1348, 778);
+            pictureBox1.Size = new Size(1367, 797);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnNuevoRegistro
             // 
-            button1.BackColor = Color.FromArgb(201, 168, 76);
-            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            button1.Location = new Point(649, 142);
-            button1.Name = "button1";
-            button1.Size = new Size(155, 45);
-            button1.TabIndex = 1;
-            button1.Text = "Nuevo registro";
-            button1.UseVisualStyleBackColor = false;
+            btnNuevoRegistro.BackColor = Color.FromArgb(201, 168, 76);
+            btnNuevoRegistro.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoRegistro.Location = new Point(690, 116);
+            btnNuevoRegistro.Name = "btnNuevoRegistro";
+            btnNuevoRegistro.Size = new Size(150, 45);
+            btnNuevoRegistro.TabIndex = 1;
+            btnNuevoRegistro.Text = "Nuevo registro";
+            btnNuevoRegistro.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEditar
             // 
-            button2.BackColor = Color.FromArgb(107, 122, 153);
-            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(892, 142);
-            button2.Name = "button2";
-            button2.Size = new Size(155, 45);
-            button2.TabIndex = 2;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.FromArgb(107, 122, 153);
+            btnEditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(933, 116);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(150, 45);
+            btnEditar.TabIndex = 2;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDarBaja
             // 
-            button3.BackColor = Color.FromArgb(242, 196, 196);
-            button3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(122, 32, 32);
-            button3.Location = new Point(1130, 142);
-            button3.Name = "button3";
-            button3.Size = new Size(150, 45);
-            button3.TabIndex = 3;
-            button3.Text = "Dar de baja";
-            button3.UseVisualStyleBackColor = false;
+            btnDarBaja.BackColor = Color.FromArgb(242, 196, 196);
+            btnDarBaja.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
+            btnDarBaja.Location = new Point(1153, 116);
+            btnDarBaja.Name = "btnDarBaja";
+            btnDarBaja.Size = new Size(150, 45);
+            btnDarBaja.TabIndex = 3;
+            btnDarBaja.Text = "Dar de baja";
+            btnDarBaja.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblBuscar
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.ForeColor = Color.FromArgb(106, 112, 144);
-            label1.Location = new Point(102, 116);
-            label1.Name = "label1";
-            label1.Size = new Size(239, 23);
-            label1.TabIndex = 4;
-            label1.Text = "Buscar por numero de control";
+            lblBuscar.AutoSize = true;
+            lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
+            lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBuscar.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBuscar.Location = new Point(102, 103);
+            lblBuscar.Name = "lblBuscar";
+            lblBuscar.Size = new Size(206, 20);
+            lblBuscar.TabIndex = 4;
+            lblBuscar.Text = "Buscar por numero de control";
             // 
-            // textBox1
+            // txtBuscarAlumno
             // 
-            textBox1.Location = new Point(102, 142);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(313, 27);
-            textBox1.TabIndex = 3;
+            txtBuscarAlumno.Location = new Point(102, 126);
+            txtBuscarAlumno.Multiline = true;
+            txtBuscarAlumno.Name = "txtBuscarAlumno";
+            txtBuscarAlumno.Size = new Size(249, 30);
+            txtBuscarAlumno.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvAlumnos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(102, 284);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1223, 487);
-            dataGridView1.TabIndex = 6;
+            dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlumnos.Location = new Point(91, 223);
+            dgvAlumnos.Name = "dgvAlumnos";
+            dgvAlumnos.RowHeadersWidth = 51;
+            dgvAlumnos.Size = new Size(1249, 568);
+            dgvAlumnos.TabIndex = 6;
             // 
             // frmGestionAlumnos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1430, 848);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(dgvAlumnos);
+            Controls.Add(txtBuscarAlumno);
+            Controls.Add(lblBuscar);
+            Controls.Add(btnDarBaja);
+            Controls.Add(btnEditar);
+            Controls.Add(btnNuevoRegistro);
             Controls.Add(pictureBox1);
             Name = "frmGestionAlumnos";
             Text = "frmGestionAlumnos";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,11 +137,11 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Label label1;
-        private TextBox textBox1;
-        private DataGridView dataGridView1;
+        private Button btnNuevoRegistro;
+        private Button btnEditar;
+        private Button btnDarBaja;
+        private Label lblBuscar;
+        private TextBox txtBuscarAlumno;
+        private DataGridView dgvAlumnos;
     }
 }
