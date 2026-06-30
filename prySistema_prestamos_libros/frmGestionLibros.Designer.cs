@@ -73,7 +73,7 @@
             // dgvLibros
             // 
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibros.Location = new Point(65, 205);
+            dgvLibros.Location = new Point(88, 209);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
             dgvLibros.Size = new Size(1249, 568);

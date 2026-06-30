@@ -61,11 +61,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(250, 247, 242);
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(27, 46, 107);
             label1.Location = new Point(98, 181);
             label1.Name = "label1";
-            label1.Size = new Size(229, 32);
+            label1.Size = new Size(162, 23);
             label1.TabIndex = 3;
             label1.Text = "Datos del ejemplar";
             // 
@@ -73,11 +73,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(250, 247, 242);
-            label2.Font = new Font("Segoe UI", 14F);
-            label2.ForeColor = Color.FromArgb(106, 112, 144);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(98, 234);
             label2.Name = "label2";
-            label2.Size = new Size(254, 32);
+            label2.Size = new Size(158, 20);
             label2.TabIndex = 4;
             label2.Text = "Libro al que pertenece";
             // 
@@ -85,11 +85,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Font = new Font("Segoe UI", 14F);
-            label3.ForeColor = Color.FromArgb(106, 112, 144);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(525, 332);
             label3.Name = "label3";
-            label3.Size = new Size(109, 32);
+            label3.Size = new Size(69, 20);
             label3.TabIndex = 5;
             label3.Text = "Cantidad";
             // 
@@ -97,11 +97,11 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Font = new Font("Segoe UI", 14F);
-            label4.ForeColor = Color.FromArgb(106, 112, 144);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(98, 332);
             label4.Name = "label4";
-            label4.Size = new Size(238, 32);
+            label4.Size = new Size(148, 20);
             label4.TabIndex = 6;
             label4.Text = "Fecha de adquisición";
             // 
@@ -109,11 +109,11 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Font = new Font("Segoe UI", 14F);
-            label5.ForeColor = Color.FromArgb(106, 112, 144);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(525, 234);
             label5.Name = "label5";
-            label5.Size = new Size(142, 32);
+            label5.Size = new Size(91, 20);
             label5.TabIndex = 7;
             label5.Text = "Localización";
             // 
@@ -121,11 +121,11 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.FromArgb(250, 247, 242);
-            label7.Font = new Font("Segoe UI", 14F);
-            label7.ForeColor = Color.FromArgb(106, 112, 144);
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
             label7.Location = new Point(826, 332);
             label7.Name = "label7";
-            label7.Size = new Size(84, 32);
+            label7.Size = new Size(54, 20);
             label7.TabIndex = 9;
             label7.Text = "Estado";
             // 
