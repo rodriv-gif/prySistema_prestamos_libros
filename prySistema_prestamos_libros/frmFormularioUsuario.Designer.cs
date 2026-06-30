@@ -31,27 +31,27 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            button1 = new Button();
+            lblNumControl = new Label();
+            lblNombre = new Label();
+            lblApellidoPaterno = new Label();
+            lblApellidoMaterno = new Label();
+            lblCarrera = new Label();
+            btnAgregarTrabajador = new Button();
             label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            lblPerfil = new Label();
+            lblUsuario = new Label();
+            lblContrasenia = new Label();
+            cmbPerfil = new ComboBox();
+            txtUsuario = new TextBox();
+            txtContrasena = new TextBox();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtApellidoPaternoTrabajador = new TextBox();
+            txtApellidoMaternoTrabajador = new TextBox();
             textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            txtNombreTrabajador = new TextBox();
+            txtNumControl = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -59,9 +59,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox1.Location = new Point(63, 116);
+            pictureBox1.Location = new Point(55, 87);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1302, 280);
+            pictureBox1.Size = new Size(1139, 210);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -69,9 +70,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox2.Location = new Point(62, 443);
+            pictureBox2.Location = new Point(54, 332);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1302, 153);
+            pictureBox2.Size = new Size(1139, 115);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -82,73 +84,78 @@
             label1.BackColor = Color.FromArgb(250, 247, 242);
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(27, 46, 107);
-            label1.Location = new Point(79, 125);
+            label1.Location = new Point(69, 94);
             label1.Name = "label1";
-            label1.Size = new Size(165, 23);
+            label1.Size = new Size(139, 19);
             label1.TabIndex = 3;
             label1.Text = "Vincular trabajador";
             // 
-            // label2
+            // lblNumControl
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(250, 247, 242);
-            label2.Location = new Point(80, 164);
-            label2.Name = "label2";
-            label2.Size = new Size(135, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Numero de control";
+            lblNumControl.AutoSize = true;
+            lblNumControl.BackColor = Color.FromArgb(250, 247, 242);
+            lblNumControl.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNumControl.Location = new Point(70, 123);
+            lblNumControl.Name = "lblNumControl";
+            lblNumControl.Size = new Size(108, 15);
+            lblNumControl.TabIndex = 4;
+            lblNumControl.Text = "Numero de control";
             // 
-            // label3
+            // lblNombre
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Location = new Point(96, 246);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Nombre";
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNombre.Location = new Point(84, 184);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(51, 15);
+            lblNombre.TabIndex = 5;
+            lblNombre.Text = "Nombre";
             // 
-            // label4
+            // lblApellidoPaterno
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Location = new Point(430, 246);
-            label4.Name = "label4";
-            label4.Size = new Size(122, 20);
-            label4.TabIndex = 6;
-            label4.Text = "Apellido paterno";
+            lblApellidoPaterno.AutoSize = true;
+            lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoPaterno.Location = new Point(376, 184);
+            lblApellidoPaterno.Name = "lblApellidoPaterno";
+            lblApellidoPaterno.Size = new Size(95, 15);
+            lblApellidoPaterno.TabIndex = 6;
+            lblApellidoPaterno.Text = "Apellido paterno";
             // 
-            // label5
+            // lblApellidoMaterno
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Location = new Point(751, 246);
-            label5.Name = "label5";
-            label5.Size = new Size(126, 20);
-            label5.TabIndex = 7;
-            label5.Text = "Apellido materno";
+            lblApellidoMaterno.AutoSize = true;
+            lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoMaterno.Location = new Point(657, 184);
+            lblApellidoMaterno.Name = "lblApellidoMaterno";
+            lblApellidoMaterno.Size = new Size(99, 15);
+            lblApellidoMaterno.TabIndex = 7;
+            lblApellidoMaterno.Text = "Apellido materno";
             // 
-            // label6
+            // lblCarrera
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(250, 247, 242);
-            label6.Location = new Point(1087, 246);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 20);
-            label6.TabIndex = 8;
-            label6.Text = "Carrera/Área";
+            lblCarrera.AutoSize = true;
+            lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
+            lblCarrera.ForeColor = Color.FromArgb(31, 31, 31);
+            lblCarrera.Location = new Point(951, 184);
+            lblCarrera.Name = "lblCarrera";
+            lblCarrera.Size = new Size(74, 15);
+            lblCarrera.TabIndex = 8;
+            lblCarrera.Text = "Carrera/Área";
             // 
-            // button1
+            // btnAgregarTrabajador
             // 
-            button1.BackColor = Color.FromArgb(17, 30, 71);
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(201, 168, 76);
-            button1.Location = new Point(627, 329);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 45);
-            button1.TabIndex = 9;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = false;
+            btnAgregarTrabajador.BackColor = Color.FromArgb(27, 46, 107);
+            btnAgregarTrabajador.ForeColor = Color.FromArgb(201, 168, 76);
+            btnAgregarTrabajador.Location = new Point(549, 241);
+            btnAgregarTrabajador.Margin = new Padding(3, 2, 3, 2);
+            btnAgregarTrabajador.Name = "btnAgregarTrabajador";
+            btnAgregarTrabajador.Size = new Size(150, 45);
+            btnAgregarTrabajador.TabIndex = 9;
+            btnAgregarTrabajador.Text = "Agregar";
+            btnAgregarTrabajador.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -156,63 +163,72 @@
             label7.BackColor = Color.FromArgb(250, 247, 242);
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(27, 46, 107);
-            label7.Location = new Point(80, 455);
+            label7.Location = new Point(70, 341);
             label7.Name = "label7";
-            label7.Size = new Size(148, 23);
+            label7.Size = new Size(126, 19);
             label7.TabIndex = 10;
             label7.Text = "Acceso al sistema";
             // 
-            // label8
+            // lblPerfil
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.FromArgb(250, 247, 242);
-            label8.Location = new Point(96, 494);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 20);
-            label8.TabIndex = 11;
-            label8.Text = "Perfil";
+            lblPerfil.AutoSize = true;
+            lblPerfil.BackColor = Color.FromArgb(250, 247, 242);
+            lblPerfil.ForeColor = Color.FromArgb(31, 31, 31);
+            lblPerfil.Location = new Point(84, 370);
+            lblPerfil.Name = "lblPerfil";
+            lblPerfil.Size = new Size(34, 15);
+            lblPerfil.TabIndex = 11;
+            lblPerfil.Text = "Perfil";
             // 
-            // label9
+            // lblUsuario
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(250, 247, 242);
-            label9.Location = new Point(492, 494);
-            label9.Name = "label9";
-            label9.Size = new Size(59, 20);
-            label9.TabIndex = 12;
-            label9.Text = "Usuario";
+            lblUsuario.AutoSize = true;
+            lblUsuario.BackColor = Color.FromArgb(250, 247, 242);
+            lblUsuario.ForeColor = Color.FromArgb(31, 31, 31);
+            lblUsuario.Location = new Point(430, 370);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.TabIndex = 12;
+            lblUsuario.Text = "Usuario";
             // 
-            // label10
+            // lblContrasenia
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.FromArgb(250, 247, 242);
-            label10.Location = new Point(871, 494);
-            label10.Name = "label10";
-            label10.Size = new Size(83, 20);
-            label10.TabIndex = 13;
-            label10.Text = "Contraseña";
+            lblContrasenia.AutoSize = true;
+            lblContrasenia.BackColor = Color.FromArgb(250, 247, 242);
+            lblContrasenia.ForeColor = Color.FromArgb(31, 31, 31);
+            lblContrasenia.Location = new Point(762, 370);
+            lblContrasenia.Name = "lblContrasenia";
+            lblContrasenia.Size = new Size(67, 15);
+            lblContrasenia.TabIndex = 13;
+            lblContrasenia.Text = "Contraseña";
             // 
-            // comboBox1
+            // cmbPerfil
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(96, 517);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 28);
-            comboBox1.TabIndex = 14;
+            cmbPerfil.BackColor = Color.White;
+            cmbPerfil.FormattingEnabled = true;
+            cmbPerfil.Location = new Point(84, 388);
+            cmbPerfil.Margin = new Padding(3, 2, 3, 2);
+            cmbPerfil.Name = "cmbPerfil";
+            cmbPerfil.Size = new Size(171, 23);
+            cmbPerfil.TabIndex = 14;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(490, 517);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(268, 27);
-            textBox1.TabIndex = 15;
+            txtUsuario.BackColor = Color.White;
+            txtUsuario.Location = new Point(429, 388);
+            txtUsuario.Margin = new Padding(3, 2, 3, 2);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(237, 23);
+            txtUsuario.TabIndex = 15;
             // 
-            // textBox2
+            // txtContrasena
             // 
-            textBox2.Location = new Point(871, 517);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 27);
-            textBox2.TabIndex = 16;
+            txtContrasena.BackColor = Color.White;
+            txtContrasena.Location = new Point(762, 388);
+            txtContrasena.Margin = new Padding(3, 2, 3, 2);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(237, 23);
+            txtContrasena.TabIndex = 16;
             // 
             // button2
             // 
@@ -220,7 +236,8 @@
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.Image = Properties.Resources.Guardar;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(348, 667);
+            button2.Location = new Point(321, 528);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(150, 45);
             button2.TabIndex = 17;
@@ -234,7 +251,8 @@
             button3.ForeColor = Color.White;
             button3.Image = Properties.Resources.Limpiar;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(627, 667);
+            button3.Location = new Point(549, 528);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
             button3.Size = new Size(150, 45);
             button3.TabIndex = 18;
@@ -248,78 +266,89 @@
             button4.ForeColor = Color.FromArgb(122, 32, 32);
             button4.Image = Properties.Resources.Cancelar1_0;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(890, 671);
+            button4.Location = new Point(777, 528);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
             button4.Size = new Size(150, 45);
             button4.TabIndex = 19;
             button4.Text = "Cancelar";
             button4.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtApellidoPaternoTrabajador
             // 
-            textBox3.Location = new Point(430, 269);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(268, 27);
-            textBox3.TabIndex = 20;
+            txtApellidoPaternoTrabajador.BackColor = Color.White;
+            txtApellidoPaternoTrabajador.Location = new Point(376, 202);
+            txtApellidoPaternoTrabajador.Margin = new Padding(3, 2, 3, 2);
+            txtApellidoPaternoTrabajador.Name = "txtApellidoPaternoTrabajador";
+            txtApellidoPaternoTrabajador.Size = new Size(235, 23);
+            txtApellidoPaternoTrabajador.TabIndex = 20;
             // 
-            // textBox4
+            // txtApellidoMaternoTrabajador
             // 
-            textBox4.Location = new Point(751, 269);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(268, 27);
-            textBox4.TabIndex = 21;
+            txtApellidoMaternoTrabajador.BackColor = Color.White;
+            txtApellidoMaternoTrabajador.Location = new Point(657, 202);
+            txtApellidoMaternoTrabajador.Margin = new Padding(3, 2, 3, 2);
+            txtApellidoMaternoTrabajador.Name = "txtApellidoMaternoTrabajador";
+            txtApellidoMaternoTrabajador.Size = new Size(235, 23);
+            txtApellidoMaternoTrabajador.TabIndex = 21;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(1087, 269);
+            textBox6.Location = new Point(951, 202);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(268, 27);
+            textBox6.Size = new Size(235, 23);
             textBox6.TabIndex = 23;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
-            // textBox7
+            // txtNombreTrabajador
             // 
-            textBox7.Location = new Point(79, 269);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(268, 27);
-            textBox7.TabIndex = 24;
+            txtNombreTrabajador.BackColor = Color.White;
+            txtNombreTrabajador.Location = new Point(69, 202);
+            txtNombreTrabajador.Margin = new Padding(3, 2, 3, 2);
+            txtNombreTrabajador.Name = "txtNombreTrabajador";
+            txtNombreTrabajador.Size = new Size(235, 23);
+            txtNombreTrabajador.TabIndex = 24;
             // 
-            // textBox8
+            // txtNumControl
             // 
-            textBox8.Location = new Point(80, 195);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(268, 27);
-            textBox8.TabIndex = 25;
+            txtNumControl.BackColor = Color.White;
+            txtNumControl.Location = new Point(70, 146);
+            txtNumControl.Margin = new Padding(3, 2, 3, 2);
+            txtNumControl.Name = "txtNumControl";
+            txtNumControl.Size = new Size(235, 23);
+            txtNumControl.TabIndex = 25;
             // 
             // frmFormularioUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 848);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
+            ClientSize = new Size(1370, 749);
+            Controls.Add(txtNumControl);
+            Controls.Add(txtNombreTrabajador);
             Controls.Add(textBox6);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(txtApellidoMaternoTrabajador);
+            Controls.Add(txtApellidoPaternoTrabajador);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtUsuario);
+            Controls.Add(cmbPerfil);
+            Controls.Add(lblContrasenia);
+            Controls.Add(lblUsuario);
+            Controls.Add(lblPerfil);
             Controls.Add(label7);
-            Controls.Add(button1);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(btnAgregarTrabajador);
+            Controls.Add(lblCarrera);
+            Controls.Add(lblApellidoMaterno);
+            Controls.Add(lblApellidoPaterno);
+            Controls.Add(lblNombre);
+            Controls.Add(lblNumControl);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmFormularioUsuario";
             Text = "frmFormularioUsuario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -333,26 +362,26 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Button button1;
+        private Label lblNumControl;
+        private Label lblNombre;
+        private Label lblApellidoPaterno;
+        private Label lblApellidoMaterno;
+        private Label lblCarrera;
+        private Button btnAgregarTrabajador;
         private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Label lblPerfil;
+        private Label lblUsuario;
+        private Label lblContrasenia;
+        private ComboBox cmbPerfil;
+        private TextBox txtUsuario;
+        private TextBox txtContrasena;
         private Button button2;
         private Button button3;
         private Button button4;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtApellidoPaternoTrabajador;
+        private TextBox txtApellidoMaternoTrabajador;
         private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox txtNombreTrabajador;
+        private TextBox txtNumControl;
     }
 }
