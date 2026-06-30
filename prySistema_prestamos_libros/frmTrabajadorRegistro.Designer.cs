@@ -31,13 +31,13 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtApellidoMaterno = new TextBox();
+            txtFechaRegistro = new TextBox();
+            txtApellidoPaterno = new TextBox();
+            txtCorreo = new TextBox();
+            txtNombres = new TextBox();
+            txtTelefono = new TextBox();
+            txtNumeroControl = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -49,18 +49,18 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            textBox11 = new TextBox();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
+            txtCodigoPostal = new TextBox();
+            txtNumCalle = new TextBox();
+            txtCalle = new TextBox();
+            txtColonia = new TextBox();
             label12 = new Label();
-            comboBox1 = new ComboBox();
+            cmbCarreraArea = new ComboBox();
             btnlimpiar = new Button();
-            btncancelar = new Button();
+            btnCancelar = new Button();
             btnguardar = new Button();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
+            iblDatosTrabajador = new Label();
+            iblDireccion = new Label();
+            iblDatosLaborales = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -96,54 +96,54 @@
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
-            // textBox7
+            // txtApellidoMaterno
             // 
-            textBox7.Location = new Point(1087, 120);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(242, 27);
-            textBox7.TabIndex = 27;
+            txtApellidoMaterno.Location = new Point(1087, 120);
+            txtApellidoMaterno.Name = "txtApellidoMaterno";
+            txtApellidoMaterno.Size = new Size(200, 27);
+            txtApellidoMaterno.TabIndex = 27;
             // 
-            // textBox6
+            // txtFechaRegistro
             // 
-            textBox6.Location = new Point(751, 201);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(249, 27);
-            textBox6.TabIndex = 26;
+            txtFechaRegistro.Location = new Point(751, 201);
+            txtFechaRegistro.Name = "txtFechaRegistro";
+            txtFechaRegistro.Size = new Size(160, 27);
+            txtFechaRegistro.TabIndex = 26;
             // 
-            // textBox5
+            // txtApellidoPaterno
             // 
-            textBox5.Location = new Point(751, 120);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(272, 27);
-            textBox5.TabIndex = 25;
+            txtApellidoPaterno.Location = new Point(751, 120);
+            txtApellidoPaterno.Name = "txtApellidoPaterno";
+            txtApellidoPaterno.Size = new Size(200, 27);
+            txtApellidoPaterno.TabIndex = 25;
             // 
-            // textBox4
+            // txtCorreo
             // 
-            textBox4.Location = new Point(430, 201);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(271, 27);
-            textBox4.TabIndex = 24;
+            txtCorreo.Location = new Point(430, 201);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(250, 27);
+            txtCorreo.TabIndex = 24;
             // 
-            // textBox3
+            // txtNombres
             // 
-            textBox3.Location = new Point(430, 120);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(271, 27);
-            textBox3.TabIndex = 23;
+            txtNombres.Location = new Point(430, 120);
+            txtNombres.Name = "txtNombres";
+            txtNombres.Size = new Size(200, 27);
+            txtNombres.TabIndex = 23;
             // 
-            // textBox2
+            // txtTelefono
             // 
-            textBox2.Location = new Point(90, 201);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(268, 27);
-            textBox2.TabIndex = 22;
+            txtTelefono.Location = new Point(90, 201);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(180, 27);
+            txtTelefono.TabIndex = 22;
             // 
-            // textBox1
+            // txtNumeroControl
             // 
-            textBox1.Location = new Point(90, 120);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(268, 27);
-            textBox1.TabIndex = 21;
+            txtNumeroControl.Location = new Point(90, 120);
+            txtNumeroControl.Name = "txtNumeroControl";
+            txtNumeroControl.Size = new Size(180, 27);
+            txtNumeroControl.TabIndex = 21;
             // 
             // label7
             // 
@@ -169,7 +169,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Location = new Point(828, 88);
+            label5.Location = new Point(780, 97);
             label5.Name = "label5";
             label5.Size = new Size(122, 20);
             label5.TabIndex = 18;
@@ -255,33 +255,33 @@
             label8.TabIndex = 32;
             label8.Text = "Colonia";
             // 
-            // textBox11
+            // txtCodigoPostal
             // 
-            textBox11.Location = new Point(1030, 406);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(250, 27);
-            textBox11.TabIndex = 31;
+            txtCodigoPostal.Location = new Point(1030, 406);
+            txtCodigoPostal.Name = "txtCodigoPostal";
+            txtCodigoPostal.Size = new Size(100, 27);
+            txtCodigoPostal.TabIndex = 31;
             // 
-            // textBox10
+            // txtNumCalle
             // 
-            textBox10.Location = new Point(713, 406);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(259, 27);
-            textBox10.TabIndex = 30;
+            txtNumCalle.Location = new Point(713, 406);
+            txtNumCalle.Name = "txtNumCalle";
+            txtNumCalle.Size = new Size(120, 27);
+            txtNumCalle.TabIndex = 30;
             // 
-            // textBox9
+            // txtCalle
             // 
-            textBox9.Location = new Point(378, 406);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(277, 27);
-            textBox9.TabIndex = 29;
+            txtCalle.Location = new Point(378, 406);
+            txtCalle.Name = "txtCalle";
+            txtCalle.Size = new Size(200, 27);
+            txtCalle.TabIndex = 29;
             // 
-            // textBox8
+            // txtColonia
             // 
-            textBox8.Location = new Point(79, 406);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(245, 27);
-            textBox8.TabIndex = 28;
+            txtColonia.Location = new Point(79, 406);
+            txtColonia.Name = "txtColonia";
+            txtColonia.Size = new Size(180, 27);
+            txtColonia.TabIndex = 28;
             // 
             // label12
             // 
@@ -293,13 +293,13 @@
             label12.TabIndex = 37;
             label12.Text = "Carrera/Área";
             // 
-            // comboBox1
+            // cmbCarreraArea
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(111, 594);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(224, 28);
-            comboBox1.TabIndex = 36;
+            cmbCarreraArea.FormattingEnabled = true;
+            cmbCarreraArea.Location = new Point(111, 594);
+            cmbCarreraArea.Name = "cmbCarreraArea";
+            cmbCarreraArea.Size = new Size(224, 28);
+            cmbCarreraArea.TabIndex = 36;
             // 
             // btnlimpiar
             // 
@@ -315,19 +315,19 @@
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = false;
             // 
-            // btncancelar
+            // btnCancelar
             // 
-            btncancelar.BackColor = Color.FromArgb(242, 196, 196);
-            btncancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
-            btncancelar.Image = Properties.Resources.Cancelar1_0;
-            btncancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btncancelar.Location = new Point(983, 700);
-            btncancelar.Name = "btncancelar";
-            btncancelar.Size = new Size(150, 45);
-            btncancelar.TabIndex = 39;
-            btncancelar.Text = "Cancelar";
-            btncancelar.UseVisualStyleBackColor = false;
+            btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
+            btnCancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
+            btnCancelar.Image = Properties.Resources.Cancelar1_0;
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(983, 700);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(150, 45);
+            btnCancelar.TabIndex = 39;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnguardar
             // 
@@ -343,41 +343,41 @@
             btnguardar.Text = "Guardar";
             btnguardar.UseVisualStyleBackColor = false;
             // 
-            // label13
+            // iblDatosTrabajador
             // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.FromArgb(250, 247, 242);
-            label13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(27, 46, 107);
-            label13.Location = new Point(79, 57);
-            label13.Name = "label13";
-            label13.Size = new Size(265, 23);
-            label13.TabIndex = 41;
-            label13.Text = "Datos personales del trabajador";
+            iblDatosTrabajador.AutoSize = true;
+            iblDatosTrabajador.BackColor = Color.FromArgb(250, 247, 242);
+            iblDatosTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iblDatosTrabajador.ForeColor = Color.FromArgb(27, 46, 107);
+            iblDatosTrabajador.Location = new Point(79, 57);
+            iblDatosTrabajador.Name = "iblDatosTrabajador";
+            iblDatosTrabajador.Size = new Size(265, 23);
+            iblDatosTrabajador.TabIndex = 41;
+            iblDatosTrabajador.Text = "Datos personales del trabajador";
             // 
-            // label14
+            // iblDireccion
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.FromArgb(250, 247, 242);
-            label14.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(27, 46, 107);
-            label14.Location = new Point(72, 337);
-            label14.Name = "label14";
-            label14.Size = new Size(85, 23);
-            label14.TabIndex = 42;
-            label14.Text = "Dirección";
+            iblDireccion.AutoSize = true;
+            iblDireccion.BackColor = Color.FromArgb(250, 247, 242);
+            iblDireccion.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iblDireccion.ForeColor = Color.FromArgb(27, 46, 107);
+            iblDireccion.Location = new Point(72, 337);
+            iblDireccion.Name = "iblDireccion";
+            iblDireccion.Size = new Size(85, 23);
+            iblDireccion.TabIndex = 42;
+            iblDireccion.Text = "Dirección";
             // 
-            // label15
+            // iblDatosLaborales
             // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.FromArgb(250, 247, 242);
-            label15.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.FromArgb(27, 46, 107);
-            label15.Location = new Point(72, 526);
-            label15.Name = "label15";
-            label15.Size = new Size(133, 23);
-            label15.TabIndex = 43;
-            label15.Text = "Datos laborales";
+            iblDatosLaborales.AutoSize = true;
+            iblDatosLaborales.BackColor = Color.FromArgb(250, 247, 242);
+            iblDatosLaborales.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iblDatosLaborales.ForeColor = Color.FromArgb(27, 46, 107);
+            iblDatosLaborales.Location = new Point(72, 526);
+            iblDatosLaborales.Name = "iblDatosLaborales";
+            iblDatosLaborales.Size = new Size(133, 23);
+            iblDatosLaborales.TabIndex = 43;
+            iblDatosLaborales.Text = "Datos laborales";
             // 
             // frmTrabajadorRegistro
             // 
@@ -385,29 +385,29 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1430, 848);
-            Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(label13);
+            Controls.Add(iblDatosLaborales);
+            Controls.Add(iblDireccion);
+            Controls.Add(iblDatosTrabajador);
             Controls.Add(btnlimpiar);
-            Controls.Add(btncancelar);
+            Controls.Add(btnCancelar);
             Controls.Add(btnguardar);
             Controls.Add(label12);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCarreraArea);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtCodigoPostal);
+            Controls.Add(txtNumCalle);
+            Controls.Add(txtCalle);
+            Controls.Add(txtColonia);
+            Controls.Add(txtApellidoMaterno);
+            Controls.Add(txtFechaRegistro);
+            Controls.Add(txtApellidoPaterno);
+            Controls.Add(txtCorreo);
+            Controls.Add(txtNombres);
+            Controls.Add(txtTelefono);
+            Controls.Add(txtNumeroControl);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -419,7 +419,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "frmTrabajadorRegistro";
-            Text = "frmformulario de trabajador";
+            Text = "Formulario de Trabajador";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -432,13 +432,13 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtApellidoMaterno;
+        private TextBox txtFechaRegistro;
+        private TextBox txtApellidoPaterno;
+        private TextBox txtCorreo;
+        private TextBox txtNombres;
+        private TextBox txtTelefono;
+        private TextBox txtNumeroControl;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -450,17 +450,17 @@
         private Label label10;
         private Label label9;
         private Label label8;
-        private TextBox textBox11;
-        private TextBox textBox10;
-        private TextBox textBox9;
-        private TextBox textBox8;
+        private TextBox txtCodigoPostal;
+        private TextBox txtNumCalle;
+        private TextBox txtCalle;
+        private TextBox txtColonia;
         private Label label12;
-        private ComboBox comboBox1;
+        private ComboBox cmbCarreraArea;
         private Button btnlimpiar;
-        private Button btncancelar;
+        private Button btnCancelar;
         private Button btnguardar;
-        private Label label13;
-        private Label label14;
-        private Label label15;
+        private Label iblDatosTrabajador;
+        private Label iblDireccion;
+        private Label iblDatosLaborales;
     }
 }
