@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionEjemplares));
             pcb11 = new PictureBox();
-            lblBuscar = new Label();
+            lblBuscarTitulo = new Label();
             txtBuscarTitulo = new TextBox();
-            dgbEjemplares = new DataGridView();
-            btn1 = new Button();
-            btn2 = new Button();
-            btn3 = new Button();
+            dgvEjemplares = new DataGridView();
+            btnNuevoTitulo = new Button();
+            btnEditarEjemplar = new Button();
+            btnDarBajaEjemplar = new Button();
             ((System.ComponentModel.ISupportInitialize)pcb11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgbEjemplares).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEjemplares).BeginInit();
             SuspendLayout();
             // 
             // pcb11
@@ -50,17 +50,17 @@
             pcb11.TabIndex = 2;
             pcb11.TabStop = false;
             // 
-            // lblBuscar
+            // lblBuscarTitulo
             // 
-            lblBuscar.AutoSize = true;
-            lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
-            lblBuscar.Font = new Font("Segoe UI", 10.2F);
-            lblBuscar.ForeColor = SystemColors.ControlText;
-            lblBuscar.Location = new Point(68, 62);
-            lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(136, 23);
-            lblBuscar.TabIndex = 3;
-            lblBuscar.Text = "Buscar por titulo";
+            lblBuscarTitulo.AutoSize = true;
+            lblBuscarTitulo.BackColor = Color.FromArgb(250, 247, 242);
+            lblBuscarTitulo.Font = new Font("Segoe UI", 10.2F);
+            lblBuscarTitulo.ForeColor = SystemColors.ControlText;
+            lblBuscarTitulo.Location = new Point(68, 62);
+            lblBuscarTitulo.Name = "lblBuscarTitulo";
+            lblBuscarTitulo.Size = new Size(136, 23);
+            lblBuscarTitulo.TabIndex = 3;
+            lblBuscarTitulo.Text = "Buscar por titulo";
             // 
             // txtBuscarTitulo
             // 
@@ -70,60 +70,60 @@
             txtBuscarTitulo.Size = new Size(313, 29);
             txtBuscarTitulo.TabIndex = 3;
             // 
-            // dgbEjemplares
+            // dgvEjemplares
             // 
-            dgbEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgbEjemplares.Location = new Point(86, 180);
-            dgbEjemplares.Name = "dgbEjemplares";
-            dgbEjemplares.RowHeadersWidth = 51;
-            dgbEjemplares.Size = new Size(1249, 568);
-            dgbEjemplares.TabIndex = 6;
+            dgvEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEjemplares.Location = new Point(86, 180);
+            dgvEjemplares.Name = "dgvEjemplares";
+            dgvEjemplares.RowHeadersWidth = 51;
+            dgvEjemplares.Size = new Size(1249, 568);
+            dgvEjemplares.TabIndex = 6;
             // 
-            // btn1
+            // btnNuevoTitulo
             // 
-            btn1.BackColor = Color.FromArgb(201, 168, 76);
-            btn1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn1.ForeColor = Color.FromArgb(17, 30, 71);
-            btn1.Image = Properties.Resources.Nuevo_registro;
-            btn1.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1.Location = new Point(633, 72);
-            btn1.Margin = new Padding(3, 2, 3, 2);
-            btn1.Name = "btn1";
-            btn1.Size = new Size(150, 45);
-            btn1.TabIndex = 15;
-            btn1.Text = "Nuevo registro";
-            btn1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn1.UseVisualStyleBackColor = false;
+            btnNuevoTitulo.BackColor = Color.FromArgb(201, 168, 76);
+            btnNuevoTitulo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoTitulo.ForeColor = Color.FromArgb(17, 30, 71);
+            btnNuevoTitulo.Image = Properties.Resources.Nuevo_registro;
+            btnNuevoTitulo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevoTitulo.Location = new Point(633, 72);
+            btnNuevoTitulo.Margin = new Padding(3, 2, 3, 2);
+            btnNuevoTitulo.Name = "btnNuevoTitulo";
+            btnNuevoTitulo.Size = new Size(150, 45);
+            btnNuevoTitulo.TabIndex = 15;
+            btnNuevoTitulo.Text = "Nuevo registro";
+            btnNuevoTitulo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNuevoTitulo.UseVisualStyleBackColor = false;
             // 
-            // btn2
+            // btnEditarEjemplar
             // 
-            btn2.BackColor = Color.FromArgb(107, 122, 153);
-            btn2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn2.ForeColor = Color.FromArgb(250, 247, 242);
-            btn2.Image = (Image)resources.GetObject("btn2.Image");
-            btn2.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2.Location = new Point(823, 72);
-            btn2.Margin = new Padding(3, 2, 3, 2);
-            btn2.Name = "btn2";
-            btn2.Size = new Size(150, 45);
-            btn2.TabIndex = 16;
-            btn2.Text = "Editar";
-            btn2.UseVisualStyleBackColor = false;
+            btnEditarEjemplar.BackColor = Color.FromArgb(107, 122, 153);
+            btnEditarEjemplar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditarEjemplar.ForeColor = Color.FromArgb(250, 247, 242);
+            btnEditarEjemplar.Image = (Image)resources.GetObject("btnEditarEjemplar.Image");
+            btnEditarEjemplar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditarEjemplar.Location = new Point(823, 72);
+            btnEditarEjemplar.Margin = new Padding(3, 2, 3, 2);
+            btnEditarEjemplar.Name = "btnEditarEjemplar";
+            btnEditarEjemplar.Size = new Size(150, 45);
+            btnEditarEjemplar.TabIndex = 16;
+            btnEditarEjemplar.Text = "Editar";
+            btnEditarEjemplar.UseVisualStyleBackColor = false;
             // 
-            // btn3
+            // btnDarBajaEjemplar
             // 
-            btn3.BackColor = Color.FromArgb(242, 196, 196);
-            btn3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn3.ForeColor = Color.FromArgb(122, 32, 32);
-            btn3.Image = (Image)resources.GetObject("btn3.Image");
-            btn3.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3.Location = new Point(1005, 72);
-            btn3.Margin = new Padding(3, 2, 3, 2);
-            btn3.Name = "btn3";
-            btn3.Size = new Size(150, 45);
-            btn3.TabIndex = 17;
-            btn3.Text = "Dar de baja";
-            btn3.UseVisualStyleBackColor = false;
+            btnDarBajaEjemplar.BackColor = Color.FromArgb(242, 196, 196);
+            btnDarBajaEjemplar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDarBajaEjemplar.ForeColor = Color.FromArgb(122, 32, 32);
+            btnDarBajaEjemplar.Image = (Image)resources.GetObject("btnDarBajaEjemplar.Image");
+            btnDarBajaEjemplar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDarBajaEjemplar.Location = new Point(1005, 72);
+            btnDarBajaEjemplar.Margin = new Padding(3, 2, 3, 2);
+            btnDarBajaEjemplar.Name = "btnDarBajaEjemplar";
+            btnDarBajaEjemplar.Size = new Size(150, 45);
+            btnDarBajaEjemplar.TabIndex = 17;
+            btnDarBajaEjemplar.Text = "Dar de baja";
+            btnDarBajaEjemplar.UseVisualStyleBackColor = false;
             // 
             // frmGestionEjemplares
             // 
@@ -131,12 +131,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1430, 848);
-            Controls.Add(btn3);
-            Controls.Add(btn2);
-            Controls.Add(btn1);
-            Controls.Add(dgbEjemplares);
+            Controls.Add(btnDarBajaEjemplar);
+            Controls.Add(btnEditarEjemplar);
+            Controls.Add(btnNuevoTitulo);
+            Controls.Add(dgvEjemplares);
             Controls.Add(txtBuscarTitulo);
-            Controls.Add(lblBuscar);
+            Controls.Add(lblBuscarTitulo);
             Controls.Add(pcb11);
             Font = new Font("Segoe UI", 12F);
             ForeColor = SystemColors.ControlText;
@@ -144,7 +144,7 @@
             Name = "frmGestionEjemplares";
             Text = "Gestion de ejemplares";
             ((System.ComponentModel.ISupportInitialize)pcb11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgbEjemplares).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEjemplares).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,10 +152,10 @@
         #endregion
         private PictureBox pcb11;
         private TextBox txtBuscarTitulo;
-        private Label lblBuscar;
-        private DataGridView dgbEjemplares;
-        private Button btn1;
-        private Button btn2;
-        private Button btn3;
+        private Label lblBuscarTitulo;
+        private DataGridView dgvEjemplares;
+        private Button btnNuevoTitulo;
+        private Button btnEditarEjemplar;
+        private Button btnDarBajaEjemplar;
     }
 }

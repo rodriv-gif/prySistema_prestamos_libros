@@ -30,9 +30,7 @@
         {
             pnlMenu = new Panel();
             btnCerrarSesion = new Button();
-            lblRegistros = new Label();
             btnEjemplar = new Button();
-            lblOperaciones = new Label();
             btnLibro = new Button();
             pcbLogo = new PictureBox();
             btnUsuario = new Button();
@@ -48,6 +46,8 @@
             pnlContenido = new Panel();
             panel4 = new Panel();
             lblBienvenida = new Label();
+            lblOperaciones = new Label();
+            label1 = new Label();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
@@ -58,10 +58,10 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(17, 30, 71);
-            pnlMenu.Controls.Add(btnCerrarSesion);
-            pnlMenu.Controls.Add(lblRegistros);
-            pnlMenu.Controls.Add(btnEjemplar);
+            pnlMenu.Controls.Add(label1);
             pnlMenu.Controls.Add(lblOperaciones);
+            pnlMenu.Controls.Add(btnCerrarSesion);
+            pnlMenu.Controls.Add(btnEjemplar);
             pnlMenu.Controls.Add(btnLibro);
             pnlMenu.Controls.Add(pcbLogo);
             pnlMenu.Controls.Add(btnUsuario);
@@ -87,17 +87,6 @@
             btnCerrarSesion.Text = "Cerrar sesión";
             btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
-            // lblRegistros
-            // 
-            lblRegistros.AutoSize = true;
-            lblRegistros.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegistros.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRegistros.Location = new Point(163, 518);
-            lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(106, 28);
-            lblRegistros.TabIndex = 10;
-            lblRegistros.Text = "Registros";
-            // 
             // btnEjemplar
             // 
             btnEjemplar.BackColor = Color.FromArgb(201, 168, 76);
@@ -109,17 +98,6 @@
             btnEjemplar.TabIndex = 8;
             btnEjemplar.Text = "Ejemplar";
             btnEjemplar.UseVisualStyleBackColor = false;
-            // 
-            // lblOperaciones
-            // 
-            lblOperaciones.AutoSize = true;
-            lblOperaciones.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblOperaciones.ForeColor = Color.FromArgb(201, 168, 76);
-            lblOperaciones.Location = new Point(144, 332);
-            lblOperaciones.Name = "lblOperaciones";
-            lblOperaciones.Size = new Size(134, 28);
-            lblOperaciones.TabIndex = 9;
-            lblOperaciones.Text = "Operaciones";
             // 
             // btnLibro
             // 
@@ -283,6 +261,28 @@
             lblBienvenida.TabIndex = 3;
             lblBienvenida.Text = "Bienvenido Aministrador / Bibliotecario";
             // 
+            // lblOperaciones
+            // 
+            lblOperaciones.AutoSize = true;
+            lblOperaciones.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOperaciones.ForeColor = Color.FromArgb(201, 168, 76);
+            lblOperaciones.Location = new Point(143, 332);
+            lblOperaciones.Name = "lblOperaciones";
+            lblOperaciones.Size = new Size(148, 28);
+            lblOperaciones.TabIndex = 3;
+            lblOperaciones.Text = "OPERACIONES";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(201, 168, 76);
+            label1.Location = new Point(143, 518);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 28);
+            label1.TabIndex = 3;
+            label1.Text = "REGISTROS";
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -320,12 +320,12 @@
         private Button btnUsuario;
         private Button btnLibro;
         private Button btnEjemplar;
-        private Label lblOperaciones;
         private Label lblRol;
-        private Label lblRegistros;
         private Button btnCerrarSesion;
         private Panel pnlContenido;
         private Panel panel4;
         private Label lblBienvenida;
+        private Label lblOperaciones;
+        private Label label1;
     }
 }

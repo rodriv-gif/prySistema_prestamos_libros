@@ -45,7 +45,7 @@
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(224, 28);
-            txtUsuario.TabIndex = 0;
+            txtUsuario.TabIndex = 1;
             // 
             // txtContraseña
             // 
@@ -108,7 +108,7 @@
             btnSalir.Location = new Point(528, 498);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(150, 45);
-            btnSalir.TabIndex = 6;
+            btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             Name = "frmLogin";
-            Text = "Form1";
+            Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();

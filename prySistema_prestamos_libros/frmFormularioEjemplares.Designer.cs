@@ -30,10 +30,10 @@
         {
             pcb1 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            lblSeleccionLibro = new Label();
+            lblCantidad = new Label();
+            lblFechaAdquisicion = new Label();
+            lblLocalizacion = new Label();
             label7 = new Label();
             cmbLibro = new ComboBox();
             txtLocalizacion = new TextBox();
@@ -69,53 +69,53 @@
             label1.TabIndex = 3;
             label1.Text = "Datos del ejemplar";
             // 
-            // label2
+            // lblSeleccionLibro
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(250, 247, 242);
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(98, 234);
-            label2.Name = "label2";
-            label2.Size = new Size(158, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Libro al que pertenece";
+            lblSeleccionLibro.AutoSize = true;
+            lblSeleccionLibro.BackColor = Color.FromArgb(250, 247, 242);
+            lblSeleccionLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSeleccionLibro.ForeColor = Color.Black;
+            lblSeleccionLibro.Location = new Point(98, 234);
+            lblSeleccionLibro.Name = "lblSeleccionLibro";
+            lblSeleccionLibro.Size = new Size(158, 20);
+            lblSeleccionLibro.TabIndex = 4;
+            lblSeleccionLibro.Text = "Libro al que pertenece";
             // 
-            // label3
+            // lblCantidad
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(525, 332);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Cantidad";
+            lblCantidad.AutoSize = true;
+            lblCantidad.BackColor = Color.FromArgb(250, 247, 242);
+            lblCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCantidad.ForeColor = Color.Black;
+            lblCantidad.Location = new Point(525, 332);
+            lblCantidad.Name = "lblCantidad";
+            lblCantidad.Size = new Size(69, 20);
+            lblCantidad.TabIndex = 5;
+            lblCantidad.Text = "Cantidad";
             // 
-            // label4
+            // lblFechaAdquisicion
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(98, 332);
-            label4.Name = "label4";
-            label4.Size = new Size(148, 20);
-            label4.TabIndex = 6;
-            label4.Text = "Fecha de adquisición";
+            lblFechaAdquisicion.AutoSize = true;
+            lblFechaAdquisicion.BackColor = Color.FromArgb(250, 247, 242);
+            lblFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFechaAdquisicion.ForeColor = Color.Black;
+            lblFechaAdquisicion.Location = new Point(98, 332);
+            lblFechaAdquisicion.Name = "lblFechaAdquisicion";
+            lblFechaAdquisicion.Size = new Size(148, 20);
+            lblFechaAdquisicion.TabIndex = 6;
+            lblFechaAdquisicion.Text = "Fecha de adquisición";
             // 
-            // label5
+            // lblLocalizacion
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(525, 234);
-            label5.Name = "label5";
-            label5.Size = new Size(91, 20);
-            label5.TabIndex = 7;
-            label5.Text = "Localización";
+            lblLocalizacion.AutoSize = true;
+            lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
+            lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLocalizacion.ForeColor = Color.Black;
+            lblLocalizacion.Location = new Point(525, 234);
+            lblLocalizacion.Name = "lblLocalizacion";
+            lblLocalizacion.Size = new Size(91, 20);
+            lblLocalizacion.TabIndex = 7;
+            lblLocalizacion.Text = "Localización";
             // 
             // label7
             // 
@@ -159,7 +159,7 @@
             // 
             // nudCantidad
             // 
-            nudCantidad.Location = new Point(526, 364);
+            nudCantidad.Location = new Point(525, 363);
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(224, 34);
             nudCantidad.TabIndex = 14;
@@ -231,10 +231,10 @@
             Controls.Add(txtLocalizacion);
             Controls.Add(cmbLibro);
             Controls.Add(label7);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lblLocalizacion);
+            Controls.Add(lblFechaAdquisicion);
+            Controls.Add(lblCantidad);
+            Controls.Add(lblSeleccionLibro);
             Controls.Add(label1);
             Controls.Add(pcb1);
             Font = new Font("Segoe UI", 12F);
@@ -251,10 +251,10 @@
         #endregion
         private PictureBox pcb1;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label lblSeleccionLibro;
+        private Label lblCantidad;
+        private Label lblFechaAdquisicion;
+        private Label lblLocalizacion;
         private Label label7;
         private ComboBox cmbLibro;
         private TextBox txtLocalizacion;
