@@ -86,9 +86,9 @@
             btnNuevoRegistro.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevoRegistro.Image = Properties.Resources.Nuevo_registro;
             btnNuevoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoRegistro.Location = new Point(723, 96);
+            btnNuevoRegistro.Location = new Point(698, 96);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
-            btnNuevoRegistro.Size = new Size(150, 45);
+            btnNuevoRegistro.Size = new Size(171, 60);
             btnNuevoRegistro.TabIndex = 14;
             btnNuevoRegistro.Text = "Nuevo registro";
             btnNuevoRegistro.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -103,7 +103,7 @@
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditar.Location = new Point(941, 96);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 45);
+            btnEditar.Size = new Size(150, 60);
             btnEditar.TabIndex = 15;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -117,7 +117,7 @@
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
             btnDarBaja.Location = new Point(1149, 96);
             btnDarBaja.Name = "btnDarBaja";
-            btnDarBaja.Size = new Size(150, 45);
+            btnDarBaja.Size = new Size(150, 60);
             btnDarBaja.TabIndex = 16;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.UseVisualStyleBackColor = false;

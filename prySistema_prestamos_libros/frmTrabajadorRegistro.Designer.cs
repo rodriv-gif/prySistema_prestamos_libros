@@ -38,22 +38,22 @@
             txtNombres = new TextBox();
             txtTelefono = new TextBox();
             txtNumeroControl = new TextBox();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
+            Amaterno = new Label();
+            lblfecharegistro = new Label();
+            lblApaterno = new Label();
+            lblcorreo = new Label();
+            lblNombre = new Label();
+            lblTelefono = new Label();
+            lblnumcontrol = new Label();
+            lblcodigopostal = new Label();
+            lblnumcalle = new Label();
+            lblcalle = new Label();
+            lblcolonia = new Label();
             txtCodigoPostal = new TextBox();
             txtNumCalle = new TextBox();
             txtCalle = new TextBox();
             txtColonia = new TextBox();
-            label12 = new Label();
+            lblArea = new Label();
             cmbCarreraArea = new ComboBox();
             btnlimpiar = new Button();
             btnCancelar = new Button();
@@ -99,199 +99,210 @@
             // txtApellidoMaterno
             // 
             txtApellidoMaterno.Location = new Point(1087, 120);
+            txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(200, 27);
+            txtApellidoMaterno.Size = new Size(236, 30);
             txtApellidoMaterno.TabIndex = 27;
             // 
             // txtFechaRegistro
             // 
             txtFechaRegistro.Location = new Point(751, 201);
+            txtFechaRegistro.Multiline = true;
             txtFechaRegistro.Name = "txtFechaRegistro";
-            txtFechaRegistro.Size = new Size(160, 27);
+            txtFechaRegistro.Size = new Size(236, 30);
             txtFechaRegistro.TabIndex = 26;
             // 
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.Location = new Point(751, 120);
+            txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(200, 27);
+            txtApellidoPaterno.Size = new Size(236, 30);
             txtApellidoPaterno.TabIndex = 25;
             // 
             // txtCorreo
             // 
             txtCorreo.Location = new Point(430, 201);
+            txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(250, 27);
+            txtCorreo.Size = new Size(236, 30);
             txtCorreo.TabIndex = 24;
             // 
             // txtNombres
             // 
             txtNombres.Location = new Point(430, 120);
+            txtNombres.Multiline = true;
             txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(200, 27);
+            txtNombres.Size = new Size(236, 30);
             txtNombres.TabIndex = 23;
             // 
             // txtTelefono
             // 
             txtTelefono.Location = new Point(90, 201);
+            txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(180, 27);
+            txtTelefono.Size = new Size(236, 30);
             txtTelefono.TabIndex = 22;
             // 
             // txtNumeroControl
             // 
             txtNumeroControl.Location = new Point(90, 120);
+            txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
-            txtNumeroControl.Size = new Size(180, 27);
+            txtNumeroControl.Size = new Size(236, 30);
             txtNumeroControl.TabIndex = 21;
             // 
-            // label7
+            // Amaterno
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(250, 247, 242);
-            label7.Location = new Point(1087, 97);
-            label7.Name = "label7";
-            label7.Size = new Size(126, 20);
-            label7.TabIndex = 20;
-            label7.Text = "Apellido materno";
+            Amaterno.AutoSize = true;
+            Amaterno.BackColor = Color.FromArgb(250, 247, 242);
+            Amaterno.Location = new Point(1087, 97);
+            Amaterno.Name = "Amaterno";
+            Amaterno.Size = new Size(126, 20);
+            Amaterno.TabIndex = 20;
+            Amaterno.Text = "Apellido materno";
             // 
-            // label6
+            // lblfecharegistro
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(250, 247, 242);
-            label6.Location = new Point(751, 178);
-            label6.Name = "label6";
-            label6.Size = new Size(123, 20);
-            label6.TabIndex = 19;
-            label6.Text = "Fecha de registro";
+            lblfecharegistro.AutoSize = true;
+            lblfecharegistro.BackColor = Color.FromArgb(250, 247, 242);
+            lblfecharegistro.Location = new Point(751, 178);
+            lblfecharegistro.Name = "lblfecharegistro";
+            lblfecharegistro.Size = new Size(123, 20);
+            lblfecharegistro.TabIndex = 19;
+            lblfecharegistro.Text = "Fecha de registro";
             // 
-            // label5
+            // lblApaterno
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Location = new Point(780, 97);
-            label5.Name = "label5";
-            label5.Size = new Size(122, 20);
-            label5.TabIndex = 18;
-            label5.Text = "Apellido paterno";
+            lblApaterno.AutoSize = true;
+            lblApaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApaterno.Location = new Point(755, 97);
+            lblApaterno.Name = "lblApaterno";
+            lblApaterno.Size = new Size(122, 20);
+            lblApaterno.TabIndex = 18;
+            lblApaterno.Text = "Apellido paterno";
             // 
-            // label4
+            // lblcorreo
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Location = new Point(430, 178);
-            label4.Name = "label4";
-            label4.Size = new Size(132, 20);
-            label4.TabIndex = 17;
-            label4.Text = "Correo electronico";
+            lblcorreo.AutoSize = true;
+            lblcorreo.BackColor = Color.FromArgb(250, 247, 242);
+            lblcorreo.Location = new Point(430, 178);
+            lblcorreo.Name = "lblcorreo";
+            lblcorreo.Size = new Size(132, 20);
+            lblcorreo.TabIndex = 17;
+            lblcorreo.Text = "Correo electronico";
             // 
-            // label3
+            // lblNombre
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Location = new Point(430, 97);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 20);
-            label3.TabIndex = 16;
-            label3.Text = "Nombre(s)";
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombre.Location = new Point(430, 97);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(80, 20);
+            lblNombre.TabIndex = 16;
+            lblNombre.Text = "Nombre(s)";
             // 
-            // label2
+            // lblTelefono
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(250, 247, 242);
-            label2.Location = new Point(90, 178);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 20);
-            label2.TabIndex = 15;
-            label2.Text = "Telefono";
+            lblTelefono.AutoSize = true;
+            lblTelefono.BackColor = Color.FromArgb(250, 247, 242);
+            lblTelefono.Location = new Point(90, 178);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(67, 20);
+            lblTelefono.TabIndex = 15;
+            lblTelefono.Text = "Telefono";
             // 
-            // label1
+            // lblnumcontrol
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(250, 247, 242);
-            label1.Location = new Point(89, 97);
-            label1.Name = "label1";
-            label1.Size = new Size(135, 20);
-            label1.TabIndex = 14;
-            label1.Text = "Numero de control";
+            lblnumcontrol.AutoSize = true;
+            lblnumcontrol.BackColor = Color.FromArgb(250, 247, 242);
+            lblnumcontrol.Location = new Point(89, 97);
+            lblnumcontrol.Name = "lblnumcontrol";
+            lblnumcontrol.Size = new Size(135, 20);
+            lblnumcontrol.TabIndex = 14;
+            lblnumcontrol.Text = "Numero de control";
             // 
-            // label11
+            // lblcodigopostal
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.FromArgb(250, 247, 242);
-            label11.Location = new Point(1030, 378);
-            label11.Name = "label11";
-            label11.Size = new Size(103, 20);
-            label11.TabIndex = 35;
-            label11.Text = "Codigo postal";
+            lblcodigopostal.AutoSize = true;
+            lblcodigopostal.BackColor = Color.FromArgb(250, 247, 242);
+            lblcodigopostal.Location = new Point(1087, 373);
+            lblcodigopostal.Name = "lblcodigopostal";
+            lblcodigopostal.Size = new Size(103, 20);
+            lblcodigopostal.TabIndex = 35;
+            lblcodigopostal.Text = "Codigo postal";
             // 
-            // label10
+            // lblnumcalle
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.FromArgb(250, 247, 242);
-            label10.Location = new Point(713, 378);
-            label10.Name = "label10";
-            label10.Size = new Size(119, 20);
-            label10.TabIndex = 34;
-            label10.Text = "Numero de calle";
+            lblnumcalle.AutoSize = true;
+            lblnumcalle.BackColor = Color.FromArgb(250, 247, 242);
+            lblnumcalle.Location = new Point(755, 378);
+            lblnumcalle.Name = "lblnumcalle";
+            lblnumcalle.Size = new Size(119, 20);
+            lblnumcalle.TabIndex = 34;
+            lblnumcalle.Text = "Numero de calle";
             // 
-            // label9
+            // lblcalle
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(250, 247, 242);
-            label9.Location = new Point(378, 378);
-            label9.Name = "label9";
-            label9.Size = new Size(42, 20);
-            label9.TabIndex = 33;
-            label9.Text = "Calle";
+            lblcalle.AutoSize = true;
+            lblcalle.BackColor = Color.FromArgb(250, 247, 242);
+            lblcalle.Location = new Point(430, 373);
+            lblcalle.Name = "lblcalle";
+            lblcalle.Size = new Size(42, 20);
+            lblcalle.TabIndex = 33;
+            lblcalle.Text = "Calle";
             // 
-            // label8
+            // lblcolonia
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.FromArgb(250, 247, 242);
-            label8.Location = new Point(79, 373);
-            label8.Name = "label8";
-            label8.Size = new Size(60, 20);
-            label8.TabIndex = 32;
-            label8.Text = "Colonia";
+            lblcolonia.AutoSize = true;
+            lblcolonia.BackColor = Color.FromArgb(250, 247, 242);
+            lblcolonia.Location = new Point(97, 373);
+            lblcolonia.Name = "lblcolonia";
+            lblcolonia.Size = new Size(60, 20);
+            lblcolonia.TabIndex = 32;
+            lblcolonia.Text = "Colonia";
             // 
             // txtCodigoPostal
             // 
-            txtCodigoPostal.Location = new Point(1030, 406);
+            txtCodigoPostal.Location = new Point(1087, 396);
+            txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
-            txtCodigoPostal.Size = new Size(100, 27);
+            txtCodigoPostal.Size = new Size(236, 30);
             txtCodigoPostal.TabIndex = 31;
             // 
             // txtNumCalle
             // 
-            txtNumCalle.Location = new Point(713, 406);
+            txtNumCalle.Location = new Point(751, 401);
+            txtNumCalle.Multiline = true;
             txtNumCalle.Name = "txtNumCalle";
-            txtNumCalle.Size = new Size(120, 27);
+            txtNumCalle.Size = new Size(236, 30);
             txtNumCalle.TabIndex = 30;
             // 
             // txtCalle
             // 
-            txtCalle.Location = new Point(378, 406);
+            txtCalle.Location = new Point(430, 396);
+            txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
-            txtCalle.Size = new Size(200, 27);
+            txtCalle.Size = new Size(236, 30);
             txtCalle.TabIndex = 29;
             // 
             // txtColonia
             // 
-            txtColonia.Location = new Point(79, 406);
+            txtColonia.Location = new Point(90, 396);
+            txtColonia.Multiline = true;
             txtColonia.Name = "txtColonia";
-            txtColonia.Size = new Size(180, 27);
+            txtColonia.Size = new Size(236, 30);
             txtColonia.TabIndex = 28;
             // 
-            // label12
+            // lblArea
             // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.FromArgb(250, 247, 242);
-            label12.Location = new Point(111, 562);
-            label12.Name = "label12";
-            label12.Size = new Size(94, 20);
-            label12.TabIndex = 37;
-            label12.Text = "Carrera/Área";
+            lblArea.AutoSize = true;
+            lblArea.BackColor = Color.FromArgb(250, 247, 242);
+            lblArea.Location = new Point(111, 562);
+            lblArea.Name = "lblArea";
+            lblArea.Size = new Size(94, 20);
+            lblArea.TabIndex = 37;
+            lblArea.Text = "Carrera/Área";
             // 
             // cmbCarreraArea
             // 
@@ -391,12 +402,12 @@
             Controls.Add(btnlimpiar);
             Controls.Add(btnCancelar);
             Controls.Add(btnguardar);
-            Controls.Add(label12);
+            Controls.Add(lblArea);
             Controls.Add(cmbCarreraArea);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
+            Controls.Add(lblcodigopostal);
+            Controls.Add(lblnumcalle);
+            Controls.Add(lblcalle);
+            Controls.Add(lblcolonia);
             Controls.Add(txtCodigoPostal);
             Controls.Add(txtNumCalle);
             Controls.Add(txtCalle);
@@ -408,13 +419,13 @@
             Controls.Add(txtNombres);
             Controls.Add(txtTelefono);
             Controls.Add(txtNumeroControl);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(Amaterno);
+            Controls.Add(lblfecharegistro);
+            Controls.Add(lblApaterno);
+            Controls.Add(lblcorreo);
+            Controls.Add(lblNombre);
+            Controls.Add(lblTelefono);
+            Controls.Add(lblnumcontrol);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -439,22 +450,22 @@
         private TextBox txtNombres;
         private TextBox txtTelefono;
         private TextBox txtNumeroControl;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
+        private Label Amaterno;
+        private Label lblfecharegistro;
+        private Label lblApaterno;
+        private Label lblcorreo;
+        private Label lblNombre;
+        private Label lblTelefono;
+        private Label lblnumcontrol;
+        private Label lblcodigopostal;
+        private Label lblnumcalle;
+        private Label lblcalle;
+        private Label lblcolonia;
         private TextBox txtCodigoPostal;
         private TextBox txtNumCalle;
         private TextBox txtCalle;
         private TextBox txtColonia;
-        private Label label12;
+        private Label lblArea;
         private ComboBox cmbCarreraArea;
         private Button btnlimpiar;
         private Button btnCancelar;
