@@ -36,15 +36,15 @@
             txtTitulo = new TextBox();
             txtEditorial = new TextBox();
             txtISBN = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
+            lblIdioma = new Label();
+            numPaginas = new Label();
+            lblCategoria = new Label();
+            lblTitulo = new Label();
+            lblEditorial = new Label();
+            lblISBN = new Label();
+            lblAmaterno = new Label();
+            lblApaterno = new Label();
+            lblNombre = new Label();
             txtApMaternoAutor = new TextBox();
             txtApPaternoAutor = new TextBox();
             txtNombreAutor = new TextBox();
@@ -79,7 +79,7 @@
             // 
             // txtIdioma
             // 
-            txtIdioma.Location = new Point(871, 262);
+            txtIdioma.Location = new Point(871, 250);
             txtIdioma.Multiline = true;
             txtIdioma.Name = "txtIdioma";
             txtIdioma.Size = new Size(236, 30);
@@ -95,7 +95,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(507, 262);
+            txtCategoria.Location = new Point(507, 250);
             txtCategoria.Multiline = true;
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(236, 30);
@@ -111,7 +111,7 @@
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(96, 262);
+            txtEditorial.Location = new Point(96, 250);
             txtEditorial.Multiline = true;
             txtEditorial.Name = "txtEditorial";
             txtEditorial.Size = new Size(236, 30);
@@ -125,95 +125,95 @@
             txtISBN.Size = new Size(236, 30);
             txtISBN.TabIndex = 18;
             // 
-            // label6
+            // lblIdioma
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(250, 247, 242);
-            label6.Location = new Point(871, 227);
-            label6.Name = "label6";
-            label6.Size = new Size(56, 20);
-            label6.TabIndex = 17;
-            label6.Text = "Idioma";
+            lblIdioma.AutoSize = true;
+            lblIdioma.BackColor = Color.FromArgb(250, 247, 242);
+            lblIdioma.Location = new Point(871, 227);
+            lblIdioma.Name = "lblIdioma";
+            lblIdioma.Size = new Size(56, 20);
+            lblIdioma.TabIndex = 17;
+            lblIdioma.Text = "Idioma";
             // 
-            // label5
+            // numPaginas
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Location = new Point(871, 135);
-            label5.Name = "label5";
-            label5.Size = new Size(140, 20);
-            label5.TabIndex = 16;
-            label5.Text = "Numero de paginas";
+            numPaginas.AutoSize = true;
+            numPaginas.BackColor = Color.FromArgb(250, 247, 242);
+            numPaginas.Location = new Point(871, 135);
+            numPaginas.Name = "numPaginas";
+            numPaginas.Size = new Size(140, 20);
+            numPaginas.TabIndex = 16;
+            numPaginas.Text = "Numero de paginas";
             // 
-            // label4
+            // lblCategoria
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Location = new Point(518, 227);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 20);
-            label4.TabIndex = 15;
-            label4.Text = "Categoria";
+            lblCategoria.AutoSize = true;
+            lblCategoria.BackColor = Color.FromArgb(250, 247, 242);
+            lblCategoria.Location = new Point(518, 227);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(74, 20);
+            lblCategoria.TabIndex = 15;
+            lblCategoria.Text = "Categoria";
             // 
-            // label3
+            // lblTitulo
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Location = new Point(507, 138);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 20);
-            label3.TabIndex = 14;
-            label3.Text = "Titulo del libro";
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.FromArgb(250, 247, 242);
+            lblTitulo.Location = new Point(507, 138);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(107, 20);
+            lblTitulo.TabIndex = 14;
+            lblTitulo.Text = "Titulo del libro";
             // 
-            // label2
+            // lblEditorial
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(250, 247, 242);
-            label2.Location = new Point(96, 227);
-            label2.Name = "label2";
-            label2.Size = new Size(65, 20);
-            label2.TabIndex = 13;
-            label2.Text = "Editorial";
+            lblEditorial.AutoSize = true;
+            lblEditorial.BackColor = Color.FromArgb(250, 247, 242);
+            lblEditorial.Location = new Point(96, 227);
+            lblEditorial.Name = "lblEditorial";
+            lblEditorial.Size = new Size(65, 20);
+            lblEditorial.TabIndex = 13;
+            lblEditorial.Text = "Editorial";
             // 
-            // label1
+            // lblISBN
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(250, 247, 242);
-            label1.Location = new Point(96, 135);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 20);
-            label1.TabIndex = 12;
-            label1.Text = "ISBN";
+            lblISBN.AutoSize = true;
+            lblISBN.BackColor = Color.FromArgb(250, 247, 242);
+            lblISBN.Location = new Point(96, 135);
+            lblISBN.Name = "lblISBN";
+            lblISBN.Size = new Size(41, 20);
+            lblISBN.TabIndex = 12;
+            lblISBN.Text = "ISBN";
             // 
-            // label9
+            // lblAmaterno
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(250, 247, 242);
-            label9.Location = new Point(871, 426);
-            label9.Name = "label9";
-            label9.Size = new Size(126, 20);
-            label9.TabIndex = 29;
-            label9.Text = "Apellido materno";
+            lblAmaterno.AutoSize = true;
+            lblAmaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblAmaterno.Location = new Point(871, 426);
+            lblAmaterno.Name = "lblAmaterno";
+            lblAmaterno.Size = new Size(126, 20);
+            lblAmaterno.TabIndex = 29;
+            lblAmaterno.Text = "Apellido materno";
             // 
-            // label8
+            // lblApaterno
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.FromArgb(250, 247, 242);
-            label8.Location = new Point(492, 426);
-            label8.Name = "label8";
-            label8.Size = new Size(122, 20);
-            label8.TabIndex = 28;
-            label8.Text = "Apellido paterno";
+            lblApaterno.AutoSize = true;
+            lblApaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApaterno.Location = new Point(492, 426);
+            lblApaterno.Name = "lblApaterno";
+            lblApaterno.Size = new Size(122, 20);
+            lblApaterno.TabIndex = 28;
+            lblApaterno.Text = "Apellido paterno";
             // 
-            // label7
+            // lblNombre
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(250, 247, 242);
-            label7.Location = new Point(96, 426);
-            label7.Name = "label7";
-            label7.Size = new Size(80, 20);
-            label7.TabIndex = 27;
-            label7.Text = "Nombre(s)";
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombre.Location = new Point(96, 426);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(80, 20);
+            lblNombre.TabIndex = 27;
+            lblNombre.Text = "Nombre(s)";
             // 
             // txtApMaternoAutor
             // 
@@ -315,9 +315,9 @@
             Controls.Add(btnguardar);
             Controls.Add(btncancelar);
             Controls.Add(btnlimpiar);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
+            Controls.Add(lblAmaterno);
+            Controls.Add(lblApaterno);
+            Controls.Add(lblNombre);
             Controls.Add(txtApMaternoAutor);
             Controls.Add(txtApPaternoAutor);
             Controls.Add(txtNombreAutor);
@@ -327,12 +327,12 @@
             Controls.Add(txtTitulo);
             Controls.Add(txtEditorial);
             Controls.Add(txtISBN);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblIdioma);
+            Controls.Add(numPaginas);
+            Controls.Add(lblCategoria);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblEditorial);
+            Controls.Add(lblISBN);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "frmFormularioLibros";
@@ -354,15 +354,15 @@
         private TextBox txtTitulo;
         private TextBox txtEditorial;
         private TextBox txtISBN;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label9;
-        private Label label8;
-        private Label label7;
+        private Label lblIdioma;
+        private Label numPaginas;
+        private Label lblCategoria;
+        private Label lblTitulo;
+        private Label lblEditorial;
+        private Label lblISBN;
+        private Label lblAmaterno;
+        private Label lblApaterno;
+        private Label lblNombre;
         private TextBox txtApMaternoAutor;
         private TextBox txtApPaternoAutor;
         private TextBox txtNombreAutor;
