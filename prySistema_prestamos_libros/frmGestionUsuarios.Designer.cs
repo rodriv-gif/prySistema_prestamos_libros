@@ -46,7 +46,7 @@
             pictureBox1.Location = new Point(29, 21);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1300, 717);
+            pictureBox1.Size = new Size(1337, 717);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -66,18 +66,19 @@
             txtBuscarUsuario.BackColor = Color.White;
             txtBuscarUsuario.Location = new Point(68, 82);
             txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
+            txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
-            txtBuscarUsuario.Size = new Size(242, 23);
+            txtBuscarUsuario.Size = new Size(220, 28);
             txtBuscarUsuario.TabIndex = 2;
             // 
             // btnNuevoRegistroUsuario
             // 
             btnNuevoRegistroUsuario.BackColor = Color.FromArgb(201, 168, 76);
-            btnNuevoRegistroUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnNuevoRegistroUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             btnNuevoRegistroUsuario.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevoRegistroUsuario.Image = (Image)resources.GetObject("btnNuevoRegistroUsuario.Image");
             btnNuevoRegistroUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoRegistroUsuario.Location = new Point(623, 68);
+            btnNuevoRegistroUsuario.Location = new Point(703, 70);
             btnNuevoRegistroUsuario.Margin = new Padding(3, 2, 3, 2);
             btnNuevoRegistroUsuario.Name = "btnNuevoRegistroUsuario";
             btnNuevoRegistroUsuario.Size = new Size(150, 45);
@@ -89,10 +90,11 @@
             // btnEditarUsuario
             // 
             btnEditarUsuario.BackColor = Color.FromArgb(107, 122, 153);
-            btnEditarUsuario.ForeColor = Color.White;
+            btnEditarUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnEditarUsuario.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
             btnEditarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditarUsuario.Location = new Point(845, 68);
+            btnEditarUsuario.Location = new Point(898, 70);
             btnEditarUsuario.Margin = new Padding(3, 2, 3, 2);
             btnEditarUsuario.Name = "btnEditarUsuario";
             btnEditarUsuario.Size = new Size(150, 45);
@@ -103,9 +105,11 @@
             // btnDarBajaUsuario
             // 
             btnDarBajaUsuario.BackColor = Color.FromArgb(242, 196, 196);
+            btnDarBajaUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnDarBajaUsuario.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBajaUsuario.Image = (Image)resources.GetObject("btnDarBajaUsuario.Image");
             btnDarBajaUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBajaUsuario.Location = new Point(1039, 68);
+            btnDarBajaUsuario.Location = new Point(1095, 70);
             btnDarBajaUsuario.Margin = new Padding(3, 2, 3, 2);
             btnDarBajaUsuario.Name = "btnDarBajaUsuario";
             btnDarBajaUsuario.Size = new Size(150, 45);
@@ -120,13 +124,14 @@
             dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.RowHeadersWidth = 51;
-            dgvUsuarios.Size = new Size(1249, 568);
+            dgvUsuarios.Size = new Size(1299, 568);
             dgvUsuarios.TabIndex = 6;
             // 
             // frmGestionUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1370, 749);
             Controls.Add(dgvUsuarios);
             Controls.Add(btnDarBajaUsuario);

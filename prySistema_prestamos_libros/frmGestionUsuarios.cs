@@ -13,6 +13,7 @@ namespace prySistema_prestamos_libros
         public frmGestionUsuarios()
         {
             InitializeComponent();
+            
         }
     }
 }
