@@ -99,50 +99,57 @@
             // txtApellidoMaterno
             // 
             txtApellidoMaterno.Location = new Point(1087, 120);
+            txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(200, 27);
+            txtApellidoMaterno.Size = new Size(236, 30);
             txtApellidoMaterno.TabIndex = 27;
             // 
             // txtFechaRegistro
             // 
             txtFechaRegistro.Location = new Point(751, 201);
+            txtFechaRegistro.Multiline = true;
             txtFechaRegistro.Name = "txtFechaRegistro";
-            txtFechaRegistro.Size = new Size(160, 27);
+            txtFechaRegistro.Size = new Size(236, 30);
             txtFechaRegistro.TabIndex = 26;
             // 
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.Location = new Point(751, 120);
+            txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(200, 27);
+            txtApellidoPaterno.Size = new Size(236, 30);
             txtApellidoPaterno.TabIndex = 25;
             // 
             // txtCorreo
             // 
             txtCorreo.Location = new Point(430, 201);
+            txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(250, 27);
+            txtCorreo.Size = new Size(236, 30);
             txtCorreo.TabIndex = 24;
             // 
             // txtNombres
             // 
             txtNombres.Location = new Point(430, 120);
+            txtNombres.Multiline = true;
             txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(200, 27);
+            txtNombres.Size = new Size(236, 30);
             txtNombres.TabIndex = 23;
             // 
             // txtTelefono
             // 
             txtTelefono.Location = new Point(90, 201);
+            txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(180, 27);
+            txtTelefono.Size = new Size(236, 30);
             txtTelefono.TabIndex = 22;
             // 
             // txtNumeroControl
             // 
             txtNumeroControl.Location = new Point(90, 120);
+            txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
-            txtNumeroControl.Size = new Size(180, 27);
+            txtNumeroControl.Size = new Size(236, 30);
             txtNumeroControl.TabIndex = 21;
             // 
             // label7
@@ -219,7 +226,7 @@
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.FromArgb(250, 247, 242);
-            label11.Location = new Point(1030, 378);
+            label11.Location = new Point(1087, 373);
             label11.Name = "label11";
             label11.Size = new Size(103, 20);
             label11.TabIndex = 35;
@@ -229,7 +236,7 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.FromArgb(250, 247, 242);
-            label10.Location = new Point(713, 378);
+            label10.Location = new Point(755, 378);
             label10.Name = "label10";
             label10.Size = new Size(119, 20);
             label10.TabIndex = 34;
@@ -239,7 +246,7 @@
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.FromArgb(250, 247, 242);
-            label9.Location = new Point(378, 378);
+            label9.Location = new Point(430, 373);
             label9.Name = "label9";
             label9.Size = new Size(42, 20);
             label9.TabIndex = 33;
@@ -257,30 +264,34 @@
             // 
             // txtCodigoPostal
             // 
-            txtCodigoPostal.Location = new Point(1030, 406);
+            txtCodigoPostal.Location = new Point(1087, 396);
+            txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
-            txtCodigoPostal.Size = new Size(100, 27);
+            txtCodigoPostal.Size = new Size(236, 30);
             txtCodigoPostal.TabIndex = 31;
             // 
             // txtNumCalle
             // 
-            txtNumCalle.Location = new Point(713, 406);
+            txtNumCalle.Location = new Point(751, 401);
+            txtNumCalle.Multiline = true;
             txtNumCalle.Name = "txtNumCalle";
-            txtNumCalle.Size = new Size(120, 27);
+            txtNumCalle.Size = new Size(236, 30);
             txtNumCalle.TabIndex = 30;
             // 
             // txtCalle
             // 
-            txtCalle.Location = new Point(378, 406);
+            txtCalle.Location = new Point(430, 396);
+            txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
-            txtCalle.Size = new Size(200, 27);
+            txtCalle.Size = new Size(236, 30);
             txtCalle.TabIndex = 29;
             // 
             // txtColonia
             // 
-            txtColonia.Location = new Point(79, 406);
+            txtColonia.Location = new Point(90, 396);
+            txtColonia.Multiline = true;
             txtColonia.Name = "txtColonia";
-            txtColonia.Size = new Size(180, 27);
+            txtColonia.Size = new Size(236, 30);
             txtColonia.TabIndex = 28;
             // 
             // label12

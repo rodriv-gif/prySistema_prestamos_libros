@@ -82,7 +82,7 @@
             txtIdioma.Location = new Point(871, 262);
             txtIdioma.Multiline = true;
             txtIdioma.Name = "txtIdioma";
-            txtIdioma.Size = new Size(249, 30);
+            txtIdioma.Size = new Size(236, 30);
             txtIdioma.TabIndex = 23;
             // 
             // txtNumPaginas
@@ -90,7 +90,7 @@
             txtNumPaginas.Location = new Point(871, 161);
             txtNumPaginas.Multiline = true;
             txtNumPaginas.Name = "txtNumPaginas";
-            txtNumPaginas.Size = new Size(249, 30);
+            txtNumPaginas.Size = new Size(236, 30);
             txtNumPaginas.TabIndex = 22;
             // 
             // txtCategoria
@@ -98,7 +98,7 @@
             txtCategoria.Location = new Point(507, 262);
             txtCategoria.Multiline = true;
             txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(249, 30);
+            txtCategoria.Size = new Size(236, 30);
             txtCategoria.TabIndex = 21;
             // 
             // txtTitulo
@@ -106,7 +106,7 @@
             txtTitulo.Location = new Point(507, 161);
             txtTitulo.Multiline = true;
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(249, 30);
+            txtTitulo.Size = new Size(236, 30);
             txtTitulo.TabIndex = 20;
             // 
             // txtEditorial
@@ -114,7 +114,7 @@
             txtEditorial.Location = new Point(96, 262);
             txtEditorial.Multiline = true;
             txtEditorial.Name = "txtEditorial";
-            txtEditorial.Size = new Size(249, 30);
+            txtEditorial.Size = new Size(236, 30);
             txtEditorial.TabIndex = 19;
             // 
             // txtISBN
@@ -122,7 +122,7 @@
             txtISBN.Location = new Point(96, 161);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
-            txtISBN.Size = new Size(249, 30);
+            txtISBN.Size = new Size(236, 30);
             txtISBN.TabIndex = 18;
             // 
             // label6
@@ -220,15 +220,15 @@
             txtApMaternoAutor.Location = new Point(871, 449);
             txtApMaternoAutor.Multiline = true;
             txtApMaternoAutor.Name = "txtApMaternoAutor";
-            txtApMaternoAutor.Size = new Size(249, 30);
+            txtApMaternoAutor.Size = new Size(236, 30);
             txtApMaternoAutor.TabIndex = 26;
             // 
             // txtApPaternoAutor
             // 
-            txtApPaternoAutor.Location = new Point(490, 449);
+            txtApPaternoAutor.Location = new Point(492, 449);
             txtApPaternoAutor.Multiline = true;
             txtApPaternoAutor.Name = "txtApPaternoAutor";
-            txtApPaternoAutor.Size = new Size(249, 30);
+            txtApPaternoAutor.Size = new Size(236, 30);
             txtApPaternoAutor.TabIndex = 25;
             // 
             // txtNombreAutor
@@ -236,7 +236,7 @@
             txtNombreAutor.Location = new Point(96, 449);
             txtNombreAutor.Multiline = true;
             txtNombreAutor.Name = "txtNombreAutor";
-            txtNombreAutor.Size = new Size(249, 30);
+            txtNombreAutor.Size = new Size(236, 30);
             txtNombreAutor.TabIndex = 24;
             // 
             // btnguardar
