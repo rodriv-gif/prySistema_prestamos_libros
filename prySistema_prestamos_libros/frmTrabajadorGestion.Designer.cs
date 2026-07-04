@@ -56,7 +56,7 @@
             txtBuscarTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarTrabajador.Location = new Point(64, 103);
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";
-            txtBuscarTrabajador.Size = new Size(249, 30);
+            txtBuscarTrabajador.Size = new Size(220, 30);
             txtBuscarTrabajador.TabIndex = 16;
             // 
             // btnDarBaja
@@ -68,7 +68,7 @@
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
             btnDarBaja.Location = new Point(1149, 96);
             btnDarBaja.Name = "btnDarBaja";
-            btnDarBaja.Size = new Size(150, 45);
+            btnDarBaja.Size = new Size(150, 52);
             btnDarBaja.TabIndex = 15;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.UseVisualStyleBackColor = false;
@@ -82,7 +82,7 @@
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditar.Location = new Point(941, 96);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 45);
+            btnEditar.Size = new Size(150, 52);
             btnEditar.TabIndex = 14;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -94,9 +94,9 @@
             btnNuevoRegistro.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevoRegistro.Image = Properties.Resources.Nuevo_registro;
             btnNuevoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoRegistro.Location = new Point(729, 96);
+            btnNuevoRegistro.Location = new Point(664, 96);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
-            btnNuevoRegistro.Size = new Size(150, 45);
+            btnNuevoRegistro.Size = new Size(212, 52);
             btnNuevoRegistro.TabIndex = 13;
             btnNuevoRegistro.Text = "Nuevo registro";
             btnNuevoRegistro.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -108,7 +108,7 @@
             iblBuscar.BackColor = Color.White;
             iblBuscar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             iblBuscar.ForeColor = Color.Black;
-            iblBuscar.Location = new Point(64, 75);
+            iblBuscar.Location = new Point(64, 77);
             iblBuscar.Name = "iblBuscar";
             iblBuscar.Size = new Size(239, 23);
             iblBuscar.TabIndex = 12;

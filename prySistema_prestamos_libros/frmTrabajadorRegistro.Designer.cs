@@ -100,49 +100,49 @@
             // 
             txtApellidoMaterno.Location = new Point(1087, 120);
             txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(200, 27);
+            txtApellidoMaterno.Size = new Size(222, 27);
             txtApellidoMaterno.TabIndex = 27;
             // 
             // txtFechaRegistro
             // 
             txtFechaRegistro.Location = new Point(751, 201);
             txtFechaRegistro.Name = "txtFechaRegistro";
-            txtFechaRegistro.Size = new Size(160, 27);
+            txtFechaRegistro.Size = new Size(222, 27);
             txtFechaRegistro.TabIndex = 26;
             // 
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.Location = new Point(751, 120);
             txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(200, 27);
+            txtApellidoPaterno.Size = new Size(222, 27);
             txtApellidoPaterno.TabIndex = 25;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(430, 201);
+            txtCorreo.Location = new Point(420, 201);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(250, 27);
+            txtCorreo.Size = new Size(222, 27);
             txtCorreo.TabIndex = 24;
             // 
             // txtNombres
             // 
-            txtNombres.Location = new Point(430, 120);
+            txtNombres.Location = new Point(420, 120);
             txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(200, 27);
+            txtNombres.Size = new Size(222, 27);
             txtNombres.TabIndex = 23;
             // 
             // txtTelefono
             // 
             txtTelefono.Location = new Point(90, 201);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(180, 27);
+            txtTelefono.Size = new Size(222, 27);
             txtTelefono.TabIndex = 22;
             // 
             // txtNumeroControl
             // 
             txtNumeroControl.Location = new Point(90, 120);
             txtNumeroControl.Name = "txtNumeroControl";
-            txtNumeroControl.Size = new Size(180, 27);
+            txtNumeroControl.Size = new Size(222, 27);
             txtNumeroControl.TabIndex = 21;
             // 
             // label7
@@ -169,7 +169,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.FromArgb(250, 247, 242);
-            label5.Location = new Point(780, 97);
+            label5.Location = new Point(752, 97);
             label5.Name = "label5";
             label5.Size = new Size(122, 20);
             label5.TabIndex = 18;
@@ -179,7 +179,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.FromArgb(250, 247, 242);
-            label4.Location = new Point(430, 178);
+            label4.Location = new Point(420, 178);
             label4.Name = "label4";
             label4.Size = new Size(132, 20);
             label4.TabIndex = 17;
@@ -189,7 +189,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(250, 247, 242);
-            label3.Location = new Point(430, 97);
+            label3.Location = new Point(420, 97);
             label3.Name = "label3";
             label3.Size = new Size(80, 20);
             label3.TabIndex = 16;
@@ -219,7 +219,7 @@
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.FromArgb(250, 247, 242);
-            label11.Location = new Point(1030, 378);
+            label11.Location = new Point(1087, 378);
             label11.Name = "label11";
             label11.Size = new Size(103, 20);
             label11.TabIndex = 35;
@@ -229,7 +229,7 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.FromArgb(250, 247, 242);
-            label10.Location = new Point(713, 378);
+            label10.Location = new Point(751, 383);
             label10.Name = "label10";
             label10.Size = new Size(119, 20);
             label10.TabIndex = 34;
@@ -239,7 +239,7 @@
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.FromArgb(250, 247, 242);
-            label9.Location = new Point(378, 378);
+            label9.Location = new Point(420, 378);
             label9.Name = "label9";
             label9.Size = new Size(42, 20);
             label9.TabIndex = 33;
@@ -249,7 +249,7 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.FromArgb(250, 247, 242);
-            label8.Location = new Point(79, 373);
+            label8.Location = new Point(89, 378);
             label8.Name = "label8";
             label8.Size = new Size(60, 20);
             label8.TabIndex = 32;
@@ -257,30 +257,30 @@
             // 
             // txtCodigoPostal
             // 
-            txtCodigoPostal.Location = new Point(1030, 406);
+            txtCodigoPostal.Location = new Point(1087, 401);
             txtCodigoPostal.Name = "txtCodigoPostal";
-            txtCodigoPostal.Size = new Size(100, 27);
+            txtCodigoPostal.Size = new Size(222, 27);
             txtCodigoPostal.TabIndex = 31;
             // 
             // txtNumCalle
             // 
-            txtNumCalle.Location = new Point(713, 406);
+            txtNumCalle.Location = new Point(751, 406);
             txtNumCalle.Name = "txtNumCalle";
-            txtNumCalle.Size = new Size(120, 27);
+            txtNumCalle.Size = new Size(222, 27);
             txtNumCalle.TabIndex = 30;
             // 
             // txtCalle
             // 
-            txtCalle.Location = new Point(378, 406);
+            txtCalle.Location = new Point(420, 401);
             txtCalle.Name = "txtCalle";
-            txtCalle.Size = new Size(200, 27);
+            txtCalle.Size = new Size(222, 27);
             txtCalle.TabIndex = 29;
             // 
             // txtColonia
             // 
-            txtColonia.Location = new Point(79, 406);
+            txtColonia.Location = new Point(89, 406);
             txtColonia.Name = "txtColonia";
-            txtColonia.Size = new Size(180, 27);
+            txtColonia.Size = new Size(223, 27);
             txtColonia.TabIndex = 28;
             // 
             // label12
@@ -296,7 +296,7 @@
             // cmbCarreraArea
             // 
             cmbCarreraArea.FormattingEnabled = true;
-            cmbCarreraArea.Location = new Point(111, 594);
+            cmbCarreraArea.Location = new Point(90, 585);
             cmbCarreraArea.Name = "cmbCarreraArea";
             cmbCarreraArea.Size = new Size(224, 28);
             cmbCarreraArea.TabIndex = 36;
@@ -310,7 +310,7 @@
             btnlimpiar.ImageAlign = ContentAlignment.MiddleLeft;
             btnlimpiar.Location = new Point(632, 700);
             btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(150, 45);
+            btnlimpiar.Size = new Size(150, 57);
             btnlimpiar.TabIndex = 40;
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = false;
@@ -324,7 +324,7 @@
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
             btnCancelar.Location = new Point(983, 700);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(150, 45);
+            btnCancelar.Size = new Size(150, 57);
             btnCancelar.TabIndex = 39;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
@@ -338,7 +338,7 @@
             btnguardar.ImageAlign = ContentAlignment.MiddleLeft;
             btnguardar.Location = new Point(304, 700);
             btnguardar.Name = "btnguardar";
-            btnguardar.Size = new Size(150, 45);
+            btnguardar.Size = new Size(150, 57);
             btnguardar.TabIndex = 38;
             btnguardar.Text = "Guardar";
             btnguardar.UseVisualStyleBackColor = false;

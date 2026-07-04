@@ -225,7 +225,7 @@
             // 
             // txtApPaternoAutor
             // 
-            txtApPaternoAutor.Location = new Point(490, 449);
+            txtApPaternoAutor.Location = new Point(507, 449);
             txtApPaternoAutor.Multiline = true;
             txtApPaternoAutor.Name = "txtApPaternoAutor";
             txtApPaternoAutor.Size = new Size(249, 30);
@@ -246,7 +246,7 @@
             btnguardar.ForeColor = Color.FromArgb(17, 30, 71);
             btnguardar.Image = Properties.Resources.Guardar;
             btnguardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnguardar.Location = new Point(367, 587);
+            btnguardar.Location = new Point(428, 587);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(150, 45);
             btnguardar.TabIndex = 32;
@@ -260,7 +260,7 @@
             btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btncancelar.Image = Properties.Resources.Cancelar1_0;
             btncancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btncancelar.Location = new Point(944, 587);
+            btncancelar.Location = new Point(861, 587);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(150, 45);
             btncancelar.TabIndex = 31;

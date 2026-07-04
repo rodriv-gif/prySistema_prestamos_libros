@@ -67,7 +67,7 @@
             txtBuscarLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarLibro.Location = new Point(78, 109);
             txtBuscarLibro.Name = "txtBuscarLibro";
-            txtBuscarLibro.Size = new Size(220, 30);
+            txtBuscarLibro.Size = new Size(309, 30);
             txtBuscarLibro.TabIndex = 2;
             // 
             // dgvLibros
@@ -86,9 +86,9 @@
             btnNuevoRegistro.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevoRegistro.Image = Properties.Resources.Nuevo_registro;
             btnNuevoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoRegistro.Location = new Point(723, 96);
+            btnNuevoRegistro.Location = new Point(636, 104);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
-            btnNuevoRegistro.Size = new Size(150, 45);
+            btnNuevoRegistro.Size = new Size(212, 52);
             btnNuevoRegistro.TabIndex = 14;
             btnNuevoRegistro.Text = "Nuevo registro";
             btnNuevoRegistro.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -101,9 +101,9 @@
             btnEditar.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(941, 96);
+            btnEditar.Location = new Point(933, 104);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 45);
+            btnEditar.Size = new Size(150, 52);
             btnEditar.TabIndex = 15;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -115,9 +115,9 @@
             btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBaja.Image = (Image)resources.GetObject("btnDarBaja.Image");
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBaja.Location = new Point(1149, 96);
+            btnDarBaja.Location = new Point(1149, 104);
             btnDarBaja.Name = "btnDarBaja";
-            btnDarBaja.Size = new Size(150, 45);
+            btnDarBaja.Size = new Size(150, 52);
             btnDarBaja.TabIndex = 16;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.UseVisualStyleBackColor = false;
