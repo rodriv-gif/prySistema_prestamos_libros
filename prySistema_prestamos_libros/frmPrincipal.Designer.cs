@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             pnlMenu = new Panel();
-            label1 = new Label();
+            lblRegistros = new Label();
             lblOperaciones = new Label();
             btnCerrarSesion = new Button();
             btnEjemplar = new Button();
@@ -46,19 +46,19 @@
             lblRol = new Label();
             panel2 = new Panel();
             pnlContenedor = new Panel();
-            panel4 = new Panel();
+            pnlBienvenida = new Panel();
             lblBienvenida = new Label();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
             pnlContenedor.SuspendLayout();
-            panel4.SuspendLayout();
+            pnlBienvenida.SuspendLayout();
             SuspendLayout();
             // 
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(17, 30, 71);
-            pnlMenu.Controls.Add(label1);
+            pnlMenu.Controls.Add(lblRegistros);
             pnlMenu.Controls.Add(lblOperaciones);
             pnlMenu.Controls.Add(btnCerrarSesion);
             pnlMenu.Controls.Add(btnEjemplar);
@@ -75,16 +75,16 @@
             pnlMenu.Size = new Size(407, 1049);
             pnlMenu.TabIndex = 0;
             // 
-            // label1
+            // lblRegistros
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(201, 168, 76);
-            label1.Location = new Point(143, 518);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 28);
-            label1.TabIndex = 3;
-            label1.Text = "REGISTROS";
+            lblRegistros.AutoSize = true;
+            lblRegistros.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegistros.ForeColor = Color.FromArgb(201, 168, 76);
+            lblRegistros.Location = new Point(143, 518);
+            lblRegistros.Name = "lblRegistros";
+            lblRegistros.Size = new Size(118, 28);
+            lblRegistros.TabIndex = 3;
+            lblRegistros.Text = "REGISTROS";
             // 
             // lblOperaciones
             // 
@@ -265,19 +265,19 @@
             // pnlContenedor
             // 
             pnlContenedor.BackColor = Color.FromArgb(250, 247, 242);
-            pnlContenedor.Controls.Add(panel4);
+            pnlContenedor.Controls.Add(pnlBienvenida);
             pnlContenedor.Location = new Point(482, 131);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(1367, 895);
             pnlContenedor.TabIndex = 2;
             // 
-            // panel4
+            // pnlBienvenida
             // 
-            panel4.Controls.Add(lblBienvenida);
-            panel4.Location = new Point(73, 85);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1105, 302);
-            panel4.TabIndex = 0;
+            pnlBienvenida.Controls.Add(lblBienvenida);
+            pnlBienvenida.Location = new Point(73, 85);
+            pnlBienvenida.Name = "pnlBienvenida";
+            pnlBienvenida.Size = new Size(1105, 302);
+            pnlBienvenida.TabIndex = 0;
             // 
             // lblBienvenida
             // 
@@ -308,8 +308,8 @@
             pnlSuperior.ResumeLayout(false);
             pnlSuperior.PerformLayout();
             pnlContenedor.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            pnlBienvenida.ResumeLayout(false);
+            pnlBienvenida.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -331,9 +331,9 @@
         private Label lblRol;
         private Button btnCerrarSesion;
         private Panel pnlContenedor;
-        private Panel panel4;
+        private Panel pnlBienvenida;
         private Label lblBienvenida;
         private Label lblOperaciones;
-        private Label label1;
+        private Label lblRegistros;
     }
 }
