@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioLibros));
+            pcbContenendorCaptura = new PictureBox();
+            pcbContenedorCompacto = new PictureBox();
             txtIdioma = new TextBox();
             txtNumPaginas = new TextBox();
             txtCategoria = new TextBox();
@@ -42,94 +43,94 @@
             lblTitulo = new Label();
             lblEditorial = new Label();
             lblISBN = new Label();
-            lblAmaterno = new Label();
+            lblApellidoMaterno = new Label();
             lblApaterno = new Label();
             lblNombre = new Label();
-            txtApMaternoAutor = new TextBox();
-            txtApPaternoAutor = new TextBox();
+            txtApellidoMaterno = new TextBox();
+            txtApellidoPaterno = new TextBox();
             txtNombreAutor = new TextBox();
-            btnguardar = new Button();
-            btncancelar = new Button();
-            btnlimpiar = new Button();
-            label10 = new Label();
-            label11 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            btnGuardar = new Button();
+            btnCancelar = new Button();
+            btnLimpiar = new Button();
+            lblDatosLibro = new Label();
+            lblDatosAutor = new Label();
+            ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pcbContenendorCaptura
             // 
-            pictureBox1.Image = Properties.Resources.contenerdorGrupo;
-            pictureBox1.Location = new Point(62, 96);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1302, 234);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pcbContenendorCaptura.Image = Properties.Resources.contenerdorGrupo;
+            pcbContenendorCaptura.Location = new Point(21, 119);
+            pcbContenendorCaptura.Name = "pcbContenendorCaptura";
+            pcbContenendorCaptura.Size = new Size(1302, 234);
+            pcbContenendorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenendorCaptura.TabIndex = 0;
+            pcbContenendorCaptura.TabStop = false;
             // 
-            // pictureBox2
+            // pcbContenedorCompacto
             // 
-            pictureBox2.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox2.Location = new Point(62, 375);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1302, 137);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
+            pcbContenedorCompacto.Location = new Point(21, 398);
+            pcbContenedorCompacto.Name = "pcbContenedorCompacto";
+            pcbContenedorCompacto.Size = new Size(1302, 137);
+            pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorCompacto.TabIndex = 1;
+            pcbContenedorCompacto.TabStop = false;
             // 
             // txtIdioma
             // 
-            txtIdioma.Location = new Point(871, 250);
+            txtIdioma.Location = new Point(790, 273);
             txtIdioma.Multiline = true;
             txtIdioma.Name = "txtIdioma";
-            txtIdioma.Size = new Size(236, 30);
+            txtIdioma.Size = new Size(245, 30);
             txtIdioma.TabIndex = 23;
             // 
             // txtNumPaginas
             // 
-            txtNumPaginas.Location = new Point(871, 161);
+            txtNumPaginas.Location = new Point(790, 181);
             txtNumPaginas.Multiline = true;
             txtNumPaginas.Name = "txtNumPaginas";
-            txtNumPaginas.Size = new Size(236, 30);
+            txtNumPaginas.Size = new Size(245, 30);
             txtNumPaginas.TabIndex = 22;
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(507, 250);
+            txtCategoria.Location = new Point(417, 273);
             txtCategoria.Multiline = true;
             txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(236, 30);
+            txtCategoria.Size = new Size(245, 30);
             txtCategoria.TabIndex = 21;
             // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(507, 161);
+            txtTitulo.Location = new Point(417, 184);
             txtTitulo.Multiline = true;
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(236, 30);
+            txtTitulo.Size = new Size(245, 30);
             txtTitulo.TabIndex = 20;
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(96, 250);
+            txtEditorial.Location = new Point(55, 273);
             txtEditorial.Multiline = true;
             txtEditorial.Name = "txtEditorial";
-            txtEditorial.Size = new Size(236, 30);
+            txtEditorial.Size = new Size(245, 30);
             txtEditorial.TabIndex = 19;
             // 
             // txtISBN
             // 
-            txtISBN.Location = new Point(96, 161);
+            txtISBN.Location = new Point(55, 184);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
-            txtISBN.Size = new Size(236, 30);
+            txtISBN.Size = new Size(245, 30);
             txtISBN.TabIndex = 18;
             // 
             // lblIdioma
             // 
             lblIdioma.AutoSize = true;
             lblIdioma.BackColor = Color.FromArgb(250, 247, 242);
-            lblIdioma.Location = new Point(871, 227);
+            lblIdioma.Location = new Point(790, 250);
             lblIdioma.Name = "lblIdioma";
             lblIdioma.Size = new Size(56, 20);
             lblIdioma.TabIndex = 17;
@@ -139,7 +140,7 @@
             // 
             numPaginas.AutoSize = true;
             numPaginas.BackColor = Color.FromArgb(250, 247, 242);
-            numPaginas.Location = new Point(871, 135);
+            numPaginas.Location = new Point(790, 158);
             numPaginas.Name = "numPaginas";
             numPaginas.Size = new Size(140, 20);
             numPaginas.TabIndex = 16;
@@ -149,7 +150,7 @@
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.BackColor = Color.FromArgb(250, 247, 242);
-            lblCategoria.Location = new Point(518, 227);
+            lblCategoria.Location = new Point(417, 250);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(74, 20);
             lblCategoria.TabIndex = 15;
@@ -159,7 +160,7 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.FromArgb(250, 247, 242);
-            lblTitulo.Location = new Point(507, 138);
+            lblTitulo.Location = new Point(417, 158);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(107, 20);
             lblTitulo.TabIndex = 14;
@@ -169,7 +170,7 @@
             // 
             lblEditorial.AutoSize = true;
             lblEditorial.BackColor = Color.FromArgb(250, 247, 242);
-            lblEditorial.Location = new Point(96, 227);
+            lblEditorial.Location = new Point(55, 250);
             lblEditorial.Name = "lblEditorial";
             lblEditorial.Size = new Size(65, 20);
             lblEditorial.TabIndex = 13;
@@ -179,27 +180,27 @@
             // 
             lblISBN.AutoSize = true;
             lblISBN.BackColor = Color.FromArgb(250, 247, 242);
-            lblISBN.Location = new Point(96, 135);
+            lblISBN.Location = new Point(55, 158);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(41, 20);
             lblISBN.TabIndex = 12;
             lblISBN.Text = "ISBN";
             // 
-            // lblAmaterno
+            // lblApellidoMaterno
             // 
-            lblAmaterno.AutoSize = true;
-            lblAmaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblAmaterno.Location = new Point(871, 426);
-            lblAmaterno.Name = "lblAmaterno";
-            lblAmaterno.Size = new Size(126, 20);
-            lblAmaterno.TabIndex = 29;
-            lblAmaterno.Text = "Apellido materno";
+            lblApellidoMaterno.AutoSize = true;
+            lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoMaterno.Location = new Point(790, 449);
+            lblApellidoMaterno.Name = "lblApellidoMaterno";
+            lblApellidoMaterno.Size = new Size(126, 20);
+            lblApellidoMaterno.TabIndex = 29;
+            lblApellidoMaterno.Text = "Apellido materno";
             // 
             // lblApaterno
             // 
             lblApaterno.AutoSize = true;
             lblApaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApaterno.Location = new Point(492, 426);
+            lblApaterno.Location = new Point(417, 449);
             lblApaterno.Name = "lblApaterno";
             lblApaterno.Size = new Size(122, 20);
             lblApaterno.TabIndex = 28;
@@ -209,117 +210,124 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.Location = new Point(96, 426);
+            lblNombre.Location = new Point(55, 449);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(80, 20);
             lblNombre.TabIndex = 27;
             lblNombre.Text = "Nombre(s)";
             // 
-            // txtApMaternoAutor
+            // txtApellidoMaterno
             // 
-            txtApMaternoAutor.Location = new Point(871, 449);
-            txtApMaternoAutor.Multiline = true;
-            txtApMaternoAutor.Name = "txtApMaternoAutor";
-            txtApMaternoAutor.Size = new Size(236, 30);
-            txtApMaternoAutor.TabIndex = 26;
+            txtApellidoMaterno.Location = new Point(790, 472);
+            txtApellidoMaterno.Multiline = true;
+            txtApellidoMaterno.Name = "txtApellidoMaterno";
+            txtApellidoMaterno.Size = new Size(245, 30);
+            txtApellidoMaterno.TabIndex = 26;
             // 
-            // txtApPaternoAutor
+            // txtApellidoPaterno
             // 
-            txtApPaternoAutor.Location = new Point(492, 449);
-            txtApPaternoAutor.Multiline = true;
-            txtApPaternoAutor.Name = "txtApPaternoAutor";
-            txtApPaternoAutor.Size = new Size(236, 30);
-            txtApPaternoAutor.TabIndex = 25;
+            txtApellidoPaterno.Location = new Point(417, 472);
+            txtApellidoPaterno.Multiline = true;
+            txtApellidoPaterno.Name = "txtApellidoPaterno";
+            txtApellidoPaterno.Size = new Size(245, 30);
+            txtApellidoPaterno.TabIndex = 25;
             // 
             // txtNombreAutor
             // 
-            txtNombreAutor.Location = new Point(96, 449);
+            txtNombreAutor.Location = new Point(55, 472);
             txtNombreAutor.Multiline = true;
             txtNombreAutor.Name = "txtNombreAutor";
-            txtNombreAutor.Size = new Size(236, 30);
+            txtNombreAutor.Size = new Size(245, 30);
             txtNombreAutor.TabIndex = 24;
             // 
-            // btnguardar
+            // btnGuardar
             // 
-            btnguardar.BackColor = Color.FromArgb(201, 168, 76);
-            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnguardar.ForeColor = Color.FromArgb(17, 30, 71);
-            btnguardar.Image = Properties.Resources.Guardar;
-            btnguardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnguardar.Location = new Point(367, 587);
-            btnguardar.Name = "btnguardar";
-            btnguardar.Size = new Size(150, 45);
-            btnguardar.TabIndex = 32;
-            btnguardar.Text = "Guardar";
-            btnguardar.UseVisualStyleBackColor = false;
+            btnGuardar.BackColor = Color.FromArgb(201, 168, 76);
+            btnGuardar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.Location = new Point(278, 627);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(150, 45);
+            btnGuardar.TabIndex = 32;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.MiddleRight;
+            btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // btncancelar
+            // btnCancelar
             // 
-            btncancelar.BackColor = Color.FromArgb(242, 196, 196);
-            btncancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
-            btncancelar.Image = Properties.Resources.Cancelar1_0;
-            btncancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btncancelar.Location = new Point(944, 587);
-            btncancelar.Name = "btncancelar";
-            btncancelar.Size = new Size(150, 45);
-            btncancelar.TabIndex = 31;
-            btncancelar.Text = "Cancelar";
-            btncancelar.UseVisualStyleBackColor = false;
+            btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
+            btnCancelar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(926, 627);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(150, 45);
+            btnCancelar.TabIndex = 31;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnlimpiar
+            // btnLimpiar
             // 
-            btnlimpiar.BackColor = Color.FromArgb(107, 122, 153);
-            btnlimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnlimpiar.ForeColor = Color.FromArgb(250, 247, 242);
-            btnlimpiar.Image = Properties.Resources.Limpiar;
-            btnlimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnlimpiar.Location = new Point(651, 587);
-            btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(150, 45);
-            btnlimpiar.TabIndex = 30;
-            btnlimpiar.Text = "Limpiar";
-            btnlimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = Color.FromArgb(107, 122, 153);
+            btnLimpiar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
+            btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
+            btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLimpiar.Location = new Point(609, 627);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(150, 45);
+            btnLimpiar.TabIndex = 30;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
+            btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // lblDatosLibro
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.FromArgb(250, 247, 242);
-            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.FromArgb(27, 46, 107);
-            label10.Location = new Point(71, 103);
-            label10.Name = "label10";
-            label10.Size = new Size(129, 23);
-            label10.TabIndex = 33;
-            label10.Text = "Datos del libro";
+            lblDatosLibro.AutoSize = true;
+            lblDatosLibro.BackColor = Color.FromArgb(250, 247, 242);
+            lblDatosLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDatosLibro.ForeColor = Color.FromArgb(27, 46, 107);
+            lblDatosLibro.Location = new Point(30, 126);
+            lblDatosLibro.Name = "lblDatosLibro";
+            lblDatosLibro.Size = new Size(129, 23);
+            lblDatosLibro.TabIndex = 33;
+            lblDatosLibro.Text = "Datos del libro";
             // 
-            // label11
+            // lblDatosAutor
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.FromArgb(250, 247, 242);
-            label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.FromArgb(27, 46, 107);
-            label11.Location = new Point(66, 384);
-            label11.Name = "label11";
-            label11.Size = new Size(134, 23);
-            label11.TabIndex = 34;
-            label11.Text = "Datos del autor";
+            lblDatosAutor.AutoSize = true;
+            lblDatosAutor.BackColor = Color.FromArgb(250, 247, 242);
+            lblDatosAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDatosAutor.ForeColor = Color.FromArgb(27, 46, 107);
+            lblDatosAutor.Location = new Point(25, 407);
+            lblDatosAutor.Name = "lblDatosAutor";
+            lblDatosAutor.Size = new Size(134, 23);
+            lblDatosAutor.TabIndex = 34;
+            lblDatosAutor.Text = "Datos del autor";
             // 
             // frmFormularioLibros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 848);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(btnguardar);
-            Controls.Add(btncancelar);
-            Controls.Add(btnlimpiar);
-            Controls.Add(lblAmaterno);
+            BackColor = Color.White;
+            ClientSize = new Size(1349, 848);
+            Controls.Add(lblDatosAutor);
+            Controls.Add(lblDatosLibro);
+            Controls.Add(btnGuardar);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnLimpiar);
+            Controls.Add(lblApellidoMaterno);
             Controls.Add(lblApaterno);
             Controls.Add(lblNombre);
-            Controls.Add(txtApMaternoAutor);
-            Controls.Add(txtApPaternoAutor);
+            Controls.Add(txtApellidoMaterno);
+            Controls.Add(txtApellidoPaterno);
             Controls.Add(txtNombreAutor);
             Controls.Add(txtIdioma);
             Controls.Add(txtNumPaginas);
@@ -333,20 +341,20 @@
             Controls.Add(lblTitulo);
             Controls.Add(lblEditorial);
             Controls.Add(lblISBN);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbContenedorCompacto);
+            Controls.Add(pcbContenendorCaptura);
             Name = "frmFormularioLibros";
-            Text = "Formularios de libros";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            Text = "Formulario de libros";
+            ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private PictureBox pcbContenendorCaptura;
+        private PictureBox pcbContenedorCompacto;
         private TextBox txtIdioma;
         private TextBox textBox6;
         private TextBox txtNumPaginas;
@@ -360,16 +368,16 @@
         private Label lblTitulo;
         private Label lblEditorial;
         private Label lblISBN;
-        private Label lblAmaterno;
+        private Label lblApellidoMaterno;
         private Label lblApaterno;
         private Label lblNombre;
-        private TextBox txtApMaternoAutor;
-        private TextBox txtApPaternoAutor;
+        private TextBox txtApellidoMaterno;
+        private TextBox txtApellidoPaterno;
         private TextBox txtNombreAutor;
-        private Button btnguardar;
-        private Button btncancelar;
-        private Button btnlimpiar;
-        private Label label10;
-        private Label label11;
+        private Button btnGuardar;
+        private Button btnCancelar;
+        private Button btnLimpiar;
+        private Label lblDatosLibro;
+        private Label lblDatosAutor;
     }
 }

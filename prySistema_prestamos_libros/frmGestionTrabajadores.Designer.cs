@@ -29,100 +29,104 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionTrabajadores));
-            pictureBox1 = new PictureBox();
+            pcbContenedorGestion = new PictureBox();
             txtBuscarTrabajador = new TextBox();
             btnDarBaja = new Button();
             btnEditar = new Button();
-            btnNuevoRegistro = new Button();
-            iblBuscar = new Label();
+            btnNuevo = new Button();
+            lblBuscar = new Label();
             dgvTrabajadores = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTrabajadores).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pcbContenedorGestion
             // 
-            pictureBox1.BackColor = Color.FromArgb(250, 247, 242);
-            pictureBox1.Image = Properties.Resources.contenerdorGrupo;
-            pictureBox1.Location = new Point(32, 39);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1528, 956);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pcbContenedorGestion.BackColor = Color.FromArgb(250, 247, 242);
+            pcbContenedorGestion.Image = Properties.Resources.contenerdorGrupo;
+            pcbContenedorGestion.Location = new Point(35, 29);
+            pcbContenedorGestion.Name = "pcbContenedorGestion";
+            pcbContenedorGestion.Size = new Size(1287, 797);
+            pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorGestion.TabIndex = 0;
+            pcbContenedorGestion.TabStop = false;
             // 
             // txtBuscarTrabajador
             // 
             txtBuscarTrabajador.BackColor = Color.White;
             txtBuscarTrabajador.Font = new Font("Segoe UI", 9F);
-            txtBuscarTrabajador.Location = new Point(78, 109);
+            txtBuscarTrabajador.Location = new Point(54, 123);
             txtBuscarTrabajador.Multiline = true;
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";
-            txtBuscarTrabajador.Size = new Size(236, 30);
+            txtBuscarTrabajador.Size = new Size(245, 30);
             txtBuscarTrabajador.TabIndex = 16;
             // 
             // btnDarBaja
             // 
             btnDarBaja.BackColor = Color.FromArgb(242, 196, 196);
-            btnDarBaja.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnDarBaja.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBaja.Image = (Image)resources.GetObject("btnDarBaja.Image");
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBaja.Location = new Point(1251, 93);
+            btnDarBaja.Location = new Point(1153, 114);
             btnDarBaja.Name = "btnDarBaja";
-            btnDarBaja.Size = new Size(171, 60);
+            btnDarBaja.Size = new Size(150, 45);
             btnDarBaja.TabIndex = 15;
             btnDarBaja.Text = "Dar de baja";
+            btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
             btnEditar.BackColor = Color.FromArgb(107, 122, 153);
-            btnEditar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnEditar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(1026, 93);
+            btnEditar.Location = new Point(905, 113);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(171, 60);
+            btnEditar.Size = new Size(150, 45);
             btnEditar.TabIndex = 14;
             btnEditar.Text = "Editar";
+            btnEditar.TextAlign = ContentAlignment.MiddleRight;
+            btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
             // 
-            // btnNuevoRegistro
+            // btnNuevo
             // 
-            btnNuevoRegistro.BackColor = Color.FromArgb(201, 168, 76);
-            btnNuevoRegistro.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            btnNuevoRegistro.ForeColor = Color.FromArgb(17, 30, 71);
-            btnNuevoRegistro.Image = Properties.Resources.Nuevo_registro;
-            btnNuevoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoRegistro.Location = new Point(803, 93);
-            btnNuevoRegistro.Name = "btnNuevoRegistro";
-            btnNuevoRegistro.Size = new Size(171, 60);
-            btnNuevoRegistro.TabIndex = 13;
-            btnNuevoRegistro.Text = "Nuevo registro";
-            btnNuevoRegistro.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnNuevoRegistro.UseVisualStyleBackColor = false;
+            btnNuevo.BackColor = Color.FromArgb(201, 168, 76);
+            btnNuevo.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevo.ForeColor = Color.FromArgb(17, 30, 71);
+            btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
+            btnNuevo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevo.Location = new Point(650, 113);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(150, 45);
+            btnNuevo.TabIndex = 13;
+            btnNuevo.Text = "Nuevo ";
+            btnNuevo.TextAlign = ContentAlignment.MiddleRight;
+            btnNuevo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // iblBuscar
+            // lblBuscar
             // 
-            iblBuscar.AutoSize = true;
-            iblBuscar.BackColor = Color.White;
-            iblBuscar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iblBuscar.ForeColor = Color.Black;
-            iblBuscar.Location = new Point(78, 83);
-            iblBuscar.Name = "iblBuscar";
-            iblBuscar.Size = new Size(239, 23);
-            iblBuscar.TabIndex = 12;
-            iblBuscar.Text = "Buscar por numero de control";
+            lblBuscar.AutoSize = true;
+            lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
+            lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBuscar.ForeColor = Color.Black;
+            lblBuscar.Location = new Point(54, 97);
+            lblBuscar.Name = "lblBuscar";
+            lblBuscar.Size = new Size(206, 20);
+            lblBuscar.TabIndex = 12;
+            lblBuscar.Text = "Buscar por numero de control";
             // 
             // dgvTrabajadores
             // 
             dgvTrabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTrabajadores.Location = new Point(64, 197);
+            dgvTrabajadores.Location = new Point(54, 235);
             dgvTrabajadores.Name = "dgvTrabajadores";
             dgvTrabajadores.RowHeadersWidth = 51;
-            dgvTrabajadores.Size = new Size(1485, 757);
+            dgvTrabajadores.Size = new Size(1249, 568);
             dgvTrabajadores.TabIndex = 17;
             // 
             // frmGestionTrabajadores
@@ -130,17 +134,17 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1566, 999);
+            ClientSize = new Size(1349, 848);
             Controls.Add(dgvTrabajadores);
             Controls.Add(txtBuscarTrabajador);
             Controls.Add(btnDarBaja);
             Controls.Add(btnEditar);
-            Controls.Add(btnNuevoRegistro);
-            Controls.Add(iblBuscar);
-            Controls.Add(pictureBox1);
+            Controls.Add(btnNuevo);
+            Controls.Add(lblBuscar);
+            Controls.Add(pcbContenedorGestion);
             Name = "frmGestionTrabajadores";
-            Text = "frmGestiontrabajadores";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Gestion de trabajadores";
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTrabajadores).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -148,12 +152,12 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pcbContenedorGestion;
         private TextBox txtBuscarTrabajador;
         private Button btnDarBaja;
         private Button btnEditar;
-        private Button btnNuevoRegistro;
-        private Label iblBuscar;
+        private Button btnNuevo;
+        private Label lblBuscar;
         private DataGridView dgvTrabajadores;
     }
 }

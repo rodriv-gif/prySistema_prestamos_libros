@@ -29,32 +29,23 @@
         private void InitializeComponent()
         {
             txtUsuario = new TextBox();
-            txtContraseña = new TextBox();
             pcbLogo = new PictureBox();
             lblUsuario = new Label();
             lblContraseña = new Label();
             btnAcceder = new Button();
             btnSalir = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
             // txtUsuario
             // 
-            txtUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(364, 329);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(224, 28);
+            txtUsuario.Size = new Size(245, 30);
             txtUsuario.TabIndex = 1;
-            // 
-            // txtContraseña
-            // 
-            txtContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtContraseña.Location = new Point(364, 416);
-            txtContraseña.Multiline = true;
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(224, 28);
-            txtContraseña.TabIndex = 1;
             // 
             // pcbLogo
             // 
@@ -112,21 +103,31 @@
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(364, 427);
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(245, 34);
+            textBox1.TabIndex = 6;
+            textBox1.UseSystemPasswordChar = true;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 247, 242);
             ClientSize = new Size(976, 618);
+            Controls.Add(textBox1);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
             Controls.Add(pcbLogo);
-            Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             Name = "frmLogin";
-            Text = "Login";
+            Text = "Control de acceso";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -135,11 +136,11 @@
         #endregion
 
         private TextBox txtUsuario;
-        private TextBox txtContraseña;
         private PictureBox pcbLogo;
         private Label lblUsuario;
         private Label lblContraseña;
         private Button btnAcceder;
         private Button btnSalir;
+        private TextBox textBox1;
     }
 }

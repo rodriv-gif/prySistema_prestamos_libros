@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pnlMenu = new Panel();
+            label1 = new Label();
+            lblOperaciones = new Label();
             btnCerrarSesion = new Button();
             btnEjemplar = new Button();
             btnLibro = new Button();
@@ -43,15 +45,13 @@
             pnlSuperior = new Panel();
             lblRol = new Label();
             panel2 = new Panel();
-            pnlContenido = new Panel();
+            pnlContenedor = new Panel();
             panel4 = new Panel();
             lblBienvenida = new Label();
-            lblOperaciones = new Label();
-            label1 = new Label();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
-            pnlContenido.SuspendLayout();
+            pnlContenedor.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +75,28 @@
             pnlMenu.Size = new Size(407, 1049);
             pnlMenu.TabIndex = 0;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(201, 168, 76);
+            label1.Location = new Point(143, 518);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 28);
+            label1.TabIndex = 3;
+            label1.Text = "REGISTROS";
+            // 
+            // lblOperaciones
+            // 
+            lblOperaciones.AutoSize = true;
+            lblOperaciones.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOperaciones.ForeColor = Color.FromArgb(201, 168, 76);
+            lblOperaciones.Location = new Point(143, 332);
+            lblOperaciones.Name = "lblOperaciones";
+            lblOperaciones.Size = new Size(148, 28);
+            lblOperaciones.TabIndex = 3;
+            lblOperaciones.Text = "OPERACIONES";
+            // 
             // btnCerrarSesion
             // 
             btnCerrarSesion.BackColor = Color.FromArgb(201, 168, 76);
@@ -86,6 +108,7 @@
             btnCerrarSesion.TabIndex = 11;
             btnCerrarSesion.Text = "Cerrar sesión";
             btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // btnEjemplar
             // 
@@ -98,6 +121,7 @@
             btnEjemplar.TabIndex = 8;
             btnEjemplar.Text = "Ejemplar";
             btnEjemplar.UseVisualStyleBackColor = false;
+            btnEjemplar.Click += btnEjemplar_Click;
             // 
             // btnLibro
             // 
@@ -110,6 +134,7 @@
             btnLibro.TabIndex = 7;
             btnLibro.Text = "Libro";
             btnLibro.UseVisualStyleBackColor = false;
+            btnLibro.Click += btnLibro_Click;
             // 
             // pcbLogo
             // 
@@ -132,6 +157,7 @@
             btnUsuario.TabIndex = 6;
             btnUsuario.Text = "Usuario";
             btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.Click += btnUsuario_Click;
             // 
             // panel1
             // 
@@ -152,6 +178,7 @@
             btnTrabajadores.TabIndex = 5;
             btnTrabajadores.Text = "Trabajadores";
             btnTrabajadores.UseVisualStyleBackColor = false;
+            btnTrabajadores.Click += btnTrabajadores_Click;
             // 
             // btnNuevoPrestamo
             // 
@@ -165,6 +192,7 @@
             btnNuevoPrestamo.TabIndex = 2;
             btnNuevoPrestamo.Text = "Nuevo préstamo";
             btnNuevoPrestamo.UseVisualStyleBackColor = false;
+            btnNuevoPrestamo.Click += btnNuevoPrestamo_Click;
             // 
             // btnAlumnos
             // 
@@ -177,6 +205,7 @@
             btnAlumnos.TabIndex = 4;
             btnAlumnos.Text = "Alumnos";
             btnAlumnos.UseVisualStyleBackColor = false;
+            btnAlumnos.Click += btnAlumnos_Click;
             // 
             // btnDevoluciones
             // 
@@ -189,6 +218,7 @@
             btnDevoluciones.TabIndex = 3;
             btnDevoluciones.Text = "Devoluciones";
             btnDevoluciones.UseVisualStyleBackColor = false;
+            btnDevoluciones.Click += btnDevoluciones_Click;
             // 
             // lblTituloSistema
             // 
@@ -232,14 +262,14 @@
             panel2.Size = new Size(1515, 10);
             panel2.TabIndex = 0;
             // 
-            // pnlContenido
+            // pnlContenedor
             // 
-            pnlContenido.BackColor = Color.FromArgb(250, 247, 242);
-            pnlContenido.Controls.Add(panel4);
-            pnlContenido.Location = new Point(435, 131);
-            pnlContenido.Name = "pnlContenido";
-            pnlContenido.Size = new Size(1448, 895);
-            pnlContenido.TabIndex = 2;
+            pnlContenedor.BackColor = Color.FromArgb(250, 247, 242);
+            pnlContenedor.Controls.Add(panel4);
+            pnlContenedor.Location = new Point(482, 131);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(1367, 895);
+            pnlContenedor.TabIndex = 2;
             // 
             // panel4
             // 
@@ -261,45 +291,23 @@
             lblBienvenida.TabIndex = 3;
             lblBienvenida.Text = "Bienvenido Aministrador / Bibliotecario";
             // 
-            // lblOperaciones
-            // 
-            lblOperaciones.AutoSize = true;
-            lblOperaciones.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblOperaciones.ForeColor = Color.FromArgb(201, 168, 76);
-            lblOperaciones.Location = new Point(143, 332);
-            lblOperaciones.Name = "lblOperaciones";
-            lblOperaciones.Size = new Size(148, 28);
-            lblOperaciones.TabIndex = 3;
-            lblOperaciones.Text = "OPERACIONES";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(201, 168, 76);
-            label1.Location = new Point(143, 518);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 28);
-            label1.TabIndex = 3;
-            label1.Text = "REGISTROS";
-            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1920, 1051);
-            Controls.Add(pnlContenido);
+            Controls.Add(pnlContenedor);
             Controls.Add(pnlSuperior);
             Controls.Add(pnlMenu);
             Name = "frmPrincipal";
-            Text = "frmPrincipal";
+            Text = "Pantalla Principal";
             pnlMenu.ResumeLayout(false);
             pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlSuperior.ResumeLayout(false);
             pnlSuperior.PerformLayout();
-            pnlContenido.ResumeLayout(false);
+            pnlContenedor.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ResumeLayout(false);
@@ -322,7 +330,7 @@
         private Button btnEjemplar;
         private Label lblRol;
         private Button btnCerrarSesion;
-        private Panel pnlContenido;
+        private Panel pnlContenedor;
         private Panel panel4;
         private Label lblBienvenida;
         private Label lblOperaciones;

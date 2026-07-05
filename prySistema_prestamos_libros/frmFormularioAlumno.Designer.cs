@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioAlumno));
             lblDatosAcademicos = new Label();
             lblDereccion = new Label();
             lblDatosPersonales = new Label();
-            btnlimpiar = new Button();
-            btncancelar = new Button();
-            btnguardar = new Button();
+            btnLimpiar = new Button();
+            btnCancelar = new Button();
+            btnGuardar = new Button();
             lblCarrera = new Label();
             cmbCarrera = new ComboBox();
             lblCodigoPostal = new Label();
@@ -50,9 +51,9 @@
             lblNombres = new Label();
             lblTelefono = new Label();
             lblNumControl = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            pcbContenedorCompacto = new PictureBox();
+            pcbContainerCompacto = new PictureBox();
+            pcbContenedorCaptura = new PictureBox();
             lblGrado = new Label();
             lblGrupo = new Label();
             txtApellidoMaterno = new TextBox();
@@ -64,10 +65,10 @@
             txtCodigoPostal = new TextBox();
             txtGrado = new TextBox();
             txtGrupo = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            dtpFechaRegistro = new DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             SuspendLayout();
             // 
             // lblDatosAcademicos
@@ -76,7 +77,7 @@
             lblDatosAcademicos.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosAcademicos.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosAcademicos.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosAcademicos.Location = new Point(71, 524);
+            lblDatosAcademicos.Location = new Point(32, 539);
             lblDatosAcademicos.Name = "lblDatosAcademicos";
             lblDatosAcademicos.Size = new Size(153, 23);
             lblDatosAcademicos.TabIndex = 76;
@@ -88,7 +89,7 @@
             lblDereccion.BackColor = Color.FromArgb(250, 247, 242);
             lblDereccion.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDereccion.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDereccion.Location = new Point(79, 348);
+            lblDereccion.Location = new Point(32, 350);
             lblDereccion.Name = "lblDereccion";
             lblDereccion.Size = new Size(85, 23);
             lblDereccion.TabIndex = 75;
@@ -100,59 +101,65 @@
             lblDatosPersonales.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosPersonales.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosPersonales.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosPersonales.Location = new Point(79, 57);
+            lblDatosPersonales.Location = new Point(40, 72);
             lblDatosPersonales.Name = "lblDatosPersonales";
-            lblDatosPersonales.Size = new Size(265, 23);
+            lblDatosPersonales.Size = new Size(240, 23);
             lblDatosPersonales.TabIndex = 74;
-            lblDatosPersonales.Text = "Datos personales del trabajador";
+            lblDatosPersonales.Text = "Datos personales del alumno";
             // 
-            // btnlimpiar
+            // btnLimpiar
             // 
-            btnlimpiar.BackColor = Color.FromArgb(107, 122, 153);
-            btnlimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnlimpiar.ForeColor = Color.FromArgb(250, 247, 242);
-            btnlimpiar.Image = Properties.Resources.Limpiar;
-            btnlimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnlimpiar.Location = new Point(666, 705);
-            btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(150, 45);
-            btnlimpiar.TabIndex = 73;
-            btnlimpiar.Text = "Limpiar";
-            btnlimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = Color.FromArgb(107, 122, 153);
+            btnLimpiar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
+            btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
+            btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLimpiar.Location = new Point(621, 706);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(150, 45);
+            btnLimpiar.TabIndex = 73;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
+            btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // btncancelar
+            // btnCancelar
             // 
-            btncancelar.BackColor = Color.FromArgb(242, 196, 196);
-            btncancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btncancelar.ForeColor = Color.FromArgb(122, 32, 32);
-            btncancelar.Image = Properties.Resources.Cancelar1_0;
-            btncancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btncancelar.Location = new Point(1030, 705);
-            btncancelar.Name = "btncancelar";
-            btncancelar.Size = new Size(150, 45);
-            btncancelar.TabIndex = 72;
-            btncancelar.Text = "Cancelar";
-            btncancelar.UseVisualStyleBackColor = false;
+            btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
+            btnCancelar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(981, 706);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(150, 45);
+            btnCancelar.TabIndex = 72;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnguardar
+            // btnGuardar
             // 
-            btnguardar.BackColor = Color.FromArgb(201, 168, 76);
-            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnguardar.ForeColor = Color.FromArgb(17, 30, 71);
-            btnguardar.Image = Properties.Resources.Guardar;
-            btnguardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnguardar.Location = new Point(319, 705);
-            btnguardar.Name = "btnguardar";
-            btnguardar.Size = new Size(150, 45);
-            btnguardar.TabIndex = 71;
-            btnguardar.Text = "Guardar";
-            btnguardar.UseVisualStyleBackColor = false;
+            btnGuardar.BackColor = Color.FromArgb(201, 168, 76);
+            btnGuardar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.Location = new Point(292, 706);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(150, 45);
+            btnGuardar.TabIndex = 71;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.MiddleRight;
+            btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // lblCarrera
             // 
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
-            lblCarrera.Location = new Point(90, 564);
+            lblCarrera.Location = new Point(51, 579);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(57, 20);
             lblCarrera.TabIndex = 70;
@@ -161,16 +168,16 @@
             // cmbCarrera
             // 
             cmbCarrera.FormattingEnabled = true;
-            cmbCarrera.Location = new Point(90, 587);
+            cmbCarrera.Location = new Point(51, 602);
             cmbCarrera.Name = "cmbCarrera";
-            cmbCarrera.Size = new Size(224, 28);
+            cmbCarrera.Size = new Size(245, 28);
             cmbCarrera.TabIndex = 69;
             // 
             // lblCodigoPostal
             // 
             lblCodigoPostal.AutoSize = true;
             lblCodigoPostal.BackColor = Color.FromArgb(250, 247, 242);
-            lblCodigoPostal.Location = new Point(1087, 389);
+            lblCodigoPostal.Location = new Point(1048, 404);
             lblCodigoPostal.Name = "lblCodigoPostal";
             lblCodigoPostal.Size = new Size(103, 20);
             lblCodigoPostal.TabIndex = 68;
@@ -180,7 +187,7 @@
             // 
             lblNumCalle.AutoSize = true;
             lblNumCalle.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumCalle.Location = new Point(751, 389);
+            lblNumCalle.Location = new Point(712, 404);
             lblNumCalle.Name = "lblNumCalle";
             lblNumCalle.Size = new Size(119, 20);
             lblNumCalle.TabIndex = 67;
@@ -190,7 +197,7 @@
             // 
             lblCalle.AutoSize = true;
             lblCalle.BackColor = Color.FromArgb(250, 247, 242);
-            lblCalle.Location = new Point(430, 389);
+            lblCalle.Location = new Point(391, 404);
             lblCalle.Name = "lblCalle";
             lblCalle.Size = new Size(42, 20);
             lblCalle.TabIndex = 66;
@@ -200,7 +207,7 @@
             // 
             lblColonia.AutoSize = true;
             lblColonia.BackColor = Color.FromArgb(250, 247, 242);
-            lblColonia.Location = new Point(89, 389);
+            lblColonia.Location = new Point(50, 394);
             lblColonia.Name = "lblColonia";
             lblColonia.Size = new Size(60, 20);
             lblColonia.TabIndex = 65;
@@ -208,33 +215,33 @@
             // 
             // txtApellidoPaterno
             // 
-            txtApellidoPaterno.Location = new Point(751, 120);
+            txtApellidoPaterno.Location = new Point(712, 135);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(249, 30);
+            txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 58;
             // 
             // txtNombres
             // 
-            txtNombres.Location = new Point(430, 120);
+            txtNombres.Location = new Point(391, 135);
             txtNombres.Multiline = true;
             txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(249, 30);
+            txtNombres.Size = new Size(245, 30);
             txtNombres.TabIndex = 56;
             // 
             // txtNumeroControl
             // 
-            txtNumeroControl.Location = new Point(90, 120);
+            txtNumeroControl.Location = new Point(51, 135);
             txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
-            txtNumeroControl.Size = new Size(249, 30);
+            txtNumeroControl.Size = new Size(245, 30);
             txtNumeroControl.TabIndex = 54;
             // 
             // lblApellidoMaterno
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.Location = new Point(1087, 97);
+            lblApellidoMaterno.Location = new Point(1048, 112);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
             lblApellidoMaterno.TabIndex = 53;
@@ -244,7 +251,7 @@
             // 
             lblFechaRegistro.AutoSize = true;
             lblFechaRegistro.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaRegistro.Location = new Point(747, 178);
+            lblFechaRegistro.Location = new Point(708, 193);
             lblFechaRegistro.Name = "lblFechaRegistro";
             lblFechaRegistro.Size = new Size(123, 20);
             lblFechaRegistro.TabIndex = 52;
@@ -254,7 +261,7 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoPaterno.Location = new Point(758, 96);
+            lblApellidoPaterno.Location = new Point(719, 111);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
             lblApellidoPaterno.TabIndex = 51;
@@ -264,7 +271,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.BackColor = Color.FromArgb(250, 247, 242);
-            lblCorreo.Location = new Point(430, 178);
+            lblCorreo.Location = new Point(391, 193);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(132, 20);
             lblCorreo.TabIndex = 50;
@@ -274,7 +281,7 @@
             // 
             lblNombres.AutoSize = true;
             lblNombres.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombres.Location = new Point(430, 97);
+            lblNombres.Location = new Point(391, 112);
             lblNombres.Name = "lblNombres";
             lblNombres.Size = new Size(80, 20);
             lblNombres.TabIndex = 49;
@@ -284,7 +291,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.BackColor = Color.FromArgb(250, 247, 242);
-            lblTelefono.Location = new Point(89, 178);
+            lblTelefono.Location = new Point(50, 193);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(67, 20);
             lblTelefono.TabIndex = 48;
@@ -294,47 +301,47 @@
             // 
             lblNumControl.AutoSize = true;
             lblNumControl.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumControl.Location = new Point(89, 97);
+            lblNumControl.Location = new Point(50, 111);
             lblNumControl.Name = "lblNumControl";
             lblNumControl.Size = new Size(135, 20);
             lblNumControl.TabIndex = 47;
             lblNumControl.Text = "Numero de control";
             // 
-            // pictureBox3
+            // pcbContenedorCompacto
             // 
-            pictureBox3.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox3.Location = new Point(63, 509);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1302, 137);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 46;
-            pictureBox3.TabStop = false;
+            pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
+            pcbContenedorCompacto.Location = new Point(24, 524);
+            pcbContenedorCompacto.Name = "pcbContenedorCompacto";
+            pcbContenedorCompacto.Size = new Size(1302, 137);
+            pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorCompacto.TabIndex = 46;
+            pcbContenedorCompacto.TabStop = false;
             // 
-            // pictureBox2
+            // pcbContainerCompacto
             // 
-            pictureBox2.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox2.Location = new Point(63, 325);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1302, 137);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 45;
-            pictureBox2.TabStop = false;
+            pcbContainerCompacto.Image = Properties.Resources.contenedorgroupCompac;
+            pcbContainerCompacto.Location = new Point(24, 340);
+            pcbContainerCompacto.Name = "pcbContainerCompacto";
+            pcbContainerCompacto.Size = new Size(1302, 137);
+            pcbContainerCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContainerCompacto.TabIndex = 45;
+            pcbContainerCompacto.TabStop = false;
             // 
-            // pictureBox1
+            // pcbContenedorCaptura
             // 
-            pictureBox1.Image = Properties.Resources.contenerdorGrupo;
-            pictureBox1.Location = new Point(63, 48);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1302, 234);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 44;
-            pictureBox1.TabStop = false;
+            pcbContenedorCaptura.Image = Properties.Resources.contenerdorGrupo;
+            pcbContenedorCaptura.Location = new Point(24, 63);
+            pcbContenedorCaptura.Name = "pcbContenedorCaptura";
+            pcbContenedorCaptura.Size = new Size(1302, 234);
+            pcbContenedorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorCaptura.TabIndex = 44;
+            pcbContenedorCaptura.TabStop = false;
             // 
             // lblGrado
             // 
             lblGrado.AutoSize = true;
             lblGrado.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrado.Location = new Point(430, 562);
+            lblGrado.Location = new Point(391, 577);
             lblGrado.Name = "lblGrado";
             lblGrado.Size = new Size(50, 20);
             lblGrado.TabIndex = 77;
@@ -344,7 +351,7 @@
             // 
             lblGrupo.AutoSize = true;
             lblGrupo.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrupo.Location = new Point(751, 562);
+            lblGrupo.Location = new Point(712, 577);
             lblGrupo.Name = "lblGrupo";
             lblGrupo.Size = new Size(50, 20);
             lblGrupo.TabIndex = 78;
@@ -352,92 +359,92 @@
             // 
             // txtApellidoMaterno
             // 
-            txtApellidoMaterno.Location = new Point(1087, 120);
+            txtApellidoMaterno.Location = new Point(1048, 135);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(249, 30);
+            txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 81;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(89, 201);
+            txtTelefono.Location = new Point(50, 216);
             txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(249, 30);
+            txtTelefono.Size = new Size(245, 30);
             txtTelefono.TabIndex = 82;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(430, 201);
+            txtCorreo.Location = new Point(391, 216);
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(249, 30);
+            txtCorreo.Size = new Size(245, 30);
             txtCorreo.TabIndex = 83;
             // 
             // txtColonia
             // 
-            txtColonia.Location = new Point(90, 412);
+            txtColonia.Location = new Point(51, 427);
             txtColonia.Multiline = true;
             txtColonia.Name = "txtColonia";
-            txtColonia.Size = new Size(249, 30);
+            txtColonia.Size = new Size(245, 30);
             txtColonia.TabIndex = 85;
             // 
             // txtCalle
             // 
-            txtCalle.Location = new Point(430, 412);
+            txtCalle.Location = new Point(391, 427);
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
-            txtCalle.Size = new Size(249, 30);
+            txtCalle.Size = new Size(245, 30);
             txtCalle.TabIndex = 86;
             // 
             // txtNumCalle
             // 
-            txtNumCalle.Location = new Point(751, 412);
+            txtNumCalle.Location = new Point(712, 427);
             txtNumCalle.Multiline = true;
             txtNumCalle.Name = "txtNumCalle";
-            txtNumCalle.Size = new Size(249, 30);
+            txtNumCalle.Size = new Size(245, 30);
             txtNumCalle.TabIndex = 87;
             // 
             // txtCodigoPostal
             // 
-            txtCodigoPostal.Location = new Point(1087, 412);
+            txtCodigoPostal.Location = new Point(1048, 427);
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
-            txtCodigoPostal.Size = new Size(249, 30);
+            txtCodigoPostal.Size = new Size(245, 30);
             txtCodigoPostal.TabIndex = 88;
             // 
             // txtGrado
             // 
-            txtGrado.Location = new Point(430, 585);
+            txtGrado.Location = new Point(391, 600);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
-            txtGrado.Size = new Size(249, 30);
+            txtGrado.Size = new Size(245, 30);
             txtGrado.TabIndex = 89;
             // 
             // txtGrupo
             // 
-            txtGrupo.Location = new Point(751, 585);
+            txtGrupo.Location = new Point(712, 600);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
-            txtGrupo.Size = new Size(249, 30);
+            txtGrupo.Size = new Size(245, 30);
             txtGrupo.TabIndex = 90;
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            dateTimePicker1.Location = new Point(751, 204);
-            dateTimePicker1.MaxDate = new DateTime(2026, 6, 29, 0, 0, 0, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(249, 27);
-            dateTimePicker1.TabIndex = 91;
-            dateTimePicker1.Value = new DateTime(2026, 6, 29, 0, 0, 0, 0);
+            dtpFechaRegistro.Location = new Point(712, 219);
+            dtpFechaRegistro.MaxDate = new DateTime(2026, 6, 29, 0, 0, 0, 0);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(245, 27);
+            dtpFechaRegistro.TabIndex = 91;
+            dtpFechaRegistro.Value = new DateTime(2026, 6, 29, 0, 0, 0, 0);
             // 
             // frmFormularioAlumno
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1430, 848);
-            Controls.Add(dateTimePicker1);
+            ClientSize = new Size(1349, 848);
+            Controls.Add(dtpFechaRegistro);
             Controls.Add(txtGrupo);
             Controls.Add(txtGrado);
             Controls.Add(txtCodigoPostal);
@@ -452,9 +459,9 @@
             Controls.Add(lblDatosAcademicos);
             Controls.Add(lblDereccion);
             Controls.Add(lblDatosPersonales);
-            Controls.Add(btnlimpiar);
-            Controls.Add(btncancelar);
-            Controls.Add(btnguardar);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGuardar);
             Controls.Add(lblCarrera);
             Controls.Add(cmbCarrera);
             Controls.Add(lblCodigoPostal);
@@ -471,14 +478,14 @@
             Controls.Add(lblNombres);
             Controls.Add(lblTelefono);
             Controls.Add(lblNumControl);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbContenedorCompacto);
+            Controls.Add(pcbContainerCompacto);
+            Controls.Add(pcbContenedorCaptura);
             Name = "frmFormularioAlumno";
-            Text = "frmFormularioAlumno";
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Formulario de Alumno";
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -488,9 +495,9 @@
         private Label lblDatosAcademicos;
         private Label lblDereccion;
         private Label lblDatosPersonales;
-        private Button btnlimpiar;
-        private Button btncancelar;
-        private Button btnguardar;
+        private Button btnLimpiar;
+        private Button btnCancelar;
+        private Button btnGuardar;
         private Label lblCarrera;
         private ComboBox cmbCarrera;
         private Label lblCodigoPostal;
@@ -507,9 +514,9 @@
         private Label lblNombres;
         private Label lblTelefono;
         private Label lblNumControl;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox pcbContenedorCompacto;
+        private PictureBox pcbContainerCompacto;
+        private PictureBox pcbContenedorCaptura;
         private Label lblGrado;
         private Label lblGrupo;
         private TextBox txtApellidoMaterno;
@@ -521,6 +528,6 @@
         private TextBox txtCodigoPostal;
         private TextBox txtGrado;
         private TextBox txtGrupo;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFechaRegistro;
     }
 }
