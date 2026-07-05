@@ -133,17 +133,17 @@
             // cmbLibro
             // 
             cmbLibro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbLibro.FormattingEnabled = true;
             cmbLibro.Location = new Point(61, 226);
             cmbLibro.Name = "cmbLibro";
-            cmbLibro.Size = new Size(245, 28);
+            cmbLibro.Size = new Size(245, 31);
             cmbLibro.TabIndex = 10;
             // 
             // txtLocalizacion
             // 
             txtLocalizacion.BackColor = Color.White;
-            txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLocalizacion.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
             txtLocalizacion.Location = new Point(479, 226);
             txtLocalizacion.Multiline = true;
@@ -154,29 +154,29 @@
             // dtpFechaAdquisicion
             // 
             dtpFechaAdquisicion.CalendarForeColor = SystemColors.ControlLightLight;
-            dtpFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaAdquisicion.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaAdquisicion.Format = DateTimePickerFormat.Short;
             dtpFechaAdquisicion.Location = new Point(61, 358);
             dtpFechaAdquisicion.Name = "dtpFechaAdquisicion";
-            dtpFechaAdquisicion.Size = new Size(245, 27);
+            dtpFechaAdquisicion.Size = new Size(245, 30);
             dtpFechaAdquisicion.TabIndex = 13;
             // 
             // nudCantidad
             // 
-            nudCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nudCantidad.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudCantidad.Location = new Point(479, 358);
             nudCantidad.Name = "nudCantidad";
-            nudCantidad.Size = new Size(245, 27);
+            nudCantidad.Size = new Size(245, 30);
             nudCantidad.TabIndex = 14;
             // 
             // txtEstado
             // 
             txtEstado.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEstado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEstado.FormattingEnabled = true;
             txtEstado.Location = new Point(864, 357);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(245, 28);
+            txtEstado.Size = new Size(245, 31);
             txtEstado.TabIndex = 15;
             // 
             // btnGuardar

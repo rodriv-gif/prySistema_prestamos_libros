@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionAlumnos));
-            pictureBox1 = new PictureBox();
+            pcbContenedorGestion = new PictureBox();
             btnNuevoRegistro = new Button();
             btnEditar = new Button();
             btnDarBaja = new Button();
             lblBuscar = new Label();
             txtBuscarAlumno = new TextBox();
             dgvAlumnos = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pcbContenedorGestion
             // 
-            pictureBox1.Image = Properties.Resources.contenedorgroupCompac;
-            pictureBox1.Location = new Point(31, 26);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1287, 797);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pcbContenedorGestion.Image = Properties.Resources.contenedorgroupCompac;
+            pcbContenedorGestion.Location = new Point(31, 26);
+            pcbContenedorGestion.Name = "pcbContenedorGestion";
+            pcbContenedorGestion.Size = new Size(1287, 797);
+            pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorGestion.TabIndex = 0;
+            pcbContenedorGestion.TabStop = false;
             // 
             // btnNuevoRegistro
             // 
@@ -112,6 +112,7 @@
             // 
             // txtBuscarAlumno
             // 
+            txtBuscarAlumno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarAlumno.Location = new Point(50, 110);
             txtBuscarAlumno.Multiline = true;
             txtBuscarAlumno.Name = "txtBuscarAlumno";
@@ -139,10 +140,10 @@
             Controls.Add(btnDarBaja);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevoRegistro);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbContenedorGestion);
             Name = "frmGestionAlumnos";
             Text = "Gestion de Alumnos";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -150,7 +151,7 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pcbContenedorGestion;
         private Button btnNuevoRegistro;
         private Button btnEditar;
         private Button btnDarBaja;

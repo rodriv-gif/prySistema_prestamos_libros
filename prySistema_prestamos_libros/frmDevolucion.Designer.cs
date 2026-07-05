@@ -300,10 +300,11 @@
             // 
             // cmbBibliotecario
             // 
+            cmbBibliotecario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBibliotecario.FormattingEnabled = true;
             cmbBibliotecario.Location = new Point(374, 461);
             cmbBibliotecario.Name = "cmbBibliotecario";
-            cmbBibliotecario.Size = new Size(245, 28);
+            cmbBibliotecario.Size = new Size(245, 31);
             cmbBibliotecario.TabIndex = 23;
             // 
             // lblMulta
@@ -440,11 +441,12 @@
             // 
             // dtpFechaDevolucion
             // 
+            dtpFechaDevolucion.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
             dtpFechaDevolucion.Location = new Point(43, 463);
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
-            dtpFechaDevolucion.Size = new Size(245, 27);
+            dtpFechaDevolucion.Size = new Size(245, 30);
             dtpFechaDevolucion.TabIndex = 38;
             // 
             // lblFechaPago
@@ -460,11 +462,12 @@
             // 
             // dtpFechaPago
             // 
+            dtpFechaPago.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPago.Format = DateTimePickerFormat.Short;
             dtpFechaPago.Location = new Point(1054, 732);
             dtpFechaPago.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPago.Name = "dtpFechaPago";
-            dtpFechaPago.Size = new Size(245, 27);
+            dtpFechaPago.Size = new Size(245, 30);
             dtpFechaPago.TabIndex = 41;
             // 
             // cmbEstadoPago

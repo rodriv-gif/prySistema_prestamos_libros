@@ -54,7 +54,7 @@
             // txtBuscarTrabajador
             // 
             txtBuscarTrabajador.BackColor = Color.White;
-            txtBuscarTrabajador.Font = new Font("Segoe UI", 9F);
+            txtBuscarTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarTrabajador.Location = new Point(54, 123);
             txtBuscarTrabajador.Multiline = true;
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";

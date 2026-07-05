@@ -64,6 +64,7 @@
             // 
             // txtBuscarTitulo
             // 
+            txtBuscarTitulo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarTitulo.Location = new Point(49, 108);
             txtBuscarTitulo.Multiline = true;
             txtBuscarTitulo.Name = "txtBuscarTitulo";

@@ -197,7 +197,7 @@
             btnAgregar.Image = (Image)resources.GetObject("btnAgregar.Image");
             btnAgregar.Location = new Point(1045, 317);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(141, 47);
+            btnAgregar.Size = new Size(150, 45);
             btnAgregar.TabIndex = 17;
             btnAgregar.Text = "Agregar";
             btnAgregar.TextAlign = ContentAlignment.MiddleRight;
@@ -492,39 +492,43 @@
             // cmbTipoPrestamo
             // 
             cmbTipoPrestamo.BackColor = Color.White;
+            cmbTipoPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoPrestamo.FormattingEnabled = true;
             cmbTipoPrestamo.Location = new Point(44, 715);
             cmbTipoPrestamo.Margin = new Padding(3, 4, 3, 4);
             cmbTipoPrestamo.Name = "cmbTipoPrestamo";
-            cmbTipoPrestamo.Size = new Size(245, 28);
+            cmbTipoPrestamo.Size = new Size(245, 31);
             cmbTipoPrestamo.TabIndex = 47;
             // 
             // cmbBibliotecario
             // 
             cmbBibliotecario.BackColor = Color.White;
+            cmbBibliotecario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBibliotecario.FormattingEnabled = true;
             cmbBibliotecario.Location = new Point(1035, 713);
             cmbBibliotecario.Margin = new Padding(3, 4, 3, 4);
             cmbBibliotecario.Name = "cmbBibliotecario";
-            cmbBibliotecario.Size = new Size(245, 28);
+            cmbBibliotecario.Size = new Size(245, 31);
             cmbBibliotecario.TabIndex = 48;
             // 
             // dtpFechaPrestamo
             // 
+            dtpFechaPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPrestamo.Format = DateTimePickerFormat.Short;
             dtpFechaPrestamo.Location = new Point(379, 711);
             dtpFechaPrestamo.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPrestamo.Name = "dtpFechaPrestamo";
-            dtpFechaPrestamo.Size = new Size(245, 27);
+            dtpFechaPrestamo.Size = new Size(245, 30);
             dtpFechaPrestamo.TabIndex = 49;
             // 
             // dtpFechaDevolucion
             // 
+            dtpFechaDevolucion.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
             dtpFechaDevolucion.Location = new Point(719, 711);
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
-            dtpFechaDevolucion.Size = new Size(245, 27);
+            dtpFechaDevolucion.Size = new Size(245, 30);
             dtpFechaDevolucion.TabIndex = 50;
             // 
             // frmPrestamos

@@ -64,7 +64,7 @@
             // 
             // txtBuscarLibro
             // 
-            txtBuscarLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarLibro.Location = new Point(50, 111);
             txtBuscarLibro.Multiline = true;
             txtBuscarLibro.Name = "txtBuscarLibro";

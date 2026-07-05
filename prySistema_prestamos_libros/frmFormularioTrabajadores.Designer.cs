@@ -99,6 +99,7 @@
             // 
             // txtApellidoMaterno
             // 
+            txtApellidoMaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(1045, 144);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
@@ -107,6 +108,7 @@
             // 
             // txtFechaRegistro
             // 
+            txtFechaRegistro.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFechaRegistro.Location = new Point(709, 225);
             txtFechaRegistro.Multiline = true;
             txtFechaRegistro.Name = "txtFechaRegistro";
@@ -115,6 +117,7 @@
             // 
             // txtApellidoPaterno
             // 
+            txtApellidoPaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(709, 144);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
@@ -123,6 +126,7 @@
             // 
             // txtCorreo
             // 
+            txtCorreo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.Location = new Point(388, 225);
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
@@ -131,6 +135,7 @@
             // 
             // txtNombre
             // 
+            txtNombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(388, 144);
             txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
@@ -139,6 +144,7 @@
             // 
             // txtTelefono
             // 
+            txtTelefono.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.Location = new Point(48, 225);
             txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
@@ -147,6 +153,7 @@
             // 
             // txtNumeroControl
             // 
+            txtNumeroControl.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroControl.Location = new Point(48, 144);
             txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
@@ -265,6 +272,7 @@
             // 
             // txtCodigoPostal
             // 
+            txtCodigoPostal.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigoPostal.Location = new Point(1045, 420);
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
@@ -273,6 +281,7 @@
             // 
             // txtNumCalle
             // 
+            txtNumCalle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumCalle.Location = new Point(709, 425);
             txtNumCalle.Multiline = true;
             txtNumCalle.Name = "txtNumCalle";
@@ -281,6 +290,7 @@
             // 
             // txtCalle
             // 
+            txtCalle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCalle.Location = new Point(388, 420);
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
@@ -289,6 +299,7 @@
             // 
             // txtColonia
             // 
+            txtColonia.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtColonia.Location = new Point(48, 420);
             txtColonia.Multiline = true;
             txtColonia.Name = "txtColonia";
@@ -307,10 +318,11 @@
             // 
             // cmbCarreraArea
             // 
+            cmbCarreraArea.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCarreraArea.FormattingEnabled = true;
             cmbCarreraArea.Location = new Point(48, 609);
             cmbCarreraArea.Name = "cmbCarreraArea";
-            cmbCarreraArea.Size = new Size(245, 28);
+            cmbCarreraArea.Size = new Size(245, 31);
             cmbCarreraArea.TabIndex = 36;
             // 
             // btnLimpiar
