@@ -121,7 +121,7 @@
   <data name="btnRegistrarDevolucion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAjFJREFUWEftmLmqFUEURZc45mLoBE6omPsDBqZmzpqa+wEm/oKZgQaO4C+YiSI4
+        vAAADrwBlbxySQAAAjFJREFUWEftmLmqFUEURZc45mLoBE6omPsDBqZmzpqa+wEm/oKZgQaO4C+YiSI4
         poIiOIto7MB6nILi8Op13+7XCNobNtx7au8+m+q61bcaZsyYMQo7gBPAaeBUorW+PBPX2Z4bjMUV4Pcq
         8glwMDcZinXArbjwA+A6cBN4E7XHwF3gXgfVqC0hnwP7crMhWBuBvOi5qG0E7kTtfNQ2dFCorWfSkAdi
         bDDqgK4hUc+qa6sv1Op5GOH8/ALYn4WLoA54NmoGvD0ioMvENfg0vj8bc7unCKhXGMpw1l4O/eFMFdBr
@@ -136,7 +136,7 @@
   <data name="btnLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAA61JREFUWEftmFuoVlUQx3+ZGphalqipaZldSMgyMREkQ/FFM9HwUmIEFeqLD4aE
+        vwAADr8BOAVTJAAAA61JREFUWEftmFuoVlUQx3+ZGphalqipaZldSMgyMREkQ/FFM9HwUmIEFeqLD4aE
         6YMpQr2Ipj4kahAqCpIPXvFBTdFMKCwVLU0k0QpveS+v/GEWDMM659vfPud4Hjp/GDhnz6xZ/2/PrJlZ
         G5rwP8QEYBuwBnglKhsIbYBH48McRgP/AXdNTgAdg81jQA+gVXheF8wAzgCfAF2j0mOVIye5Dbzt9B2A
         jcDfwKdAS6cri6eA39yec6KBxxeB4E1ggNO/BdwynZx2c7qy0FtL+yl6r0YDjyeBH4A7RmQB0NzpFdqT
@@ -158,7 +158,7 @@
   <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAS1JREFUWEftmNtNAzEQRQ8SRfAJSJBQBxXQAHREH4gikKgg4VUOjyPZkmUF8tgd
+        vAAADrwBlbxySQAAAS1JREFUWEftmNtNAzEQRQ8SRfAJSJBQBxXQAHREH4gikKgg4VUOjyPZkmUF8tgd
         NB8+0iiRPZ577c1644XBYDCJE+AGuANuZw5rWluNg7gGPoBP4CsorK2GWnvhrN5LkRfgAXicOaxpbTXU
         2mslXXoHvgGnwBFwPHNY09pqqKXmzvgbcZCztFgU1lZDLTV3phr0UkQbVGMYPJQwg/fAM3DVd2zAHHMd
         0xNm8Kn0r4FF39lgnznmOqYnzGArvAIu+4TSZt9fEwkzKMvGpBtue7n9Xjdhc8zdRKhBuWhWyc+zEm2b

@@ -80,7 +80,7 @@
             // 
             // txtIdioma
             // 
-            txtIdioma.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtIdioma.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIdioma.Location = new Point(790, 273);
             txtIdioma.Multiline = true;
             txtIdioma.Name = "txtIdioma";
@@ -89,7 +89,7 @@
             // 
             // txtNumPaginas
             // 
-            txtNumPaginas.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumPaginas.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumPaginas.Location = new Point(790, 181);
             txtNumPaginas.Multiline = true;
             txtNumPaginas.Name = "txtNumPaginas";
@@ -98,7 +98,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCategoria.Location = new Point(417, 273);
             txtCategoria.Multiline = true;
             txtCategoria.Name = "txtCategoria";
@@ -107,7 +107,7 @@
             // 
             // txtTitulo
             // 
-            txtTitulo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTitulo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTitulo.Location = new Point(417, 184);
             txtTitulo.Multiline = true;
             txtTitulo.Name = "txtTitulo";
@@ -116,7 +116,7 @@
             // 
             // txtEditorial
             // 
-            txtEditorial.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEditorial.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEditorial.Location = new Point(55, 273);
             txtEditorial.Multiline = true;
             txtEditorial.Name = "txtEditorial";
@@ -125,7 +125,7 @@
             // 
             // txtISBN
             // 
-            txtISBN.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtISBN.Location = new Point(55, 184);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
@@ -224,7 +224,7 @@
             // 
             // txtApellidoMaterno
             // 
-            txtApellidoMaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(790, 472);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
@@ -233,7 +233,7 @@
             // 
             // txtApellidoPaterno
             // 
-            txtApellidoPaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(417, 472);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
@@ -242,7 +242,7 @@
             // 
             // txtNombreAutor
             // 
-            txtNombreAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreAutor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombreAutor.Location = new Point(55, 472);
             txtNombreAutor.Multiline = true;
             txtNombreAutor.Name = "txtNombreAutor";

@@ -167,11 +167,11 @@
             // 
             // cmbCarrera
             // 
-            cmbCarrera.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCarrera.FormattingEnabled = true;
             cmbCarrera.Location = new Point(51, 602);
             cmbCarrera.Name = "cmbCarrera";
-            cmbCarrera.Size = new Size(245, 31);
+            cmbCarrera.Size = new Size(245, 28);
             cmbCarrera.TabIndex = 69;
             // 
             // lblCodigoPostal
@@ -216,7 +216,7 @@
             // 
             // txtApellidoPaterno
             // 
-            txtApellidoPaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(712, 135);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
@@ -225,7 +225,7 @@
             // 
             // txtNombres
             // 
-            txtNombres.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombres.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombres.Location = new Point(391, 135);
             txtNombres.Multiline = true;
             txtNombres.Name = "txtNombres";
@@ -234,7 +234,7 @@
             // 
             // txtNumeroControl
             // 
-            txtNumeroControl.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroControl.Location = new Point(51, 135);
             txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
@@ -363,7 +363,7 @@
             // 
             // txtApellidoMaterno
             // 
-            txtApellidoMaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(1048, 135);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
@@ -372,7 +372,7 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefono.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.Location = new Point(50, 216);
             txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
@@ -381,7 +381,7 @@
             // 
             // txtCorreo
             // 
-            txtCorreo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.Location = new Point(391, 216);
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
@@ -390,7 +390,7 @@
             // 
             // txtColonia
             // 
-            txtColonia.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtColonia.Location = new Point(51, 427);
             txtColonia.Multiline = true;
             txtColonia.Name = "txtColonia";
@@ -399,7 +399,7 @@
             // 
             // txtCalle
             // 
-            txtCalle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCalle.Location = new Point(391, 427);
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
@@ -408,7 +408,7 @@
             // 
             // txtNumCalle
             // 
-            txtNumCalle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumCalle.Location = new Point(712, 427);
             txtNumCalle.Multiline = true;
             txtNumCalle.Name = "txtNumCalle";
@@ -417,7 +417,7 @@
             // 
             // txtCodigoPostal
             // 
-            txtCodigoPostal.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigoPostal.Location = new Point(1048, 427);
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
@@ -426,7 +426,7 @@
             // 
             // txtGrado
             // 
-            txtGrado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrado.Location = new Point(391, 600);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
@@ -435,7 +435,7 @@
             // 
             // txtGrupo
             // 
-            txtGrupo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrupo.Location = new Point(712, 600);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
@@ -444,11 +444,11 @@
             // 
             // dtpFechaRegistro
             // 
-            dtpFechaRegistro.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaRegistro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaRegistro.Location = new Point(712, 219);
             dtpFechaRegistro.MaxDate = new DateTime(2026, 6, 29, 0, 0, 0, 0);
             dtpFechaRegistro.Name = "dtpFechaRegistro";
-            dtpFechaRegistro.Size = new Size(245, 30);
+            dtpFechaRegistro.Size = new Size(245, 27);
             dtpFechaRegistro.TabIndex = 91;
             dtpFechaRegistro.Value = new DateTime(2026, 6, 29, 0, 0, 0, 0);
             // 

@@ -117,8 +117,9 @@
             // 
             // txtNumControl
             // 
-            txtNumControl.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumControl.Location = new Point(42, 54);
+            txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";
             txtNumControl.Size = new Size(245, 30);
             txtNumControl.TabIndex = 4;
@@ -126,8 +127,9 @@
             // txtNombreSolicitante
             // 
             txtNombreSolicitante.BackColor = Color.White;
-            txtNombreSolicitante.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombreSolicitante.Location = new Point(374, 54);
+            txtNombreSolicitante.Multiline = true;
             txtNombreSolicitante.Name = "txtNombreSolicitante";
             txtNombreSolicitante.Size = new Size(245, 30);
             txtNombreSolicitante.TabIndex = 5;
@@ -135,8 +137,9 @@
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.BackColor = Color.White;
-            txtApellidoPaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(722, 54);
+            txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 6;
@@ -144,8 +147,9 @@
             // txtApellidoMaterno
             // 
             txtApellidoMaterno.BackColor = Color.WhiteSmoke;
-            txtApellidoMaterno.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(1053, 54);
+            txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 7;
@@ -153,8 +157,9 @@
             // txtGrado
             // 
             txtGrado.BackColor = Color.White;
-            txtGrado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrado.Location = new Point(42, 121);
+            txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
             txtGrado.Size = new Size(245, 30);
             txtGrado.TabIndex = 8;
@@ -162,8 +167,9 @@
             // txtGrupo
             // 
             txtGrupo.BackColor = Color.White;
-            txtGrupo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrupo.Location = new Point(374, 121);
+            txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
             txtGrupo.Size = new Size(245, 30);
             txtGrupo.TabIndex = 9;
@@ -171,9 +177,10 @@
             // txtCarrera
             // 
             txtCarrera.BackColor = Color.White;
-            txtCarrera.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCarrera.ForeColor = SystemColors.WindowText;
             txtCarrera.Location = new Point(722, 121);
+            txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
             txtCarrera.Size = new Size(245, 30);
             txtCarrera.TabIndex = 10;
@@ -300,11 +307,11 @@
             // 
             // cmbBibliotecario
             // 
-            cmbBibliotecario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBibliotecario.FormattingEnabled = true;
             cmbBibliotecario.Location = new Point(374, 461);
             cmbBibliotecario.Name = "cmbBibliotecario";
-            cmbBibliotecario.Size = new Size(245, 31);
+            cmbBibliotecario.Size = new Size(245, 28);
             cmbBibliotecario.TabIndex = 23;
             // 
             // lblMulta
@@ -366,7 +373,7 @@
             // txtLibrosVencidos
             // 
             txtLibrosVencidos.BackColor = Color.White;
-            txtLibrosVencidos.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLibrosVencidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLibrosVencidos.Location = new Point(43, 613);
             txtLibrosVencidos.Multiline = true;
             txtLibrosVencidos.Name = "txtLibrosVencidos";
@@ -376,8 +383,9 @@
             // txtDiasRetraso
             // 
             txtDiasRetraso.BackColor = Color.White;
-            txtDiasRetraso.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDiasRetraso.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDiasRetraso.Location = new Point(42, 733);
+            txtDiasRetraso.Multiline = true;
             txtDiasRetraso.Name = "txtDiasRetraso";
             txtDiasRetraso.Size = new Size(245, 30);
             txtDiasRetraso.TabIndex = 31;
@@ -385,8 +393,9 @@
             // txtMonto
             // 
             txtMonto.BackColor = Color.White;
-            txtMonto.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMonto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMonto.Location = new Point(374, 732);
+            txtMonto.Multiline = true;
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(245, 30);
             txtMonto.TabIndex = 32;
@@ -441,12 +450,13 @@
             // 
             // dtpFechaDevolucion
             // 
-            dtpFechaDevolucion.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaDevolucion.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
             dtpFechaDevolucion.Location = new Point(43, 463);
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
-            dtpFechaDevolucion.Size = new Size(245, 30);
+            dtpFechaDevolucion.Size = new Size(245, 27);
             dtpFechaDevolucion.TabIndex = 38;
             // 
             // lblFechaPago
@@ -462,12 +472,12 @@
             // 
             // dtpFechaPago
             // 
-            dtpFechaPago.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaPago.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPago.Format = DateTimePickerFormat.Short;
             dtpFechaPago.Location = new Point(1054, 732);
             dtpFechaPago.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPago.Name = "dtpFechaPago";
-            dtpFechaPago.Size = new Size(245, 30);
+            dtpFechaPago.Size = new Size(245, 27);
             dtpFechaPago.TabIndex = 41;
             // 
             // cmbEstadoPago

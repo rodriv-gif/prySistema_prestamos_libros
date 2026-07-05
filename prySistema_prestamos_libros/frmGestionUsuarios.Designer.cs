@@ -65,7 +65,7 @@
             // txtBuscarUsuario
             // 
             txtBuscarUsuario.BackColor = Color.White;
-            txtBuscarUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarUsuario.Location = new Point(52, 110);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";

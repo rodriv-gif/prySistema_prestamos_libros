@@ -207,17 +207,17 @@
             // cmbPerfil
             // 
             cmbPerfil.BackColor = Color.White;
-            cmbPerfil.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbPerfil.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Location = new Point(41, 494);
             cmbPerfil.Name = "cmbPerfil";
-            cmbPerfil.Size = new Size(245, 31);
+            cmbPerfil.Size = new Size(245, 28);
             cmbPerfil.TabIndex = 14;
             // 
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.White;
-            txtUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(369, 493);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
@@ -227,7 +227,7 @@
             // txtContrasena
             // 
             txtContrasena.BackColor = Color.White;
-            txtContrasena.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContrasena.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContrasena.Location = new Point(712, 494);
             txtContrasena.Multiline = true;
             txtContrasena.Name = "txtContrasena";
@@ -284,7 +284,7 @@
             // txtApellidoPaternoTrabajador
             // 
             txtApellidoPaternoTrabajador.BackColor = Color.White;
-            txtApellidoPaternoTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaternoTrabajador.Location = new Point(368, 271);
             txtApellidoPaternoTrabajador.Multiline = true;
             txtApellidoPaternoTrabajador.Name = "txtApellidoPaternoTrabajador";
@@ -294,7 +294,7 @@
             // txtApellidoMaternoTrabajador
             // 
             txtApellidoMaternoTrabajador.BackColor = Color.White;
-            txtApellidoMaternoTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaternoTrabajador.Location = new Point(711, 269);
             txtApellidoMaternoTrabajador.Multiline = true;
             txtApellidoMaternoTrabajador.Name = "txtApellidoMaternoTrabajador";
@@ -304,8 +304,9 @@
             // txtCarreraTrabajador
             // 
             txtCarreraTrabajador.BackColor = Color.White;
-            txtCarreraTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCarreraTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCarreraTrabajador.Location = new Point(1047, 269);
+            txtCarreraTrabajador.Multiline = true;
             txtCarreraTrabajador.Name = "txtCarreraTrabajador";
             txtCarreraTrabajador.Size = new Size(245, 30);
             txtCarreraTrabajador.TabIndex = 23;
@@ -314,7 +315,7 @@
             // txtNombreTrabajador
             // 
             txtNombreTrabajador.BackColor = Color.White;
-            txtNombreTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombreTrabajador.Location = new Point(40, 271);
             txtNombreTrabajador.Multiline = true;
             txtNombreTrabajador.Name = "txtNombreTrabajador";
@@ -324,7 +325,7 @@
             // txtNumControl
             // 
             txtNumControl.BackColor = Color.White;
-            txtNumControl.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumControl.Location = new Point(40, 206);
             txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";
