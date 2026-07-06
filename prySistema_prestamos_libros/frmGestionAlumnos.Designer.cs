@@ -112,7 +112,9 @@
             // 
             // txtBuscarAlumno
             // 
+            txtBuscarAlumno.BackColor = Color.White;
             txtBuscarAlumno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarAlumno.ForeColor = Color.FromArgb(31, 31, 31);
             txtBuscarAlumno.Location = new Point(50, 110);
             txtBuscarAlumno.Multiline = true;
             txtBuscarAlumno.Name = "txtBuscarAlumno";

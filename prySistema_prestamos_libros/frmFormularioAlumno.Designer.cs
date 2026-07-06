@@ -305,6 +305,7 @@
             // 
             lblNumControl.AutoSize = true;
             lblNumControl.BackColor = Color.FromArgb(250, 247, 242);
+            lblNumControl.ForeColor = SystemColors.ControlText;
             lblNumControl.Location = new Point(50, 111);
             lblNumControl.Name = "lblNumControl";
             lblNumControl.Size = new Size(135, 20);
@@ -495,6 +496,7 @@
             Controls.Add(pcbContenedorCompacto);
             Controls.Add(pcbContainerCompacto);
             Controls.Add(pcbContenedorCaptura);
+            ForeColor = Color.Black;
             Name = "frmFormularioAlumno";
             Text = "Formulario de Alumno";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();

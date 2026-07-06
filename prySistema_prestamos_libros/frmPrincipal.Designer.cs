@@ -184,7 +184,7 @@
             // 
             btnNuevoPrestamo.BackColor = Color.FromArgb(201, 168, 76);
             btnNuevoPrestamo.FlatAppearance.BorderColor = Color.Black;
-            btnNuevoPrestamo.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNuevoPrestamo.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevoPrestamo.Location = new Point(107, 363);
             btnNuevoPrestamo.Name = "btnNuevoPrestamo";

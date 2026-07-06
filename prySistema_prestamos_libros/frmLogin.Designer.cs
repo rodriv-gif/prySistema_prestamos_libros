@@ -40,6 +40,7 @@
             // 
             // txtUsuario
             // 
+            txtUsuario.BackColor = Color.White;
             txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(364, 329);
             txtUsuario.Multiline = true;
@@ -105,6 +106,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.White;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(364, 427);
             textBox1.Name = "textBox1";
