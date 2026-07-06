@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionLibros));
             pcbContenedorGestion = new PictureBox();
-            iblBuscar = new Label();
+            lblBuscar = new Label();
             txtBuscarLibro = new TextBox();
             dgvLibros = new DataGridView();
             btnNuevo = new Button();
@@ -50,17 +50,17 @@
             pcbContenedorGestion.TabIndex = 0;
             pcbContenedorGestion.TabStop = false;
             // 
-            // iblBuscar
+            // lblBuscar
             // 
-            iblBuscar.AutoSize = true;
-            iblBuscar.BackColor = Color.FromArgb(250, 247, 242);
-            iblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iblBuscar.ForeColor = Color.Black;
-            iblBuscar.Location = new Point(50, 88);
-            iblBuscar.Name = "iblBuscar";
-            iblBuscar.Size = new Size(170, 20);
-            iblBuscar.TabIndex = 1;
-            iblBuscar.Text = "Buscar por ISBN o Titulo";
+            lblBuscar.AutoSize = true;
+            lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
+            lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBuscar.ForeColor = Color.Black;
+            lblBuscar.Location = new Point(50, 88);
+            lblBuscar.Name = "lblBuscar";
+            lblBuscar.Size = new Size(170, 20);
+            lblBuscar.TabIndex = 1;
+            lblBuscar.Text = "Buscar por ISBN o Titulo";
             // 
             // txtBuscarLibro
             // 
@@ -139,7 +139,7 @@
             Controls.Add(btnNuevo);
             Controls.Add(dgvLibros);
             Controls.Add(txtBuscarLibro);
-            Controls.Add(iblBuscar);
+            Controls.Add(lblBuscar);
             Controls.Add(pcbContenedorGestion);
             Name = "frmGestionLibros";
             Text = "Gestión de Libros";
@@ -152,7 +152,7 @@
         #endregion
 
         private PictureBox pcbContenedorGestion;
-        private Label iblBuscar;
+        private Label lblBuscar;
         private TextBox txtBuscarLibro;
         private DataGridView dgvLibros;
         private Button btnNuevo;

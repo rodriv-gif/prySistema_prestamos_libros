@@ -33,7 +33,6 @@
             pcbContenedorCompacto = new PictureBox();
             pcbContainerCompacto = new PictureBox();
             txtApellidoMaterno = new TextBox();
-            txtFechaRegistro = new TextBox();
             txtApellidoPaterno = new TextBox();
             txtCorreo = new TextBox();
             txtNombre = new TextBox();
@@ -62,6 +61,7 @@
             lblDatosTrabajador = new Label();
             lblDireccion = new Label();
             iblDatosLaborales = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).BeginInit();
@@ -105,15 +105,6 @@
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 27;
-            // 
-            // txtFechaRegistro
-            // 
-            txtFechaRegistro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFechaRegistro.Location = new Point(709, 225);
-            txtFechaRegistro.Multiline = true;
-            txtFechaRegistro.Name = "txtFechaRegistro";
-            txtFechaRegistro.Size = new Size(245, 30);
-            txtFechaRegistro.TabIndex = 26;
             // 
             // txtApellidoPaterno
             // 
@@ -409,12 +400,21 @@
             iblDatosLaborales.TabIndex = 43;
             iblDatosLaborales.Text = "Datos laborales";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(709, 225);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(245, 27);
+            dateTimePicker1.TabIndex = 44;
+            dateTimePicker1.Value = new DateTime(2026, 7, 5, 22, 46, 15, 0);
+            // 
             // frmFormularioTrabajadores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1349, 848);
+            Controls.Add(dateTimePicker1);
             Controls.Add(iblDatosLaborales);
             Controls.Add(lblDireccion);
             Controls.Add(lblDatosTrabajador);
@@ -432,7 +432,6 @@
             Controls.Add(txtCalle);
             Controls.Add(txtColonia);
             Controls.Add(txtApellidoMaterno);
-            Controls.Add(txtFechaRegistro);
             Controls.Add(txtApellidoPaterno);
             Controls.Add(txtCorreo);
             Controls.Add(txtNombre);
@@ -463,7 +462,6 @@
         private PictureBox pcbContenedorCompacto;
         private PictureBox pcbContainerCompacto;
         private TextBox txtApellidoMaterno;
-        private TextBox txtFechaRegistro;
         private TextBox txtApellidoPaterno;
         private TextBox txtCorreo;
         private TextBox txtNombre;
@@ -492,5 +490,6 @@
         private Label lblDatosTrabajador;
         private Label lblDireccion;
         private Label iblDatosLaborales;
+        private DateTimePicker dateTimePicker1;
     }
 }
