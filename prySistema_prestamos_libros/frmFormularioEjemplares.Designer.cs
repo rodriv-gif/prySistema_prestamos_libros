@@ -75,7 +75,7 @@
             lblSeleccionLibro.AutoSize = true;
             lblSeleccionLibro.BackColor = Color.FromArgb(250, 247, 242);
             lblSeleccionLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSeleccionLibro.ForeColor = Color.Black;
+            lblSeleccionLibro.ForeColor = SystemColors.ControlText;
             lblSeleccionLibro.Location = new Point(61, 190);
             lblSeleccionLibro.Name = "lblSeleccionLibro";
             lblSeleccionLibro.Size = new Size(158, 20);
@@ -87,7 +87,7 @@
             lblCantidad.AutoSize = true;
             lblCantidad.BackColor = Color.FromArgb(250, 247, 242);
             lblCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCantidad.ForeColor = Color.Black;
+            lblCantidad.ForeColor = SystemColors.ControlText;
             lblCantidad.Location = new Point(479, 314);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(69, 20);
@@ -99,7 +99,7 @@
             lblFechaAdquisicion.AutoSize = true;
             lblFechaAdquisicion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaAdquisicion.ForeColor = Color.Black;
+            lblFechaAdquisicion.ForeColor = SystemColors.ControlText;
             lblFechaAdquisicion.Location = new Point(61, 314);
             lblFechaAdquisicion.Name = "lblFechaAdquisicion";
             lblFechaAdquisicion.Size = new Size(148, 20);
@@ -111,7 +111,7 @@
             lblLocalizacion.AutoSize = true;
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLocalizacion.ForeColor = Color.Black;
+            lblLocalizacion.ForeColor = SystemColors.ControlText;
             lblLocalizacion.Location = new Point(479, 190);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
@@ -123,7 +123,7 @@
             lblEstado.AutoSize = true;
             lblEstado.BackColor = Color.FromArgb(250, 247, 242);
             lblEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEstado.ForeColor = Color.Black;
+            lblEstado.ForeColor = SystemColors.ControlText;
             lblEstado.Location = new Point(864, 314);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(54, 20);

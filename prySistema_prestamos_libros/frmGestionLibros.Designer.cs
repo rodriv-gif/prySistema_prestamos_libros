@@ -55,7 +55,7 @@
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscar.ForeColor = Color.Black;
+            lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(50, 88);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(170, 20);

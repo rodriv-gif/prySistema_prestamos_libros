@@ -182,7 +182,7 @@
             lblCodigoPostal.Name = "lblCodigoPostal";
             lblCodigoPostal.Size = new Size(103, 20);
             lblCodigoPostal.TabIndex = 68;
-            lblCodigoPostal.Text = "Codigo postal";
+            lblCodigoPostal.Text = "Código postal";
             // 
             // lblNumCalle
             // 
@@ -192,7 +192,7 @@
             lblNumCalle.Name = "lblNumCalle";
             lblNumCalle.Size = new Size(119, 20);
             lblNumCalle.TabIndex = 67;
-            lblNumCalle.Text = "Numero de calle";
+            lblNumCalle.Text = "Número de calle";
             // 
             // lblCalle
             // 
@@ -245,6 +245,7 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoMaterno.ForeColor = SystemColors.ControlText;
             lblApellidoMaterno.Location = new Point(1048, 112);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -255,6 +256,7 @@
             // 
             lblFechaRegistro.AutoSize = true;
             lblFechaRegistro.BackColor = Color.FromArgb(250, 247, 242);
+            lblFechaRegistro.ForeColor = SystemColors.ControlText;
             lblFechaRegistro.Location = new Point(708, 193);
             lblFechaRegistro.Name = "lblFechaRegistro";
             lblFechaRegistro.Size = new Size(123, 20);
@@ -265,6 +267,7 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoPaterno.ForeColor = Color.Black;
             lblApellidoPaterno.Location = new Point(719, 111);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -275,6 +278,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.BackColor = Color.FromArgb(250, 247, 242);
+            lblCorreo.ForeColor = SystemColors.ControlText;
             lblCorreo.Location = new Point(391, 193);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(132, 20);
@@ -285,6 +289,7 @@
             // 
             lblNombres.AutoSize = true;
             lblNombres.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombres.ForeColor = Color.Black;
             lblNombres.Location = new Point(391, 112);
             lblNombres.Name = "lblNombres";
             lblNombres.Size = new Size(80, 20);
@@ -295,6 +300,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.BackColor = Color.FromArgb(250, 247, 242);
+            lblTelefono.ForeColor = SystemColors.ControlText;
             lblTelefono.Location = new Point(50, 193);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(67, 20);

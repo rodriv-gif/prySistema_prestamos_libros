@@ -134,6 +134,7 @@
             // 
             txtISBN.BackColor = Color.White;
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtISBN.ForeColor = Color.FromArgb(31, 31, 31);
             txtISBN.Location = new Point(48, 57);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
@@ -177,6 +178,7 @@
             // 
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
             txtLocalizacion.Location = new Point(48, 334);
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(576, 27);
@@ -185,6 +187,7 @@
             // txtInventario
             // 
             txtInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInventario.ForeColor = Color.FromArgb(31, 31, 31);
             txtInventario.Location = new Point(719, 334);
             txtInventario.Multiline = true;
             txtInventario.Name = "txtInventario";

@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionEjemplares));
-            pcb11 = new PictureBox();
+            pcbContenedorGestion = new PictureBox();
             lblBuscarTitulo = new Label();
             txtBuscarTitulo = new TextBox();
             dgvEjemplares = new DataGridView();
             btnNuevoTitulo = new Button();
             btnEditarEjemplar = new Button();
             btnDarBajaEjemplar = new Button();
-            ((System.ComponentModel.ISupportInitialize)pcb11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEjemplares).BeginInit();
             SuspendLayout();
             // 
-            // pcb11
+            // pcbContenedorGestion
             // 
-            pcb11.Image = Properties.Resources.contenerdorGrupo;
-            pcb11.Location = new Point(31, 27);
-            pcb11.Name = "pcb11";
-            pcb11.Size = new Size(1287, 797);
-            pcb11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcb11.TabIndex = 2;
-            pcb11.TabStop = false;
+            pcbContenedorGestion.Image = Properties.Resources.contenerdorGrupo;
+            pcbContenedorGestion.Location = new Point(31, 27);
+            pcbContenedorGestion.Name = "pcbContenedorGestion";
+            pcbContenedorGestion.Size = new Size(1287, 797);
+            pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbContenedorGestion.TabIndex = 2;
+            pcbContenedorGestion.TabStop = false;
             // 
             // lblBuscarTitulo
             // 
@@ -141,20 +141,20 @@
             Controls.Add(dgvEjemplares);
             Controls.Add(txtBuscarTitulo);
             Controls.Add(lblBuscarTitulo);
-            Controls.Add(pcb11);
+            Controls.Add(pcbContenedorGestion);
             Font = new Font("Segoe UI", 12F);
             ForeColor = SystemColors.ControlText;
             Margin = new Padding(4);
             Name = "frmGestionEjemplares";
             Text = "Gestion de ejemplares";
-            ((System.ComponentModel.ISupportInitialize)pcb11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvEjemplares).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private PictureBox pcb11;
+        private PictureBox pcbContenedorGestion;
         private TextBox txtBuscarTitulo;
         private Label lblBuscarTitulo;
         private DataGridView dgvEjemplares;
