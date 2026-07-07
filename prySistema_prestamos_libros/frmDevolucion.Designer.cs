@@ -76,9 +76,10 @@
             // pcbContenedorBusqueda
             // 
             pcbContenedorBusqueda.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenedorBusqueda.Location = new Point(23, 2);
+            pcbContenedorBusqueda.Location = new Point(20, 2);
+            pcbContenedorBusqueda.Margin = new Padding(3, 2, 3, 2);
             pcbContenedorBusqueda.Name = "pcbContenedorBusqueda";
-            pcbContenedorBusqueda.Size = new Size(1302, 374);
+            pcbContenedorBusqueda.Size = new Size(1139, 280);
             pcbContenedorBusqueda.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorBusqueda.TabIndex = 0;
             pcbContenedorBusqueda.TabStop = false;
@@ -86,9 +87,10 @@
             // pcbContenedorCaptura
             // 
             pcbContenedorCaptura.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenedorCaptura.Location = new Point(23, 547);
+            pcbContenedorCaptura.Location = new Point(20, 410);
+            pcbContenedorCaptura.Margin = new Padding(3, 2, 3, 2);
             pcbContenedorCaptura.Name = "pcbContenedorCaptura";
-            pcbContenedorCaptura.Size = new Size(1302, 234);
+            pcbContenedorCaptura.Size = new Size(1139, 176);
             pcbContenedorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCaptura.TabIndex = 1;
             pcbContenedorCaptura.TabStop = false;
@@ -96,9 +98,10 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(23, 393);
+            pcbContenedorCompacto.Location = new Point(20, 295);
+            pcbContenedorCompacto.Margin = new Padding(3, 2, 3, 2);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
-            pcbContenedorCompacto.Size = new Size(1302, 137);
+            pcbContenedorCompacto.Size = new Size(1139, 103);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCompacto.TabIndex = 2;
             pcbContenedorCompacto.TabStop = false;
@@ -109,90 +112,103 @@
             lblBusquedaSolicitante.BackColor = Color.FromArgb(250, 247, 242);
             lblBusquedaSolicitante.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBusquedaSolicitante.ForeColor = Color.FromArgb(27, 46, 107);
-            lblBusquedaSolicitante.Location = new Point(33, 8);
+            lblBusquedaSolicitante.Location = new Point(29, 6);
             lblBusquedaSolicitante.Name = "lblBusquedaSolicitante";
-            lblBusquedaSolicitante.Size = new Size(205, 23);
+            lblBusquedaSolicitante.Size = new Size(171, 19);
             lblBusquedaSolicitante.TabIndex = 3;
             lblBusquedaSolicitante.Text = "Búsqueda del solicitante";
             // 
             // txtNumControl
             // 
             txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumControl.Location = new Point(42, 54);
+            txtNumControl.ForeColor = Color.FromArgb(31, 31, 31);
+            txtNumControl.Location = new Point(37, 40);
+            txtNumControl.Margin = new Padding(3, 2, 3, 2);
             txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";
-            txtNumControl.Size = new Size(245, 30);
+            txtNumControl.Size = new Size(215, 24);
             txtNumControl.TabIndex = 4;
             // 
             // txtNombreSolicitante
             // 
             txtNombreSolicitante.BackColor = Color.White;
             txtNombreSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreSolicitante.Location = new Point(374, 54);
+            txtNombreSolicitante.ForeColor = Color.FromArgb(31, 31, 31);
+            txtNombreSolicitante.Location = new Point(327, 40);
+            txtNombreSolicitante.Margin = new Padding(3, 2, 3, 2);
             txtNombreSolicitante.Multiline = true;
             txtNombreSolicitante.Name = "txtNombreSolicitante";
-            txtNombreSolicitante.Size = new Size(245, 30);
+            txtNombreSolicitante.Size = new Size(215, 24);
             txtNombreSolicitante.TabIndex = 5;
             // 
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.BackColor = Color.White;
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoPaterno.Location = new Point(722, 54);
+            txtApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            txtApellidoPaterno.Location = new Point(632, 40);
+            txtApellidoPaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(245, 30);
+            txtApellidoPaterno.Size = new Size(215, 24);
             txtApellidoPaterno.TabIndex = 6;
             // 
             // txtApellidoMaterno
             // 
             txtApellidoMaterno.BackColor = Color.WhiteSmoke;
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoMaterno.Location = new Point(1053, 54);
+            txtApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            txtApellidoMaterno.Location = new Point(921, 40);
+            txtApellidoMaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(245, 30);
+            txtApellidoMaterno.Size = new Size(215, 24);
             txtApellidoMaterno.TabIndex = 7;
             // 
             // txtGrado
             // 
             txtGrado.BackColor = Color.White;
             txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtGrado.Location = new Point(42, 121);
+            txtGrado.ForeColor = Color.FromArgb(31, 31, 31);
+            txtGrado.Location = new Point(37, 91);
+            txtGrado.Margin = new Padding(3, 2, 3, 2);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
-            txtGrado.Size = new Size(245, 30);
+            txtGrado.Size = new Size(215, 24);
             txtGrado.TabIndex = 8;
             // 
             // txtGrupo
             // 
             txtGrupo.BackColor = Color.White;
             txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtGrupo.Location = new Point(374, 121);
+            txtGrupo.ForeColor = Color.FromArgb(31, 31, 31);
+            txtGrupo.Location = new Point(327, 91);
+            txtGrupo.Margin = new Padding(3, 2, 3, 2);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
-            txtGrupo.Size = new Size(245, 30);
+            txtGrupo.Size = new Size(215, 24);
             txtGrupo.TabIndex = 9;
             // 
             // txtCarrera
             // 
             txtCarrera.BackColor = Color.White;
             txtCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCarrera.ForeColor = SystemColors.WindowText;
-            txtCarrera.Location = new Point(722, 121);
+            txtCarrera.ForeColor = Color.FromArgb(31, 31, 31);
+            txtCarrera.Location = new Point(632, 91);
+            txtCarrera.Margin = new Padding(3, 2, 3, 2);
             txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
-            txtCarrera.Size = new Size(245, 30);
+            txtCarrera.Size = new Size(215, 24);
             txtCarrera.TabIndex = 10;
             // 
             // lblNumeroControl
             // 
             lblNumeroControl.AutoSize = true;
             lblNumeroControl.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumeroControl.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNumeroControl.Location = new Point(42, 31);
+            lblNumeroControl.ForeColor = SystemColors.ControlText;
+            lblNumeroControl.Location = new Point(37, 23);
             lblNumeroControl.Name = "lblNumeroControl";
-            lblNumeroControl.Size = new Size(135, 20);
+            lblNumeroControl.Size = new Size(108, 15);
             lblNumeroControl.TabIndex = 11;
             lblNumeroControl.Text = "Numero de control";
             // 
@@ -200,10 +216,10 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNombre.Location = new Point(374, 31);
+            lblNombre.ForeColor = SystemColors.ControlText;
+            lblNombre.Location = new Point(327, 23);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(64, 20);
+            lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 12;
             lblNombre.Text = "Nombre";
             // 
@@ -211,10 +227,10 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoPaterno.Location = new Point(722, 31);
+            lblApellidoPaterno.ForeColor = SystemColors.ControlText;
+            lblApellidoPaterno.Location = new Point(632, 23);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
-            lblApellidoPaterno.Size = new Size(122, 20);
+            lblApellidoPaterno.Size = new Size(95, 15);
             lblApellidoPaterno.TabIndex = 13;
             lblApellidoPaterno.Text = "Apellido paterno";
             // 
@@ -222,10 +238,10 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoMaterno.Location = new Point(1053, 31);
+            lblApellidoMaterno.ForeColor = SystemColors.ControlText;
+            lblApellidoMaterno.Location = new Point(921, 23);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
-            lblApellidoMaterno.Size = new Size(126, 20);
+            lblApellidoMaterno.Size = new Size(99, 15);
             lblApellidoMaterno.TabIndex = 14;
             lblApellidoMaterno.Text = "Apellido materno";
             // 
@@ -233,10 +249,10 @@
             // 
             lblGrado.AutoSize = true;
             lblGrado.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrado.ForeColor = Color.FromArgb(31, 31, 31);
-            lblGrado.Location = new Point(42, 98);
+            lblGrado.ForeColor = SystemColors.ControlText;
+            lblGrado.Location = new Point(37, 74);
             lblGrado.Name = "lblGrado";
-            lblGrado.Size = new Size(50, 20);
+            lblGrado.Size = new Size(39, 15);
             lblGrado.TabIndex = 15;
             lblGrado.Text = "Grado";
             // 
@@ -244,10 +260,10 @@
             // 
             lblGrupo.AutoSize = true;
             lblGrupo.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrupo.ForeColor = Color.FromArgb(31, 31, 31);
-            lblGrupo.Location = new Point(374, 98);
+            lblGrupo.ForeColor = SystemColors.ControlText;
+            lblGrupo.Location = new Point(327, 74);
             lblGrupo.Name = "lblGrupo";
-            lblGrupo.Size = new Size(50, 20);
+            lblGrupo.Size = new Size(40, 15);
             lblGrupo.TabIndex = 16;
             lblGrupo.Text = "Grupo";
             // 
@@ -255,20 +271,21 @@
             // 
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
-            lblCarrera.ForeColor = Color.FromArgb(31, 31, 31);
-            lblCarrera.Location = new Point(722, 98);
+            lblCarrera.ForeColor = SystemColors.ControlText;
+            lblCarrera.Location = new Point(632, 74);
             lblCarrera.Name = "lblCarrera";
-            lblCarrera.Size = new Size(102, 20);
+            lblCarrera.Size = new Size(80, 15);
             lblCarrera.TabIndex = 17;
             lblCarrera.Text = "Carrera / Área";
             // 
             // dgvPrestamosActivos
             // 
             dgvPrestamosActivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPrestamosActivos.Location = new Point(42, 157);
+            dgvPrestamosActivos.Location = new Point(37, 118);
+            dgvPrestamosActivos.Margin = new Padding(3, 2, 3, 2);
             dgvPrestamosActivos.Name = "dgvPrestamosActivos";
             dgvPrestamosActivos.RowHeadersWidth = 51;
-            dgvPrestamosActivos.Size = new Size(1249, 197);
+            dgvPrestamosActivos.Size = new Size(1093, 148);
             dgvPrestamosActivos.TabIndex = 18;
             // 
             // lblRegistroDevolucion
@@ -277,9 +294,9 @@
             lblRegistroDevolucion.BackColor = Color.FromArgb(250, 247, 242);
             lblRegistroDevolucion.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegistroDevolucion.ForeColor = Color.FromArgb(27, 46, 107);
-            lblRegistroDevolucion.Location = new Point(33, 403);
+            lblRegistroDevolucion.Location = new Point(29, 302);
             lblRegistroDevolucion.Name = "lblRegistroDevolucion";
-            lblRegistroDevolucion.Size = new Size(194, 23);
+            lblRegistroDevolucion.Size = new Size(164, 19);
             lblRegistroDevolucion.TabIndex = 19;
             lblRegistroDevolucion.Text = "Registro de devolución";
             // 
@@ -287,10 +304,10 @@
             // 
             lblFechaDevolucion.AutoSize = true;
             lblFechaDevolucion.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaDevolucion.ForeColor = Color.FromArgb(31, 31, 31);
-            lblFechaDevolucion.Location = new Point(42, 438);
+            lblFechaDevolucion.ForeColor = SystemColors.ControlText;
+            lblFechaDevolucion.Location = new Point(37, 328);
             lblFechaDevolucion.Name = "lblFechaDevolucion";
-            lblFechaDevolucion.Size = new Size(145, 20);
+            lblFechaDevolucion.Size = new Size(116, 15);
             lblFechaDevolucion.TabIndex = 20;
             lblFechaDevolucion.Text = "Fecha de devolución";
             // 
@@ -298,10 +315,10 @@
             // 
             lblBibliotecario.AutoSize = true;
             lblBibliotecario.BackColor = Color.FromArgb(250, 247, 242);
-            lblBibliotecario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblBibliotecario.Location = new Point(374, 438);
+            lblBibliotecario.ForeColor = SystemColors.ControlText;
+            lblBibliotecario.Location = new Point(327, 328);
             lblBibliotecario.Name = "lblBibliotecario";
-            lblBibliotecario.Size = new Size(168, 20);
+            lblBibliotecario.Size = new Size(131, 15);
             lblBibliotecario.TabIndex = 21;
             lblBibliotecario.Text = "Biliotecario que registra";
             // 
@@ -309,9 +326,10 @@
             // 
             cmbBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbBibliotecario.FormattingEnabled = true;
-            cmbBibliotecario.Location = new Point(374, 461);
+            cmbBibliotecario.Location = new Point(327, 346);
+            cmbBibliotecario.Margin = new Padding(3, 2, 3, 2);
             cmbBibliotecario.Name = "cmbBibliotecario";
-            cmbBibliotecario.Size = new Size(245, 28);
+            cmbBibliotecario.Size = new Size(215, 23);
             cmbBibliotecario.TabIndex = 23;
             // 
             // lblMulta
@@ -320,9 +338,9 @@
             lblMulta.BackColor = Color.FromArgb(250, 247, 242);
             lblMulta.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMulta.ForeColor = Color.FromArgb(27, 46, 107);
-            lblMulta.Location = new Point(33, 558);
+            lblMulta.Location = new Point(29, 418);
             lblMulta.Name = "lblMulta";
-            lblMulta.Size = new Size(137, 23);
+            lblMulta.Size = new Size(115, 19);
             lblMulta.TabIndex = 24;
             lblMulta.Text = "Multa generada";
             // 
@@ -330,10 +348,10 @@
             // 
             lblLibrosVencidos.AutoSize = true;
             lblLibrosVencidos.BackColor = Color.FromArgb(250, 247, 242);
-            lblLibrosVencidos.ForeColor = Color.FromArgb(31, 31, 31);
-            lblLibrosVencidos.Location = new Point(42, 590);
+            lblLibrosVencidos.ForeColor = SystemColors.ControlText;
+            lblLibrosVencidos.Location = new Point(37, 442);
             lblLibrosVencidos.Name = "lblLibrosVencidos";
-            lblLibrosVencidos.Size = new Size(112, 20);
+            lblLibrosVencidos.Size = new Size(89, 15);
             lblLibrosVencidos.TabIndex = 25;
             lblLibrosVencidos.Text = "Libros Vencidos";
             // 
@@ -341,10 +359,10 @@
             // 
             lblDiasRetraso.AutoSize = true;
             lblDiasRetraso.BackColor = Color.FromArgb(250, 247, 242);
-            lblDiasRetraso.ForeColor = Color.FromArgb(31, 31, 31);
-            lblDiasRetraso.Location = new Point(42, 709);
+            lblDiasRetraso.ForeColor = SystemColors.ControlText;
+            lblDiasRetraso.Location = new Point(37, 532);
             lblDiasRetraso.Name = "lblDiasRetraso";
-            lblDiasRetraso.Size = new Size(109, 20);
+            lblDiasRetraso.Size = new Size(84, 15);
             lblDiasRetraso.TabIndex = 26;
             lblDiasRetraso.Text = "Dias de retraso";
             // 
@@ -352,10 +370,10 @@
             // 
             lblMonto.AutoSize = true;
             lblMonto.BackColor = Color.FromArgb(250, 247, 242);
-            lblMonto.ForeColor = Color.FromArgb(31, 31, 31);
-            lblMonto.Location = new Point(374, 709);
+            lblMonto.ForeColor = SystemColors.ControlText;
+            lblMonto.Location = new Point(327, 532);
             lblMonto.Name = "lblMonto";
-            lblMonto.Size = new Size(108, 20);
+            lblMonto.Size = new Size(85, 15);
             lblMonto.TabIndex = 27;
             lblMonto.Text = "Monto a pagar";
             // 
@@ -363,10 +381,10 @@
             // 
             lblEstadoPago.AutoSize = true;
             lblEstadoPago.BackColor = Color.FromArgb(250, 247, 242);
-            lblEstadoPago.ForeColor = Color.FromArgb(31, 31, 31);
-            lblEstadoPago.Location = new Point(722, 709);
+            lblEstadoPago.ForeColor = SystemColors.ControlText;
+            lblEstadoPago.Location = new Point(632, 532);
             lblEstadoPago.Name = "lblEstadoPago";
-            lblEstadoPago.Size = new Size(114, 20);
+            lblEstadoPago.Size = new Size(88, 15);
             lblEstadoPago.TabIndex = 28;
             lblEstadoPago.Text = "Estado de pago";
             // 
@@ -374,30 +392,36 @@
             // 
             txtLibrosVencidos.BackColor = Color.White;
             txtLibrosVencidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLibrosVencidos.Location = new Point(43, 613);
+            txtLibrosVencidos.ForeColor = Color.FromArgb(31, 31, 31);
+            txtLibrosVencidos.Location = new Point(38, 460);
+            txtLibrosVencidos.Margin = new Padding(3, 2, 3, 2);
             txtLibrosVencidos.Multiline = true;
             txtLibrosVencidos.Name = "txtLibrosVencidos";
-            txtLibrosVencidos.Size = new Size(1231, 81);
+            txtLibrosVencidos.Size = new Size(1078, 62);
             txtLibrosVencidos.TabIndex = 30;
             // 
             // txtDiasRetraso
             // 
             txtDiasRetraso.BackColor = Color.White;
             txtDiasRetraso.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDiasRetraso.Location = new Point(42, 733);
+            txtDiasRetraso.ForeColor = Color.FromArgb(31, 31, 31);
+            txtDiasRetraso.Location = new Point(37, 550);
+            txtDiasRetraso.Margin = new Padding(3, 2, 3, 2);
             txtDiasRetraso.Multiline = true;
             txtDiasRetraso.Name = "txtDiasRetraso";
-            txtDiasRetraso.Size = new Size(245, 30);
+            txtDiasRetraso.Size = new Size(215, 24);
             txtDiasRetraso.TabIndex = 31;
             // 
             // txtMonto
             // 
             txtMonto.BackColor = Color.White;
             txtMonto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtMonto.Location = new Point(374, 732);
+            txtMonto.ForeColor = Color.FromArgb(31, 31, 31);
+            txtMonto.Location = new Point(327, 549);
+            txtMonto.Margin = new Padding(3, 2, 3, 2);
             txtMonto.Multiline = true;
             txtMonto.Name = "txtMonto";
-            txtMonto.Size = new Size(245, 30);
+            txtMonto.Size = new Size(215, 24);
             txtMonto.TabIndex = 32;
             // 
             // btnRegistrarDevolucion
@@ -407,9 +431,10 @@
             btnRegistrarDevolucion.ForeColor = Color.FromArgb(17, 30, 71);
             btnRegistrarDevolucion.Image = (Image)resources.GetObject("btnRegistrarDevolucion.Image");
             btnRegistrarDevolucion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRegistrarDevolucion.Location = new Point(312, 798);
+            btnRegistrarDevolucion.Location = new Point(273, 598);
+            btnRegistrarDevolucion.Margin = new Padding(3, 2, 3, 2);
             btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
-            btnRegistrarDevolucion.Size = new Size(150, 45);
+            btnRegistrarDevolucion.Size = new Size(131, 34);
             btnRegistrarDevolucion.TabIndex = 35;
             btnRegistrarDevolucion.Text = "Registrar";
             btnRegistrarDevolucion.TextAlign = ContentAlignment.MiddleRight;
@@ -423,9 +448,10 @@
             btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(633, 798);
+            btnLimpiar.Location = new Point(554, 598);
+            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(150, 45);
+            btnLimpiar.Size = new Size(131, 34);
             btnLimpiar.TabIndex = 36;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
@@ -439,9 +465,10 @@
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(932, 798);
+            btnCancelar.Location = new Point(816, 598);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(150, 45);
+            btnCancelar.Size = new Size(131, 34);
             btnCancelar.TabIndex = 37;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
@@ -453,20 +480,19 @@
             dtpFechaDevolucion.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
-            dtpFechaDevolucion.Location = new Point(43, 463);
-            dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
+            dtpFechaDevolucion.Location = new Point(38, 347);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
-            dtpFechaDevolucion.Size = new Size(245, 27);
+            dtpFechaDevolucion.Size = new Size(215, 23);
             dtpFechaDevolucion.TabIndex = 38;
             // 
             // lblFechaPago
             // 
             lblFechaPago.AutoSize = true;
             lblFechaPago.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaPago.ForeColor = Color.FromArgb(31, 31, 31);
-            lblFechaPago.Location = new Point(1054, 710);
+            lblFechaPago.ForeColor = SystemColors.ControlText;
+            lblFechaPago.Location = new Point(922, 532);
             lblFechaPago.Name = "lblFechaPago";
-            lblFechaPago.Size = new Size(107, 20);
+            lblFechaPago.Size = new Size(84, 15);
             lblFechaPago.TabIndex = 39;
             lblFechaPago.Text = "Fecha de pago";
             // 
@@ -474,26 +500,26 @@
             // 
             dtpFechaPago.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPago.Format = DateTimePickerFormat.Short;
-            dtpFechaPago.Location = new Point(1054, 732);
-            dtpFechaPago.Margin = new Padding(3, 4, 3, 4);
+            dtpFechaPago.Location = new Point(922, 549);
             dtpFechaPago.Name = "dtpFechaPago";
-            dtpFechaPago.Size = new Size(245, 27);
+            dtpFechaPago.Size = new Size(215, 23);
             dtpFechaPago.TabIndex = 41;
             // 
             // cmbEstadoPago
             // 
             cmbEstadoPago.FormattingEnabled = true;
-            cmbEstadoPago.Location = new Point(722, 737);
+            cmbEstadoPago.Location = new Point(632, 553);
+            cmbEstadoPago.Margin = new Padding(3, 2, 3, 2);
             cmbEstadoPago.Name = "cmbEstadoPago";
-            cmbEstadoPago.Size = new Size(245, 28);
+            cmbEstadoPago.Size = new Size(215, 23);
             cmbEstadoPago.TabIndex = 42;
             // 
             // frmDevolucion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1349, 848);
+            ClientSize = new Size(1180, 562);
             Controls.Add(cmbEstadoPago);
             Controls.Add(dtpFechaPago);
             Controls.Add(lblFechaPago);
@@ -532,6 +558,7 @@
             Controls.Add(pcbContenedorCompacto);
             Controls.Add(pcbContenedorCaptura);
             Controls.Add(pcbContenedorBusqueda);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmDevolucion";
             Text = "Formulario de Devolucion";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).EndInit();
