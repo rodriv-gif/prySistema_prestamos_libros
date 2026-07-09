@@ -38,7 +38,7 @@
             txtEditorial = new TextBox();
             txtISBN = new TextBox();
             lblIdioma = new Label();
-            numPaginas = new Label();
+            lblNumPaginas = new Label();
             lblCategoria = new Label();
             lblTitulo = new Label();
             lblEditorial = new Label();
@@ -142,15 +142,15 @@
             lblIdioma.TabIndex = 17;
             lblIdioma.Text = "Idioma";
             // 
-            // numPaginas
+            // lblNumPaginas
             // 
-            numPaginas.AutoSize = true;
-            numPaginas.BackColor = Color.FromArgb(250, 247, 242);
-            numPaginas.Location = new Point(790, 158);
-            numPaginas.Name = "numPaginas";
-            numPaginas.Size = new Size(140, 20);
-            numPaginas.TabIndex = 16;
-            numPaginas.Text = "Numero de paginas";
+            lblNumPaginas.AutoSize = true;
+            lblNumPaginas.BackColor = Color.FromArgb(250, 247, 242);
+            lblNumPaginas.Location = new Point(790, 158);
+            lblNumPaginas.Name = "lblNumPaginas";
+            lblNumPaginas.Size = new Size(140, 20);
+            lblNumPaginas.TabIndex = 16;
+            lblNumPaginas.Text = "Numero de páginas";
             // 
             // lblCategoria
             // 
@@ -160,7 +160,7 @@
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(74, 20);
             lblCategoria.TabIndex = 15;
-            lblCategoria.Text = "Categoria";
+            lblCategoria.Text = "Categoría";
             // 
             // lblTitulo
             // 
@@ -345,7 +345,7 @@
             Controls.Add(txtEditorial);
             Controls.Add(txtISBN);
             Controls.Add(lblIdioma);
-            Controls.Add(numPaginas);
+            Controls.Add(lblNumPaginas);
             Controls.Add(lblCategoria);
             Controls.Add(lblTitulo);
             Controls.Add(lblEditorial);
@@ -372,7 +372,7 @@
         private TextBox txtEditorial;
         private TextBox txtISBN;
         private Label lblIdioma;
-        private Label numPaginas;
+        private Label lblNumPaginas;
         private Label lblCategoria;
         private Label lblTitulo;
         private Label lblEditorial;

@@ -58,9 +58,9 @@
             lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(50, 88);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(170, 20);
+            lblBuscar.Size = new Size(119, 20);
             lblBuscar.TabIndex = 1;
-            lblBuscar.Text = "Buscar por ISBN o Titulo";
+            lblBuscar.Text = "Buscar por ISBN ";
             // 
             // txtBuscarLibro
             // 

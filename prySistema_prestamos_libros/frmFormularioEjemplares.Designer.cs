@@ -40,7 +40,7 @@
             txtLocalizacion = new TextBox();
             dtpFechaAdquisicion = new DateTimePicker();
             nudCantidad = new NumericUpDown();
-            txtEstado = new ComboBox();
+            cmbEstado = new ComboBox();
             btnGuardar = new Button();
             btnLimpiar = new Button();
             btnCancelar = new Button();
@@ -169,15 +169,15 @@
             nudCantidad.Size = new Size(245, 27);
             nudCantidad.TabIndex = 14;
             // 
-            // txtEstado
+            // cmbEstado
             // 
-            txtEstado.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEstado.FormattingEnabled = true;
-            txtEstado.Location = new Point(864, 357);
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(245, 28);
-            txtEstado.TabIndex = 15;
+            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbEstado.FormattingEnabled = true;
+            cmbEstado.Location = new Point(864, 357);
+            cmbEstado.Name = "cmbEstado";
+            cmbEstado.Size = new Size(245, 28);
+            cmbEstado.TabIndex = 15;
             // 
             // btnGuardar
             // 
@@ -238,7 +238,7 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnGuardar);
-            Controls.Add(txtEstado);
+            Controls.Add(cmbEstado);
             Controls.Add(nudCantidad);
             Controls.Add(dtpFechaAdquisicion);
             Controls.Add(txtLocalizacion);
@@ -273,7 +273,7 @@
         private TextBox txtLocalizacion;
         private DateTimePicker dtpFechaAdquisicion;
         private NumericUpDown nudCantidad;
-        private ComboBox txtEstado;
+        private ComboBox cmbEstado;
         private Button btnGuardar;
         private Button btnLimpiar;
         private Button btnCancelar;
