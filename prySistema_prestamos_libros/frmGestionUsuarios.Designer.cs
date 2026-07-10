@@ -43,9 +43,10 @@
             // pcbContenedorGestion
             // 
             pcbContenedorGestion.Image = (Image)resources.GetObject("pcbContenedorGestion.Image");
-            pcbContenedorGestion.Location = new Point(33, 28);
+            pcbContenedorGestion.Location = new Point(29, 21);
+            pcbContenedorGestion.Margin = new Padding(3, 2, 3, 2);
             pcbContenedorGestion.Name = "pcbContenedorGestion";
-            pcbContenedorGestion.Size = new Size(1287, 797);
+            pcbContenedorGestion.Size = new Size(1126, 598);
             pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorGestion.TabIndex = 0;
             pcbContenedorGestion.TabStop = false;
@@ -55,10 +56,10 @@
             lblBuscarNumero.AutoSize = true;
             lblBuscarNumero.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscarNumero.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscarNumero.ForeColor = Color.FromArgb(31, 31, 31);
-            lblBuscarNumero.Location = new Point(52, 87);
+            lblBuscarNumero.ForeColor = Color.Black;
+            lblBuscarNumero.Location = new Point(46, 65);
             lblBuscarNumero.Name = "lblBuscarNumero";
-            lblBuscarNumero.Size = new Size(206, 20);
+            lblBuscarNumero.Size = new Size(165, 15);
             lblBuscarNumero.TabIndex = 1;
             lblBuscarNumero.Text = "Buscar por numero de control";
             // 
@@ -66,10 +67,12 @@
             // 
             txtBuscarUsuario.BackColor = Color.White;
             txtBuscarUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarUsuario.Location = new Point(52, 110);
+            txtBuscarUsuario.ForeColor = Color.FromArgb(31, 31, 31);
+            txtBuscarUsuario.Location = new Point(46, 82);
+            txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
-            txtBuscarUsuario.Size = new Size(245, 30);
+            txtBuscarUsuario.Size = new Size(215, 24);
             txtBuscarUsuario.TabIndex = 2;
             // 
             // btnNuevo
@@ -79,9 +82,10 @@
             btnNuevo.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
             btnNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevo.Location = new Point(654, 119);
+            btnNuevo.Location = new Point(572, 89);
+            btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 45);
+            btnNuevo.Size = new Size(131, 34);
             btnNuevo.TabIndex = 3;
             btnNuevo.Text = "Nuevo";
             btnNuevo.TextAlign = ContentAlignment.MiddleRight;
@@ -95,9 +99,10 @@
             btnEditar.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(907, 119);
+            btnEditar.Location = new Point(794, 89);
+            btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 45);
+            btnEditar.Size = new Size(131, 34);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
@@ -111,9 +116,10 @@
             btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBaja.Image = (Image)resources.GetObject("btnDarBaja.Image");
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBaja.Location = new Point(1151, 121);
+            btnDarBaja.Location = new Point(1007, 91);
+            btnDarBaja.Margin = new Padding(3, 2, 3, 2);
             btnDarBaja.Name = "btnDarBaja";
-            btnDarBaja.Size = new Size(150, 45);
+            btnDarBaja.Size = new Size(131, 34);
             btnDarBaja.TabIndex = 5;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
@@ -123,18 +129,19 @@
             // dgvUsuarios
             // 
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Location = new Point(52, 235);
+            dgvUsuarios.Location = new Point(46, 176);
+            dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.RowHeadersWidth = 51;
-            dgvUsuarios.Size = new Size(1249, 568);
+            dgvUsuarios.Size = new Size(1093, 426);
             dgvUsuarios.TabIndex = 6;
             // 
             // frmGestionUsuarios
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1349, 848);
+            ClientSize = new Size(1180, 562);
             Controls.Add(dgvUsuarios);
             Controls.Add(btnDarBaja);
             Controls.Add(btnEditar);
@@ -142,6 +149,7 @@
             Controls.Add(txtBuscarUsuario);
             Controls.Add(lblBuscarNumero);
             Controls.Add(pcbContenedorGestion);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmGestionUsuarios";
             Text = "Gestion de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).EndInit();
