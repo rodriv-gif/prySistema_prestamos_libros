@@ -43,9 +43,6 @@
             lblApellidoMaterno = new Label();
             lblApaterno = new Label();
             lblNombre = new Label();
-            txtApellidoMaterno = new TextBox();
-            txtApellidoPaterno = new TextBox();
-            txtNombreAutor = new TextBox();
             btnGuardar = new Button();
             btnCancelar = new Button();
             btnLimpiar = new Button();
@@ -54,6 +51,9 @@
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
+            cmbNombreAutor = new ComboBox();
+            cmbApellidoPaterno = new ComboBox();
+            cmbApellidoMaterno = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             SuspendLayout();
@@ -195,33 +195,6 @@
             lblNombre.TabIndex = 27;
             lblNombre.Text = "Nombre(s)";
             // 
-            // txtApellidoMaterno
-            // 
-            txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoMaterno.Location = new Point(755, 362);
-            txtApellidoMaterno.Multiline = true;
-            txtApellidoMaterno.Name = "txtApellidoMaterno";
-            txtApellidoMaterno.Size = new Size(245, 30);
-            txtApellidoMaterno.TabIndex = 26;
-            // 
-            // txtApellidoPaterno
-            // 
-            txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoPaterno.Location = new Point(411, 362);
-            txtApellidoPaterno.Multiline = true;
-            txtApellidoPaterno.Name = "txtApellidoPaterno";
-            txtApellidoPaterno.Size = new Size(245, 30);
-            txtApellidoPaterno.TabIndex = 25;
-            // 
-            // txtNombreAutor
-            // 
-            txtNombreAutor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreAutor.Location = new Point(61, 362);
-            txtNombreAutor.Multiline = true;
-            txtNombreAutor.Name = "txtNombreAutor";
-            txtNombreAutor.Size = new Size(245, 30);
-            txtNombreAutor.TabIndex = 24;
-            // 
             // btnGuardar
             // 
             btnGuardar.BackColor = Color.FromArgb(201, 168, 76);
@@ -318,12 +291,39 @@
             comboBox3.Size = new Size(245, 28);
             comboBox3.TabIndex = 37;
             // 
+            // cmbNombreAutor
+            // 
+            cmbNombreAutor.FormattingEnabled = true;
+            cmbNombreAutor.Location = new Point(61, 362);
+            cmbNombreAutor.Name = "cmbNombreAutor";
+            cmbNombreAutor.Size = new Size(245, 28);
+            cmbNombreAutor.TabIndex = 38;
+            // 
+            // cmbApellidoPaterno
+            // 
+            cmbApellidoPaterno.FormattingEnabled = true;
+            cmbApellidoPaterno.Location = new Point(411, 362);
+            cmbApellidoPaterno.Name = "cmbApellidoPaterno";
+            cmbApellidoPaterno.Size = new Size(245, 28);
+            cmbApellidoPaterno.TabIndex = 39;
+            // 
+            // cmbApellidoMaterno
+            // 
+            cmbApellidoMaterno.FormattingEnabled = true;
+            cmbApellidoMaterno.Location = new Point(755, 362);
+            cmbApellidoMaterno.Name = "cmbApellidoMaterno";
+            cmbApellidoMaterno.Size = new Size(245, 28);
+            cmbApellidoMaterno.TabIndex = 40;
+            // 
             // frmFormularioLibros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1064, 536);
+            Controls.Add(cmbApellidoMaterno);
+            Controls.Add(cmbApellidoPaterno);
+            Controls.Add(cmbNombreAutor);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
@@ -335,9 +335,6 @@
             Controls.Add(lblApellidoMaterno);
             Controls.Add(lblApaterno);
             Controls.Add(lblNombre);
-            Controls.Add(txtApellidoMaterno);
-            Controls.Add(txtApellidoPaterno);
-            Controls.Add(txtNombreAutor);
             Controls.Add(txtNumPaginas);
             Controls.Add(txtTitulo);
             Controls.Add(txtISBN);
@@ -374,9 +371,6 @@
         private Label lblApellidoMaterno;
         private Label lblApaterno;
         private Label lblNombre;
-        private TextBox txtApellidoMaterno;
-        private TextBox txtApellidoPaterno;
-        private TextBox txtNombreAutor;
         private Button btnGuardar;
         private Button btnCancelar;
         private Button btnLimpiar;
@@ -385,5 +379,8 @@
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox3;
+        private ComboBox cmbNombreAutor;
+        private ComboBox cmbApellidoPaterno;
+        private ComboBox cmbApellidoMaterno;
     }
 }
