@@ -14,5 +14,13 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            var frm = new frmFormularioTrabajadores();
+
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
     }
 }

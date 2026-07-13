@@ -12,49 +12,92 @@ namespace prySistema_prestamos_libros
     public partial class frmPrincipal : Form
     {
         clsPrincipal principal;
+
+        // Botones del menú lateral que representan un módulo del sistema.
+        private Button[] botonesModulo;
+        private Button botonModuloActivo;
+
+        // Colores normal / activo para marcar en qué módulo está el usuario.
+        private static readonly Color colorFondoNormal = Color.FromArgb(201, 168, 76);
+        private static readonly Color colorTextoNormal = Color.FromArgb(17, 30, 71);
+        private static readonly Color colorFondoActivo = Color.FromArgb(17, 30, 71);
+        private static readonly Color colorTextoActivo = Color.FromArgb(201, 168, 76);
+
         public frmPrincipal()
         {
             InitializeComponent();
+
+            botonesModulo = new[]
+            {
+                btnNuevoPrestamo,
+                btnDevoluciones,
+                btnAlumnos,
+                btnTrabajadores,
+                btnUsuario,
+                btnLibro,
+                btnEjemplar
+            };
+        }
+
+        // Quita el resaltado de todos los botones del menú y lo aplica solo al módulo seleccionado.
+        private void MarcarModuloActivo(Button boton)
+        {
+            foreach (Button btn in botonesModulo)
+            {
+                btn.BackColor = colorFondoNormal;
+                btn.ForeColor = colorTextoNormal;
+            }
+
+            boton.BackColor = colorFondoActivo;
+            boton.ForeColor = colorTextoActivo;
+            botonModuloActivo = boton;
         }
 
         private void btnNuevoPrestamo_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmPrestamos(), pnlContenedor);
         }
 
         private void btnDevoluciones_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmDevolucion(), pnlContenedor);
         }
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmGestionAlumnos(), pnlContenedor);
         }
 
         private void btnTrabajadores_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmGestionTrabajadores(), pnlContenedor);
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmGestionUsuarios(), pnlContenedor);
         }
 
         private void btnLibro_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmGestionLibros(), pnlContenedor);
         }
 
         private void btnEjemplar_Click(object sender, EventArgs e)
         {
+            MarcarModuloActivo((Button)sender);
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmGestionEjemplares(), pnlContenedor);
         }

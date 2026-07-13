@@ -13,7 +13,15 @@ namespace prySistema_prestamos_libros
         public frmGestionUsuarios()
         {
             InitializeComponent();
-            
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            var frm = new frmFormularioUsuario();
+
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
         }
     }
 }

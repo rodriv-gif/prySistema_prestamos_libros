@@ -79,7 +79,7 @@
             // pcbContenendorBusqueda
             // 
             pcbContenendorBusqueda.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenendorBusqueda.Location = new Point(85, 262);
+            pcbContenendorBusqueda.Location = new Point(95, 262);
             pcbContenendorBusqueda.Name = "pcbContenendorBusqueda";
             pcbContenendorBusqueda.Size = new Size(1302, 374);
             pcbContenendorBusqueda.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             lblBusquedaLibro.BackColor = Color.FromArgb(250, 247, 242);
             lblBusquedaLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBusquedaLibro.ForeColor = Color.FromArgb(27, 46, 107);
-            lblBusquedaLibro.Location = new Point(94, 270);
+            lblBusquedaLibro.Location = new Point(104, 270);
             lblBusquedaLibro.Name = "lblBusquedaLibro";
             lblBusquedaLibro.Size = new Size(163, 23);
             lblBusquedaLibro.TabIndex = 6;
@@ -101,7 +101,7 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(85, 651);
+            pcbContenedorCompacto.Location = new Point(95, 651);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
             pcbContenedorCompacto.Size = new Size(1302, 137);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             lblISBN.BackColor = Color.FromArgb(250, 247, 242);
             lblISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblISBN.ForeColor = Color.FromArgb(31, 31, 31);
-            lblISBN.Location = new Point(106, 293);
+            lblISBN.Location = new Point(116, 293);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(41, 20);
             lblISBN.TabIndex = 10;
@@ -125,7 +125,7 @@
             txtISBN.BackColor = Color.White;
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtISBN.ForeColor = Color.FromArgb(31, 31, 31);
-            txtISBN.Location = new Point(106, 316);
+            txtISBN.Location = new Point(116, 316);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(245, 30);
@@ -134,7 +134,7 @@
             // dgvLibros
             // 
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibros.Location = new Point(106, 367);
+            dgvLibros.Location = new Point(116, 367);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
             dgvLibros.Size = new Size(1249, 197);
@@ -146,7 +146,7 @@
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
-            lblLocalizacion.Location = new Point(106, 570);
+            lblLocalizacion.Location = new Point(116, 570);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
             lblLocalizacion.TabIndex = 13;
@@ -158,7 +158,7 @@
             lblInventario.BackColor = Color.FromArgb(250, 247, 242);
             lblInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInventario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblInventario.Location = new Point(777, 570);
+            lblInventario.Location = new Point(787, 570);
             lblInventario.Name = "lblInventario";
             lblInventario.Size = new Size(156, 20);
             lblInventario.TabIndex = 14;
@@ -169,7 +169,7 @@
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
-            txtLocalizacion.Location = new Point(106, 593);
+            txtLocalizacion.Location = new Point(116, 593);
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(576, 27);
             txtLocalizacion.TabIndex = 15;
@@ -178,7 +178,7 @@
             // 
             txtInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInventario.ForeColor = Color.FromArgb(31, 31, 31);
-            txtInventario.Location = new Point(777, 593);
+            txtInventario.Location = new Point(787, 593);
             txtInventario.Multiline = true;
             txtInventario.Name = "txtInventario";
             txtInventario.Size = new Size(245, 30);
@@ -190,7 +190,7 @@
             btnAgregar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.FromArgb(201, 168, 76);
             btnAgregar.Image = (Image)resources.GetObject("btnAgregar.Image");
-            btnAgregar.Location = new Point(1103, 576);
+            btnAgregar.Location = new Point(1113, 576);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(150, 45);
             btnAgregar.TabIndex = 17;
@@ -206,7 +206,7 @@
             button2.ForeColor = Color.FromArgb(17, 30, 71);
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(323, 798);
+            button2.Location = new Point(337, 818);
             button2.Name = "button2";
             button2.Size = new Size(150, 45);
             button2.TabIndex = 18;
@@ -222,7 +222,7 @@
             btnLimpiarPrestamo.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiarPrestamo.Image = (Image)resources.GetObject("btnLimpiarPrestamo.Image");
             btnLimpiarPrestamo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiarPrestamo.Location = new Point(660, 798);
+            btnLimpiarPrestamo.Location = new Point(679, 818);
             btnLimpiarPrestamo.Name = "btnLimpiarPrestamo";
             btnLimpiarPrestamo.Size = new Size(150, 45);
             btnLimpiarPrestamo.TabIndex = 19;
@@ -238,7 +238,7 @@
             btnCancelarPrestamo.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelarPrestamo.Image = (Image)resources.GetObject("btnCancelarPrestamo.Image");
             btnCancelarPrestamo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelarPrestamo.Location = new Point(994, 798);
+            btnCancelarPrestamo.Location = new Point(1016, 818);
             btnCancelarPrestamo.Name = "btnCancelarPrestamo";
             btnCancelarPrestamo.Size = new Size(150, 45);
             btnCancelarPrestamo.TabIndex = 20;
@@ -253,7 +253,7 @@
             lblTipoPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTipoPrestamo.ForeColor = Color.FromArgb(31, 31, 31);
-            lblTipoPrestamo.Location = new Point(102, 698);
+            lblTipoPrestamo.Location = new Point(112, 698);
             lblTipoPrestamo.Name = "lblTipoPrestamo";
             lblTipoPrestamo.Size = new Size(127, 20);
             lblTipoPrestamo.TabIndex = 38;
@@ -264,7 +264,7 @@
             lblFechaPrestamo.AutoSize = true;
             lblFechaPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaPrestamo.Location = new Point(437, 698);
+            lblFechaPrestamo.Location = new Point(447, 698);
             lblFechaPrestamo.Name = "lblFechaPrestamo";
             lblFechaPrestamo.Size = new Size(135, 20);
             lblFechaPrestamo.TabIndex = 39;
@@ -275,7 +275,7 @@
             lblFechaDevolucion.AutoSize = true;
             lblFechaDevolucion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaDevolucion.Location = new Point(777, 698);
+            lblFechaDevolucion.Location = new Point(787, 698);
             lblFechaDevolucion.Name = "lblFechaDevolucion";
             lblFechaDevolucion.Size = new Size(145, 20);
             lblFechaDevolucion.TabIndex = 40;
@@ -287,7 +287,7 @@
             lblBibliotecario.BackColor = Color.FromArgb(250, 247, 242);
             lblBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBibliotecario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblBibliotecario.Location = new Point(1093, 698);
+            lblBibliotecario.Location = new Point(1103, 698);
             lblBibliotecario.Name = "lblBibliotecario";
             lblBibliotecario.Size = new Size(177, 20);
             lblBibliotecario.TabIndex = 41;
@@ -299,7 +299,7 @@
             lblDatosPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosPrestamo.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosPrestamo.Location = new Point(90, 659);
+            lblDatosPrestamo.Location = new Point(100, 659);
             lblDatosPrestamo.Name = "lblDatosPrestamo";
             lblDatosPrestamo.Size = new Size(167, 23);
             lblDatosPrestamo.TabIndex = 46;
@@ -310,7 +310,7 @@
             cmbTipoPrestamo.BackColor = Color.White;
             cmbTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoPrestamo.FormattingEnabled = true;
-            cmbTipoPrestamo.Location = new Point(102, 724);
+            cmbTipoPrestamo.Location = new Point(112, 724);
             cmbTipoPrestamo.Margin = new Padding(3, 4, 3, 4);
             cmbTipoPrestamo.Name = "cmbTipoPrestamo";
             cmbTipoPrestamo.Size = new Size(245, 28);
@@ -320,7 +320,7 @@
             // 
             dtpFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPrestamo.Format = DateTimePickerFormat.Short;
-            dtpFechaPrestamo.Location = new Point(437, 720);
+            dtpFechaPrestamo.Location = new Point(447, 720);
             dtpFechaPrestamo.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPrestamo.Name = "dtpFechaPrestamo";
             dtpFechaPrestamo.Size = new Size(245, 27);
@@ -330,7 +330,7 @@
             // 
             dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
-            dtpFechaDevolucion.Location = new Point(777, 720);
+            dtpFechaDevolucion.Location = new Point(787, 720);
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
             dtpFechaDevolucion.Size = new Size(245, 27);
@@ -341,7 +341,7 @@
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
             lblCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCarrera.Location = new Point(777, 177);
+            lblCarrera.Location = new Point(787, 177);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(102, 20);
             lblCarrera.TabIndex = 68;
@@ -351,7 +351,7 @@
             // 
             txtCarrera.BackColor = Color.White;
             txtCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCarrera.Location = new Point(777, 200);
+            txtCarrera.Location = new Point(787, 200);
             txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
             txtCarrera.Size = new Size(245, 30);
@@ -363,7 +363,7 @@
             lblGrupo.BackColor = Color.FromArgb(250, 247, 242);
             lblGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGrupo.ForeColor = Color.FromArgb(31, 31, 31);
-            lblGrupo.Location = new Point(442, 177);
+            lblGrupo.Location = new Point(452, 177);
             lblGrupo.Name = "lblGrupo";
             lblGrupo.Size = new Size(50, 20);
             lblGrupo.TabIndex = 66;
@@ -375,7 +375,7 @@
             lblGrado.BackColor = Color.FromArgb(250, 247, 242);
             lblGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGrado.ForeColor = Color.FromArgb(31, 31, 31);
-            lblGrado.Location = new Point(102, 177);
+            lblGrado.Location = new Point(112, 177);
             lblGrado.Name = "lblGrado";
             lblGrado.Size = new Size(50, 20);
             lblGrado.TabIndex = 65;
@@ -387,7 +387,7 @@
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoMaterno.Location = new Point(777, 110);
+            lblApellidoMaterno.Location = new Point(787, 110);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
             lblApellidoMaterno.TabIndex = 64;
@@ -399,7 +399,7 @@
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoPaterno.Location = new Point(442, 110);
+            lblApellidoPaterno.Location = new Point(452, 110);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
             lblApellidoPaterno.TabIndex = 63;
@@ -411,7 +411,7 @@
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
             lblNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNombre.Location = new Point(102, 110);
+            lblNombre.Location = new Point(112, 110);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(64, 20);
             lblNombre.TabIndex = 62;
@@ -423,7 +423,7 @@
             lblTipoSolicitante.BackColor = Color.FromArgb(250, 247, 242);
             lblTipoSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTipoSolicitante.ForeColor = Color.FromArgb(31, 31, 31);
-            lblTipoSolicitante.Location = new Point(442, 48);
+            lblTipoSolicitante.Location = new Point(452, 48);
             lblTipoSolicitante.Name = "lblTipoSolicitante";
             lblTipoSolicitante.Size = new Size(132, 20);
             lblTipoSolicitante.TabIndex = 61;
@@ -433,7 +433,7 @@
             // 
             txtGrupo.BackColor = Color.White;
             txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtGrupo.Location = new Point(437, 200);
+            txtGrupo.Location = new Point(447, 200);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
             txtGrupo.Size = new Size(245, 30);
@@ -443,7 +443,7 @@
             // 
             txtGrado.BackColor = Color.White;
             txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtGrado.Location = new Point(102, 200);
+            txtGrado.Location = new Point(112, 200);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
             txtGrado.Size = new Size(245, 30);
@@ -453,7 +453,7 @@
             // 
             txtApellidoMaterno.BackColor = Color.White;
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoMaterno.Location = new Point(777, 133);
+            txtApellidoMaterno.Location = new Point(787, 133);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
@@ -463,7 +463,7 @@
             // 
             txtApellidoPaterno.BackColor = Color.White;
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoPaterno.Location = new Point(437, 133);
+            txtApellidoPaterno.Location = new Point(447, 133);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(245, 30);
@@ -473,7 +473,7 @@
             // 
             txtNombre.BackColor = Color.White;
             txtNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(102, 133);
+            txtNombre.Location = new Point(112, 133);
             txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
             txtNombre.ReadOnly = true;
@@ -484,7 +484,7 @@
             // 
             txtTipoSolicitante.BackColor = Color.White;
             txtTipoSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTipoSolicitante.Location = new Point(437, 70);
+            txtTipoSolicitante.Location = new Point(447, 70);
             txtTipoSolicitante.Multiline = true;
             txtTipoSolicitante.Name = "txtTipoSolicitante";
             txtTipoSolicitante.Size = new Size(245, 30);
@@ -494,7 +494,7 @@
             // 
             txtNumControlSolicitante.BackColor = Color.White;
             txtNumControlSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumControlSolicitante.Location = new Point(102, 70);
+            txtNumControlSolicitante.Location = new Point(112, 70);
             txtNumControlSolicitante.Multiline = true;
             txtNumControlSolicitante.Name = "txtNumControlSolicitante";
             txtNumControlSolicitante.Size = new Size(245, 30);
@@ -506,7 +506,7 @@
             lblNumeroControl.BackColor = Color.FromArgb(250, 247, 242);
             lblNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNumeroControl.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNumeroControl.Location = new Point(102, 45);
+            lblNumeroControl.Location = new Point(112, 45);
             lblNumeroControl.Name = "lblNumeroControl";
             lblNumeroControl.Size = new Size(164, 20);
             lblNumeroControl.TabIndex = 53;
@@ -518,7 +518,7 @@
             lblDatosSolicitante.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosSolicitante.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosSolicitante.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosSolicitante.Location = new Point(90, 21);
+            lblDatosSolicitante.Location = new Point(100, 21);
             lblDatosSolicitante.Name = "lblDatosSolicitante";
             lblDatosSolicitante.Size = new Size(173, 23);
             lblDatosSolicitante.TabIndex = 52;
@@ -527,7 +527,7 @@
             // pcbContenedorCaptura
             // 
             pcbContenedorCaptura.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenedorCaptura.Location = new Point(85, 12);
+            pcbContenedorCaptura.Location = new Point(95, 12);
             pcbContenedorCaptura.Name = "pcbContenedorCaptura";
             pcbContenedorCaptura.Size = new Size(1302, 234);
             pcbContenedorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -538,7 +538,7 @@
             // 
             txtBibliotecario.BackColor = Color.White;
             txtBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBibliotecario.Location = new Point(1093, 720);
+            txtBibliotecario.Location = new Point(1103, 720);
             txtBibliotecario.Multiline = true;
             txtBibliotecario.Name = "txtBibliotecario";
             txtBibliotecario.Size = new Size(245, 30);

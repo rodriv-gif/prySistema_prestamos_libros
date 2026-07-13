@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,5 +14,6 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
         }
+
     }
 }

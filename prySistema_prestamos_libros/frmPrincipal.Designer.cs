@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             pnlMenu = new Panel();
             lblRegistros = new Label();
             lblOperaciones = new Label();
@@ -43,14 +44,18 @@
             btnDevoluciones = new Button();
             lblTituloSistema = new Label();
             pnlSuperior = new Panel();
-            lblRol = new Label();
+            lblAyuda = new Label();
+            pcbAyuda = new PictureBox();
+            lblUsuario = new Label();
             panel2 = new Panel();
             pnlContenedor = new Panel();
             pnlBienvenida = new Panel();
             lblBienvenida = new Label();
+            lblRol = new Label();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbAyuda).BeginInit();
             pnlContenedor.SuspendLayout();
             pnlBienvenida.SuspendLayout();
             SuspendLayout();
@@ -138,7 +143,7 @@
             // 
             // pcbLogo
             // 
-            pcbLogo.Image = Properties.Resources.logol;
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
             pcbLogo.Location = new Point(62, 11);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(280, 280);
@@ -226,7 +231,7 @@
             lblTituloSistema.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloSistema.ForeColor = Color.FromArgb(201, 168, 76);
             lblTituloSistema.ImageAlign = ContentAlignment.BottomCenter;
-            lblTituloSistema.Location = new Point(441, 11);
+            lblTituloSistema.Location = new Point(410, 27);
             lblTituloSistema.Name = "lblTituloSistema";
             lblTituloSistema.Size = new Size(705, 54);
             lblTituloSistema.TabIndex = 2;
@@ -236,6 +241,9 @@
             // 
             pnlSuperior.BackColor = Color.FromArgb(17, 30, 71);
             pnlSuperior.Controls.Add(lblRol);
+            pnlSuperior.Controls.Add(lblAyuda);
+            pnlSuperior.Controls.Add(pcbAyuda);
+            pnlSuperior.Controls.Add(lblUsuario);
             pnlSuperior.Controls.Add(panel2);
             pnlSuperior.Controls.Add(lblTituloSistema);
             pnlSuperior.Location = new Point(406, 1);
@@ -243,16 +251,37 @@
             pnlSuperior.Size = new Size(1518, 110);
             pnlSuperior.TabIndex = 1;
             // 
-            // lblRol
+            // lblAyuda
             // 
-            lblRol.AutoSize = true;
-            lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRol.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRol.Location = new Point(1273, 59);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(209, 25);
-            lblRol.TabIndex = 11;
-            lblRol.Text = "Usuario: Administrador";
+            lblAyuda.AutoSize = true;
+            lblAyuda.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAyuda.ForeColor = Color.FromArgb(201, 168, 76);
+            lblAyuda.Location = new Point(1382, 38);
+            lblAyuda.Name = "lblAyuda";
+            lblAyuda.Size = new Size(72, 25);
+            lblAyuda.TabIndex = 12;
+            lblAyuda.Text = " Ayuda";
+            // 
+            // pcbAyuda
+            // 
+            pcbAyuda.Image = (Image)resources.GetObject("pcbAyuda.Image");
+            pcbAyuda.Location = new Point(1445, 27);
+            pcbAyuda.Name = "pcbAyuda";
+            pcbAyuda.Size = new Size(57, 54);
+            pcbAyuda.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbAyuda.TabIndex = 3;
+            pcbAyuda.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.FromArgb(201, 168, 76);
+            lblUsuario.Location = new Point(1148, 38);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(87, 25);
+            lblUsuario.TabIndex = 11;
+            lblUsuario.Text = "Usuario: ";
             // 
             // panel2
             // 
@@ -291,6 +320,17 @@
             lblBienvenida.TabIndex = 3;
             lblBienvenida.Text = "Bienvenido Aministrador / Bibliotecario";
             // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRol.ForeColor = Color.FromArgb(201, 168, 76);
+            lblRol.Location = new Point(1230, 38);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(126, 25);
+            lblRol.TabIndex = 13;
+            lblRol.Text = "Administrador";
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -302,12 +342,14 @@
             Controls.Add(pnlMenu);
             Name = "frmPrincipal";
             Text = "Pantalla Principal";
+            WindowState = FormWindowState.Maximized;
             Load += frmPrincipal_Load;
             pnlMenu.ResumeLayout(false);
             pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlSuperior.ResumeLayout(false);
             pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbAyuda).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlBienvenida.ResumeLayout(false);
             pnlBienvenida.PerformLayout();
@@ -329,12 +371,15 @@
         private Button btnUsuario;
         private Button btnLibro;
         private Button btnEjemplar;
-        private Label lblRol;
+        private Label lblUsuario;
         private Button btnCerrarSesion;
         private Panel pnlContenedor;
         private Panel pnlBienvenida;
         private Label lblBienvenida;
         private Label lblOperaciones;
         private Label lblRegistros;
+        private PictureBox pcbAyuda;
+        private Label lblAyuda;
+        private Label lblRol;
     }
 }

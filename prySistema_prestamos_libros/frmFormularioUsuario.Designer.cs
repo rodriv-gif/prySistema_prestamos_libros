@@ -60,9 +60,9 @@
             // pcbContenedorCaptura
             // 
             pcbContenedorCaptura.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCaptura.Location = new Point(85, 12);
+            pcbContenedorCaptura.Location = new Point(27, 19);
             pcbContenedorCaptura.Name = "pcbContenedorCaptura";
-            pcbContenedorCaptura.Size = new Size(1302, 234);
+            pcbContenedorCaptura.Size = new Size(1187, 234);
             pcbContenedorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCaptura.TabIndex = 0;
             pcbContenedorCaptura.TabStop = false;
@@ -70,9 +70,9 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(85, 291);
+            pcbContenedorCompacto.Location = new Point(27, 292);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
-            pcbContenedorCompacto.Size = new Size(1302, 137);
+            pcbContenedorCompacto.Size = new Size(1187, 137);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCompacto.TabIndex = 1;
             pcbContenedorCompacto.TabStop = false;
@@ -83,7 +83,7 @@
             lblVincularTrabajador.BackColor = Color.FromArgb(250, 247, 242);
             lblVincularTrabajador.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             lblVincularTrabajador.ForeColor = Color.FromArgb(27, 46, 107);
-            lblVincularTrabajador.Location = new Point(101, 21);
+            lblVincularTrabajador.Location = new Point(41, 29);
             lblVincularTrabajador.Name = "lblVincularTrabajador";
             lblVincularTrabajador.Size = new Size(165, 23);
             lblVincularTrabajador.TabIndex = 3;
@@ -94,7 +94,7 @@
             lblNumControl.AutoSize = true;
             lblNumControl.BackColor = Color.FromArgb(250, 247, 242);
             lblNumControl.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNumControl.Location = new Point(102, 55);
+            lblNumControl.Location = new Point(57, 52);
             lblNumControl.Name = "lblNumControl";
             lblNumControl.Size = new Size(135, 20);
             lblNumControl.TabIndex = 4;
@@ -105,7 +105,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
             lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNombre.Location = new Point(101, 120);
+            lblNombre.Location = new Point(57, 130);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(64, 20);
             lblNombre.TabIndex = 5;
@@ -116,7 +116,7 @@
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoPaterno.Location = new Point(430, 120);
+            lblApellidoPaterno.Location = new Point(345, 130);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
             lblApellidoPaterno.TabIndex = 6;
@@ -127,7 +127,7 @@
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
-            lblApellidoMaterno.Location = new Point(773, 120);
+            lblApellidoMaterno.Location = new Point(652, 130);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
             lblApellidoMaterno.TabIndex = 7;
@@ -138,7 +138,7 @@
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
             lblCarrera.ForeColor = Color.FromArgb(31, 31, 31);
-            lblCarrera.Location = new Point(1109, 120);
+            lblCarrera.Location = new Point(940, 130);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(94, 20);
             lblCarrera.TabIndex = 8;
@@ -150,7 +150,7 @@
             btnAgregarTrabajador.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregarTrabajador.ForeColor = Color.FromArgb(201, 168, 76);
             btnAgregarTrabajador.Image = (Image)resources.GetObject("btnAgregarTrabajador.Image");
-            btnAgregarTrabajador.Location = new Point(649, 190);
+            btnAgregarTrabajador.Location = new Point(552, 198);
             btnAgregarTrabajador.Name = "btnAgregarTrabajador";
             btnAgregarTrabajador.Size = new Size(150, 45);
             btnAgregarTrabajador.TabIndex = 9;
@@ -165,7 +165,7 @@
             lblAccesoSistema.BackColor = Color.FromArgb(250, 247, 242);
             lblAccesoSistema.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             lblAccesoSistema.ForeColor = Color.FromArgb(27, 46, 107);
-            lblAccesoSistema.Location = new Point(103, 303);
+            lblAccesoSistema.Location = new Point(41, 302);
             lblAccesoSistema.Name = "lblAccesoSistema";
             lblAccesoSistema.Size = new Size(148, 23);
             lblAccesoSistema.TabIndex = 10;
@@ -176,7 +176,7 @@
             lblPerfil.AutoSize = true;
             lblPerfil.BackColor = Color.FromArgb(250, 247, 242);
             lblPerfil.ForeColor = Color.FromArgb(31, 31, 31);
-            lblPerfil.Location = new Point(103, 341);
+            lblPerfil.Location = new Point(57, 341);
             lblPerfil.Name = "lblPerfil";
             lblPerfil.Size = new Size(42, 20);
             lblPerfil.TabIndex = 11;
@@ -187,7 +187,7 @@
             lblUsuario.AutoSize = true;
             lblUsuario.BackColor = Color.FromArgb(250, 247, 242);
             lblUsuario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblUsuario.Location = new Point(431, 341);
+            lblUsuario.Location = new Point(345, 343);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 12;
@@ -198,7 +198,7 @@
             lblContrasenia.AutoSize = true;
             lblContrasenia.BackColor = Color.FromArgb(250, 247, 242);
             lblContrasenia.ForeColor = Color.FromArgb(31, 31, 31);
-            lblContrasenia.Location = new Point(774, 343);
+            lblContrasenia.Location = new Point(652, 341);
             lblContrasenia.Name = "lblContrasenia";
             lblContrasenia.Size = new Size(83, 20);
             lblContrasenia.TabIndex = 13;
@@ -209,7 +209,7 @@
             cmbPerfil.BackColor = Color.White;
             cmbPerfil.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPerfil.FormattingEnabled = true;
-            cmbPerfil.Location = new Point(103, 366);
+            cmbPerfil.Location = new Point(57, 364);
             cmbPerfil.Name = "cmbPerfil";
             cmbPerfil.Size = new Size(245, 28);
             cmbPerfil.TabIndex = 14;
@@ -218,7 +218,7 @@
             // 
             txtUsuario.BackColor = Color.White;
             txtUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(431, 365);
+            txtUsuario.Location = new Point(345, 366);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(245, 30);
@@ -228,7 +228,7 @@
             // 
             txtContrasena.BackColor = Color.White;
             txtContrasena.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtContrasena.Location = new Point(774, 366);
+            txtContrasena.Location = new Point(652, 364);
             txtContrasena.Multiline = true;
             txtContrasena.Name = "txtContrasena";
             txtContrasena.PasswordChar = '*';
@@ -242,22 +242,22 @@
             btnGuardar.ForeColor = Color.FromArgb(31, 31, 31);
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(303, 555);
+            btnGuardar.Location = new Point(174, 470);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 17;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnLimpiar
-            // 
+            //
             btnLimpiar.BackColor = Color.FromArgb(107, 122, 153);
             btnLimpiar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(652, 555);
+            btnLimpiar.Location = new Point(552, 470);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
             btnLimpiar.TabIndex = 18;
@@ -265,27 +265,27 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnCancelar
-            // 
+            //
             btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
             btnCancelar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(1046, 555);
+            btnCancelar.Location = new Point(940, 470);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 19;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtApellidoPaternoTrabajador
             // 
             txtApellidoPaternoTrabajador.BackColor = Color.White;
             txtApellidoPaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoPaternoTrabajador.Location = new Point(430, 143);
+            txtApellidoPaternoTrabajador.Location = new Point(345, 153);
             txtApellidoPaternoTrabajador.Multiline = true;
             txtApellidoPaternoTrabajador.Name = "txtApellidoPaternoTrabajador";
             txtApellidoPaternoTrabajador.Size = new Size(245, 30);
@@ -295,7 +295,7 @@
             // 
             txtApellidoMaternoTrabajador.BackColor = Color.White;
             txtApellidoMaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellidoMaternoTrabajador.Location = new Point(773, 141);
+            txtApellidoMaternoTrabajador.Location = new Point(652, 153);
             txtApellidoMaternoTrabajador.Multiline = true;
             txtApellidoMaternoTrabajador.Name = "txtApellidoMaternoTrabajador";
             txtApellidoMaternoTrabajador.Size = new Size(245, 30);
@@ -305,18 +305,17 @@
             // 
             txtCarreraTrabajador.BackColor = Color.White;
             txtCarreraTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCarreraTrabajador.Location = new Point(1109, 141);
+            txtCarreraTrabajador.Location = new Point(940, 153);
             txtCarreraTrabajador.Multiline = true;
             txtCarreraTrabajador.Name = "txtCarreraTrabajador";
             txtCarreraTrabajador.Size = new Size(245, 30);
             txtCarreraTrabajador.TabIndex = 23;
-            txtCarreraTrabajador.TextChanged += textBox6_TextChanged;
             // 
             // txtNombreTrabajador
             // 
             txtNombreTrabajador.BackColor = Color.White;
             txtNombreTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreTrabajador.Location = new Point(102, 143);
+            txtNombreTrabajador.Location = new Point(57, 153);
             txtNombreTrabajador.Multiline = true;
             txtNombreTrabajador.Name = "txtNombreTrabajador";
             txtNombreTrabajador.Size = new Size(245, 30);
@@ -326,7 +325,7 @@
             // 
             txtNumControl.BackColor = Color.White;
             txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumControl.Location = new Point(102, 78);
+            txtNumControl.Location = new Point(57, 76);
             txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";
             txtNumControl.Size = new Size(245, 30);
@@ -337,7 +336,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1475, 875);
+            ClientSize = new Size(1244, 542);
             Controls.Add(txtNumControl);
             Controls.Add(txtNombreTrabajador);
             Controls.Add(txtCarreraTrabajador);

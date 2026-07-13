@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             pcbLogo = new PictureBox();
             lblUsuario = new Label();
             lblContraseña = new Label();
@@ -40,7 +41,7 @@
             // 
             // pcbLogo
             // 
-            pcbLogo.Image = Properties.Resources.logol;
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
             pcbLogo.Location = new Point(344, 12);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(280, 280);
@@ -81,7 +82,7 @@
             btnAcceder.TabIndex = 5;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
-            btnAcceder.Click += btnAcceder_Click;
+
             // 
             // btnSalir
             // 
@@ -94,7 +95,7 @@
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
-            btnSalir.Click += btnSalir_Click;
+
             // 
             // txtPassword
             // 
@@ -109,6 +110,7 @@
             // 
             // txtUsuario
             // 
+            txtUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(364, 339);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
@@ -129,6 +131,7 @@
             Controls.Add(lblUsuario);
             Controls.Add(pcbLogo);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Control de acceso";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);

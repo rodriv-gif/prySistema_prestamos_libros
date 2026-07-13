@@ -50,10 +50,11 @@
             // 
             // pcbContenedorBusqueda
             // 
+            pcbContenedorBusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pcbContenedorBusqueda.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenedorBusqueda.Location = new Point(85, 42);
+            pcbContenedorBusqueda.Location = new Point(25, 12);
             pcbContenedorBusqueda.Name = "pcbContenedorBusqueda";
-            pcbContenedorBusqueda.Size = new Size(1302, 374);
+            pcbContenedorBusqueda.Size = new Size(1014, 362);
             pcbContenedorBusqueda.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorBusqueda.TabIndex = 2;
             pcbContenedorBusqueda.TabStop = false;
@@ -64,7 +65,7 @@
             lblDatosEjemplar.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosEjemplar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosEjemplar.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosEjemplar.Location = new Point(88, 53);
+            lblDatosEjemplar.Location = new Point(28, 23);
             lblDatosEjemplar.Name = "lblDatosEjemplar";
             lblDatosEjemplar.Size = new Size(162, 23);
             lblDatosEjemplar.TabIndex = 3;
@@ -76,7 +77,7 @@
             lblSeleccionLibro.BackColor = Color.FromArgb(250, 247, 242);
             lblSeleccionLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSeleccionLibro.ForeColor = SystemColors.ControlText;
-            lblSeleccionLibro.Location = new Point(121, 124);
+            lblSeleccionLibro.Location = new Point(61, 94);
             lblSeleccionLibro.Name = "lblSeleccionLibro";
             lblSeleccionLibro.Size = new Size(158, 20);
             lblSeleccionLibro.TabIndex = 4;
@@ -88,7 +89,7 @@
             lblCantidad.BackColor = Color.FromArgb(250, 247, 242);
             lblCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCantidad.ForeColor = SystemColors.ControlText;
-            lblCantidad.Location = new Point(539, 248);
+            lblCantidad.Location = new Point(377, 238);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(69, 20);
             lblCantidad.TabIndex = 5;
@@ -100,7 +101,7 @@
             lblFechaAdquisicion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblFechaAdquisicion.ForeColor = SystemColors.ControlText;
-            lblFechaAdquisicion.Location = new Point(121, 248);
+            lblFechaAdquisicion.Location = new Point(61, 218);
             lblFechaAdquisicion.Name = "lblFechaAdquisicion";
             lblFechaAdquisicion.Size = new Size(148, 20);
             lblFechaAdquisicion.TabIndex = 6;
@@ -112,7 +113,7 @@
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLocalizacion.ForeColor = SystemColors.ControlText;
-            lblLocalizacion.Location = new Point(539, 124);
+            lblLocalizacion.Location = new Point(377, 107);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
             lblLocalizacion.TabIndex = 7;
@@ -124,7 +125,7 @@
             lblEstado.BackColor = Color.FromArgb(250, 247, 242);
             lblEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblEstado.ForeColor = SystemColors.ControlText;
-            lblEstado.Location = new Point(924, 248);
+            lblEstado.Location = new Point(688, 238);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(54, 20);
             lblEstado.TabIndex = 9;
@@ -135,7 +136,7 @@
             cmbLibro.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbLibro.FormattingEnabled = true;
-            cmbLibro.Location = new Point(121, 160);
+            cmbLibro.Location = new Point(61, 130);
             cmbLibro.Name = "cmbLibro";
             cmbLibro.Size = new Size(245, 28);
             cmbLibro.TabIndex = 10;
@@ -145,10 +146,10 @@
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
-            txtLocalizacion.Location = new Point(539, 160);
+            txtLocalizacion.Location = new Point(377, 130);
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
-            txtLocalizacion.Size = new Size(630, 30);
+            txtLocalizacion.Size = new Size(556, 30);
             txtLocalizacion.TabIndex = 11;
             // 
             // dtpFechaAdquisicion
@@ -156,7 +157,7 @@
             dtpFechaAdquisicion.CalendarForeColor = SystemColors.ControlLightLight;
             dtpFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaAdquisicion.Format = DateTimePickerFormat.Short;
-            dtpFechaAdquisicion.Location = new Point(121, 292);
+            dtpFechaAdquisicion.Location = new Point(61, 262);
             dtpFechaAdquisicion.Name = "dtpFechaAdquisicion";
             dtpFechaAdquisicion.Size = new Size(245, 27);
             dtpFechaAdquisicion.TabIndex = 13;
@@ -164,7 +165,7 @@
             // nudCantidad
             // 
             nudCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nudCantidad.Location = new Point(539, 292);
+            nudCantidad.Location = new Point(377, 261);
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(245, 27);
             nudCantidad.TabIndex = 14;
@@ -174,19 +175,20 @@
             cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbEstado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(924, 291);
+            cmbEstado.Location = new Point(688, 261);
             cmbEstado.Name = "cmbEstado";
             cmbEstado.Size = new Size(245, 28);
             cmbEstado.TabIndex = 15;
             // 
             // btnGuardar
             // 
+            btnGuardar.Anchor = AnchorStyles.None;
             btnGuardar.BackColor = Color.FromArgb(201, 168, 76);
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
-            btnGuardar.Location = new Point(303, 555);
+            btnGuardar.Location = new Point(129, 427);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 16;
@@ -194,16 +196,18 @@
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnLimpiar
             // 
+            btnLimpiar.Anchor = AnchorStyles.None;
             btnLimpiar.BackColor = Color.FromArgb(107, 122, 153);
             btnLimpiar.Cursor = Cursors.Hand;
             btnLimpiar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(652, 555);
+            btnLimpiar.Location = new Point(452, 427);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
             btnLimpiar.TabIndex = 17;
@@ -211,30 +215,32 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
-            // 
+            btnLimpiar.Click += btnLimpiar_Click;
+            //
             // btnCancelar
-            // 
+            //
+            btnCancelar.Anchor = AnchorStyles.None;
             btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
             btnCancelar.Cursor = Cursors.Hand;
             btnCancelar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(1046, 555);
+            btnCancelar.Location = new Point(773, 427);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 18;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
-            // 
+            btnCancelar.Click += btnCancelar_Click;
+            //
             // frmFormularioEjemplares
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1475, 875);
+            ClientSize = new Size(1064, 510);
             Controls.Add(btnCancelar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnGuardar);

@@ -43,7 +43,7 @@
             // pcbContenedorGestion
             // 
             pcbContenedorGestion.Image = (Image)resources.GetObject("pcbContenedorGestion.Image");
-            pcbContenedorGestion.Location = new Point(96, 41);
+            pcbContenedorGestion.Location = new Point(104, 41);
             pcbContenedorGestion.Name = "pcbContenedorGestion";
             pcbContenedorGestion.Size = new Size(1287, 797);
             pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -56,7 +56,7 @@
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBuscar.ForeColor = SystemColors.ControlText;
-            lblBuscar.Location = new Point(115, 102);
+            lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(117, 20);
             lblBuscar.TabIndex = 3;
@@ -65,7 +65,7 @@
             // txtBuscarClave
             // 
             txtBuscarClave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarClave.Location = new Point(115, 125);
+            txtBuscarClave.Location = new Point(123, 125);
             txtBuscarClave.Multiline = true;
             txtBuscarClave.Name = "txtBuscarClave";
             txtBuscarClave.Size = new Size(245, 30);
@@ -74,7 +74,7 @@
             // dgvEjemplares
             // 
             dgvEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEjemplares.Location = new Point(115, 238);
+            dgvEjemplares.Location = new Point(123, 238);
             dgvEjemplares.Name = "dgvEjemplares";
             dgvEjemplares.RowHeadersWidth = 51;
             dgvEjemplares.Size = new Size(1249, 568);
@@ -87,7 +87,7 @@
             btnNuevo.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
             btnNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevo.Location = new Point(742, 125);
+            btnNuevo.Location = new Point(750, 125);
             btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 45);
@@ -96,6 +96,7 @@
             btnNuevo.TextAlign = ContentAlignment.MiddleRight;
             btnNuevo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEditar
             // 
@@ -104,7 +105,7 @@
             btnEditar.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(979, 125);
+            btnEditar.Location = new Point(987, 125);
             btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 45);
@@ -119,7 +120,7 @@
             btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBaja.Image = (Image)resources.GetObject("btnDarBaja.Image");
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBaja.Location = new Point(1214, 125);
+            btnDarBaja.Location = new Point(1222, 125);
             btnDarBaja.Margin = new Padding(3, 2, 3, 2);
             btnDarBaja.Name = "btnDarBaja";
             btnDarBaja.Size = new Size(150, 45);
