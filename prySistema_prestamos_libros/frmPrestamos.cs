@@ -14,5 +14,16 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
         }
+
+        private void frmPrestamos_Load(object sender, EventArgs e)
+        {
+            txtTipoSolicitante.Enabled = false;
+            txtNombre.Enabled = false;
+            txtApellidoPaterno.Enabled = false;
+            txtApellidoMaterno.Enabled = false;
+            txtGrado.Enabled = false;
+            txtGrupo.Enabled = false;
+            txtCarrera.Enabled = false;
+        }
     }
 }

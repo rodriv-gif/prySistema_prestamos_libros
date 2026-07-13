@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="frmFormularioEjemplares.cs">
       <SubType>Form</SubType>
     </Compile>

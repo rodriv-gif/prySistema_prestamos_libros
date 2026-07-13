@@ -226,7 +226,7 @@
             lblTituloSistema.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloSistema.ForeColor = Color.FromArgb(201, 168, 76);
             lblTituloSistema.ImageAlign = ContentAlignment.BottomCenter;
-            lblTituloSistema.Location = new Point(457, 11);
+            lblTituloSistema.Location = new Point(441, 11);
             lblTituloSistema.Name = "lblTituloSistema";
             lblTituloSistema.Size = new Size(705, 54);
             lblTituloSistema.TabIndex = 2;
@@ -248,11 +248,11 @@
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRol.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRol.Location = new Point(29, 58);
+            lblRol.Location = new Point(1273, 59);
             lblRol.Name = "lblRol";
-            lblRol.Size = new Size(302, 25);
+            lblRol.Size = new Size(209, 25);
             lblRol.TabIndex = 11;
-            lblRol.Text = "Inicio: Administrador/Bibiotecario";
+            lblRol.Text = "Usuario: Administrador";
             // 
             // panel2
             // 
@@ -266,9 +266,9 @@
             // 
             pnlContenedor.BackColor = Color.FromArgb(250, 247, 242);
             pnlContenedor.Controls.Add(pnlBienvenida);
-            pnlContenedor.Location = new Point(482, 131);
+            pnlContenedor.Location = new Point(415, 117);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(1367, 895);
+            pnlContenedor.Size = new Size(1493, 922);
             pnlContenedor.TabIndex = 2;
             // 
             // pnlBienvenida
@@ -302,6 +302,7 @@
             Controls.Add(pnlMenu);
             Name = "frmPrincipal";
             Text = "Pantalla Principal";
+            Load += frmPrincipal_Load;
             pnlMenu.ResumeLayout(false);
             pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();

@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtUsuario = new TextBox();
             pcbLogo = new PictureBox();
             lblUsuario = new Label();
             lblContraseña = new Label();
             btnAcceder = new Button();
             btnSalir = new Button();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
+            txtUsuario = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
-            // 
-            // txtUsuario
-            // 
-            txtUsuario.BackColor = Color.White;
-            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(364, 329);
-            txtUsuario.Multiline = true;
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(245, 30);
-            txtUsuario.TabIndex = 1;
             // 
             // pcbLogo
             // 
@@ -91,29 +81,39 @@
             btnAcceder.TabIndex = 5;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
+            btnAcceder.Click += btnAcceder_Click;
             // 
             // btnSalir
             // 
-            btnSalir.BackColor = Color.FromArgb(242, 196, 196);
+            btnSalir.BackColor = Color.FromArgb(107, 122, 153);
             btnSalir.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.ForeColor = Color.FromArgb(122, 32, 32);
+            btnSalir.ForeColor = Color.FromArgb(250, 247, 242);
             btnSalir.Location = new Point(528, 498);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(150, 45);
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(364, 427);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(245, 34);
-            textBox1.TabIndex = 6;
-            textBox1.UseSystemPasswordChar = true;
+            txtPassword.BackColor = Color.White;
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(364, 427);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(245, 34);
+            txtPassword.TabIndex = 6;
+            txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.Location = new Point(364, 339);
+            txtUsuario.Multiline = true;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(245, 30);
+            txtUsuario.TabIndex = 7;
             // 
             // frmLogin
             // 
@@ -121,13 +121,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 247, 242);
             ClientSize = new Size(976, 618);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsuario);
+            Controls.Add(txtPassword);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
             Controls.Add(pcbLogo);
-            Controls.Add(txtUsuario);
             Name = "frmLogin";
             Text = "Control de acceso";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
@@ -136,13 +136,12 @@
         }
 
         #endregion
-
-        private TextBox txtUsuario;
         private PictureBox pcbLogo;
         private Label lblUsuario;
         private Label lblContraseña;
         private Button btnAcceder;
         private Button btnSalir;
-        private TextBox textBox1;
+        private TextBox txtPassword;
+        private TextBox txtUsuario;
     }
 }

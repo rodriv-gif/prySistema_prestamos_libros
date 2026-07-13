@@ -43,8 +43,8 @@
             // pcbContenedorGestion
             // 
             pcbContenedorGestion.BackColor = Color.FromArgb(250, 247, 242);
-            pcbContenedorGestion.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenedorGestion.Location = new Point(35, 29);
+            pcbContenedorGestion.Image = (Image)resources.GetObject("pcbContenedorGestion.Image");
+            pcbContenedorGestion.Location = new Point(96, 41);
             pcbContenedorGestion.Name = "pcbContenedorGestion";
             pcbContenedorGestion.Size = new Size(1287, 797);
             pcbContenedorGestion.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -55,7 +55,7 @@
             // 
             txtBuscarTrabajador.BackColor = Color.White;
             txtBuscarTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarTrabajador.Location = new Point(54, 123);
+            txtBuscarTrabajador.Location = new Point(115, 125);
             txtBuscarTrabajador.Multiline = true;
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";
             txtBuscarTrabajador.Size = new Size(245, 30);
@@ -68,7 +68,7 @@
             btnDarBaja.ForeColor = Color.FromArgb(122, 32, 32);
             btnDarBaja.Image = (Image)resources.GetObject("btnDarBaja.Image");
             btnDarBaja.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDarBaja.Location = new Point(1153, 114);
+            btnDarBaja.Location = new Point(1214, 125);
             btnDarBaja.Name = "btnDarBaja";
             btnDarBaja.Size = new Size(150, 45);
             btnDarBaja.TabIndex = 15;
@@ -83,7 +83,7 @@
             btnEditar.ForeColor = Color.FromArgb(250, 247, 242);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(905, 113);
+            btnEditar.Location = new Point(979, 125);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 45);
             btnEditar.TabIndex = 14;
@@ -99,7 +99,7 @@
             btnNuevo.ForeColor = Color.FromArgb(17, 30, 71);
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
             btnNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevo.Location = new Point(650, 113);
+            btnNuevo.Location = new Point(742, 125);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 45);
             btnNuevo.TabIndex = 13;
@@ -114,7 +114,7 @@
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBuscar.ForeColor = Color.Black;
-            lblBuscar.Location = new Point(54, 97);
+            lblBuscar.Location = new Point(115, 102);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(206, 20);
             lblBuscar.TabIndex = 12;
@@ -123,7 +123,7 @@
             // dgvTrabajadores
             // 
             dgvTrabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTrabajadores.Location = new Point(54, 235);
+            dgvTrabajadores.Location = new Point(115, 238);
             dgvTrabajadores.Name = "dgvTrabajadores";
             dgvTrabajadores.RowHeadersWidth = 51;
             dgvTrabajadores.Size = new Size(1249, 568);
@@ -134,7 +134,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1349, 848);
+            ClientSize = new Size(1475, 875);
             Controls.Add(dgvTrabajadores);
             Controls.Add(txtBuscarTrabajador);
             Controls.Add(btnDarBaja);

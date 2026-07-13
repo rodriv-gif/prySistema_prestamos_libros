@@ -11,8 +11,15 @@ namespace prySistema_prestamos_libros
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmLogin());
-            Application.Run(new frmPrincipal());
+
+            using (frmLogin login = new frmLogin())
+            {
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmPrincipal());
+                }
+            }
+            /*Application.Run(new frmPrincipal());
             Application.Run(new frmPrestamos());
             Application.Run(new frmDevolucion());
             Application.Run(new frmGestionAlumnos());
@@ -25,7 +32,7 @@ namespace prySistema_prestamos_libros
             Application.Run(new frmFormularioLibros());
             Application.Run(new frmFormularioEjemplares());
             Application.Run(new frmGestionEjemplares());
-
+            */
         }
     }
 }

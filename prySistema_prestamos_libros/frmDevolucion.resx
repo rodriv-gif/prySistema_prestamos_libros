@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="colSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnRegistrarDevolucion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -136,7 +142,7 @@
   <data name="btnLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAA61JREFUWEftmFuoVlUQx3+ZGphalqipaZldSMgyMREkQ/FFM9HwUmIEFeqLD4aE
+        vAAADrwBlbxySQAAA61JREFUWEftmFuoVlUQx3+ZGphalqipaZldSMgyMREkQ/FFM9HwUmIEFeqLD4aE
         6YMpQr2Ipj4kahAqCpIPXvFBTdFMKCwVLU0k0QpveS+v/GEWDMM659vfPud4Hjp/GDhnz6xZ/2/PrJlZ
         G5rwP8QEYBuwBnglKhsIbYBH48McRgP/AXdNTgAdg81jQA+gVXheF8wAzgCfAF2j0mOVIye5Dbzt9B2A
         jcDfwKdAS6cri6eA39yec6KBxxeB4E1ggNO/BdwynZx2c7qy0FtL+yl6r0YDjyeBH4A7RmQB0NzpFdqT

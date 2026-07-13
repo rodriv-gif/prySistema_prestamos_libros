@@ -63,5 +63,18 @@ namespace prySistema_prestamos_libros
         {
             Application.Exit();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            btnNuevoPrestamo.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnDevoluciones.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnTrabajadores.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnUsuario.Enabled = clsLogin.EsAdministrador;
+            btnLibro.Enabled = clsLogin.EsAdministrador;
+            btnEjemplar.Enabled = clsLogin.EsAdministrador;
+
+
+        }
     }
 }
