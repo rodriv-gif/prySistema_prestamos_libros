@@ -28,8 +28,8 @@ namespace prySistema_prestamos_libros
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     //Insertar datos
-                    string sqlInsAlumno = @"INSERT INTO alumnos(matricula, id_carrera, nombre, apellido_paterno, apellido_materno, calle, colonia, cp, email, telefono, grado, grupo, fecha_registro) 
-                                      VALUES(@mat, @idCar, @nom, @apP, @apM, @calle, @col, @cp, @email, @tel, @gra, @gru, @fecha);";
+                    string sqlInsAlumno = @"INSERT INTO tblalumnos(matricula, id_carrera, nombre, apellido_paterno, apellido_materno, calle, colonia, codigo_postal, email, telefono, grado, grupo, fecha_registro, estado) 
+                                      VALUES(@mat, @idCar, @nom, @apP, @apM, @calle, @col, @cp, @email, @tel, @gra, @gru, @fecha, 'Activo');";
                     using (var comando = new MySqlCommand(sqlInsAlumno, conexion))
                     {
                         //llenamos los parametros de sql con las propiedades
@@ -37,7 +37,7 @@ namespace prySistema_prestamos_libros
                         comando.Parameters.AddWithValue("@idCar", this.IdCarrera);
                         comando.Parameters.AddWithValue("@nom", this.Nombre);
                         comando.Parameters.AddWithValue("@apP", this.ApellidoPaterno);
-                        comando.Parameters.AddWithValue("@apP", this.ApellidoMaterno);
+                        comando.Parameters.AddWithValue("@apM", this.ApellidoMaterno);
                         comando.Parameters.AddWithValue("@calle", this.Calle);
                         comando.Parameters.AddWithValue("@col", this.Colonia);
                         comando.Parameters.AddWithValue("@cp", this.CodigoPostal);
