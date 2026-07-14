@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionEjemplares));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pcbContenedorGestion = new PictureBox();
             lblBuscar = new Label();
             txtBuscarClave = new TextBox();
@@ -73,10 +76,23 @@
             // 
             // dgvEjemplares
             // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEjemplares.EnableHeadersVisualStyles = false;
             dgvEjemplares.Location = new Point(123, 238);
             dgvEjemplares.Name = "dgvEjemplares";
             dgvEjemplares.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dgvEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvEjemplares.Size = new Size(1249, 568);
             dgvEjemplares.TabIndex = 6;
             // 

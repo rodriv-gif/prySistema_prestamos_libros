@@ -25,16 +25,29 @@ namespace prySistema_prestamos_libros
             try
             {
                 dgvTrabajadores.DataSource = trabajador.CargarDataGrid();
-                dgvTrabajadores.Columns["id_carrera"].Visible = false;
-                dgvTrabajadores.Columns["Fecha de Registro"].Visible = false;
-                dgvTrabajadores.Columns["Calle"].Visible = false;
-                dgvTrabajadores.Columns["Colonia"].Visible = false;
-                dgvTrabajadores.Columns["Código Postal"].Visible = false;
+                OcultarColumnas();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        // Cada vez que se asigna un DataSource nuevo a dgvTrabajadores (CargarGrid o una búsqueda),
+        // la grid regenera sus columnas y pierde la visibilidad anterior. Por eso se creo este método se
+        // llama en TODOS los lugares donde se reasigne el DataSource.
+        private void OcultarColumnas()
+        {
+            if (dgvTrabajadores.Columns["id_carrera"] != null)
+                dgvTrabajadores.Columns["id_carrera"].Visible = false;
+            if (dgvTrabajadores.Columns["Fecha de Registro"] != null)
+                dgvTrabajadores.Columns["Fecha de Registro"].Visible = false;
+            if (dgvTrabajadores.Columns["Calle"] != null)
+                dgvTrabajadores.Columns["Calle"].Visible = false;
+            if (dgvTrabajadores.Columns["Colonia"] != null)
+                dgvTrabajadores.Columns["Colonia"].Visible = false;
+            if (dgvTrabajadores.Columns["Código Postal"] != null)
+                dgvTrabajadores.Columns["Código Postal"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -75,6 +88,27 @@ namespace prySistema_prestamos_libros
             frm.ShowDialog(this);
             CargarGrid();
         }
-        
+
+        private void txtBuscarTrabajador_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBuscarTrabajador.Text))
+            {
+                CargarGrid();
+                return;
+            }
+            trabajador = new clsGestionTrabajador();
+            dgvTrabajadores.DataSource = null;
+            dgvTrabajadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                trabajador.NumComtrol = int.Parse(txtBuscarTrabajador.Text);
+                dgvTrabajadores.DataSource = trabajador.Consultar();
+                OcultarColumnas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Requiere asignar datos" + ex.Message);
+            }
+        }
     }
 }
