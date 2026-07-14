@@ -36,5 +36,54 @@ namespace prySistema_prestamos_libros
                     break;
             }
         }
+        public bool ValidarAcceso()
+        {
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+
+                    string sql = "SELECT b.numero_control, " +
+                                    "t.nombre, " +
+                                    "t.apellido_paterno, " +
+                                    "p.perfil AS perfil " +
+                                "FROM tblbibliotecario b " +
+                                "INNER JOIN tbltrabajadores t ON b.numero_control = t.numero_control " +
+                                "INNER JOIN tblperfil p ON b.id_perfil = p.id_perfil " +
+                                "WHERE b.usuario = @usuario AND b.contrasenia = @password; ";
+
+                    using (var consulta = new MySqlCommand(sql, conexion))
+                    {
+                        consulta.Parameters.AddWithValue("@usuario", usuario);
+                        consulta.Parameters.AddWithValue("@password", password);
+
+                        using (var resultado = consulta.ExecuteReader())
+                        {
+                            if (resultado.Read())
+                            {
+                                perfil = resultado.GetString("perfil");
+                                AsignarPermisos();
+                                if (!esAdministrador && !esBibliotecario)
+                                {
+                                    throw new Exception("No tiene permisos para acceder");
+                                }
+                                MessageBox.Show("Tu perfil es:" + perfil, "Sistema");
+                                return true;
+
+                            }
+                            else
+                            {
+                                throw new Exception("Usuarios o contraseña incorrecta.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
     }
 }
