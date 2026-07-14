@@ -82,7 +82,6 @@
             btnAcceder.TabIndex = 5;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
-
             // 
             // btnSalir
             // 
@@ -95,7 +94,7 @@
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
-
+            btnSalir.Click += btnSalir_Click;
             // 
             // txtPassword
             // 
