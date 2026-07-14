@@ -46,11 +46,9 @@
             lblTelefono = new Label();
             lblNumControl = new Label();
             lblCodigoPostal = new Label();
-            lblNumCalle = new Label();
             lblcalle = new Label();
             lblcolonia = new Label();
             txtCodigoPostal = new TextBox();
-            txtNumCalle = new TextBox();
             txtCalle = new TextBox();
             txtColonia = new TextBox();
             lblArea = new Label();
@@ -227,21 +225,11 @@
             // 
             lblCodigoPostal.AutoSize = true;
             lblCodigoPostal.BackColor = Color.FromArgb(250, 247, 242);
-            lblCodigoPostal.Location = new Point(954, 328);
+            lblCodigoPostal.Location = new Point(649, 328);
             lblCodigoPostal.Name = "lblCodigoPostal";
             lblCodigoPostal.Size = new Size(103, 20);
             lblCodigoPostal.TabIndex = 35;
             lblCodigoPostal.Text = "Codigo postal";
-            // 
-            // lblNumCalle
-            // 
-            lblNumCalle.AutoSize = true;
-            lblNumCalle.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumCalle.Location = new Point(650, 328);
-            lblNumCalle.Name = "lblNumCalle";
-            lblNumCalle.Size = new Size(119, 20);
-            lblNumCalle.TabIndex = 34;
-            lblNumCalle.Text = "Numero de calle";
             // 
             // lblcalle
             // 
@@ -266,20 +254,11 @@
             // txtCodigoPostal
             // 
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCodigoPostal.Location = new Point(954, 351);
+            txtCodigoPostal.Location = new Point(650, 351);
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
             txtCodigoPostal.TabIndex = 31;
-            // 
-            // txtNumCalle
-            // 
-            txtNumCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumCalle.Location = new Point(649, 351);
-            txtNumCalle.Multiline = true;
-            txtNumCalle.Name = "txtNumCalle";
-            txtNumCalle.Size = new Size(245, 30);
-            txtNumCalle.TabIndex = 30;
             // 
             // txtCalle
             // 
@@ -420,11 +399,9 @@
             panel1.Controls.Add(lblArea);
             panel1.Controls.Add(cmbCarreraArea);
             panel1.Controls.Add(lblCodigoPostal);
-            panel1.Controls.Add(lblNumCalle);
             panel1.Controls.Add(lblcalle);
             panel1.Controls.Add(lblcolonia);
             panel1.Controls.Add(txtCodigoPostal);
-            panel1.Controls.Add(txtNumCalle);
             panel1.Controls.Add(txtCalle);
             panel1.Controls.Add(txtColonia);
             panel1.Controls.Add(txtApellidoMaterno);
@@ -487,11 +464,9 @@
         private Label lblTelefono;
         private Label lblNumControl;
         private Label lblCodigoPostal;
-        private Label lblNumCalle;
         private Label lblcalle;
         private Label lblcolonia;
         private TextBox txtCodigoPostal;
-        private TextBox txtNumCalle;
         private TextBox txtCalle;
         private TextBox txtColonia;
         private Label lblArea;

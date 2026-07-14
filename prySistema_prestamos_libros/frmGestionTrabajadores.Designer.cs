@@ -91,7 +91,8 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
-            // 
+            btnEditar.Click += btnEditar_Click;
+            //
             // btnNuevo
             // 
             btnNuevo.BackColor = Color.FromArgb(201, 168, 76);

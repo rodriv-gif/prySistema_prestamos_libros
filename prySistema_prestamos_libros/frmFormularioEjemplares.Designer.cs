@@ -196,7 +196,6 @@
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnLimpiar
             // 
@@ -215,7 +214,6 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
-            btnLimpiar.Click += btnLimpiar_Click;
             //
             // btnCancelar
             //
@@ -233,7 +231,6 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
             //
             // frmFormularioEjemplares
             // 
