@@ -50,7 +50,6 @@
             lblcolonia = new Label();
             txtCodigoPostal = new TextBox();
             txtCalle = new TextBox();
-            txtColonia = new TextBox();
             lblArea = new Label();
             cmbCarreraArea = new ComboBox();
             btnLimpiar = new Button();
@@ -61,6 +60,9 @@
             iblDatosLaborales = new Label();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            txtMunicipio = new TextBox();
+            lblMunicipio = new Label();
+            cmbColonia = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).BeginInit();
@@ -118,7 +120,7 @@
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCorreo.Location = new Point(328, 156);
+            txtCorreo.Location = new Point(337, 156);
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(245, 30);
@@ -185,7 +187,7 @@
             // 
             lblcorreo.AutoSize = true;
             lblcorreo.BackColor = Color.FromArgb(250, 247, 242);
-            lblcorreo.Location = new Point(328, 133);
+            lblcorreo.Location = new Point(337, 133);
             lblcorreo.Name = "lblcorreo";
             lblcorreo.Size = new Size(132, 20);
             lblcorreo.TabIndex = 17;
@@ -225,7 +227,7 @@
             // 
             lblCodigoPostal.AutoSize = true;
             lblCodigoPostal.BackColor = Color.FromArgb(250, 247, 242);
-            lblCodigoPostal.Location = new Point(649, 328);
+            lblCodigoPostal.Location = new Point(32, 328);
             lblCodigoPostal.Name = "lblCodigoPostal";
             lblCodigoPostal.Size = new Size(103, 20);
             lblCodigoPostal.TabIndex = 35;
@@ -235,7 +237,7 @@
             // 
             lblcalle.AutoSize = true;
             lblcalle.BackColor = Color.FromArgb(250, 247, 242);
-            lblcalle.Location = new Point(328, 328);
+            lblcalle.Location = new Point(954, 328);
             lblcalle.Name = "lblcalle";
             lblcalle.Size = new Size(42, 20);
             lblcalle.TabIndex = 33;
@@ -245,7 +247,7 @@
             // 
             lblcolonia.AutoSize = true;
             lblcolonia.BackColor = Color.FromArgb(250, 247, 242);
-            lblcolonia.Location = new Point(32, 328);
+            lblcolonia.Location = new Point(649, 328);
             lblcolonia.Name = "lblcolonia";
             lblcolonia.Size = new Size(60, 20);
             lblcolonia.TabIndex = 32;
@@ -254,7 +256,7 @@
             // txtCodigoPostal
             // 
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCodigoPostal.Location = new Point(650, 351);
+            txtCodigoPostal.Location = new Point(32, 351);
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
@@ -263,20 +265,11 @@
             // txtCalle
             // 
             txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCalle.Location = new Point(328, 351);
+            txtCalle.Location = new Point(954, 351);
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(245, 30);
             txtCalle.TabIndex = 29;
-            // 
-            // txtColonia
-            // 
-            txtColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtColonia.Location = new Point(32, 351);
-            txtColonia.Multiline = true;
-            txtColonia.Name = "txtColonia";
-            txtColonia.Size = new Size(245, 30);
-            txtColonia.TabIndex = 28;
             // 
             // lblArea
             // 
@@ -392,6 +385,9 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(cmbColonia);
+            panel1.Controls.Add(txtMunicipio);
+            panel1.Controls.Add(lblMunicipio);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(iblDatosLaborales);
             panel1.Controls.Add(lblDireccion);
@@ -403,7 +399,6 @@
             panel1.Controls.Add(lblcolonia);
             panel1.Controls.Add(txtCodigoPostal);
             panel1.Controls.Add(txtCalle);
-            panel1.Controls.Add(txtColonia);
             panel1.Controls.Add(txtApellidoMaterno);
             panel1.Controls.Add(txtApellidoPaterno);
             panel1.Controls.Add(txtCorreo);
@@ -422,8 +417,36 @@
             panel1.Controls.Add(pcbContenedorCaptura);
             panel1.Location = new Point(24, 9);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1247, 624);
+            panel1.Size = new Size(1247, 609);
             panel1.TabIndex = 45;
+            // 
+            // txtMunicipio
+            // 
+            txtMunicipio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMunicipio.Location = new Point(337, 351);
+            txtMunicipio.Multiline = true;
+            txtMunicipio.Name = "txtMunicipio";
+            txtMunicipio.Size = new Size(245, 30);
+            txtMunicipio.TabIndex = 46;
+            // 
+            // lblMunicipio
+            // 
+            lblMunicipio.AutoSize = true;
+            lblMunicipio.BackColor = Color.FromArgb(250, 247, 242);
+            lblMunicipio.Location = new Point(337, 328);
+            lblMunicipio.Name = "lblMunicipio";
+            lblMunicipio.Size = new Size(75, 20);
+            lblMunicipio.TabIndex = 45;
+            lblMunicipio.Text = "Municipio";
+            // 
+            // cmbColonia
+            // 
+            cmbColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbColonia.FormattingEnabled = true;
+            cmbColonia.Location = new Point(649, 353);
+            cmbColonia.Name = "cmbColonia";
+            cmbColonia.Size = new Size(245, 28);
+            cmbColonia.TabIndex = 47;
             // 
             // frmFormularioTrabajadores
             // 
@@ -468,7 +491,6 @@
         private Label lblcolonia;
         private TextBox txtCodigoPostal;
         private TextBox txtCalle;
-        private TextBox txtColonia;
         private Label lblArea;
         private ComboBox cmbCarreraArea;
         private Button btnLimpiar;
@@ -479,5 +501,8 @@
         private Label iblDatosLaborales;
         private DateTimePicker dateTimePicker1;
         private Panel panel1;
+        private TextBox txtMunicipio;
+        private Label lblMunicipio;
+        private ComboBox cmbColonia;
     }
 }

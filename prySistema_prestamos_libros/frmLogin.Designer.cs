@@ -76,7 +76,7 @@
             btnAcceder.BackColor = Color.FromArgb(27, 46, 107);
             btnAcceder.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.FromArgb(201, 168, 76);
-            btnAcceder.Location = new Point(259, 498);
+            btnAcceder.Location = new Point(267, 498);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(150, 45);
             btnAcceder.TabIndex = 5;
@@ -89,7 +89,7 @@
             btnSalir.BackColor = Color.FromArgb(107, 122, 153);
             btnSalir.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.FromArgb(250, 247, 242);
-            btnSalir.Location = new Point(528, 498);
+            btnSalir.Location = new Point(556, 498);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(150, 45);
             btnSalir.TabIndex = 5;

@@ -40,6 +40,10 @@ namespace prySistema_prestamos_libros
         {
             if (dgvTrabajadores.Columns["id_carrera"] != null)
                 dgvTrabajadores.Columns["id_carrera"].Visible = false;
+            if (dgvTrabajadores.Columns["id_direccion"] != null)
+                dgvTrabajadores.Columns["id_direccion"].Visible = false;
+            if (dgvTrabajadores.Columns["id_colonia"] != null)
+                dgvTrabajadores.Columns["id_colonia"].Visible = false;
             if (dgvTrabajadores.Columns["Fecha de Registro"] != null)
                 dgvTrabajadores.Columns["Fecha de Registro"].Visible = false;
             if (dgvTrabajadores.Columns["Calle"] != null)
@@ -48,6 +52,8 @@ namespace prySistema_prestamos_libros
                 dgvTrabajadores.Columns["Colonia"].Visible = false;
             if (dgvTrabajadores.Columns["Código Postal"] != null)
                 dgvTrabajadores.Columns["Código Postal"].Visible = false;
+            if (dgvTrabajadores.Columns["Municipio"] != null)
+                dgvTrabajadores.Columns["Municipio"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -73,12 +79,15 @@ namespace prySistema_prestamos_libros
             string nombre = fila.Cells["Nombre"].Value.ToString();
             string apellidoPaterno = fila.Cells["Apellido Paterno"].Value.ToString();
             string apellidoMaterno = fila.Cells["Apellido Materno"].Value.ToString();
-            string calle = fila.Cells["Calle"].Value.ToString();
-            string colonia = fila.Cells["Colonia"].Value.ToString();
-            string codigoPostal = fila.Cells["Código Postal"].Value.ToString();
+            string calle = fila.Cells["Calle"].Value?.ToString();
+            string colonia = fila.Cells["Colonia"].Value?.ToString();
+            string codigoPostal = fila.Cells["Código Postal"].Value?.ToString();
+            string municipio = fila.Cells["Municipio"].Value?.ToString();
             string correo = fila.Cells["Correo electrónico"].Value.ToString();
             string telefono = fila.Cells["Teléfono"].Value.ToString();
             string idCarrera = fila.Cells["id_carrera"].Value?.ToString();
+            string idDireccion = fila.Cells["id_direccion"].Value?.ToString();
+            string idColonia = fila.Cells["id_colonia"].Value?.ToString();
 
             // TODO: cuando frmFormularioTrabajadores tenga forma de recibir estos datos
             // (constructor sobrecargado, propiedades públicas, etc.), pasarlos aquí antes de ShowDialog.

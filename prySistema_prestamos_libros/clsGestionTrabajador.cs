@@ -26,24 +26,33 @@ namespace prySistema_prestamos_libros
                 clsConexion conexionDB = new clsConexion();
                 using (var conexion = conexionDB.AbrirConexion())
                 {
-                    // Se trae el registro completo
+                    // Se trae el registro completo (incluyendo la cadena de dirección normalizada:
+                    // tbldireccion -> tblcolonias -> tblcodigo_postal -> tblmunicipios)
                     // para que al editar no se necesite una segunda consulta a la base de datos.
-                    // id_carrera va al final y se oculta en la grid, solo sirve para preseleccionar el combo al editar.
+                    // id_carrera, id_direccion e id_colonia van al final y se ocultan en la grid,
+                    // solo sirven para preseleccionar combos al editar.
                     string sql = "SELECT t.numero_control AS 'Número de Control', " +
                                     "t.nombre AS 'Nombre', " +
                                     "t.apellido_paterno AS 'Apellido Paterno', " +
                                     "t.apellido_materno AS 'Apellido Materno', " +
-                                    "t.calle AS 'Calle', " +
-                                    "t.colonia AS 'Colonia', " +
-                                    "t.codigo_postal AS 'Código Postal', " +
+                                    "d.calle AS 'Calle', " +
+                                    "col.nombre_colonia AS 'Colonia', " +
+                                    "cp.codigo_postal AS 'Código Postal', " +
+                                    "m.nombre_municipio AS 'Municipio', " +
                                     "IFNULL(c.nombre_carrera, 'Sin Carrera / Administrativo') AS 'Carrera', " +
                                     "t.email AS 'Correo electrónico', " +
                                     "t.telefono AS 'Teléfono', " +
                                     "t.estado AS 'Estatus', " +
                                     "t.fecha_registro AS 'Fecha de Registro', " +
-                                    "t.id_carrera AS 'id_carrera' " +
+                                    "t.id_carrera AS 'id_carrera', " +
+                                    "t.id_direccion AS 'id_direccion', " +
+                                    "d.id_colonia AS 'id_colonia' " +
                                 "FROM tbltrabajadores t " +
-                                "LEFT JOIN tblcarreras c ON t.id_carrera = c.id_carrera; ";
+                                "LEFT JOIN tblcarreras c ON t.id_carrera = c.id_carrera " +
+                                "LEFT JOIN tbldireccion d ON t.id_direccion = d.id_direccion " +
+                                "LEFT JOIN tblcolonias col ON d.id_colonia = col.id_colonia " +
+                                "LEFT JOIN tblcodigo_postal cp ON col.codigo_postal = cp.codigo_postal " +
+                                "LEFT JOIN tblmunicipios m ON cp.id_municipio = m.id_municipio; ";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
@@ -70,17 +79,24 @@ namespace prySistema_prestamos_libros
                                     "t.nombre AS 'Nombre', " +
                                     "t.apellido_paterno AS 'Apellido Paterno', " +
                                     "t.apellido_materno AS 'Apellido Materno', " +
-                                    "t.calle AS 'Calle', " +
-                                    "t.colonia AS 'Colonia', " +
-                                    "t.codigo_postal AS 'Código Postal', " +
+                                    "d.calle AS 'Calle', " +
+                                    "col.nombre_colonia AS 'Colonia', " +
+                                    "cp.codigo_postal AS 'Código Postal', " +
+                                    "m.nombre_municipio AS 'Municipio', " +
                                     "IFNULL(c.nombre_carrera, 'Sin Carrera / Administrativo') AS 'Carrera', " +
                                     "t.email AS 'Correo electrónico', " +
                                     "t.telefono AS 'Teléfono', " +
                                     "t.estado AS 'Estatus', " +
                                     "t.fecha_registro AS 'Fecha de Registro', " +
-                                    "t.id_carrera AS 'id_carrera'  " +
+                                    "t.id_carrera AS 'id_carrera', " +
+                                    "t.id_direccion AS 'id_direccion', " +
+                                    "d.id_colonia AS 'id_colonia' " +
                                 "FROM tbltrabajadores t " +
                                 "LEFT JOIN tblcarreras c ON t.id_carrera = c.id_carrera " +
+                                "LEFT JOIN tbldireccion d ON t.id_direccion = d.id_direccion " +
+                                "LEFT JOIN tblcolonias col ON d.id_colonia = col.id_colonia " +
+                                "LEFT JOIN tblcodigo_postal cp ON col.codigo_postal = cp.codigo_postal " +
+                                "LEFT JOIN tblmunicipios m ON cp.id_municipio = m.id_municipio " +
                                 "WHERE t.numero_control LIKE @numeroControl; ";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
