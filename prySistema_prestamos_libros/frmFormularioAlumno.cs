@@ -23,12 +23,10 @@ namespace prySistema_prestamos_libros
                 clsAlumnos nuevoAlumno = new clsAlumnos();
 
                 //Llenar las cajas de texto
-                nuevoAlumno.Matricula = txtMatricula.Text;
                 nuevoAlumno.Nombre = txtNombres.Text;
                 nuevoAlumno.ApellidoPaterno = txtApellidoPaterno.Text;
                 nuevoAlumno.ApellidoMaterno = txtApellidoMaterno.Text;
                 nuevoAlumno.Calle = txtCalle.Text;
-                nuevoAlumno.Colonia = txtColonia.Text;
                 nuevoAlumno.CodigoPostal = txtCodigoPostal.Text;
                 nuevoAlumno.Correo = txtCorreo.Text;
                 nuevoAlumno.Telefono = txtTelefono.Text;

@@ -26,11 +26,11 @@ namespace prySistema_prestamos_libros
                 clsConexion conexionDB = new clsConexion();
                 using (var conexion = conexionDB.AbrirConexion())
                 {
-                    // Se trae el registro completo (incluyendo la cadena de dirección normalizada:
-                    // tbldireccion -> tblcolonias -> tblcodigo_postal -> tblmunicipios)
-                    // para que al editar no se necesite una segunda consulta a la base de datos.
-                    // id_carrera, id_direccion e id_colonia van al final y se ocultan en la grid,
-                    // solo sirven para preseleccionar combos al editar.
+                    /* Se trae el registro completo incluyendo la cadena de dirección normalizada:
+                    tbldireccion, tblcolonias, tblcodigo_postal, tblmunicipios
+                    para que al editar no se necesite una segunda consulta a la base de datos.
+                    id_carrera, id_direccion e id_colonia van al final y se ocultan en la grid,
+                    solo sirven para preseleccionar combos al editar.*/
                     string sql = "SELECT t.numero_control AS 'Número de Control', " +
                                     "t.nombre AS 'Nombre', " +
                                     "t.apellido_paterno AS 'Apellido Paterno', " +

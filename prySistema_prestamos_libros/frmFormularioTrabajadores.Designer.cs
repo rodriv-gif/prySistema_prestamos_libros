@@ -58,11 +58,11 @@
             lblDatosTrabajador = new Label();
             lblDireccion = new Label();
             iblDatosLaborales = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFechaRegistro = new DateTimePicker();
             panel1 = new Panel();
+            cmbColonia = new ComboBox();
             txtMunicipio = new TextBox();
             lblMunicipio = new Label();
-            cmbColonia = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).BeginInit();
@@ -261,6 +261,7 @@
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
             txtCodigoPostal.TabIndex = 31;
+            txtCodigoPostal.TextChanged += txtCodigoPostal_TextChanged;
             // 
             // txtCalle
             // 
@@ -305,6 +306,7 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnCancelar
             // 
@@ -321,6 +323,7 @@
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGuardar
             // 
@@ -337,6 +340,7 @@
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // lblDatosTrabajador
             // 
@@ -374,21 +378,21 @@
             iblDatosLaborales.TabIndex = 43;
             iblDatosLaborales.Text = "Datos laborales";
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(649, 159);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(245, 27);
-            dateTimePicker1.TabIndex = 44;
-            dateTimePicker1.Value = new DateTime(2026, 7, 5, 22, 46, 15, 0);
+            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
+            dtpFechaRegistro.Location = new Point(649, 159);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(245, 27);
+            dtpFechaRegistro.TabIndex = 44;
+            dtpFechaRegistro.Value = new DateTime(2026, 7, 5, 22, 46, 15, 0);
             // 
             // panel1
             // 
             panel1.Controls.Add(cmbColonia);
             panel1.Controls.Add(txtMunicipio);
             panel1.Controls.Add(lblMunicipio);
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(dtpFechaRegistro);
             panel1.Controls.Add(iblDatosLaborales);
             panel1.Controls.Add(lblDireccion);
             panel1.Controls.Add(lblDatosTrabajador);
@@ -420,6 +424,15 @@
             panel1.Size = new Size(1247, 609);
             panel1.TabIndex = 45;
             // 
+            // cmbColonia
+            // 
+            cmbColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbColonia.FormattingEnabled = true;
+            cmbColonia.Location = new Point(649, 353);
+            cmbColonia.Name = "cmbColonia";
+            cmbColonia.Size = new Size(245, 28);
+            cmbColonia.TabIndex = 47;
+            // 
             // txtMunicipio
             // 
             txtMunicipio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -438,15 +451,6 @@
             lblMunicipio.Size = new Size(75, 20);
             lblMunicipio.TabIndex = 45;
             lblMunicipio.Text = "Municipio";
-            // 
-            // cmbColonia
-            // 
-            cmbColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbColonia.FormattingEnabled = true;
-            cmbColonia.Location = new Point(649, 353);
-            cmbColonia.Name = "cmbColonia";
-            cmbColonia.Size = new Size(245, 28);
-            cmbColonia.TabIndex = 47;
             // 
             // frmFormularioTrabajadores
             // 
@@ -499,7 +503,7 @@
         private Label lblDatosTrabajador;
         private Label lblDireccion;
         private Label iblDatosLaborales;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFechaRegistro;
         private Panel panel1;
         private TextBox txtMunicipio;
         private Label lblMunicipio;

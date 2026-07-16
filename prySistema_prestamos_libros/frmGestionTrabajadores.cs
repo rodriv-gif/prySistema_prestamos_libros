@@ -66,36 +66,55 @@ namespace prySistema_prestamos_libros
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dgvTrabajadores.SelectedRows.Count == 0)
+            // CurrentRow se actualiza con solo darle clic a una celda; SelectedRows.Count solo
+            // cuenta cuando se selecciona la fila completa (clic en el encabezado gris de la izquierda).
+            if (dgvTrabajadores.CurrentRow == null)
             {
                 MessageBox.Show("Selecciona un trabajador de la lista antes de editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // Datos de la fila seleccionada, listos para mandarlos al formulario de captura
-            // en cuanto tenga un constructor/método que los reciba.
             DataGridViewRow fila = dgvTrabajadores.CurrentRow;
-            string numeroControl = fila.Cells["Número de Control"].Value.ToString();
-            string nombre = fila.Cells["Nombre"].Value.ToString();
-            string apellidoPaterno = fila.Cells["Apellido Paterno"].Value.ToString();
-            string apellidoMaterno = fila.Cells["Apellido Materno"].Value.ToString();
-            string calle = fila.Cells["Calle"].Value?.ToString();
-            string colonia = fila.Cells["Colonia"].Value?.ToString();
-            string codigoPostal = fila.Cells["Código Postal"].Value?.ToString();
-            string municipio = fila.Cells["Municipio"].Value?.ToString();
-            string correo = fila.Cells["Correo electrónico"].Value.ToString();
-            string telefono = fila.Cells["Teléfono"].Value.ToString();
-            string idCarrera = fila.Cells["id_carrera"].Value?.ToString();
-            string idDireccion = fila.Cells["id_direccion"].Value?.ToString();
-            string idColonia = fila.Cells["id_colonia"].Value?.ToString();
 
-            // TODO: cuando frmFormularioTrabajadores tenga forma de recibir estos datos
-            // (constructor sobrecargado, propiedades públicas, etc.), pasarlos aquí antes de ShowDialog.
-            var frm = new frmFormularioTrabajadores();
+            var frm = new frmFormularioTrabajadores(fila);
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
             CargarGrid();
+        }
+
+        private void btnDarBaja_Click(object sender, EventArgs e)
+        {
+            if (dgvTrabajadores.CurrentRow == null)
+            {
+                MessageBox.Show("Selecciona un trabajador de la lista antes de dar de baja.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow fila = dgvTrabajadores.CurrentRow;
+            string nombre = fila.Cells["Nombre"].Value?.ToString();
+            int numeroControl = Convert.ToInt32(fila.Cells["Número de Control"].Value);
+
+            DialogResult respuesta = MessageBox.Show(
+                $"¿Seguro que quieres dar de baja a {nombre}?",
+                "Confirmar baja",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (respuesta != DialogResult.Yes)
+                return;
+
+            try
+            {
+                clsTrabajador trabajadorBaja = new clsTrabajador();
+                string msg = trabajadorBaja.DarBajaTrabajador(numeroControl);
+                MessageBox.Show(msg, "Baja exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo dar de baja al trabajador: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtBuscarTrabajador_TextChanged(object sender, EventArgs e)

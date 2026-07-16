@@ -79,6 +79,7 @@
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // btnEditar
             // 
@@ -146,6 +147,7 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvTrabajadores.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgvTrabajadores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrabajadores.Size = new Size(1249, 568);
             dgvTrabajadores.TabIndex = 17;
             // 

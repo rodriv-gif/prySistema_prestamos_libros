@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+using MySqlConnector;
 using System;
 using System.Data;
 using System.Collections.Generic;
@@ -8,61 +8,92 @@ namespace prySistema_prestamos_libros
 {
     internal class clsAlumnos : clsDatosPersona
     {
-        private string matricula;
+        private int matricula;
         private int idCarrera;
         private int grado;
         private string grupo;
+        private string estado;
 
-        public string Matricula { get => matricula; set => matricula = value; }
+        // matricula es INT en tblalumnos (PRIMARY KEY), no texto.
+        public int Matricula { get => matricula; set => matricula = value; }
         public int Grado { get => grado; set => grado = value; }
         public string Grupo { get => grupo; set => grupo = value; }
         public int IdCarrera { get => idCarrera; set => idCarrera = value; }
+        public string Estado { get => estado; set => estado = value; }
 
-        //Metodo para registrar un nuevo alumno
+        // Registra un alumno nuevo. Son 2 inserts (direccion, luego alumno), igual que en
+        // clsTrabajador.Registrar(), porque tblalumnos.id_direccion depende de que la fila
+        // de tbldireccion ya exista. Van dentro de una transacción para que si el segundo
+        // insert falla, se deshaga el primero.
         public string Registrar()
         {
             string msj = "";
             clsConexion conexionBD = new clsConexion();
+
             try
             {
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    //Insertar datos
-                    string sqlInsAlumno = @"INSERT INTO alumnos(matricula, id_carrera, nombre, apellido_paterno, apellido_materno, calle, colonia, cp, email, telefono, grado, grupo, fecha_registro) 
-                                      VALUES(@mat, @idCar, @nom, @apP, @apM, @calle, @col, @cp, @email, @tel, @gra, @gru, @fecha);";
-                    using (var comando = new MySqlCommand(sqlInsAlumno, conexion))
+                    using (var transaccion = conexion.BeginTransaction())
                     {
-                        //llenamos los parametros de sql con las propiedades
-                        comando.Parameters.AddWithValue("@mat", this.Matricula);
-                        comando.Parameters.AddWithValue("@idCar", this.IdCarrera);
-                        comando.Parameters.AddWithValue("@nom", this.Nombre);
-                        comando.Parameters.AddWithValue("@apP", this.ApellidoPaterno);
-                        comando.Parameters.AddWithValue("@apP", this.ApellidoMaterno);
-                        comando.Parameters.AddWithValue("@calle", this.Calle);
-                        comando.Parameters.AddWithValue("@col", this.Colonia);
-                        comando.Parameters.AddWithValue("@cp", this.CodigoPostal);
-                        comando.Parameters.AddWithValue("@email", this.Correo);
-                        comando.Parameters.AddWithValue("@tel", this.Telefono);
-                        comando.Parameters.AddWithValue("@gra", this.Grado);
-                        comando.Parameters.AddWithValue("@gru", this.Grupo);
-                        comando.Parameters.AddWithValue("@fecha", this.FechaRegistro);
+                        try
+                        {
+                            // 1) Insertar la dirección y obtener el id_direccion que genera
+                            int idDireccionNueva = 0;
 
-                        //Se ejecuta la consulta
-                        comando.ExecuteNonQuery();
+                            string sqlDireccion = @"INSERT INTO tbldireccion (id_colonia, calle)
+                                                     VALUES (@idColonia, @calle);
+                                                     SELECT LAST_INSERT_ID();";
+
+                            using (var comandoDireccion = new MySqlCommand(sqlDireccion, conexion, transaccion))
+                            {
+                                comandoDireccion.Parameters.AddWithValue("@idColonia", this.IdColonia);
+                                comandoDireccion.Parameters.AddWithValue("@calle", this.Calle);
+                                idDireccionNueva = Convert.ToInt32(comandoDireccion.ExecuteScalar());
+                            }
+
+                            // 2) Insertar el alumno usando el id_direccion recién creado
+                            string sqlAlumno = @"INSERT INTO tblalumnos
+                                                 (matricula, id_carrera, nombre, apellido_paterno, apellido_materno, id_direccion, email, telefono, grado, grupo, fecha_registro, estado)
+                                                 VALUES (@mat, @idCar, @nom, @apP, @apM, @idDireccion, @email, @tel, @gra, @gru, @fecha, @estado);";
+
+                            using (var comandoAlumno = new MySqlCommand(sqlAlumno, conexion, transaccion))
+                            {
+                                comandoAlumno.Parameters.AddWithValue("@mat", this.Matricula);
+                                comandoAlumno.Parameters.AddWithValue("@idCar", this.IdCarrera);
+                                comandoAlumno.Parameters.AddWithValue("@nom", this.Nombre);
+                                comandoAlumno.Parameters.AddWithValue("@apP", this.ApellidoPaterno);
+                                comandoAlumno.Parameters.AddWithValue("@apM", this.ApellidoMaterno);
+                                comandoAlumno.Parameters.AddWithValue("@idDireccion", idDireccionNueva);
+                                comandoAlumno.Parameters.AddWithValue("@email", this.Correo);
+                                comandoAlumno.Parameters.AddWithValue("@tel", this.Telefono);
+                                comandoAlumno.Parameters.AddWithValue("@gra", this.Grado);
+                                comandoAlumno.Parameters.AddWithValue("@gru", this.Grupo);
+                                comandoAlumno.Parameters.AddWithValue("@fecha", this.FechaRegistro);
+                                comandoAlumno.Parameters.AddWithValue("@estado", this.Estado);
+                                comandoAlumno.ExecuteNonQuery();
+                            }
+
+                            transaccion.Commit();
+                            msj = "El alumno se registró correctamente";
+                        }
+                        catch(Exception ex)
+                        {
+                            transaccion.Rollback();
+                            throw new Exception("Error en la operacion. se cancelaron los cambios: " + ex.Message);
+                        }
                     }
-                    msj = "El alumno se registró correctamente";
-
                 }
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Error al guardar en la BD; " + ex.Message);
+                throw new Exception("Error al guardar en la BD: " + ex.Message);
             }
+
             return msj;
         }
 
-            // Método para cargar el catálogo puro de Carreras en el ComboBox del formulario
+        // Método para cargar el catálogo puro de Carreras en el ComboBox del formulario
         public DataTable ObtenerCarreras()
         {
             DataTable tabla = new DataTable();

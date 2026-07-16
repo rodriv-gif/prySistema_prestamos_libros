@@ -13,9 +13,8 @@ namespace prySistema_prestamos_libros
         private string telefono;
         private string correo;
         private DateTime fechaRegistro;
-        private string colonia;
+        private int idColonia;
         private string calle;
-        private string numeroCalle;
         private string codigoPostal;
 
         public string Nombre { get => nombre; set => nombre = value; }
@@ -24,9 +23,11 @@ namespace prySistema_prestamos_libros
         public string Telefono { get => telefono; set => telefono = value; }
         public string Correo { get => correo; set => correo = value; }
         public DateTime FechaRegistro { get => fechaRegistro; set => fechaRegistro = value; }
-        public string Colonia { get => colonia; set => colonia = value; }
+        // Ya no es el nombre de la colonia en texto: es el id que entrega cmbColonia.SelectedValue,
+        // porque tbldireccion.id_colonia es la columna que realmente se guarda.
+        public int IdColonia { get => idColonia; set => idColonia = value; }
         public string Calle { get => calle; set => calle = value; }
-        public string NumeroCalle { get => numeroCalle; set => numeroCalle = value; }
+        // No se inserta directo en ninguna tabla; solo se usa para filtrar tblcolonias al capturar.
         public string CodigoPostal { get => codigoPostal; set => codigoPostal = value; }
     }
 }
