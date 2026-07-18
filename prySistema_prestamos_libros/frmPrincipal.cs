@@ -109,6 +109,19 @@ namespace prySistema_prestamos_libros
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            // Nombre y rol del usuario que inició sesión (se llenan en clsLogin.ValidarAcceso()).
+            // El nombre completo solo va en el mensaje de bienvenida; arriba solo se muestra el rol.
+            lblBienvenida.Text = "Bienvenido, " + clsLogin.NombreCompleto;
+            lblRol.Text = clsLogin.Perfil;
+
+            // lblUsuario tiene AutoSize activado, así que su ancho cambia según el largo del
+            // nombre. Si dejamos lblRol y lblAyuda en la posición fija del diseñador, un nombre
+            // largo se les encima. Por eso se recalculan aquí, en cascada, según el ancho real
+            // que terminó teniendo cada control ya con su texto puesto.
+            lblRol.Location = new Point(lblUsuario.Right + 8, lblRol.Location.Y);
+            lblAyuda.Location = new Point(lblRol.Right + 8, lblAyuda.Location.Y);
+            pcbAyuda.Location = new Point(lblAyuda.Right + 3, pcbAyuda.Location.Y);
+
             btnNuevoPrestamo.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
             btnDevoluciones.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
             btnAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;

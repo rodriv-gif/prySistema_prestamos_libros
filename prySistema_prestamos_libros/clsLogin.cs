@@ -17,10 +17,14 @@ namespace prySistema_prestamos_libros
         private static string perfil;
         private static bool esAdministrador;
         private static bool esBibliotecario;
+        private static string nombreUsuario;
+        private static string apellidoPaternoUsuario;
 
         //propiedades
         public static bool EsAdministrador { get => esAdministrador; }
         public static bool EsBibliotecario { get => esBibliotecario; }
+        public static string Perfil { get => perfil; }
+        public static string NombreCompleto { get => nombreUsuario + " " + apellidoPaternoUsuario; }
 
         public void AsignarPermisos()
         {
@@ -63,6 +67,8 @@ namespace prySistema_prestamos_libros
                             if (resultado.Read())
                             {
                                 perfil = resultado.GetString("perfil");
+                                nombreUsuario = resultado.GetString("nombre");
+                                apellidoPaternoUsuario = resultado.GetString("apellido_paterno");
                                 AsignarPermisos();
                                 if (!esAdministrador && !esBibliotecario)
                                 {
