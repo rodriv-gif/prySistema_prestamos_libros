@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevolucion));
             pcbContenedorBusqueda = new PictureBox();
             pcbContenedorCaptura = new PictureBox();
@@ -57,7 +60,6 @@
             lblLibrosVencidos = new Label();
             lblDiasRetraso = new Label();
             lblMonto = new Label();
-            lblEstadoPago = new Label();
             txtLibrosVencidos = new TextBox();
             txtDiasRetraso = new TextBox();
             txtMonto = new TextBox();
@@ -67,7 +69,6 @@
             dtpFechaDevolucion = new DateTimePicker();
             lblFechaPago = new Label();
             dtpFechaPago = new DateTimePicker();
-            cmbEstadoPago = new ComboBox();
             cmbEstadoPrestamo = new ComboBox();
             lblEstadoPrestamo = new Label();
             panel1 = new Panel();
@@ -269,11 +270,26 @@
             // 
             // dgvPrestamosActivos
             // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvPrestamosActivos.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPrestamosActivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPrestamosActivos.Columns.AddRange(new DataGridViewColumn[] { colSeleccionar });
+            dgvPrestamosActivos.EnableHeadersVisualStyles = false;
             dgvPrestamosActivos.Location = new Point(24, 155);
             dgvPrestamosActivos.Name = "dgvPrestamosActivos";
             dgvPrestamosActivos.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvPrestamosActivos.Size = new Size(1249, 197);
             dgvPrestamosActivos.TabIndex = 18;
             // 
@@ -372,17 +388,6 @@
             lblMonto.TabIndex = 27;
             lblMonto.Text = "Monto a pagar";
             // 
-            // lblEstadoPago
-            // 
-            lblEstadoPago.AutoSize = true;
-            lblEstadoPago.BackColor = Color.FromArgb(250, 247, 242);
-            lblEstadoPago.ForeColor = Color.FromArgb(31, 31, 31);
-            lblEstadoPago.Location = new Point(704, 707);
-            lblEstadoPago.Name = "lblEstadoPago";
-            lblEstadoPago.Size = new Size(114, 20);
-            lblEstadoPago.TabIndex = 28;
-            lblEstadoPago.Text = "Estado de pago";
-            // 
             // txtLibrosVencidos
             // 
             txtLibrosVencidos.BackColor = Color.White;
@@ -477,7 +482,7 @@
             lblFechaPago.AutoSize = true;
             lblFechaPago.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaPago.ForeColor = Color.FromArgb(31, 31, 31);
-            lblFechaPago.Location = new Point(1036, 708);
+            lblFechaPago.Location = new Point(704, 707);
             lblFechaPago.Name = "lblFechaPago";
             lblFechaPago.Size = new Size(107, 20);
             lblFechaPago.TabIndex = 39;
@@ -487,19 +492,11 @@
             // 
             dtpFechaPago.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPago.Format = DateTimePickerFormat.Short;
-            dtpFechaPago.Location = new Point(1036, 730);
+            dtpFechaPago.Location = new Point(704, 728);
             dtpFechaPago.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPago.Name = "dtpFechaPago";
             dtpFechaPago.Size = new Size(245, 27);
             dtpFechaPago.TabIndex = 41;
-            // 
-            // cmbEstadoPago
-            // 
-            cmbEstadoPago.FormattingEnabled = true;
-            cmbEstadoPago.Location = new Point(704, 735);
-            cmbEstadoPago.Name = "cmbEstadoPago";
-            cmbEstadoPago.Size = new Size(245, 28);
-            cmbEstadoPago.TabIndex = 42;
             // 
             // cmbEstadoPrestamo
             // 
@@ -525,14 +522,12 @@
             // 
             panel1.Controls.Add(lblEstadoPrestamo);
             panel1.Controls.Add(cmbEstadoPrestamo);
-            panel1.Controls.Add(cmbEstadoPago);
             panel1.Controls.Add(dtpFechaPago);
             panel1.Controls.Add(lblFechaPago);
             panel1.Controls.Add(dtpFechaDevolucion);
             panel1.Controls.Add(txtMonto);
             panel1.Controls.Add(txtDiasRetraso);
             panel1.Controls.Add(txtLibrosVencidos);
-            panel1.Controls.Add(lblEstadoPago);
             panel1.Controls.Add(lblMonto);
             panel1.Controls.Add(lblDiasRetraso);
             panel1.Controls.Add(lblLibrosVencidos);
@@ -615,7 +610,6 @@
         private Label lblLibrosVencidos;
         private Label lblDiasRetraso;
         private Label lblMonto;
-        private Label lblEstadoPago;
         private TextBox txtLibrosVencidos;
         private TextBox txtDiasRetraso;
         private TextBox txtMonto;
@@ -625,7 +619,6 @@
         private DateTimePicker dtpFechaDevolucion;
         private Label lblFechaPago;
         private DateTimePicker dtpFechaPago;
-        private ComboBox cmbEstadoPago;
         private DataGridViewCheckBoxColumn colSeleccionar;
         private ComboBox cmbEstadoPrestamo;
         private Label lblEstadoPrestamo;

@@ -249,9 +249,9 @@
             btnGuardar.Text = "Guardar";
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnLimpiar
-            //
+            // 
             btnLimpiar.BackColor = Color.FromArgb(107, 122, 153);
             btnLimpiar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
@@ -265,9 +265,9 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnCancelar
-            //
+            // 
             btnCancelar.BackColor = Color.FromArgb(242, 196, 196);
             btnCancelar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
@@ -280,7 +280,7 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
-            //
+            // 
             // txtApellidoPaternoTrabajador
             // 
             txtApellidoPaternoTrabajador.BackColor = Color.White;
@@ -362,6 +362,7 @@
             Controls.Add(pcbContenedorCompacto);
             Controls.Add(pcbContenedorCaptura);
             Name = "frmFormularioUsuario";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();

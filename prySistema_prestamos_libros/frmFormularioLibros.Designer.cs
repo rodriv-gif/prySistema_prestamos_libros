@@ -347,6 +347,7 @@
             Controls.Add(pcbContenedorCompacto);
             Controls.Add(pcbContenendorCaptura);
             Name = "frmFormularioLibros";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de libros";
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();

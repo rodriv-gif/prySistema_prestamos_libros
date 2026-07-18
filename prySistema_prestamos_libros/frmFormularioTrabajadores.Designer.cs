@@ -463,6 +463,7 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
             Name = "frmFormularioTrabajadores";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Trabajador";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();

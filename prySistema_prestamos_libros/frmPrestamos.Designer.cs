@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             pcbContenendorBusqueda = new PictureBox();
             lblBusquedaLibro = new Label();
             pcbContenedorCompacto = new PictureBox();
@@ -46,7 +53,6 @@
             lblTipoPrestamo = new Label();
             lblFechaPrestamo = new Label();
             lblFechaDevolucion = new Label();
-            lblBibliotecario = new Label();
             lblDatosPrestamo = new Label();
             cmbTipoPrestamo = new ComboBox();
             dtpFechaPrestamo = new DateTimePicker();
@@ -66,22 +72,24 @@
             txtNombre = new TextBox();
             txtTipoSolicitante = new TextBox();
             txtNumControlSolicitante = new TextBox();
-            lblNumeroControl = new Label();
+            lblNumControlSolicitante = new Label();
             lblDatosSolicitante = new Label();
             pcbContenedorCaptura = new PictureBox();
-            txtBibliotecario = new TextBox();
+            dgvLibrosPrestar = new DataGridView();
+            lblLibroPrestar = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbContenendorBusqueda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibros).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLibrosPrestar).BeginInit();
             SuspendLayout();
             // 
             // pcbContenendorBusqueda
             // 
             pcbContenendorBusqueda.Image = Properties.Resources.contenerdorGrupo;
-            pcbContenendorBusqueda.Location = new Point(95, 262);
+            pcbContenendorBusqueda.Location = new Point(95, 393);
             pcbContenendorBusqueda.Name = "pcbContenendorBusqueda";
-            pcbContenendorBusqueda.Size = new Size(1302, 374);
+            pcbContenendorBusqueda.Size = new Size(1302, 290);
             pcbContenendorBusqueda.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenendorBusqueda.TabIndex = 3;
             pcbContenendorBusqueda.TabStop = false;
@@ -92,7 +100,7 @@
             lblBusquedaLibro.BackColor = Color.FromArgb(250, 247, 242);
             lblBusquedaLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBusquedaLibro.ForeColor = Color.FromArgb(27, 46, 107);
-            lblBusquedaLibro.Location = new Point(104, 270);
+            lblBusquedaLibro.Location = new Point(104, 401);
             lblBusquedaLibro.Name = "lblBusquedaLibro";
             lblBusquedaLibro.Size = new Size(163, 23);
             lblBusquedaLibro.TabIndex = 6;
@@ -101,7 +109,7 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(95, 651);
+            pcbContenedorCompacto.Location = new Point(95, 703);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
             pcbContenedorCompacto.Size = new Size(1302, 137);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -114,7 +122,7 @@
             lblISBN.BackColor = Color.FromArgb(250, 247, 242);
             lblISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblISBN.ForeColor = Color.FromArgb(31, 31, 31);
-            lblISBN.Location = new Point(116, 293);
+            lblISBN.Location = new Point(116, 424);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(41, 20);
             lblISBN.TabIndex = 10;
@@ -125,7 +133,7 @@
             txtISBN.BackColor = Color.White;
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtISBN.ForeColor = Color.FromArgb(31, 31, 31);
-            txtISBN.Location = new Point(116, 316);
+            txtISBN.Location = new Point(116, 447);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(245, 30);
@@ -133,11 +141,26 @@
             // 
             // dgvLibros
             // 
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dgvLibros.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibros.Location = new Point(116, 367);
+            dgvLibros.EnableHeadersVisualStyles = false;
+            dgvLibros.Location = new Point(117, 483);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dgvLibros.Size = new Size(1249, 197);
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dgvLibros.Size = new Size(1249, 118);
             dgvLibros.TabIndex = 12;
             // 
             // lblLocalizacion
@@ -146,7 +169,7 @@
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
-            lblLocalizacion.Location = new Point(116, 570);
+            lblLocalizacion.Location = new Point(112, 613);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
             lblLocalizacion.TabIndex = 13;
@@ -158,7 +181,7 @@
             lblInventario.BackColor = Color.FromArgb(250, 247, 242);
             lblInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInventario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblInventario.Location = new Point(787, 570);
+            lblInventario.Location = new Point(787, 613);
             lblInventario.Name = "lblInventario";
             lblInventario.Size = new Size(156, 20);
             lblInventario.TabIndex = 14;
@@ -169,7 +192,7 @@
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
-            txtLocalizacion.Location = new Point(116, 593);
+            txtLocalizacion.Location = new Point(116, 636);
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(576, 27);
             txtLocalizacion.TabIndex = 15;
@@ -178,7 +201,7 @@
             // 
             txtInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInventario.ForeColor = Color.FromArgb(31, 31, 31);
-            txtInventario.Location = new Point(787, 593);
+            txtInventario.Location = new Point(787, 636);
             txtInventario.Multiline = true;
             txtInventario.Name = "txtInventario";
             txtInventario.Size = new Size(245, 30);
@@ -190,7 +213,7 @@
             btnAgregar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.FromArgb(201, 168, 76);
             btnAgregar.Image = (Image)resources.GetObject("btnAgregar.Image");
-            btnAgregar.Location = new Point(1113, 576);
+            btnAgregar.Location = new Point(1155, 613);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(150, 45);
             btnAgregar.TabIndex = 17;
@@ -206,7 +229,7 @@
             button2.ForeColor = Color.FromArgb(17, 30, 71);
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(337, 818);
+            button2.Location = new Point(337, 870);
             button2.Name = "button2";
             button2.Size = new Size(150, 45);
             button2.TabIndex = 18;
@@ -222,7 +245,7 @@
             btnLimpiarPrestamo.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiarPrestamo.Image = (Image)resources.GetObject("btnLimpiarPrestamo.Image");
             btnLimpiarPrestamo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiarPrestamo.Location = new Point(679, 818);
+            btnLimpiarPrestamo.Location = new Point(679, 870);
             btnLimpiarPrestamo.Name = "btnLimpiarPrestamo";
             btnLimpiarPrestamo.Size = new Size(150, 45);
             btnLimpiarPrestamo.TabIndex = 19;
@@ -238,7 +261,7 @@
             btnCancelarPrestamo.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelarPrestamo.Image = (Image)resources.GetObject("btnCancelarPrestamo.Image");
             btnCancelarPrestamo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelarPrestamo.Location = new Point(1016, 818);
+            btnCancelarPrestamo.Location = new Point(1016, 870);
             btnCancelarPrestamo.Name = "btnCancelarPrestamo";
             btnCancelarPrestamo.Size = new Size(150, 45);
             btnCancelarPrestamo.TabIndex = 20;
@@ -253,7 +276,7 @@
             lblTipoPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTipoPrestamo.ForeColor = Color.FromArgb(31, 31, 31);
-            lblTipoPrestamo.Location = new Point(112, 698);
+            lblTipoPrestamo.Location = new Point(112, 750);
             lblTipoPrestamo.Name = "lblTipoPrestamo";
             lblTipoPrestamo.Size = new Size(127, 20);
             lblTipoPrestamo.TabIndex = 38;
@@ -264,7 +287,7 @@
             lblFechaPrestamo.AutoSize = true;
             lblFechaPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaPrestamo.Location = new Point(447, 698);
+            lblFechaPrestamo.Location = new Point(447, 750);
             lblFechaPrestamo.Name = "lblFechaPrestamo";
             lblFechaPrestamo.Size = new Size(135, 20);
             lblFechaPrestamo.TabIndex = 39;
@@ -275,23 +298,11 @@
             lblFechaDevolucion.AutoSize = true;
             lblFechaDevolucion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaDevolucion.Location = new Point(787, 698);
+            lblFechaDevolucion.Location = new Point(787, 750);
             lblFechaDevolucion.Name = "lblFechaDevolucion";
             lblFechaDevolucion.Size = new Size(145, 20);
             lblFechaDevolucion.TabIndex = 40;
             lblFechaDevolucion.Text = "Fecha de devolución";
-            // 
-            // lblBibliotecario
-            // 
-            lblBibliotecario.AutoSize = true;
-            lblBibliotecario.BackColor = Color.FromArgb(250, 247, 242);
-            lblBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBibliotecario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblBibliotecario.Location = new Point(1103, 698);
-            lblBibliotecario.Name = "lblBibliotecario";
-            lblBibliotecario.Size = new Size(177, 20);
-            lblBibliotecario.TabIndex = 41;
-            lblBibliotecario.Text = "Bibliotecario que registra";
             // 
             // lblDatosPrestamo
             // 
@@ -299,7 +310,7 @@
             lblDatosPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosPrestamo.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosPrestamo.Location = new Point(100, 659);
+            lblDatosPrestamo.Location = new Point(100, 711);
             lblDatosPrestamo.Name = "lblDatosPrestamo";
             lblDatosPrestamo.Size = new Size(167, 23);
             lblDatosPrestamo.TabIndex = 46;
@@ -310,7 +321,7 @@
             cmbTipoPrestamo.BackColor = Color.White;
             cmbTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoPrestamo.FormattingEnabled = true;
-            cmbTipoPrestamo.Location = new Point(112, 724);
+            cmbTipoPrestamo.Location = new Point(112, 776);
             cmbTipoPrestamo.Margin = new Padding(3, 4, 3, 4);
             cmbTipoPrestamo.Name = "cmbTipoPrestamo";
             cmbTipoPrestamo.Size = new Size(245, 28);
@@ -320,7 +331,7 @@
             // 
             dtpFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPrestamo.Format = DateTimePickerFormat.Short;
-            dtpFechaPrestamo.Location = new Point(447, 720);
+            dtpFechaPrestamo.Location = new Point(447, 772);
             dtpFechaPrestamo.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPrestamo.Name = "dtpFechaPrestamo";
             dtpFechaPrestamo.Size = new Size(245, 27);
@@ -330,7 +341,7 @@
             // 
             dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
-            dtpFechaDevolucion.Location = new Point(787, 720);
+            dtpFechaDevolucion.Location = new Point(787, 772);
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
             dtpFechaDevolucion.Size = new Size(245, 27);
@@ -500,17 +511,17 @@
             txtNumControlSolicitante.Size = new Size(245, 30);
             txtNumControlSolicitante.TabIndex = 54;
             // 
-            // lblNumeroControl
+            // lblNumControlSolicitante
             // 
-            lblNumeroControl.AutoSize = true;
-            lblNumeroControl.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNumeroControl.ForeColor = Color.FromArgb(31, 31, 31);
-            lblNumeroControl.Location = new Point(112, 45);
-            lblNumeroControl.Name = "lblNumeroControl";
-            lblNumeroControl.Size = new Size(164, 20);
-            lblNumeroControl.TabIndex = 53;
-            lblNumeroControl.Text = "Numero de control / ID";
+            lblNumControlSolicitante.AutoSize = true;
+            lblNumControlSolicitante.BackColor = Color.FromArgb(250, 247, 242);
+            lblNumControlSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNumControlSolicitante.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNumControlSolicitante.Location = new Point(112, 45);
+            lblNumControlSolicitante.Name = "lblNumControlSolicitante";
+            lblNumControlSolicitante.Size = new Size(211, 20);
+            lblNumControlSolicitante.TabIndex = 53;
+            lblNumControlSolicitante.Text = "Numero de control / Matricula";
             // 
             // lblDatosSolicitante
             // 
@@ -529,28 +540,62 @@
             pcbContenedorCaptura.Image = Properties.Resources.contenerdorGrupo;
             pcbContenedorCaptura.Location = new Point(95, 12);
             pcbContenedorCaptura.Name = "pcbContenedorCaptura";
-            pcbContenedorCaptura.Size = new Size(1302, 234);
+            pcbContenedorCaptura.Size = new Size(1302, 360);
             pcbContenedorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCaptura.TabIndex = 51;
             pcbContenedorCaptura.TabStop = false;
             // 
-            // txtBibliotecario
+            // dgvLibrosPrestar
             // 
-            txtBibliotecario.BackColor = Color.White;
-            txtBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBibliotecario.Location = new Point(1103, 720);
-            txtBibliotecario.Multiline = true;
-            txtBibliotecario.Name = "txtBibliotecario";
-            txtBibliotecario.Size = new Size(245, 30);
-            txtBibliotecario.TabIndex = 69;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dgvLibrosPrestar.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dgvLibrosPrestar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = SystemColors.Window;
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
+            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle13;
+            dgvLibrosPrestar.EnableHeadersVisualStyles = false;
+            dgvLibrosPrestar.Location = new Point(121, 270);
+            dgvLibrosPrestar.Name = "dgvLibrosPrestar";
+            dgvLibrosPrestar.RowHeadersWidth = 51;
+            dataGridViewCellStyle14.BackColor = Color.White;
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dgvLibrosPrestar.Size = new Size(1249, 83);
+            dgvLibrosPrestar.TabIndex = 70;
+            // 
+            // lblLibroPrestar
+            // 
+            lblLibroPrestar.AutoSize = true;
+            lblLibroPrestar.BackColor = Color.FromArgb(250, 247, 242);
+            lblLibroPrestar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLibroPrestar.Location = new Point(117, 247);
+            lblLibroPrestar.Name = "lblLibroPrestar";
+            lblLibroPrestar.Size = new Size(111, 20);
+            lblLibroPrestar.TabIndex = 71;
+            lblLibroPrestar.Text = "Libros a prestar";
             // 
             // frmPrestamos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1475, 875);
-            Controls.Add(txtBibliotecario);
+            ClientSize = new Size(1475, 938);
+            Controls.Add(lblLibroPrestar);
+            Controls.Add(dgvLibrosPrestar);
             Controls.Add(lblCarrera);
             Controls.Add(txtCarrera);
             Controls.Add(lblGrupo);
@@ -566,14 +611,13 @@
             Controls.Add(txtNombre);
             Controls.Add(txtTipoSolicitante);
             Controls.Add(txtNumControlSolicitante);
-            Controls.Add(lblNumeroControl);
+            Controls.Add(lblNumControlSolicitante);
             Controls.Add(lblDatosSolicitante);
             Controls.Add(pcbContenedorCaptura);
             Controls.Add(dtpFechaDevolucion);
             Controls.Add(dtpFechaPrestamo);
             Controls.Add(cmbTipoPrestamo);
             Controls.Add(lblDatosPrestamo);
-            Controls.Add(lblBibliotecario);
             Controls.Add(lblFechaDevolucion);
             Controls.Add(lblFechaPrestamo);
             Controls.Add(lblTipoPrestamo);
@@ -598,6 +642,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibros).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLibrosPrestar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -640,9 +685,11 @@
         private TextBox txtNombre;
         private TextBox txtTipoSolicitante;
         private TextBox txtNumControlSolicitante;
-        private Label lblNumeroControl;
+        private Label lblNumControlSolicitante;
         private Label lblDatosSolicitante;
         private PictureBox pcbContenedorCaptura;
         private TextBox txtBibliotecario;
+        private DataGridView dgvLibrosPrestar;
+        private Label lblLibroPrestar;
     }
 }

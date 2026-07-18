@@ -488,7 +488,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1288, 745);
+            ClientSize = new Size(1285, 745);
             Controls.Add(panel1);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCancelar);
@@ -496,6 +496,7 @@
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "frmFormularioAlumno";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Alumno";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContainerCompacto).EndInit();

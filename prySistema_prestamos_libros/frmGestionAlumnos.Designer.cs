@@ -129,6 +129,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
             dgvAlumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvAlumnos.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
