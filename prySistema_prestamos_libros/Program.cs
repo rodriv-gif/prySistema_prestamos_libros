@@ -19,7 +19,6 @@ namespace prySistema_prestamos_libros
                     Application.Run(new frmPrincipal());
                 }
             }
-            
 
             /*Application.Run(new frmPrestamos());
             Application.Run(new frmFormularioAlumno());

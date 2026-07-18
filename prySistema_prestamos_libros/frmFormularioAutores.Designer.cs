@@ -45,6 +45,7 @@
             // lblRegidtroAutor
             // 
             lblRegidtroAutor.AutoSize = true;
+            lblRegidtroAutor.BackColor = Color.FromArgb(250, 247, 242);
             lblRegidtroAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegidtroAutor.ForeColor = Color.FromArgb(27, 46, 107);
             lblRegidtroAutor.Location = new Point(34, 34);
@@ -66,6 +67,7 @@
             // lblNombreAutor
             // 
             lblNombreAutor.AutoSize = true;
+            lblNombreAutor.BackColor = Color.FromArgb(250, 247, 242);
             lblNombreAutor.Location = new Point(46, 72);
             lblNombreAutor.Name = "lblNombreAutor";
             lblNombreAutor.Size = new Size(64, 20);
@@ -75,6 +77,7 @@
             // lblApellidoPaterno
             // 
             lblApellidoPaterno.AutoSize = true;
+            lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoPaterno.Location = new Point(339, 72);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -84,6 +87,7 @@
             // lblApellidoMaterno
             // 
             lblApellidoMaterno.AutoSize = true;
+            lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoMaterno.Location = new Point(46, 144);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(122, 20);
