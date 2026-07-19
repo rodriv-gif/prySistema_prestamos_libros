@@ -15,7 +15,66 @@ namespace prySistema_prestamos_libros
             InitializeComponent();
             CargarCombos();
         }
+        // Controla si el formulario está registrando uno nuevo o editando uno existente,
+        // para que btnGuardar sepa si debe hacer INSERT o UPDATE.
+        private bool modoEdicion = false;
+        private int matriculaOriginal = 0;
+        private int idDireccionOriginal = 0;
 
+        // Constructor para modo edición: recibe la fila seleccionada en el DataGridView
+        // de frmGestionAlumnos y llena los campos con esos datos.
+        public frmFormularioAlumno(DataGridViewRow filaSeleccionada) : this()
+        {
+            CargarDatosParaEditar(filaSeleccionada);
+        }
+
+        private void CargarDatosParaEditar(DataGridViewRow fila)
+        {
+            modoEdicion = true;
+            matriculaOriginal = Convert.ToInt32(fila.Cells["Matricula"].Value);
+            idDireccionOriginal = Convert.ToInt32(fila.Cells["id_direccion"].Value);
+
+            txtMatricula.Text = fila.Cells["Matricula"].Value?.ToString();
+            txtNombres.Text = fila.Cells["Nombre"].Value?.ToString();
+            txtApellidoPaterno.Text = fila.Cells["Apellido Paterno"].Value?.ToString();
+            txtApellidoMaterno.Text = fila.Cells["Apellido Materno"].Value?.ToString();
+            txtCorreo.Text = fila.Cells["Correo electrónico"].Value?.ToString();
+            txtTelefono.Text = fila.Cells["Teléfono"].Value?.ToString();
+            txtCalle.Text = fila.Cells["Calle"].Value?.ToString();
+            txtGrado.Text = fila.Cells["Grado"].Value?.ToString();
+            txtGrupo.Text = fila.Cells["Grupo"].Value?.ToString();
+
+            // Convert.ToString regresa "" si el valor es null en vez de tronar,
+            string fechaTexto = Convert.ToString(fila.Cells["Fecha de Registro"].Value);
+            if (!string.IsNullOrEmpty(fechaTexto))
+                dtpFechaRegistro.Value = Convert.ToDateTime(fechaTexto);
+
+            //Asignamos el código postal (Esto intentará disparar el evento automáticamente)
+            string cp = fila.Cells["Código Postal"].Value?.ToString();
+            txtCodigoPostal.Text = cp;
+
+            // Si el evento automático fue bloqueado por la carga del formulario y el DataSource sigue vacío,
+            // forzamos a la clase dirección a traer las colonias en este instante.
+            if (cmbColonia.DataSource == null && !string.IsNullOrEmpty(cp) && cp.Trim().Length == 5)
+            {
+                clsDireccion direccion = new clsDireccion();
+                txtMunicipio.Text = direccion.ObtenerMunicipioPorCP(cp.Trim());
+                cmbColonia.DataSource = direccion.ObtenerColoniasPorCP(cp.Trim());
+                cmbColonia.DisplayMember = "nombre_colonia";
+                cmbColonia.ValueMember = "id_colonia";
+            }
+
+            // Ya con cmbColonia llena la línea de arriba lo carga de forma síncrona(osea enviar datos en bloques,
+            // se selecciona la colonia que ya tenía el alumno.
+            string idColonia = fila.Cells["id_colonia"].Value?.ToString();
+            if (!string.IsNullOrEmpty(idColonia))
+                cmbColonia.SelectedValue = Convert.ToInt32(idColonia);
+
+            // Igual con la carrera/área ya cargada en CargarCombos().
+            string idCarrera = fila.Cells["id_carrera"].Value?.ToString();
+            if (!string.IsNullOrEmpty(idCarrera))
+                cmbCarrera.SelectedValue = Convert.ToInt32(idCarrera);
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -23,28 +82,37 @@ namespace prySistema_prestamos_libros
                 clsAlumnos nuevoAlumno = new clsAlumnos();
 
                 //Llenar las cajas de texto
+                nuevoAlumno.Matricula = Convert.ToInt32(txtMatricula.Text);
                 nuevoAlumno.Nombre = txtNombres.Text;
                 nuevoAlumno.ApellidoPaterno = txtApellidoPaterno.Text;
                 nuevoAlumno.ApellidoMaterno = txtApellidoMaterno.Text;
-                nuevoAlumno.Calle = txtCalle.Text;
-                nuevoAlumno.CodigoPostal = txtCodigoPostal.Text;
                 nuevoAlumno.Correo = txtCorreo.Text;
                 nuevoAlumno.Telefono = txtTelefono.Text;
-                nuevoAlumno.Grado = int.Parse(txtGrado.Text);
+                nuevoAlumno.Grado = Convert.ToInt32(txtGrado.Text);
                 nuevoAlumno.Grupo = txtGrupo.Text;
+                nuevoAlumno.FechaRegistro = dtpFechaRegistro.Value;
+                nuevoAlumno.Estado = "Activo";
 
+                // Dirección, la colonia se elige en el combo ya filtrado por el código postal
+                nuevoAlumno.Calle = txtCalle.Text;
+                nuevoAlumno.CodigoPostal = txtCodigoPostal.Text;
+                nuevoAlumno.IdColonia = Convert.ToInt32(cmbColonia.SelectedValue);
                 //Para atrapar el id de la carrera al momento de que se seleccione la carrera en el combo
                 nuevoAlumno.IdCarrera = Convert.ToInt32(cmbCarrera.SelectedValue);
-
-                //Se guarda los registros en la base de datos
-                string msg = nuevoAlumno.Registrar();
-                //Mostramos un mensaje del registro
+                // Si el formulario se abrió desde Editar, se actualiza el registro existente;
+                // si se abrió desde Nuevo, se inserta uno nuevo.
+                string msg;
+                if (modoEdicion)
+                    msg = nuevoAlumno.ActualizarAlumno(idDireccionOriginal, matriculaOriginal);
+                else
+                    msg = nuevoAlumno.RegistrarAlumno();
                 MessageBox.Show(msg, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception ex)
             {
                 //Mensaje por si falla el registro
-                MessageBox.Show("No se pudo registrar al alumno: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo registrar el alumno: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -55,13 +123,14 @@ namespace prySistema_prestamos_libros
             txtNombres.Clear();
             txtApellidoPaterno.Clear();
             txtApellidoMaterno.Clear();
-            txtCalle.Clear();
-            txtColonia.Clear();
-            txtCodigoPostal.Clear();
             txtCorreo.Clear();
             txtTelefono.Clear();
+            txtCodigoPostal.Clear();
+            txtMunicipio.Clear();
+            txtCalle.Clear();
             txtGrado.Clear();
             txtGrupo.Clear();
+            cmbColonia.DataSource = null;
 
             //Para regresar el combobox a la opcion inicial que es seleccione una carrera
             if (cmbCarrera.Items.Count > 0)
@@ -100,6 +169,42 @@ namespace prySistema_prestamos_libros
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar las carreras: " + ex.Message);
+            }
+        }
+
+        // Cuando el bibliotecario o administador termina de teclear el código postal (5 dígitos),
+        // se busca el municipio y se cargan las colonias que le correspondan.
+        private void txtCodigoPostal_TextChanged(object sender, EventArgs e)
+        {
+            string cp = txtCodigoPostal.Text.Trim();
+
+            if (cp.Length != 5)
+            {
+                txtMunicipio.Clear();
+                cmbColonia.DataSource = null;
+                return;
+            }
+
+            clsDireccion direccion = new clsDireccion();
+            try
+            {
+                txtMunicipio.Text = direccion.ObtenerMunicipioPorCP(cp);
+
+                DataTable dtColonias = direccion.ObtenerColoniasPorCP(cp);
+                if (dtColonias.Rows.Count == 0)
+                {
+                    cmbColonia.DataSource = null;
+                    MessageBox.Show("No se encontraron colonias para ese código postal.");
+                    return;
+                }
+
+                cmbColonia.DataSource = dtColonias;
+                cmbColonia.DisplayMember = "nombre_colonia";
+                cmbColonia.ValueMember = "id_colonia";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el código postal: " + ex.Message);
             }
         }
     }
