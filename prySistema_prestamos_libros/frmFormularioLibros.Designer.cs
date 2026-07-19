@@ -40,8 +40,6 @@
             lblTitulo = new Label();
             lblEditorial = new Label();
             lblISBN = new Label();
-            lblApellidoMaterno = new Label();
-            lblApaterno = new Label();
             lblNombre = new Label();
             btnGuardar = new Button();
             btnCancelar = new Button();
@@ -52,10 +50,16 @@
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
             cmbNombreAutor = new ComboBox();
-            cmbApellidoPaterno = new ComboBox();
-            cmbApellidoMaterno = new ComboBox();
+            dataGridView1 = new DataGridView();
+            btnBorrar = new Button();
+            textBox1 = new TextBox();
+            dataGridView2 = new DataGridView();
+            btnAgregarTrabajador = new Button();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // pcbContenendorCaptura
@@ -63,7 +67,7 @@
             pcbContenendorCaptura.Image = Properties.Resources.contenerdorGrupo;
             pcbContenendorCaptura.Location = new Point(27, 19);
             pcbContenendorCaptura.Name = "pcbContenendorCaptura";
-            pcbContenendorCaptura.Size = new Size(1014, 234);
+            pcbContenendorCaptura.Size = new Size(1014, 390);
             pcbContenendorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenendorCaptura.TabIndex = 0;
             pcbContenendorCaptura.TabStop = false;
@@ -71,9 +75,9 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(27, 288);
+            pcbContenedorCompacto.Location = new Point(27, 417);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
-            pcbContenedorCompacto.Size = new Size(1014, 137);
+            pcbContenedorCompacto.Size = new Size(1014, 244);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenedorCompacto.TabIndex = 1;
             pcbContenedorCompacto.TabStop = false;
@@ -165,31 +169,11 @@
             lblISBN.TabIndex = 12;
             lblISBN.Text = "ISBN";
             // 
-            // lblApellidoMaterno
-            // 
-            lblApellidoMaterno.AutoSize = true;
-            lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.Location = new Point(755, 339);
-            lblApellidoMaterno.Name = "lblApellidoMaterno";
-            lblApellidoMaterno.Size = new Size(126, 20);
-            lblApellidoMaterno.TabIndex = 29;
-            lblApellidoMaterno.Text = "Apellido materno";
-            // 
-            // lblApaterno
-            // 
-            lblApaterno.AutoSize = true;
-            lblApaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApaterno.Location = new Point(411, 339);
-            lblApaterno.Name = "lblApaterno";
-            lblApaterno.Size = new Size(122, 20);
-            lblApaterno.TabIndex = 28;
-            lblApaterno.Text = "Apellido paterno";
-            // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.Location = new Point(61, 339);
+            lblNombre.Location = new Point(64, 499);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(80, 20);
             lblNombre.TabIndex = 27;
@@ -202,7 +186,7 @@
             btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(125, 465);
+            btnGuardar.Location = new Point(125, 683);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 32;
@@ -218,7 +202,7 @@
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(773, 465);
+            btnCancelar.Location = new Point(773, 683);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 31;
@@ -234,7 +218,7 @@
             btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(456, 465);
+            btnLimpiar.Location = new Point(456, 683);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
             btnLimpiar.TabIndex = 30;
@@ -261,7 +245,7 @@
             lblDatosAutor.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosAutor.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosAutor.Location = new Point(31, 297);
+            lblDatosAutor.Location = new Point(31, 426);
             lblDatosAutor.Name = "lblDatosAutor";
             lblDatosAutor.Size = new Size(134, 23);
             lblDatosAutor.TabIndex = 34;
@@ -294,35 +278,95 @@
             // cmbNombreAutor
             // 
             cmbNombreAutor.FormattingEnabled = true;
-            cmbNombreAutor.Location = new Point(61, 362);
+            cmbNombreAutor.Location = new Point(61, 532);
             cmbNombreAutor.Name = "cmbNombreAutor";
-            cmbNombreAutor.Size = new Size(245, 28);
+            cmbNombreAutor.Size = new Size(269, 28);
             cmbNombreAutor.TabIndex = 38;
             // 
-            // cmbApellidoPaterno
+            // dataGridView1
             // 
-            cmbApellidoPaterno.FormattingEnabled = true;
-            cmbApellidoPaterno.Location = new Point(411, 362);
-            cmbApellidoPaterno.Name = "cmbApellidoPaterno";
-            cmbApellidoPaterno.Size = new Size(245, 28);
-            cmbApellidoPaterno.TabIndex = 39;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(61, 226);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(320, 167);
+            dataGridView1.TabIndex = 41;
             // 
-            // cmbApellidoMaterno
+            // btnBorrar
             // 
-            cmbApellidoMaterno.FormattingEnabled = true;
-            cmbApellidoMaterno.Location = new Point(755, 362);
-            cmbApellidoMaterno.Name = "cmbApellidoMaterno";
-            cmbApellidoMaterno.Size = new Size(245, 28);
-            cmbApellidoMaterno.TabIndex = 40;
+            btnBorrar.BackColor = Color.FromArgb(27, 46, 107);
+            btnBorrar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBorrar.ForeColor = Color.FromArgb(250, 247, 242);
+            btnBorrar.Image = (Image)resources.GetObject("btnBorrar.Image");
+            btnBorrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBorrar.Location = new Point(401, 293);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(150, 45);
+            btnBorrar.TabIndex = 42;
+            btnBorrar.Text = "Limpiar";
+            btnBorrar.TextAlign = ContentAlignment.MiddleRight;
+            btnBorrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBorrar.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(202, 499);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 43;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(376, 448);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(460, 188);
+            dataGridView2.TabIndex = 44;
+            // 
+            // btnAgregarTrabajador
+            // 
+            btnAgregarTrabajador.BackColor = Color.FromArgb(27, 46, 107);
+            btnAgregarTrabajador.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarTrabajador.ForeColor = Color.FromArgb(201, 168, 76);
+            btnAgregarTrabajador.Image = (Image)resources.GetObject("btnAgregarTrabajador.Image");
+            btnAgregarTrabajador.Location = new Point(864, 485);
+            btnAgregarTrabajador.Name = "btnAgregarTrabajador";
+            btnAgregarTrabajador.Size = new Size(150, 45);
+            btnAgregarTrabajador.TabIndex = 45;
+            btnAgregarTrabajador.Text = "Agregar";
+            btnAgregarTrabajador.TextAlign = ContentAlignment.MiddleRight;
+            btnAgregarTrabajador.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAgregarTrabajador.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = Color.FromArgb(242, 196, 196);
+            btnEliminar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = Color.FromArgb(122, 32, 32);
+            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEliminar.Location = new Point(864, 569);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(150, 45);
+            btnEliminar.TabIndex = 46;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.TextAlign = ContentAlignment.MiddleRight;
+            btnEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEliminar.UseVisualStyleBackColor = false;
             // 
             // frmFormularioLibros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1064, 536);
-            Controls.Add(cmbApellidoMaterno);
-            Controls.Add(cmbApellidoPaterno);
+            ClientSize = new Size(1064, 753);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnAgregarTrabajador);
+            Controls.Add(dataGridView2);
+            Controls.Add(textBox1);
+            Controls.Add(btnBorrar);
+            Controls.Add(dataGridView1);
             Controls.Add(cmbNombreAutor);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
@@ -332,8 +376,6 @@
             Controls.Add(btnGuardar);
             Controls.Add(btnCancelar);
             Controls.Add(btnLimpiar);
-            Controls.Add(lblApellidoMaterno);
-            Controls.Add(lblApaterno);
             Controls.Add(lblNombre);
             Controls.Add(txtNumPaginas);
             Controls.Add(txtTitulo);
@@ -350,6 +392,8 @@
             Text = "Formulario de libros";
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -368,8 +412,6 @@
         private Label lblTitulo;
         private Label lblEditorial;
         private Label lblISBN;
-        private Label lblApellidoMaterno;
-        private Label lblApaterno;
         private Label lblNombre;
         private Button btnGuardar;
         private Button btnCancelar;
@@ -380,7 +422,11 @@
         private ComboBox comboBox2;
         private ComboBox comboBox3;
         private ComboBox cmbNombreAutor;
-        private ComboBox cmbApellidoPaterno;
-        private ComboBox cmbApellidoMaterno;
+        private DataGridView dataGridView1;
+        private Button btnBorrar;
+        private TextBox textBox1;
+        private DataGridView dataGridView2;
+        private Button btnAgregarTrabajador;
+        private Button btnEliminar;
     }
 }
