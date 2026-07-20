@@ -121,6 +121,44 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
+
+        // Búsqueda exacta (no LIKE) para el formulario de préstamos: el bibliotecario teclea
+        // el número/matrícula y necesitamos saber de una vez si existe, sin resultados parciales.
+        // Solo trae alumnos con estado 'Activo' (no tiene sentido prestarle a uno dado de baja).
+        public DataTable BuscarPorMatricula(int matriculaBuscada)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT a.nombre AS 'Nombre', " +
+                                    "a.apellido_paterno AS 'Apellido Paterno', " +
+                                    "a.apellido_materno AS 'Apellido Materno', " +
+                                    "IFNULL(c.nombre_carrera, '') AS 'Carrera', " +
+                                    "a.grado AS 'Grado', " +
+                                    "a.grupo AS 'Grupo' " +
+                                "FROM tblalumnos a " +
+                                "LEFT JOIN tblcarreras c ON a.id_carrera = c.id_carrera " +
+                                "WHERE a.matricula = @matricula AND a.estado = 'Activo';";
+
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@matricula", matriculaBuscada);
+                        using (var adaptador = new MySqlDataAdapter(comando))
+                        {
+                            adaptador.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar al alumno: " + ex.Message);
+            }
+            return tabla;
+        }
     }
 }
 

@@ -114,5 +114,40 @@ namespace prySistema_prestamos_libros
             }
             return tabla;
         }
+
+        // Búsqueda exacta (no LIKE) para el formulario de préstamos: mismo criterio que
+        // clsGestionAlumno.BuscarPorMatricula(), pero del lado de tbltrabajadores.
+        public DataTable BuscarPorNumeroControl(int numeroControlBuscado)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT t.nombre AS 'Nombre', " +
+                                    "t.apellido_paterno AS 'Apellido Paterno', " +
+                                    "t.apellido_materno AS 'Apellido Materno', " +
+                                    "IFNULL(c.nombre_carrera, 'Sin Carrera / Administrativo') AS 'Carrera' " +
+                                "FROM tbltrabajadores t " +
+                                "LEFT JOIN tblcarreras c ON t.id_carrera = c.id_carrera " +
+                                "WHERE t.numero_control = @numeroControl AND t.estado = 'Activo';";
+
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@numeroControl", numeroControlBuscado);
+                        using (var adaptador = new MySqlDataAdapter(comando))
+                        {
+                            adaptador.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar al trabajador: " + ex.Message);
+            }
+            return tabla;
+        }
     }
 }

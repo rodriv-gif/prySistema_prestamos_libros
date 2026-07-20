@@ -47,7 +47,7 @@
             txtLocalizacion = new TextBox();
             txtInventario = new TextBox();
             btnAgregar = new Button();
-            button2 = new Button();
+            btnRegistrar = new Button();
             btnLimpiarPrestamo = new Button();
             btnCancelarPrestamo = new Button();
             lblTipoPrestamo = new Label();
@@ -222,21 +222,21 @@
             btnAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAgregar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnRegistrar
             // 
-            button2.BackColor = Color.FromArgb(201, 168, 76);
-            button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.FromArgb(17, 30, 71);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(337, 870);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 45);
-            button2.TabIndex = 18;
-            button2.Text = "Registrar";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.UseVisualStyleBackColor = false;
+            btnRegistrar.BackColor = Color.FromArgb(201, 168, 76);
+            btnRegistrar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrar.ForeColor = Color.FromArgb(17, 30, 71);
+            btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");
+            btnRegistrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegistrar.Location = new Point(337, 870);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(150, 45);
+            btnRegistrar.TabIndex = 18;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.TextAlign = ContentAlignment.MiddleRight;
+            btnRegistrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // btnLimpiarPrestamo
             // 
@@ -510,6 +510,7 @@
             txtNumControlSolicitante.Name = "txtNumControlSolicitante";
             txtNumControlSolicitante.Size = new Size(245, 30);
             txtNumControlSolicitante.TabIndex = 54;
+            txtNumControlSolicitante.TextChanged += txtNumControlSolicitante_TextChanged;
             // 
             // lblNumControlSolicitante
             // 
@@ -623,7 +624,7 @@
             Controls.Add(lblTipoPrestamo);
             Controls.Add(btnCancelarPrestamo);
             Controls.Add(btnLimpiarPrestamo);
-            Controls.Add(button2);
+            Controls.Add(btnRegistrar);
             Controls.Add(btnAgregar);
             Controls.Add(txtInventario);
             Controls.Add(txtLocalizacion);
@@ -659,7 +660,7 @@
         private TextBox txtLocalizacion;
         private TextBox txtInventario;
         private Button btnAgregar;
-        private Button button2;
+        private Button btnRegistrar;
         private Button btnLimpiarPrestamo;
         private Button btnCancelarPrestamo;
         private Label lblTipoPrestamo;
