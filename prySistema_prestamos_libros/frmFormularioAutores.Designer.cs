@@ -120,7 +120,7 @@
             // 
             // btnRegistrar
             // 
-            btnRegistrar.BackColor = Color.FromArgb(201, 168, 7);
+            btnRegistrar.BackColor = Color.FromArgb(201, 168, 76);
             btnRegistrar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = Color.FromArgb(17, 30, 71);
             btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");

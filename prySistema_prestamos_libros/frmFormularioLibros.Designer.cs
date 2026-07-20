@@ -49,16 +49,16 @@
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
-            cmbNombreAutor = new ComboBox();
-            textBox1 = new TextBox();
-            btnAgregarNuevoAutor = new Button();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
+            txtBuscarAutor = new TextBox();
+            dgvAutor = new DataGridView();
+            dgvAlmacenarAutor = new DataGridView();
             btnBorrar = new Button();
+            btnAgregarAutor = new Button();
+            btnNuevoAutor = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAutor).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlmacenarAutor).BeginInit();
             SuspendLayout();
             // 
             // pcbContenendorCaptura
@@ -66,7 +66,7 @@
             pcbContenendorCaptura.Image = Properties.Resources.contenerdorGrupo;
             pcbContenendorCaptura.Location = new Point(27, 19);
             pcbContenendorCaptura.Name = "pcbContenendorCaptura";
-            pcbContenendorCaptura.Size = new Size(1014, 394);
+            pcbContenendorCaptura.Size = new Size(1014, 330);
             pcbContenendorCaptura.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbContenendorCaptura.TabIndex = 0;
             pcbContenendorCaptura.TabStop = false;
@@ -74,7 +74,7 @@
             // pcbContenedorCompacto
             // 
             pcbContenedorCompacto.Image = Properties.Resources.contenedorgroupCompac;
-            pcbContenedorCompacto.Location = new Point(27, 430);
+            pcbContenedorCompacto.Location = new Point(27, 369);
             pcbContenedorCompacto.Name = "pcbContenedorCompacto";
             pcbContenedorCompacto.Size = new Size(1014, 228);
             pcbContenedorCompacto.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -172,7 +172,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.Location = new Point(63, 500);
+            lblNombre.Location = new Point(165, 412);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(80, 20);
             lblNombre.TabIndex = 27;
@@ -185,7 +185,7 @@
             btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(125, 684);
+            btnGuardar.Location = new Point(125, 623);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 32;
@@ -201,7 +201,7 @@
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(773, 684);
+            btnCancelar.Location = new Point(773, 623);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 31;
@@ -217,7 +217,7 @@
             btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(456, 684);
+            btnLimpiar.Location = new Point(456, 623);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
             btnLimpiar.TabIndex = 30;
@@ -244,7 +244,7 @@
             lblDatosAutor.BackColor = Color.FromArgb(250, 247, 242);
             lblDatosAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatosAutor.ForeColor = Color.FromArgb(27, 46, 107);
-            lblDatosAutor.Location = new Point(31, 439);
+            lblDatosAutor.Location = new Point(31, 378);
             lblDatosAutor.Name = "lblDatosAutor";
             lblDatosAutor.Size = new Size(134, 23);
             lblDatosAutor.TabIndex = 34;
@@ -274,53 +274,31 @@
             comboBox3.Size = new Size(245, 28);
             comboBox3.TabIndex = 37;
             // 
-            // cmbNombreAutor
+            // txtBuscarAutor
             // 
-            cmbNombreAutor.FormattingEnabled = true;
-            cmbNombreAutor.Location = new Point(61, 530);
-            cmbNombreAutor.Name = "cmbNombreAutor";
-            cmbNombreAutor.Size = new Size(256, 28);
-            cmbNombreAutor.TabIndex = 38;
+            txtBuscarAutor.Location = new Point(251, 409);
+            txtBuscarAutor.Multiline = true;
+            txtBuscarAutor.Name = "txtBuscarAutor";
+            txtBuscarAutor.Size = new Size(322, 30);
+            txtBuscarAutor.TabIndex = 39;
             // 
-            // textBox1
+            // dgvAutor
             // 
-            textBox1.Location = new Point(229, 497);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(88, 27);
-            textBox1.TabIndex = 39;
+            dgvAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAutor.Location = new Point(165, 445);
+            dgvAutor.Name = "dgvAutor";
+            dgvAutor.RowHeadersWidth = 51;
+            dgvAutor.Size = new Size(423, 128);
+            dgvAutor.TabIndex = 41;
             // 
-            // btnAgregarNuevoAutor
+            // dgvAlmacenarAutor
             // 
-            btnAgregarNuevoAutor.BackColor = Color.FromArgb(27, 46, 107);
-            btnAgregarNuevoAutor.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregarNuevoAutor.ForeColor = Color.FromArgb(201, 168, 76);
-            btnAgregarNuevoAutor.Image = (Image)resources.GetObject("btnAgregarNuevoAutor.Image");
-            btnAgregarNuevoAutor.Location = new Point(850, 519);
-            btnAgregarNuevoAutor.Name = "btnAgregarNuevoAutor";
-            btnAgregarNuevoAutor.Size = new Size(150, 45);
-            btnAgregarNuevoAutor.TabIndex = 40;
-            btnAgregarNuevoAutor.Text = "Agregar";
-            btnAgregarNuevoAutor.TextAlign = ContentAlignment.MiddleRight;
-            btnAgregarNuevoAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAgregarNuevoAutor.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(411, 459);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(423, 188);
-            dataGridView1.TabIndex = 41;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(41, 215);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(350, 188);
-            dataGridView2.TabIndex = 42;
+            dgvAlmacenarAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlmacenarAutor.Location = new Point(41, 227);
+            dgvAlmacenarAutor.Name = "dgvAlmacenarAutor";
+            dgvAlmacenarAutor.RowHeadersWidth = 51;
+            dgvAlmacenarAutor.Size = new Size(370, 95);
+            dgvAlmacenarAutor.TabIndex = 42;
             // 
             // btnBorrar
             // 
@@ -329,7 +307,7 @@
             btnBorrar.ForeColor = Color.FromArgb(250, 247, 242);
             btnBorrar.Image = (Image)resources.GetObject("btnBorrar.Image");
             btnBorrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBorrar.Location = new Point(435, 291);
+            btnBorrar.Location = new Point(438, 251);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(150, 45);
             btnBorrar.TabIndex = 43;
@@ -338,18 +316,49 @@
             btnBorrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBorrar.UseVisualStyleBackColor = false;
             // 
+            // btnAgregarAutor
+            // 
+            btnAgregarAutor.BackColor = Color.FromArgb(27, 46, 107);
+            btnAgregarAutor.Font = new Font("Segoe UI Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarAutor.ForeColor = Color.FromArgb(201, 168, 76);
+            btnAgregarAutor.Image = (Image)resources.GetObject("btnAgregarAutor.Image");
+            btnAgregarAutor.Location = new Point(610, 484);
+            btnAgregarAutor.Name = "btnAgregarAutor";
+            btnAgregarAutor.Size = new Size(150, 45);
+            btnAgregarAutor.TabIndex = 44;
+            btnAgregarAutor.Text = "Agregar";
+            btnAgregarAutor.TextAlign = ContentAlignment.MiddleRight;
+            btnAgregarAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAgregarAutor.UseVisualStyleBackColor = false;
+            // 
+            // btnNuevoAutor
+            // 
+            btnNuevoAutor.BackColor = Color.FromArgb(201, 168, 76);
+            btnNuevoAutor.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoAutor.ForeColor = Color.FromArgb(17, 30, 71);
+            btnNuevoAutor.Image = (Image)resources.GetObject("btnNuevoAutor.Image");
+            btnNuevoAutor.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevoAutor.Location = new Point(810, 484);
+            btnNuevoAutor.Name = "btnNuevoAutor";
+            btnNuevoAutor.Size = new Size(150, 45);
+            btnNuevoAutor.TabIndex = 45;
+            btnNuevoAutor.Text = "Nuevo";
+            btnNuevoAutor.TextAlign = ContentAlignment.MiddleRight;
+            btnNuevoAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNuevoAutor.UseVisualStyleBackColor = false;
+            // 
             // frmFormularioLibros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1064, 753);
+            ClientSize = new Size(1064, 693);
+            Controls.Add(btnNuevoAutor);
+            Controls.Add(btnAgregarAutor);
             Controls.Add(btnBorrar);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
-            Controls.Add(btnAgregarNuevoAutor);
-            Controls.Add(textBox1);
-            Controls.Add(cmbNombreAutor);
+            Controls.Add(dgvAlmacenarAutor);
+            Controls.Add(dgvAutor);
+            Controls.Add(txtBuscarAutor);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
@@ -375,8 +384,8 @@
             Text = "Formulario de libros";
             ((System.ComponentModel.ISupportInitialize)pcbContenendorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAutor).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlmacenarAutor).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,11 +413,12 @@
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox3;
-        private ComboBox cmbNombreAutor;
-        private TextBox textBox1;
+        private TextBox txtBuscarAutor;
         private Button btnAgregarNuevoAutor;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView dgvAutor;
+        private DataGridView dgvAlmacenarAutor;
         private Button btnBorrar;
+        private Button btnAgregarAutor;
+        private Button btnNuevoAutor;
     }
 }
