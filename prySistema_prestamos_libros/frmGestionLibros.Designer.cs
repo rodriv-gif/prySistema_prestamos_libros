@@ -73,6 +73,7 @@
             txtBuscarLibro.Name = "txtBuscarLibro";
             txtBuscarLibro.Size = new Size(245, 30);
             txtBuscarLibro.TabIndex = 2;
+            txtBuscarLibro.TextChanged += txtBuscarLibro_TextChanged;
             // 
             // dgvLibros
             // 
@@ -131,6 +132,7 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -147,6 +149,7 @@
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // frmGestionLibros
             // 

@@ -46,9 +46,9 @@
             btnLimpiar = new Button();
             lblDatosLibro = new Label();
             lblDatosAutor = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            cmbEditorial = new ComboBox();
+            cmbCategoria = new ComboBox();
+            cmbIdioma = new ComboBox();
             txtBuscarAutor = new TextBox();
             dgvAutor = new DataGridView();
             dgvAlmacenarAutor = new DataGridView();
@@ -193,6 +193,7 @@
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
@@ -209,6 +210,7 @@
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnLimpiar
             // 
@@ -225,6 +227,7 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // lblDatosLibro
             // 
@@ -250,29 +253,29 @@
             lblDatosAutor.TabIndex = 34;
             lblDatosAutor.Text = "Datos del autor";
             // 
-            // comboBox1
+            // cmbEditorial
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(61, 168);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(245, 28);
-            comboBox1.TabIndex = 35;
+            cmbEditorial.FormattingEnabled = true;
+            cmbEditorial.Location = new Point(61, 168);
+            cmbEditorial.Name = "cmbEditorial";
+            cmbEditorial.Size = new Size(245, 28);
+            cmbEditorial.TabIndex = 35;
             // 
-            // comboBox2
+            // cmbCategoria
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(411, 168);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(245, 28);
-            comboBox2.TabIndex = 36;
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(411, 168);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(245, 28);
+            cmbCategoria.TabIndex = 36;
             // 
-            // comboBox3
+            // cmbIdioma
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(755, 168);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(245, 28);
-            comboBox3.TabIndex = 37;
+            cmbIdioma.FormattingEnabled = true;
+            cmbIdioma.Location = new Point(755, 168);
+            cmbIdioma.Name = "cmbIdioma";
+            cmbIdioma.Size = new Size(245, 28);
+            cmbIdioma.TabIndex = 37;
             // 
             // txtBuscarAutor
             // 
@@ -281,6 +284,7 @@
             txtBuscarAutor.Name = "txtBuscarAutor";
             txtBuscarAutor.Size = new Size(322, 30);
             txtBuscarAutor.TabIndex = 39;
+            txtBuscarAutor.TextChanged += txtBuscarAutor_TextChanged;
             // 
             // dgvAutor
             // 
@@ -290,6 +294,7 @@
             dgvAutor.RowHeadersWidth = 51;
             dgvAutor.Size = new Size(423, 128);
             dgvAutor.TabIndex = 41;
+            dgvAutor.CellDoubleClick += dgvAutor_CellDoubleClick;
             // 
             // dgvAlmacenarAutor
             // 
@@ -299,6 +304,7 @@
             dgvAlmacenarAutor.RowHeadersWidth = 51;
             dgvAlmacenarAutor.Size = new Size(370, 95);
             dgvAlmacenarAutor.TabIndex = 42;
+            dgvAlmacenarAutor.CellContentDoubleClick += dgvAlmacenarAutor_CellContentDoubleClick;
             // 
             // btnBorrar
             // 
@@ -315,6 +321,7 @@
             btnBorrar.TextAlign = ContentAlignment.MiddleRight;
             btnBorrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBorrar.UseVisualStyleBackColor = false;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // btnAgregarAutor
             // 
@@ -330,6 +337,7 @@
             btnAgregarAutor.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAgregarAutor.UseVisualStyleBackColor = false;
+            btnAgregarAutor.Click += btnAgregarAutor_Click;
             // 
             // btnNuevoAutor
             // 
@@ -346,6 +354,7 @@
             btnNuevoAutor.TextAlign = ContentAlignment.MiddleRight;
             btnNuevoAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnNuevoAutor.UseVisualStyleBackColor = false;
+            btnNuevoAutor.Click += btnNuevoAutor_Click;
             // 
             // frmFormularioLibros
             // 
@@ -359,9 +368,9 @@
             Controls.Add(dgvAlmacenarAutor);
             Controls.Add(dgvAutor);
             Controls.Add(txtBuscarAutor);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbIdioma);
+            Controls.Add(cmbCategoria);
+            Controls.Add(cmbEditorial);
             Controls.Add(lblDatosAutor);
             Controls.Add(lblDatosLibro);
             Controls.Add(btnGuardar);
@@ -410,9 +419,9 @@
         private Button btnLimpiar;
         private Label lblDatosLibro;
         private Label lblDatosAutor;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox cmbEditorial;
+        private ComboBox cmbCategoria;
+        private ComboBox cmbIdioma;
         private TextBox txtBuscarAutor;
         private Button btnAgregarNuevoAutor;
         private DataGridView dgvAutor;
