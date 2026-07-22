@@ -13,6 +13,7 @@ namespace prySistema_prestamos_libros
 
         // propiedad
         public string Isbn { get => isbn; set => isbn = value; }
+        public int BuscarClave { get; internal set; }
 
         // Trae los ejemplares que coincidan con el ISBN tecleado.
         // Un mismo libro puede tener varios ejemplares, por eso puede regresar más de una fila,
@@ -49,6 +50,11 @@ namespace prySistema_prestamos_libros
                 throw new Exception("Error al buscar el libro: " + ex.Message);
             }
             return tabla;
+        }
+
+        internal object? CargarDataGrid()
+        {
+            throw new NotImplementedException();
         }
     }
 }

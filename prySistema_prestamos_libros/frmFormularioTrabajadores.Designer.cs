@@ -1,6 +1,6 @@
 ﻿namespace prySistema_prestamos_libros
 {
-    partial class frmFormularioTrabajadores
+    partial class frmFormularioLibross
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioTrabajadores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioLibross));
             pcbContenedorCaptura = new PictureBox();
             pcbContenedorCompacto = new PictureBox();
             pcbContainerCompacto = new PictureBox();
