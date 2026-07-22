@@ -14,13 +14,16 @@ namespace prySistema_prestamos_libros
         public frmGestionLibros()
         {
             InitializeComponent();
-            //CargarGrid();
+            CargarGrid();
         }
+
         public void CargarGrid()
         {
             Libros = new clsGestionLibros();
             dgvLibros.DataSource = null;
-            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             try
             {
                 dgvLibros.DataSource = Libros.CargarDataGrid();
@@ -37,6 +40,7 @@ namespace prySistema_prestamos_libros
         // llama en TODOS los lugares donde se reasigne el DataSource.
         private void OcultarColumnas()
         {
+            // Ocultar IDs internos del sistema
             if (dgvLibros.Columns["id_libro"] != null)
                 dgvLibros.Columns["id_libro"].Visible = false;
             if (dgvLibros.Columns["id_editorial"] != null)
@@ -45,12 +49,13 @@ namespace prySistema_prestamos_libros
                 dgvLibros.Columns["id_categoria"].Visible = false;
             if (dgvLibros.Columns["id_idioma"] != null)
                 dgvLibros.Columns["id_idioma"].Visible = false;
-            if (dgvLibros.Columns["titulo_libro"] != null)
-                dgvLibros.Columns["titulo_libro"].Visible = false;
-            if (dgvLibros.Columns["paginas"] != null)
-                dgvLibros.Columns["paginas"].Visible = false;
-            if (dgvLibros.Columns["ISBN"] != null)
-                dgvLibros.Columns["ISBN"].Visible = false;
+            if (dgvLibros.Columns["id_ejemplar"] != null)
+                dgvLibros.Columns["id_ejemplar"].Visible = false;
+
+            if (dgvLibros.Columns["Editorial"] != null)
+                dgvLibros.Columns["Editorial"].Visible = false;
+            if (dgvLibros.Columns["Páginas"] != null)
+                dgvLibros.Columns["Páginas"].Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -64,20 +69,18 @@ namespace prySistema_prestamos_libros
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-        
-            /*if (dgvLibros.CurrentRow == null)
+            if (dgvLibros.CurrentRow == null)
             {
                 MessageBox.Show("Selecciona un libro de la lista antes de editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             DataGridViewRow fila = dgvLibros.CurrentRow;
-
             var frm = new frmFormularioLibros(fila);
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
-            CargarGrid();*/
+            CargarGrid();
         }
 
         private void btnDarBaja_Click(object sender, EventArgs e)
@@ -89,11 +92,12 @@ namespace prySistema_prestamos_libros
             }
 
             DataGridViewRow fila = dgvLibros.CurrentRow;
-            string nombre = fila.Cells["Nombre"].Value?.ToString();
-            int numeroControl = Convert.ToInt32(fila.Cells["Número de Control"].Value);
+
+            string tituloLibro = fila.Cells["Título"].Value?.ToString();
+            int idLibro = Convert.ToInt32(fila.Cells["id_libro"].Value);
 
             DialogResult respuesta = MessageBox.Show(
-                $"¿Seguro que quieres dar de baja a {nombre}?",
+                $"¿Seguro que quieres dar de baja el libro '{tituloLibro}'?",
                 "Confirmar baja",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
@@ -104,7 +108,7 @@ namespace prySistema_prestamos_libros
             try
             {
                 clsGestionLibros libroBaja = new clsGestionLibros();
-                string msg = libroBaja.DarBajaLibro(numeroControl);
+                string msg = libroBaja.DarBajaLibro(idLibro);
                 MessageBox.Show(msg, "Baja exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarGrid();
             }
@@ -116,25 +120,27 @@ namespace prySistema_prestamos_libros
 
         private void txtBuscarLibro_TextChanged(object sender, EventArgs e)
         {
-             if (string.IsNullOrEmpty(txtBuscarLibro.Text))
+            if (string.IsNullOrEmpty(txtBuscarLibro.Text))
             {
                 CargarGrid();
                 return;
             }
-            clsGestionLibros libros = new clsGestionLibros();
+
             dgvLibros.DataSource = null;
-            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             try
             {
+                Libros = new clsGestionLibros();
                 Libros.Isbn = txtBuscarLibro.Text;
                 dgvLibros.DataSource = Libros.Consultar();
                 OcultarColumnas();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Requiere asignar datos" + ex.Message);
+                MessageBox.Show("Requiere asignar datos: " + ex.Message);
             }
-           
         }
     }
 }
