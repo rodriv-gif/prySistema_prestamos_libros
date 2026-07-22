@@ -15,6 +15,9 @@ namespace prySistema_prestamos_libros
 
         // propiedad
         public int BuscarPorClave { get => buscarPorClave; set => buscarPorClave = value; }
+        public int IdLibro { get; internal set; }
+        public string Localizacion { get; internal set; }
+        public int Inventario { get; internal set; }
 
         public DataTable CargarDataGrid()
         {
