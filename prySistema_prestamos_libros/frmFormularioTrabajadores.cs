@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace prySistema_prestamos_libros
 {
-    public partial class frmFormularioTrabajadores : Form
+    public partial class frmFormularioLibross : Form
     {
-        public frmFormularioTrabajadores()
+        public frmFormularioLibross()
         {
             InitializeComponent();
             CargarCombos();
@@ -24,7 +24,7 @@ namespace prySistema_prestamos_libros
 
         // Constructor para modo edición: recibe la fila seleccionada en el DataGridView
         // de frmGestionTrabajadores y llena los campos con esos datos.
-        public frmFormularioTrabajadores(DataGridViewRow filaSeleccionada) : this()
+        public frmFormularioLibross(DataGridViewRow filaSeleccionada) : this()
         {
             CargarDatosParaEditar(filaSeleccionada);
         }

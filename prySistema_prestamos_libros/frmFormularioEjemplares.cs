@@ -14,5 +14,10 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

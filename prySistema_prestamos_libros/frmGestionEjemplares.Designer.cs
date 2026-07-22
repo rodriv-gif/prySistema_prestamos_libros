@@ -73,6 +73,7 @@
             txtBuscarClave.Name = "txtBuscarClave";
             txtBuscarClave.Size = new Size(245, 30);
             txtBuscarClave.TabIndex = 3;
+            txtBuscarClave.TextChanged += txtBuscarClave_TextChanged;
             // 
             // dgvEjemplares
             // 
@@ -129,6 +130,7 @@
             btnEditar.TabIndex = 16;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -146,6 +148,7 @@
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // frmGestionEjemplares
             // 
