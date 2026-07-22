@@ -167,7 +167,8 @@
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
-            // 
+            btnGuardar.Click += btnGuardar_Click;
+            //
             // btnLimpiar
             // 
             btnLimpiar.Anchor = AnchorStyles.None;
@@ -229,6 +230,7 @@
             dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvLibrosPerteneciente.Size = new Size(830, 205);
             dgvLibrosPerteneciente.TabIndex = 19;
+            dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
             // 
             // chkSeleccionar
             // 
@@ -244,6 +246,7 @@
             txtLibroPerteneciete.Name = "txtLibroPerteneciete";
             txtLibroPerteneciete.Size = new Size(265, 30);
             txtLibroPerteneciete.TabIndex = 20;
+            txtLibroPerteneciete.TextChanged += txtLibroPerteneciete_TextChanged;
             // 
             // frmFormularioEjemplares
             // 

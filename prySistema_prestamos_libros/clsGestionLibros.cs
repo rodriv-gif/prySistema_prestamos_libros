@@ -68,9 +68,38 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        internal object? CargarDataGrid()
+        // Búsqueda de libros para el formulario de Ejemplares: aquí no importa si el
+        // libro ya tiene ejemplares o no (por eso no hay JOIN con tblejemplares), porque
+        // el objetivo es encontrar el libro al que se le van a agregar ejemplares nuevos.
+        public DataTable BuscarLibroParaEjemplar(string isbnBuscado)
         {
-            throw new NotImplementedException();
+            DataTable tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT l.id_libro AS 'id_libro', " +
+                                    "l.titulo_libro AS 'Título', " +
+                                    "l.ISBN AS 'ISBN' " +
+                                "FROM tbllibros l " +
+                                "WHERE l.ISBN LIKE @isbn;";
+
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@isbn", "%" + isbnBuscado + "%");
+                        using (var adaptador = new MySqlDataAdapter(comando))
+                        {
+                            adaptador.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar el libro: " + ex.Message);
+            }
+            return tabla;
         }
     }
 }
