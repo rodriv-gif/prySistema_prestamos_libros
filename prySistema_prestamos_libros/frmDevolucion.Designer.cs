@@ -54,8 +54,6 @@
             colSeleccionar = new DataGridViewCheckBoxColumn();
             lblRegistroDevolucion = new Label();
             lblFechaDevolucion = new Label();
-            lblBibliotecario = new Label();
-            cmbBibliotecario = new ComboBox();
             lblMulta = new Label();
             lblLibrosVencidos = new Label();
             lblDiasRetraso = new Label();
@@ -323,26 +321,6 @@
             lblFechaDevolucion.TabIndex = 20;
             lblFechaDevolucion.Text = "Fecha de devolución";
             // 
-            // lblBibliotecario
-            // 
-            lblBibliotecario.AutoSize = true;
-            lblBibliotecario.BackColor = Color.FromArgb(250, 247, 242);
-            lblBibliotecario.ForeColor = Color.FromArgb(31, 31, 31);
-            lblBibliotecario.Location = new Point(704, 440);
-            lblBibliotecario.Name = "lblBibliotecario";
-            lblBibliotecario.Size = new Size(168, 20);
-            lblBibliotecario.TabIndex = 21;
-            lblBibliotecario.Text = "Biliotecario que registra";
-            // 
-            // cmbBibliotecario
-            // 
-            cmbBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbBibliotecario.FormattingEnabled = true;
-            cmbBibliotecario.Location = new Point(704, 463);
-            cmbBibliotecario.Name = "cmbBibliotecario";
-            cmbBibliotecario.Size = new Size(245, 28);
-            cmbBibliotecario.TabIndex = 23;
-            // 
             // lblMulta
             // 
             lblMulta.AutoSize = true;
@@ -532,8 +510,6 @@
             panel1.Controls.Add(lblDiasRetraso);
             panel1.Controls.Add(lblLibrosVencidos);
             panel1.Controls.Add(lblMulta);
-            panel1.Controls.Add(cmbBibliotecario);
-            panel1.Controls.Add(lblBibliotecario);
             panel1.Controls.Add(lblFechaDevolucion);
             panel1.Controls.Add(lblRegistroDevolucion);
             panel1.Controls.Add(dgvPrestamosActivos);
@@ -604,8 +580,6 @@
         private DataGridView dgvPrestamosActivos;
         private Label lblRegistroDevolucion;
         private Label lblFechaDevolucion;
-        private Label lblBibliotecario;
-        private ComboBox cmbBibliotecario;
         private Label lblMulta;
         private Label lblLibrosVencidos;
         private Label lblDiasRetraso;
