@@ -33,6 +33,7 @@ namespace prySistema_prestamos_libros
                                     "e.localizacion AS 'Localización', " +
                                     "e.inventario AS 'Inventario', " +
                                     "e.fecha_adquisicion AS 'Fecha de adquisición', " +
+                                    "e.estado AS 'Estado', " +
                                     "e.id_libro AS 'id_libro' " +
                                 "FROM tblejemplares e " +
                                 "LEFT JOIN tbllibros l ON e.id_libro = l.id_libro;";
@@ -67,6 +68,7 @@ namespace prySistema_prestamos_libros
                                     "e.localizacion AS 'Localización', " +
                                     "e.inventario AS 'Inventario', " +
                                     "e.fecha_adquisicion AS 'Fecha de adquisición', " +
+                                    "e.estado AS 'Estado', " +
                                     "e.id_libro AS 'id_libro' " +
                                 "FROM tblejemplares e " +
                                 "LEFT JOIN tbllibros l ON e.id_libro = l.id_libro " +
@@ -91,9 +93,10 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        // No hay id_estado_ejemplar (se quitó de la BD), así que no existe una "baja lógica"
-        // posible aquí como con Trabajadores/Alumnos. Esto borra la fila de verdad.
-        public string EliminarEjemplar(int idEjemplar)
+        // Baja lógica: no borra la fila, solo marca estado = 'Inactivo'. Igual que
+        // DarBajaTrabajador()/DarBajaAlumno() — el registro se puede recuperar después
+        // y no rompe referencias de otras tablas (préstamos, etc.).
+        public string DarBajaEjemplar(int idEjemplar)
         {
             string msj = "";
             clsConexion conexionBD = new clsConexion();
@@ -102,7 +105,7 @@ namespace prySistema_prestamos_libros
             {
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "DELETE FROM tblejemplares WHERE id_ejemplar = @idEjemplar;";
+                    string sql = "UPDATE tblejemplares SET estado = 'Inactivo' WHERE id_ejemplar = @idEjemplar;";
 
                     using (var comando = new MySqlCommand(sql, conexion))
                     {
@@ -110,11 +113,11 @@ namespace prySistema_prestamos_libros
                         comando.ExecuteNonQuery();
                     }
                 }
-                msj = "El ejemplar se eliminó correctamente";
+                msj = "El ejemplar se dio de baja correctamente";
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al eliminar el ejemplar: " + ex.Message);
+                throw new Exception("Error al dar de baja al ejemplar: " + ex.Message);
             }
 
             return msj;
