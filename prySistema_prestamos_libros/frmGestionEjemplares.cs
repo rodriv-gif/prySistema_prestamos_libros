@@ -14,6 +14,7 @@ namespace prySistema_prestamos_libros
         public frmGestionEjemplares()
         {
             InitializeComponent();
+            CargarGrid();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -22,7 +23,7 @@ namespace prySistema_prestamos_libros
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
-
+            CargarGrid();
         }
         public void CargarGrid()
         {
@@ -47,13 +48,13 @@ namespace prySistema_prestamos_libros
         {
             if (dgvEjemplares.CurrentRow == null)
             {
-                MessageBox.Show("Selecciona un trabajador de la lista antes de editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecciona un ejemplar de la lista antes de editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             DataGridViewRow fila = dgvEjemplares.CurrentRow;
 
-            var frm = new frmFormularioEjemplares (fila);
+            var frm = new frmFormularioEjemplares(fila);
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
@@ -64,17 +65,17 @@ namespace prySistema_prestamos_libros
         {
             if (dgvEjemplares.CurrentRow == null)
             {
-                MessageBox.Show("Selecciona un trabajador de la lista antes de dar de baja.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecciona un ejemplar de la lista antes de eliminarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             DataGridViewRow fila = dgvEjemplares.CurrentRow;
-            string nombre = fila.Cells["Nombre"].Value?.ToString();
-            int numeroControl = Convert.ToInt32(fila.Cells["Número de Control"].Value);
+            string titulo = fila.Cells["Título"].Value?.ToString();
+            int idEjemplar = Convert.ToInt32(fila.Cells["ID Ejemplar"].Value);
 
             DialogResult respuesta = MessageBox.Show(
-                $"¿Seguro que quieres dar de baja a {nombre}?",
-                "Confirmar baja",
+                $"¿Seguro que quieres eliminar este ejemplar de \"{titulo}\"?",
+                "Confirmar eliminación",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -82,14 +83,14 @@ namespace prySistema_prestamos_libros
                 return;
             try
             {
-                clsTrabajador trabajadorBaja = new clsTrabajador();
-                string msg = trabajadorBaja.DarBajaTrabajador(numeroControl);
-                MessageBox.Show(msg, "Baja exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clsGestionEjemplares ejemplarBaja = new clsGestionEjemplares();
+                string msg = ejemplarBaja.EliminarEjemplar(idEjemplar);
+                MessageBox.Show(msg, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarGrid();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo dar de baja al trabajador: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo eliminar el ejemplar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void txtBuscarClave_TextChanged(object sender, EventArgs e)
