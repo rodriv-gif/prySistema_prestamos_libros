@@ -8,31 +8,60 @@ namespace prySistema_prestamos_libros
 {
     internal class clsConexion
     {
-        //Conexion con la BD
-        private string host = "189.240.192.140";
-        private string bd = "Equipo5_Library_Manager";
-        private string usuario = "usuario5GB";
-        private string password = "equipo5gb";
-        private string puerto = "3306";
+        // Conexión remota (hosting) 
+        private string hostRemoto = "189.240.192.140";
+        private string bdRemota = "Equipo5_Library_Manager";
+        private string usuarioRemoto = "usuario5GB";
+        private string passwordRemoto = "equipo5gb";
+        private string puertoRemoto = "3306";
 
-        private string cadenaConexion => $"server = {host};database ={bd};user = {usuario};password = {password};port = {puerto};";
+        // Conexión local 
+        // Ajusta estos 5 valores a los de tu MySQL local
+        private string hostLocal = "localhost";
+        private string bdLocal = "Equipo5_Library_Manager";
+        private string usuarioLocal = "root";
+        private string passwordLocal = "rootMy142007";
+        private string puertoLocal = "3306";
 
-        //Abre la conexion con la BD
+        private string CadenaConexion(string host, string bd, string usuario, string password, string puerto)
+            => $"server={host};database={bd};user={usuario};password={password};port={puerto};";
+
+        // Indica cuál conexión quedó activa después de AbrirConexion()
+        public bool UsandoRespaldoLocal { get; private set; }
+
+        // Abre la conexión: intenta primero el hosting remoto,
+        // si falla, cae automáticamente a la base local de respaldo.
         public MySqlConnection AbrirConexion()
         {
-            var conexion = new MySqlConnection(cadenaConexion);
+            var conexionRemota = new MySqlConnection(CadenaConexion(hostRemoto, bdRemota, usuarioRemoto, passwordRemoto, puertoRemoto));
 
             try
             {
-                conexion.Open();
-                return conexion;
+                conexionRemota.Open();
+                UsandoRespaldoLocal = false;
+                return conexionRemota;
             }
-            catch (Exception ex)
+            catch (Exception exRemota)
             {
-                throw new Exception("Error al intentar conectarse a la base de datos" + ex.Message, ex);
+                // El hosting no respondió, se intenta con la base local
+                try
+                {
+                    var conexionLocal = new MySqlConnection(CadenaConexion(hostLocal, bdLocal, usuarioLocal, passwordLocal, puertoLocal));
+                    conexionLocal.Open();
+                    UsandoRespaldoLocal = true;
+                    return conexionLocal;
+                }
+                catch (Exception exLocal)
+                {
+                    throw new Exception(
+                        "No se pudo conectar ni al servidor remoto ni a la base local de respaldo.\n" +
+                        "Error remoto: " + exRemota.Message + "\n" +
+                        "Error local: " + exLocal.Message, exLocal);
+                }
             }
         }
-        //Cierra la conexion con la BD
+
+        // Cierra la conexión con la BD
         public void CerrarConexion(MySqlConnection conexion)
         {
             try
@@ -45,12 +74,11 @@ namespace prySistema_prestamos_libros
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al cerrar la conexion con la bse de datos: " + ex.Message, ex);
+                throw new Exception("Error al cerrar la conexion con la base de datos: " + ex.Message, ex);
             }
-
         }
-
     }
 }
+
 
 

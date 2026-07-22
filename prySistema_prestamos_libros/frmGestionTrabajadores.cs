@@ -54,6 +54,12 @@ namespace prySistema_prestamos_libros
                 dgvTrabajadores.Columns["Código Postal"].Visible = false;
             if (dgvTrabajadores.Columns["Municipio"] != null)
                 dgvTrabajadores.Columns["Municipio"].Visible = false;
+            if (dgvTrabajadores.Columns["Nombre"] != null)
+                dgvTrabajadores.Columns["Nombre"].Visible = false;
+            if (dgvTrabajadores.Columns["Apellido paterno"] != null)
+                dgvTrabajadores.Columns["Apellido paterno"].Visible = false;
+            if (dgvTrabajadores.Columns["Apellido materno"] != null)
+                dgvTrabajadores.Columns["Apellido materno"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {

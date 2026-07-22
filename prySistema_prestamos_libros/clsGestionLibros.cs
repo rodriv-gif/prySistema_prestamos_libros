@@ -17,6 +17,11 @@ namespace prySistema_prestamos_libros
         // Trae los ejemplares que coincidan con el ISBN tecleado.
         // Un mismo libro puede tener varios ejemplares, por eso puede regresar más de una fila,
         // una por cada copia física distinta.
+        //
+        // Los autores son muchos a muchos (tbllibro_autor), así que si no se agruparan,
+        // un libro con 2 autores regresaría 2 filas duplicadas (una por autor), duplicando
+        // también el ejemplar. GROUP_CONCAT junta todos los autores de un mismo libro en un
+        // solo texto separado por comas, y el GROUP BY evita esas filas repetidas.
         public DataTable Consultar()
         {
             DataTable tabla = new DataTable();
@@ -27,12 +32,23 @@ namespace prySistema_prestamos_libros
                 {
                     string sql = "SELECT l.titulo_libro AS 'Título', " +
                                     "l.ISBN AS 'ISBN', " +
+                                    "ed.nombre_editorial AS 'Editorial', " +
+                                    "cat.nombre AS 'Categoría', " +
+                                    "idi.nombre_idioma AS 'Idioma', " +
+                                    "GROUP_CONCAT(DISTINCT CONCAT(a.nombre, ' ', a.apellido_paterno) SEPARATOR ', ') AS 'Autores', " +
                                     "e.localizacion AS 'Localización', " +
                                     "e.inventario AS 'Inventario', " +
                                     "e.id_ejemplar AS 'id_ejemplar' " +
                                 "FROM tbllibros l " +
                                 "INNER JOIN tblejemplares e ON l.id_libro = e.id_libro " +
-                                "WHERE l.ISBN LIKE @isbn;";
+                                "LEFT JOIN tbleditoriales ed ON l.id_editorial = ed.id_editorial " +
+                                "LEFT JOIN tblcategorias cat ON l.id_categoria = cat.id_categoria " +
+                                "LEFT JOIN tblidiomas idi ON l.id_idioma = idi.id_idioma " +
+                                "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
+                                "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
+                                "WHERE l.ISBN LIKE @isbn " +
+                                "GROUP BY l.id_libro, e.id_ejemplar, l.titulo_libro, l.ISBN, " +
+                                    "ed.nombre_editorial, cat.nombre, idi.nombre_idioma, e.localizacion, e.inventario;";
 
                     using (var comando = new MySqlCommand(sql, conexion))
                     {

@@ -13,7 +13,21 @@ namespace prySistema_prestamos_libros
         public frmPrestamos()
         {
             InitializeComponent();
+
+            librosAPestar = new DataTable();
+            librosAPestar.Columns.Add("Título");
+            librosAPestar.Columns.Add("ISBN");
+            librosAPestar.Columns.Add("Editorial");
+            librosAPestar.Columns.Add("Categoría");
+            librosAPestar.Columns.Add("Idioma");
+            librosAPestar.Columns.Add("Autores");
+            librosAPestar.Columns.Add("id_ejemplar");
+            dgvLibrosPrestar.DataSource = librosAPestar;
+            dgvLibrosPrestar.Columns["id_ejemplar"].HeaderText = "Ejemplar";
         }
+
+        private int idEjemplarSeleccionado;
+        private DataTable librosAPestar;
 
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
@@ -90,6 +104,91 @@ namespace prySistema_prestamos_libros
             txtCarrera.Clear();
             txtGrado.Clear();
             txtGrupo.Clear();
+        }
+
+        private void txtISBN_TextChanged(object sender, EventArgs e)
+        {
+            string isbnTexto = txtISBN.Text.Trim();
+
+            if (string.IsNullOrEmpty(isbnTexto))
+            {
+                dgvLibros.DataSource = null;
+                return;
+            }
+
+            clsGestionLibros libro = new clsGestionLibros();
+            try
+            {
+                libro.Isbn = isbnTexto;
+                DataTable dtLibros = libro.Consultar();
+                dgvLibros.DataSource = dtLibros;
+                OcultarColumnas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el libro" + ex.Message);
+            }
+        }
+
+        private void LimpiarDataGridLibros()
+        {
+            dgvLibros.Rows.Clear();
+        }
+
+        private void OcultarColumnas()
+        {
+            if (dgvLibros.Columns["id_ejemplar"] != null)
+                dgvLibros.Columns["id_ejemplar"].Visible = false;
+            if (dgvLibros.Columns["Localización"] != null)
+                dgvLibros.Columns["Localización"].Visible = false;
+            if (dgvLibros.Columns["Inventario"] != null)
+                dgvLibros.Columns["Inventario"].Visible = false;
+        }
+
+        private void dgvLibros_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow fila = dgvLibros.CurrentRow;
+
+            if (fila == null)
+            {
+                return;
+            }
+
+            txtLocalizacion.Text = fila.Cells["Localización"].Value?.ToString();
+            txtInventario.Text = fila.Cells["Inventario"].Value?.ToString();
+            idEjemplarSeleccionado = Convert.ToInt32(fila.Cells["id_ejemplar"].Value);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //primero Validar que sí se haya seleccionado un libro
+            if (idEjemplarSeleccionado == 0)
+            {
+                MessageBox.Show("Selecciona un libro primero");
+                return;
+            }
+
+            //validad para evitar agregar el mismo ejemplar dos veces
+            foreach (DataRow filaExistente in librosAPestar.Rows)
+            {
+                if (Convert.ToInt32(filaExistente["id_ejemplar"]) == idEjemplarSeleccionado)
+                {
+                    MessageBox.Show("Ese ejemplar ya está seleccionado en la lista");
+                    return;
+                }
+            }
+
+            //Tomar de nuevo la fila seleccionada en dgvLibros
+            DataGridViewRow filaSeleccionada = dgvLibros.CurrentRow;
+            dgvLibrosPrestar.Rows.Add(
+                filaSeleccionada.Cells["Título"].Value,
+                filaSeleccionada.Cells["ISBN"].Value,
+                filaSeleccionada.Cells["Editorial"].Value,
+                filaSeleccionada.Cells["Categoría"].Value,
+                filaSeleccionada.Cells["Idioma"].Value,
+                filaSeleccionada.Cells["Autores"].Value,
+                idEjemplarSeleccionado
+            );
         }
     }
 }

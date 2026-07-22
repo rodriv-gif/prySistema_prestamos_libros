@@ -138,6 +138,7 @@
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(245, 30);
             txtISBN.TabIndex = 11;
+            txtISBN.TextChanged += txtISBN_TextChanged;
             // 
             // dgvLibros
             // 
@@ -160,8 +161,9 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvLibros.Size = new Size(1249, 118);
+            dgvLibros.Size = new Size(1188, 118);
             dgvLibros.TabIndex = 12;
+            dgvLibros.SelectionChanged += dgvLibros_SelectionChanged;
             // 
             // lblLocalizacion
             // 
@@ -221,6 +223,7 @@
             btnAgregar.TextAlign = ContentAlignment.MiddleRight;
             btnAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnRegistrar
             // 
@@ -582,7 +585,7 @@
             dataGridViewCellStyle7.BackColor = Color.White;
             dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            dgvLibrosPrestar.Size = new Size(1249, 83);
+            dgvLibrosPrestar.Size = new Size(911, 83);
             dgvLibrosPrestar.TabIndex = 70;
             // 
             // lblLibroPrestar
