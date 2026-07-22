@@ -70,6 +70,8 @@
             cmbEstadoPrestamo = new ComboBox();
             lblEstadoPrestamo = new Label();
             panel1 = new Panel();
+            txtBibliotecario = new TextBox();
+            lblBibliotecario = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
@@ -498,6 +500,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblBibliotecario);
+            panel1.Controls.Add(txtBibliotecario);
             panel1.Controls.Add(lblEstadoPrestamo);
             panel1.Controls.Add(cmbEstadoPrestamo);
             panel1.Controls.Add(dtpFechaPago);
@@ -535,6 +539,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1310, 784);
             panel1.TabIndex = 45;
+            // 
+            // txtBibliotecario
+            // 
+            txtBibliotecario.BackColor = Color.White;
+            txtBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBibliotecario.Location = new Point(704, 458);
+            txtBibliotecario.Multiline = true;
+            txtBibliotecario.Name = "txtBibliotecario";
+            txtBibliotecario.Size = new Size(245, 30);
+            txtBibliotecario.TabIndex = 45;
+            // 
+            // lblBibliotecario
+            // 
+            lblBibliotecario.AutoSize = true;
+            lblBibliotecario.BackColor = Color.FromArgb(250, 247, 242);
+            lblBibliotecario.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBibliotecario.Location = new Point(704, 435);
+            lblBibliotecario.Name = "lblBibliotecario";
+            lblBibliotecario.Size = new Size(177, 20);
+            lblBibliotecario.TabIndex = 46;
+            lblBibliotecario.Text = "Bibliotecario que registra";
             // 
             // frmDevolucion
             // 
@@ -597,5 +622,7 @@
         private ComboBox cmbEstadoPrestamo;
         private Label lblEstadoPrestamo;
         private Panel panel1;
+        private Label lblBibliotecario;
+        private TextBox txtBibliotecario;
     }
 }

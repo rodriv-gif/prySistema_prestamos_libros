@@ -14,20 +14,20 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
 
-            librosAPestar = new DataTable();
-            librosAPestar.Columns.Add("Título");
-            librosAPestar.Columns.Add("ISBN");
-            librosAPestar.Columns.Add("Editorial");
-            librosAPestar.Columns.Add("Categoría");
-            librosAPestar.Columns.Add("Idioma");
-            librosAPestar.Columns.Add("Autores");
-            librosAPestar.Columns.Add("id_ejemplar");
-            dgvLibrosPrestar.DataSource = librosAPestar;
+            librosAPrestar = new DataTable();
+            librosAPrestar.Columns.Add("Título");
+            librosAPrestar.Columns.Add("ISBN");
+            librosAPrestar.Columns.Add("Editorial");
+            librosAPrestar.Columns.Add("Categoría");
+            librosAPrestar.Columns.Add("Idioma");
+            librosAPrestar.Columns.Add("Autores");
+            librosAPrestar.Columns.Add("id_ejemplar");
+            dgvLibrosPrestar.DataSource = librosAPrestar;
             dgvLibrosPrestar.Columns["id_ejemplar"].HeaderText = "Ejemplar";
         }
 
         private int idEjemplarSeleccionado;
-        private DataTable librosAPestar;
+        private DataTable librosAPrestar;
 
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
@@ -169,7 +169,7 @@ namespace prySistema_prestamos_libros
             }
 
             //validad para evitar agregar el mismo ejemplar dos veces
-            foreach (DataRow filaExistente in librosAPestar.Rows)
+            foreach (DataRow filaExistente in librosAPrestar.Rows)
             {
                 if (Convert.ToInt32(filaExistente["id_ejemplar"]) == idEjemplarSeleccionado)
                 {
@@ -180,7 +180,7 @@ namespace prySistema_prestamos_libros
 
             //Tomar de nuevo la fila seleccionada en dgvLibros
             DataGridViewRow filaSeleccionada = dgvLibros.CurrentRow;
-            dgvLibrosPrestar.Rows.Add(
+             librosAPrestar.Rows.Add(
                 filaSeleccionada.Cells["Título"].Value,
                 filaSeleccionada.Cells["ISBN"].Value,
                 filaSeleccionada.Cells["Editorial"].Value,
