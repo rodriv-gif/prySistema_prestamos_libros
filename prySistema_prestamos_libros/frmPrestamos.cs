@@ -93,24 +93,36 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Calcula la fecha límite de devolución según el plazo fijo de la política
-        // (15 días para Alumno, 20 para Trabajador), a partir de la fecha de préstamo.
+        // Calcula la fecha límite de devolución. Si el préstamo es "Biblioteca" (se usa y
+        // regresa el mismo día, sin salir del edificio), la devolución es la misma fecha
+        // de préstamo. Si es "Domicilio", aplica el plazo fijo de la política
+        // (15 días para Alumno, 20 para Trabajador).
         private void ActualizarFechaDevolucion()
         {
-            int dias;
+            int? diasSolicitante = null;
             if (txtTipoSolicitante.Text == "Alumno")
-                dias = DiasPrestamoAlumno;
+                diasSolicitante = DiasPrestamoAlumno;
             else if (txtTipoSolicitante.Text == "Trabajador")
-                dias = DiasPrestamoTrabajador;
-            else
+                diasSolicitante = DiasPrestamoTrabajador;
+
+            if (diasSolicitante == null)
                 return; // sin solicitante válido todavía, no hay nada que calcular
 
-            dtpFechaDevolucion.Value = dtpFechaPrestamo.Value.Date.AddDays(dias);
+            if (cmbTipoPrestamo.Text == "Biblioteca")
+                dtpFechaDevolucion.Value = dtpFechaPrestamo.Value.Date;
+            else
+                dtpFechaDevolucion.Value = dtpFechaPrestamo.Value.Date.AddDays(diasSolicitante.Value);
         }
 
-        // Si el bibliotecario cambia la fecha de préstamo (por ejemplo, para registrar uno
-        // atrasado), el plazo se debe recalcular a partir de esa nueva fecha.
+        // Si el bibliotecario cambia la fecha de préstamo (por ejemplo, para registrar uno atrasado, el plazo se debe recalcular a partir de esa nueva fecha.
         private void dtpFechaPrestamo_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarFechaDevolucion();
+        }
+
+        // Si cambian el tipo de préstamo (Biblioteca/Domicilio), también hay que
+        // recalcular, ya que ese dato decide si aplica el mismo día o el plazo de 15/20 días.
+        private void cmbTipoPrestamo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ActualizarFechaDevolucion();
         }

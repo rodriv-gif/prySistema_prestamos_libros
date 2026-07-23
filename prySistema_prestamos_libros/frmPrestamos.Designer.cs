@@ -336,6 +336,7 @@
             cmbTipoPrestamo.Name = "cmbTipoPrestamo";
             cmbTipoPrestamo.Size = new Size(245, 28);
             cmbTipoPrestamo.TabIndex = 47;
+            cmbTipoPrestamo.SelectedIndexChanged += cmbTipoPrestamo_SelectedIndexChanged;
             // 
             // dtpFechaPrestamo
             // 
