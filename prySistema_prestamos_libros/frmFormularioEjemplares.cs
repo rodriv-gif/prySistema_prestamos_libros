@@ -73,6 +73,11 @@ namespace prySistema_prestamos_libros
             {
                 MessageBox.Show("Error al buscar el libro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //verifica que el txt no este vacio
+            if (txtLibroPerteneciete.Text.Trim() == "")
+            {
+                return;
+            }
         }
 
         // Al marcar el checkbox de una fila se guarda el id_libro de esa fila. Se
@@ -94,6 +99,8 @@ namespace prySistema_prestamos_libros
             }
 
             idLibroSeleccionado = marcada ? Convert.ToInt32(filaMarcada.Cells["id_libro"].Value) : 0;
+
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -112,6 +119,7 @@ namespace prySistema_prestamos_libros
                 txtLocalizacion.Focus();
                 return;
             }
+
 
             try
             {
@@ -167,5 +175,24 @@ namespace prySistema_prestamos_libros
             Close();
         }
 
+        private void txtLocalizacion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLocalizacion.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese la localización.");
+                txtLocalizacion.Focus();
+                return;
+            }
+        }
+
+        private void nudCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudCantidad.Value <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser mayor que cero.");
+                nudCantidad.Focus();
+                return;
+            }
+        }
     }
 }

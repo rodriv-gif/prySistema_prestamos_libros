@@ -132,6 +132,7 @@
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(556, 30);
             txtLocalizacion.TabIndex = 11;
+            txtLocalizacion.TextChanged += txtLocalizacion_TextChanged;
             // 
             // dtpFechaAdquisicion
             // 
@@ -150,6 +151,7 @@
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(245, 27);
             nudCantidad.TabIndex = 14;
+            nudCantidad.ValueChanged += nudCantidad_ValueChanged;
             // 
             // btnGuardar
             // 
@@ -168,7 +170,7 @@
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
-            //
+            // 
             // btnLimpiar
             // 
             btnLimpiar.Anchor = AnchorStyles.None;
