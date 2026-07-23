@@ -112,9 +112,9 @@
             lblBuscar.ForeColor = Color.FromArgb(31, 31, 31);
             lblBuscar.Location = new Point(123, 101);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(145, 20);
+            lblBuscar.Size = new Size(241, 20);
             lblBuscar.TabIndex = 4;
-            lblBuscar.Text = "Buscar por matricula";
+            lblBuscar.Text = "Buscar por matricula o por nombre";
             // 
             // txtBuscarAlumno
             // 
@@ -127,6 +127,7 @@
             txtBuscarAlumno.Size = new Size(245, 31);
             txtBuscarAlumno.TabIndex = 3;
             txtBuscarAlumno.TextChanged += txtBuscarAlumno_TextChanged;
+            txtBuscarAlumno.KeyPress += txtBuscarAlumno_KeyPress;
             // 
             // dgvAlumnos
             // 

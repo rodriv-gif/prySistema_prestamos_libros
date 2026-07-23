@@ -19,12 +19,16 @@ namespace prySistema_prestamos_libros
         private static bool esBibliotecario;
         private static string nombreUsuario;
         private static string apellidoPaternoUsuario;
+        private static int idBibliotecario;
 
         //propiedades
         public static bool EsAdministrador { get => esAdministrador; }
         public static bool EsBibliotecario { get => esBibliotecario; }
         public static string Perfil { get => perfil; }
         public static string NombreCompleto { get => nombreUsuario + " " + apellidoPaternoUsuario; }
+        // Id propio de tblbibliotecario (no es el numero_control del trabajador), se usa
+        // para llenar id_bibliotecario al registrar un préstamo.
+        public static int IdBibliotecario { get => idBibliotecario; }
 
         public void AsignarPermisos()
         {
@@ -48,7 +52,8 @@ namespace prySistema_prestamos_libros
                 using (var conexion = conexionBD.AbrirConexion())
                 {
 
-                    string sql = "SELECT b.numero_control, " +
+                    string sql = "SELECT b.id_bibliotecario, " +
+                                    "b.numero_control, " +
                                     "t.nombre, " +
                                     "t.apellido_paterno, " +
                                     "p.perfil AS perfil " +
@@ -69,6 +74,7 @@ namespace prySistema_prestamos_libros
                                 perfil = resultado.GetString("perfil");
                                 nombreUsuario = resultado.GetString("nombre");
                                 apellidoPaternoUsuario = resultado.GetString("apellido_paterno");
+                                idBibliotecario = resultado.GetInt32("id_bibliotecario");
                                 AsignarPermisos();
                                 if (!esAdministrador && !esBibliotecario)
                                 {

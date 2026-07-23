@@ -102,6 +102,15 @@ namespace prySistema_prestamos_libros
             principal.agregarAlContenedor(new frmGestionEjemplares(), pnlContenedor);
         }
 
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            MarcarModuloActivo((Button)sender);
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmReportes(), pnlContenedor);
+        }
+
+
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -132,5 +141,7 @@ namespace prySistema_prestamos_libros
 
 
         }
+
+       
     }
 }

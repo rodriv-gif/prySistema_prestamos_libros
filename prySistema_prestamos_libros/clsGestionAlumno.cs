@@ -9,13 +9,15 @@ namespace prySistema_prestamos_libros
     internal class clsGestionAlumno
     {
         //atrubuto
-        private int matricula;
+        private string busqueda;
 
         private MySqlDataAdapter consulta;
         private DataTable tabla;
 
         //propiedad
-        public int Matricula { get => matricula; set => matricula = value; }
+        // Ahora acepta tanto matrícula como nombre (mismo criterio que clsGestionTrabajador),
+        // por eso es string y ya no int: escribir letras ya no truena la búsqueda.
+        public string Busqueda { get => busqueda; set => busqueda = value; }
 
 
 
@@ -56,7 +58,8 @@ namespace prySistema_prestamos_libros
                                 "LEFT JOIN tbldireccion d ON a.id_direccion = d.id_direccion " +
                                 "LEFT JOIN tblcolonias col ON d.id_colonia = col.id_colonia " +
                                 "LEFT JOIN tblcodigo_postal cp ON col.codigo_postal = cp.codigo_postal " +
-                                "LEFT JOIN tblmunicipios m ON cp.id_municipio = m.id_municipio; ";
+                                "LEFT JOIN tblmunicipios m ON cp.id_municipio = m.id_municipio " +
+                                "WHERE a.estado = 'Activo';";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
@@ -103,10 +106,12 @@ namespace prySistema_prestamos_libros
                                 "LEFT JOIN tblcolonias col ON d.id_colonia = col.id_colonia " +
                                 "LEFT JOIN tblcodigo_postal cp ON col.codigo_postal = cp.codigo_postal " +
                                 "LEFT JOIN tblmunicipios m ON cp.id_municipio = m.id_municipio " +
-                                "WHERE a.matricula LIKE @matricula; ";
+                                "WHERE (a.matricula LIKE @busqueda " +
+                                   "OR a.nombre LIKE @busqueda) " +
+                                   "AND a.estado = 'Activo'; ";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
-                        consultar.Parameters.AddWithValue("@matricula", "%" + matricula + "%");
+                        consultar.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
                         using (consulta = new MySqlDataAdapter(consultar))
                         {
                             consulta.Fill(tabla);

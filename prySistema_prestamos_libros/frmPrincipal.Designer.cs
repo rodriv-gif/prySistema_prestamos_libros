@@ -44,6 +44,7 @@
             btnDevoluciones = new Button();
             lblTituloSistema = new Label();
             pnlSuperior = new Panel();
+            lblRol = new Label();
             lblAyuda = new Label();
             pcbAyuda = new PictureBox();
             lblUsuario = new Label();
@@ -51,7 +52,7 @@
             pnlContenedor = new Panel();
             pnlBienvenida = new Panel();
             lblBienvenida = new Label();
-            lblRol = new Label();
+            btnReportes = new Button();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
@@ -63,6 +64,7 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(17, 30, 71);
+            pnlMenu.Controls.Add(btnReportes);
             pnlMenu.Controls.Add(lblRegistros);
             pnlMenu.Controls.Add(lblOperaciones);
             pnlMenu.Controls.Add(btnCerrarSesion);
@@ -85,7 +87,7 @@
             lblRegistros.AutoSize = true;
             lblRegistros.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegistros.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRegistros.Location = new Point(143, 518);
+            lblRegistros.Location = new Point(153, 497);
             lblRegistros.Name = "lblRegistros";
             lblRegistros.Size = new Size(118, 28);
             lblRegistros.TabIndex = 3;
@@ -96,7 +98,7 @@
             lblOperaciones.AutoSize = true;
             lblOperaciones.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblOperaciones.ForeColor = Color.FromArgb(201, 168, 76);
-            lblOperaciones.Location = new Point(143, 332);
+            lblOperaciones.Location = new Point(143, 318);
             lblOperaciones.Name = "lblOperaciones";
             lblOperaciones.Size = new Size(148, 28);
             lblOperaciones.TabIndex = 3;
@@ -120,7 +122,7 @@
             btnEjemplar.BackColor = Color.FromArgb(201, 168, 76);
             btnEjemplar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEjemplar.ForeColor = Color.FromArgb(17, 30, 71);
-            btnEjemplar.Location = new Point(107, 852);
+            btnEjemplar.Location = new Point(107, 813);
             btnEjemplar.Name = "btnEjemplar";
             btnEjemplar.Size = new Size(212, 52);
             btnEjemplar.TabIndex = 8;
@@ -133,7 +135,7 @@
             btnLibro.BackColor = Color.FromArgb(201, 168, 76);
             btnLibro.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLibro.ForeColor = Color.FromArgb(17, 30, 71);
-            btnLibro.Location = new Point(107, 773);
+            btnLibro.Location = new Point(107, 742);
             btnLibro.Name = "btnLibro";
             btnLibro.Size = new Size(212, 52);
             btnLibro.TabIndex = 7;
@@ -156,7 +158,7 @@
             btnUsuario.BackColor = Color.FromArgb(201, 168, 76);
             btnUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUsuario.ForeColor = Color.FromArgb(17, 30, 71);
-            btnUsuario.Location = new Point(107, 696);
+            btnUsuario.Location = new Point(107, 671);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(212, 52);
             btnUsuario.TabIndex = 6;
@@ -177,7 +179,7 @@
             btnTrabajadores.BackColor = Color.FromArgb(201, 168, 76);
             btnTrabajadores.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTrabajadores.ForeColor = Color.FromArgb(17, 30, 71);
-            btnTrabajadores.Location = new Point(107, 623);
+            btnTrabajadores.Location = new Point(107, 598);
             btnTrabajadores.Name = "btnTrabajadores";
             btnTrabajadores.Size = new Size(212, 52);
             btnTrabajadores.TabIndex = 5;
@@ -191,7 +193,7 @@
             btnNuevoPrestamo.FlatAppearance.BorderColor = Color.Black;
             btnNuevoPrestamo.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNuevoPrestamo.ForeColor = Color.FromArgb(17, 30, 71);
-            btnNuevoPrestamo.Location = new Point(107, 363);
+            btnNuevoPrestamo.Location = new Point(107, 349);
             btnNuevoPrestamo.Name = "btnNuevoPrestamo";
             btnNuevoPrestamo.Size = new Size(212, 52);
             btnNuevoPrestamo.TabIndex = 2;
@@ -204,7 +206,7 @@
             btnAlumnos.BackColor = Color.FromArgb(201, 168, 76);
             btnAlumnos.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAlumnos.ForeColor = Color.FromArgb(17, 30, 71);
-            btnAlumnos.Location = new Point(107, 549);
+            btnAlumnos.Location = new Point(107, 528);
             btnAlumnos.Name = "btnAlumnos";
             btnAlumnos.Size = new Size(212, 52);
             btnAlumnos.TabIndex = 4;
@@ -217,7 +219,7 @@
             btnDevoluciones.BackColor = Color.FromArgb(201, 168, 76);
             btnDevoluciones.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDevoluciones.ForeColor = Color.FromArgb(17, 30, 71);
-            btnDevoluciones.Location = new Point(107, 439);
+            btnDevoluciones.Location = new Point(107, 420);
             btnDevoluciones.Name = "btnDevoluciones";
             btnDevoluciones.Size = new Size(212, 52);
             btnDevoluciones.TabIndex = 3;
@@ -250,6 +252,17 @@
             pnlSuperior.Name = "pnlSuperior";
             pnlSuperior.Size = new Size(1518, 110);
             pnlSuperior.TabIndex = 1;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRol.ForeColor = Color.FromArgb(201, 168, 76);
+            lblRol.Location = new Point(1230, 38);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(126, 25);
+            lblRol.TabIndex = 13;
+            lblRol.Text = "Administrador";
             // 
             // lblAyuda
             // 
@@ -316,20 +329,22 @@
             lblBienvenida.ForeColor = Color.FromArgb(27, 46, 107);
             lblBienvenida.Location = new Point(248, 97);
             lblBienvenida.Name = "lblBienvenida";
-            lblBienvenida.Size = new Size(771, 54);
+            lblBienvenida.Size = new Size(796, 54);
             lblBienvenida.TabIndex = 3;
-            lblBienvenida.Text = "Bienvenido Aministrador / Bibliotecario";
+            lblBienvenida.Text = "Bienvenido Administrador / Bibliotecario";
             // 
-            // lblRol
+            // btnReportes
             // 
-            lblRol.AutoSize = true;
-            lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRol.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRol.Location = new Point(1230, 38);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(126, 25);
-            lblRol.TabIndex = 13;
-            lblRol.Text = "Administrador";
+            btnReportes.BackColor = Color.FromArgb(201, 168, 76);
+            btnReportes.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReportes.ForeColor = Color.FromArgb(17, 30, 71);
+            btnReportes.Location = new Point(107, 882);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(212, 52);
+            btnReportes.TabIndex = 12;
+            btnReportes.Text = "Reportes";
+            btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // frmPrincipal
             // 
@@ -381,5 +396,6 @@
         private PictureBox pcbAyuda;
         private Label lblAyuda;
         private Label lblRol;
+        private Button btnReportes;
     }
 }

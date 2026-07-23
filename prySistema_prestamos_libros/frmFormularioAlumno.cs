@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace prySistema_prestamos_libros
@@ -53,8 +54,7 @@ namespace prySistema_prestamos_libros
             string cp = fila.Cells["Código Postal"].Value?.ToString();
             txtCodigoPostal.Text = cp;
 
-            // Si el evento automático fue bloqueado por la carga del formulario y el DataSource sigue vacío,
-            // forzamos a la clase dirección a traer las colonias en este instante.
+            // Si el evento automático fue bloqueado por la carga del formulario y el DataSource sigue vacío,forzamos a la clase dirección a traer las colonias en este instante.
             if (cmbColonia.DataSource == null && !string.IsNullOrEmpty(cp) && cp.Trim().Length == 5)
             {
                 clsDireccion direccion = new clsDireccion();
@@ -64,8 +64,7 @@ namespace prySistema_prestamos_libros
                 cmbColonia.ValueMember = "id_colonia";
             }
 
-            // Ya con cmbColonia llena la línea de arriba lo carga de forma síncrona(osea enviar datos en bloques,
-            // se selecciona la colonia que ya tenía el alumno.
+            // Ya con cmbColonia llena la línea de arriba lo carga de forma síncrona(osea enviar datos en bloques,se selecciona la colonia que ya tenía el alumno.
             string idColonia = fila.Cells["id_colonia"].Value?.ToString();
             if (!string.IsNullOrEmpty(idColonia))
                 cmbColonia.SelectedValue = Convert.ToInt32(idColonia);
@@ -75,8 +74,129 @@ namespace prySistema_prestamos_libros
             if (!string.IsNullOrEmpty(idCarrera))
                 cmbCarrera.SelectedValue = Convert.ToInt32(idCarrera);
         }
+        // Solo dígitos (matrícula, teléfono, código postal, grado). Se usa en varios campos porque ninguno de ellos acepta letras ni símbolos.
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        // Solo letras y espacio (nombre, apellidos). char.IsLetter ya incluye acentos y Ñ.
+        private void SoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        // La calle sí necesita números y algunos símbolos de dirección (# . , -), además
+        // de letras y espacio, por eso tiene su propio filtro en vez de reusar los de arriba.
+        private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            bool permitido = char.IsLetterOrDigit(e.KeyChar) || " #.,-".IndexOf(e.KeyChar) >= 0;
+            if (!permitido)
+                e.Handled = true;
+        }
+
+        // El grupo puede ser "A", "301", "3A", etc., por eso acepta letras y números pero
+        // no espacios ni símbolos.
+        private void txtGrupo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (!char.IsLetterOrDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        // Revisa que cada campo tenga el tipo de dato y el largo correcto antes de mandarlo
+        // a la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtMatricula.Text))
+            {
+                MessageBox.Show("Captura la matrícula (solo números).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatricula.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombres.Text))
+            {
+                MessageBox.Show("Captura el nombre (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombres.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellidoPaterno.Text))
+            {
+                MessageBox.Show("Captura el apellido paterno (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellidoPaterno.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellidoMaterno.Text))
+            {
+                MessageBox.Show("Captura el apellido materno (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellidoMaterno.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text) ||
+                !Regex.IsMatch(txtCorreo.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("El correo no tiene un formato válido. Debe ser algo como ejemplo@dominio.com.",
+                    "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCorreo.Focus();
+                return false;
+            }
+
+            if (txtTelefono.Text.Trim().Length != 10)
+            {
+                MessageBox.Show("El teléfono debe tener exactamente 10 dígitos.", "Teléfono inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTelefono.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCalle.Text))
+            {
+                MessageBox.Show("Captura la calle.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCalle.Focus();
+                return false;
+            }
+
+            if (txtCodigoPostal.Text.Trim().Length != 5)
+            {
+                MessageBox.Show("El código postal debe tener exactamente 5 dígitos.", "Código postal inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCodigoPostal.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtGrado.Text))
+            {
+                MessageBox.Show("Captura el grado (solo números).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrado.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtGrupo.Text))
+            {
+                MessageBox.Show("Captura el grupo.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrupo.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
+
             try
             {
                 clsAlumnos nuevoAlumno = new clsAlumnos();
@@ -99,8 +219,7 @@ namespace prySistema_prestamos_libros
                 nuevoAlumno.IdColonia = Convert.ToInt32(cmbColonia.SelectedValue);
                 //Para atrapar el id de la carrera al momento de que se seleccione la carrera en el combo
                 nuevoAlumno.IdCarrera = Convert.ToInt32(cmbCarrera.SelectedValue);
-                // Si el formulario se abrió desde Editar, se actualiza el registro existente;
-                // si se abrió desde Nuevo, se inserta uno nuevo.
+                // Si el formulario se abrió desde Editar, se actualiza el registro existente; si se abrió desde Nuevo, se inserta uno nuevo.
                 string msg;
                 if (modoEdicion)
                     msg = nuevoAlumno.ActualizarAlumno(idDireccionOriginal, matriculaOriginal);

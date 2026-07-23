@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionTrabajadores));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pcbContenedorGestion = new PictureBox();
             txtBuscarTrabajador = new TextBox();
             btnDarBaja = new Button();
@@ -64,6 +64,7 @@
             txtBuscarTrabajador.Size = new Size(245, 30);
             txtBuscarTrabajador.TabIndex = 16;
             txtBuscarTrabajador.TextChanged += txtBuscarTrabajador_TextChanged;
+            txtBuscarTrabajador.KeyPress += txtBuscarTrabajador_KeyPress;
             // 
             // btnDarBaja
             // 
@@ -123,31 +124,31 @@
             lblBuscar.ForeColor = Color.Black;
             lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(206, 20);
+            lblBuscar.Size = new Size(275, 20);
             lblBuscar.TabIndex = 12;
-            lblBuscar.Text = "Buscar por numero de control";
+            lblBuscar.Text = "Buscar por numero de control o nombre";
             // 
             // dgvTrabajadores
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dgvTrabajadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvTrabajadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvTrabajadores.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvTrabajadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvTrabajadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvTrabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTrabajadores.EnableHeadersVisualStyles = false;
             dgvTrabajadores.Location = new Point(123, 238);
             dgvTrabajadores.Name = "dgvTrabajadores";
             dgvTrabajadores.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvTrabajadores.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvTrabajadores.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvTrabajadores.Size = new Size(1249, 568);
             dgvTrabajadores.TabIndex = 17;
             // 

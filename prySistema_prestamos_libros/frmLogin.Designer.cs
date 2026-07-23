@@ -52,22 +52,22 @@
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.FromArgb(17, 30, 71);
             lblUsuario.Location = new Point(437, 295);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(92, 31);
+            lblUsuario.Size = new Size(97, 31);
             lblUsuario.TabIndex = 3;
             lblUsuario.Text = "Usuario";
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-            lblContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblContraseña.ForeColor = Color.FromArgb(17, 30, 71);
             lblContraseña.Location = new Point(418, 382);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(129, 31);
+            lblContraseña.Size = new Size(134, 31);
             lblContraseña.TabIndex = 4;
             lblContraseña.Text = "Contraseña";
             // 
@@ -101,6 +101,7 @@
             // 
             txtPassword.BackColor = Color.White;
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.ForeColor = Color.Black;
             txtPassword.Location = new Point(364, 427);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -110,7 +111,8 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = Color.Black;
             txtUsuario.Location = new Point(364, 339);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";

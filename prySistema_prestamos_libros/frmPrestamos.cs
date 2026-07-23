@@ -29,6 +29,10 @@ namespace prySistema_prestamos_libros
         private int idEjemplarSeleccionado;
         private DataTable librosAPrestar;
 
+        // Plazo fijo de la política de la biblioteca: no lo decide el bibliotecario.
+        private const int DiasPrestamoAlumno = 15;
+        private const int DiasPrestamoTrabajador = 20;
+
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
             txtTipoSolicitante.Enabled = false;
@@ -38,6 +42,77 @@ namespace prySistema_prestamos_libros
             txtGrado.Enabled = false;
             txtGrupo.Enabled = false;
             txtCarrera.Enabled = false;
+
+            // El bibliotecario que registra siempre es quien inició sesión, no se escribe
+            // a mano (evita que alguien registre a nombre de otro bibliotecario).
+            txtBibliotecario.Text = clsLogin.NombreCompleto;
+            txtBibliotecario.ReadOnly = true;
+
+            dtpFechaPrestamo.Value = DateTime.Today;
+            dtpFechaDevolucion.Value = DateTime.Today;
+            // Se sigue proponiendo el plazo (15/20 días) como valor inicial al encontrar
+            // al solicitante, pero ahora el bibliotecario puede corregirlo a mano si hace falta.
+
+            CargarCombos();
+        }
+
+        // Llena cmbTipoPrestamo (Biblioteca/Domicilio) y cmbEstadoPrestamo
+        // (Prestado/Devuelto/Vencido) desde sus catálogos en la base de datos.
+        private void CargarCombos()
+        {
+            try
+            {
+                clsPrestamo prestamo = new clsPrestamo();
+
+                DataTable dtTipos = prestamo.ObtenerTiposPrestamo();
+                cmbTipoPrestamo.DataSource = dtTipos;
+                cmbTipoPrestamo.DisplayMember = "tipo";
+                cmbTipoPrestamo.ValueMember = "id_tipo_prestamo";
+                cmbTipoPrestamo.SelectedIndex = -1;
+
+                DataTable dtEstados = prestamo.ObtenerEstadosPrestamo();
+                cmbEstadoPrestamo.DataSource = dtEstados;
+                cmbEstadoPrestamo.DisplayMember = "estado";
+                cmbEstadoPrestamo.ValueMember = "id_estado";
+
+                // Se preselecciona "Prestado" como valor inicial (lo normal para un préstamo
+                // nuevo), pero el combo queda habilitado por si el bibliotecario necesita
+                // cambiarlo a mano.
+                foreach (DataRow filaEstado in dtEstados.Rows)
+                {
+                    if (filaEstado["estado"].ToString() == "Prestado")
+                    {
+                        cmbEstadoPrestamo.SelectedValue = filaEstado["id_estado"];
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los catálogos de préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Calcula la fecha límite de devolución según el plazo fijo de la política
+        // (15 días para Alumno, 20 para Trabajador), a partir de la fecha de préstamo.
+        private void ActualizarFechaDevolucion()
+        {
+            int dias;
+            if (txtTipoSolicitante.Text == "Alumno")
+                dias = DiasPrestamoAlumno;
+            else if (txtTipoSolicitante.Text == "Trabajador")
+                dias = DiasPrestamoTrabajador;
+            else
+                return; // sin solicitante válido todavía, no hay nada que calcular
+
+            dtpFechaDevolucion.Value = dtpFechaPrestamo.Value.Date.AddDays(dias);
+        }
+
+        // Si el bibliotecario cambia la fecha de préstamo (por ejemplo, para registrar uno
+        // atrasado), el plazo se debe recalcular a partir de esa nueva fecha.
+        private void dtpFechaPrestamo_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarFechaDevolucion();
         }
 
         // Al teclear el número de control / matrícula, se busca primero en Alumnos y,
@@ -67,6 +142,7 @@ namespace prySistema_prestamos_libros
                     txtCarrera.Text = fila["Carrera"].ToString();
                     txtGrado.Text = fila["Grado"].ToString();
                     txtGrupo.Text = fila["Grupo"].ToString();
+                    ActualizarFechaDevolucion();
                     return;
                 }
 
@@ -82,6 +158,7 @@ namespace prySistema_prestamos_libros
                     txtCarrera.Text = fila["Carrera"].ToString();
                     txtGrado.Clear();
                     txtGrupo.Clear();
+                    ActualizarFechaDevolucion();
                     return;
                 }
 
@@ -108,9 +185,9 @@ namespace prySistema_prestamos_libros
 
         private void txtISBN_TextChanged(object sender, EventArgs e)
         {
-            string isbnTexto = txtISBN.Text.Trim();
+            string busquedaTexto = txtISBN.Text.Trim();
 
-            if (string.IsNullOrEmpty(isbnTexto))
+            if (string.IsNullOrEmpty(busquedaTexto))
             {
                 dgvLibros.DataSource = null;
                 return;
@@ -119,14 +196,14 @@ namespace prySistema_prestamos_libros
             clsGestionLibros libro = new clsGestionLibros();
             try
             {
-                libro.Isbn = isbnTexto;
+                libro.Busqueda = busquedaTexto;
                 DataTable dtLibros = libro.Consultar();
                 dgvLibros.DataSource = dtLibros;
                 OcultarColumnas();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar el libro" + ex.Message);
+                MessageBox.Show("Error al buscar el libro: " + ex.Message);
             }
         }
 
@@ -189,6 +266,119 @@ namespace prySistema_prestamos_libros
                 filaSeleccionada.Cells["Autores"].Value,
                 idEjemplarSeleccionado
             );
+        }
+
+        // Revisa que todo lo necesario para registrar el préstamo esté completo antes de
+        // tocar la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
+        private bool ValidarPrestamo()
+        {
+            if (txtTipoSolicitante.Text != "Alumno" && txtTipoSolicitante.Text != "Trabajador")
+            {
+                MessageBox.Show("Busca un solicitante válido (alumno o trabajador) antes de registrar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumControlSolicitante.Focus();
+                return false;
+            }
+
+            if (librosAPrestar.Rows.Count == 0)
+            {
+                MessageBox.Show("Agrega al menos un libro a la lista de préstamo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cmbTipoPrestamo.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona el tipo de préstamo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbTipoPrestamo.Focus();
+                return false;
+            }
+
+            if (cmbEstadoPrestamo.SelectedValue == null)
+            {
+                MessageBox.Show("No se encontró el estado 'Prestado' en el catálogo (tblestado_prestamo).", "Error de catálogo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (dtpFechaDevolucion.Value.Date < dtpFechaPrestamo.Value.Date)
+            {
+                MessageBox.Show("La fecha de devolución no puede ser antes que la fecha de préstamo.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarPrestamo())
+                return;
+
+            try
+            {
+                // Solo uno de los dos (matricula/numeroControl) lleva valor, según el tipo
+                // de solicitante que ya se encontró al teclear el número de control/matrícula.
+                int idSolicitante = Convert.ToInt32(txtNumControlSolicitante.Text.Trim());
+                int? matricula = null;
+                int? numeroControl = null;
+
+                if (txtTipoSolicitante.Text == "Alumno")
+                    matricula = idSolicitante;
+                else
+                    numeroControl = idSolicitante;
+
+                List<int> idsEjemplares = new List<int>();
+                foreach (DataRow fila in librosAPrestar.Rows)
+                    idsEjemplares.Add(Convert.ToInt32(fila["id_ejemplar"]));
+
+                clsPrestamo prestamo = new clsPrestamo();
+                string msg = prestamo.RegistrarPrestamo(
+                    matricula,
+                    numeroControl,
+                    Convert.ToInt32(cmbTipoPrestamo.SelectedValue),
+                    Convert.ToInt32(cmbEstadoPrestamo.SelectedValue),
+                    dtpFechaPrestamo.Value,
+                    dtpFechaDevolucion.Value,
+                    clsLogin.IdBibliotecario,
+                    idsEjemplares
+                );
+
+                MessageBox.Show(msg, "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarFormularioCompleto();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo registrar el préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLimpiarPrestamo_Click(object sender, EventArgs e)
+        {
+            LimpiarFormularioCompleto();
+        }
+
+        // Deja el formulario como recién abierto, listo para capturar otro préstamo.
+        // No toca txtBibliotecario: ese siempre es el usuario logueado.
+        private void LimpiarFormularioCompleto()
+        {
+            txtNumControlSolicitante.Clear();
+            LimpiarDatosSolicitante();
+
+            txtISBN.Clear();
+            dgvLibros.DataSource = null;
+            txtLocalizacion.Clear();
+            txtInventario.Clear();
+            idEjemplarSeleccionado = 0;
+
+            librosAPrestar.Rows.Clear();
+
+            cmbTipoPrestamo.SelectedIndex = -1;
+            // cmbEstadoPrestamo NO se toca: siempre se queda fijo en "Prestado" y bloqueado.
+            dtpFechaPrestamo.Value = DateTime.Today;
+            dtpFechaDevolucion.Value = DateTime.Today;
+        }
+
+        private void btnCancelarPrestamo_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

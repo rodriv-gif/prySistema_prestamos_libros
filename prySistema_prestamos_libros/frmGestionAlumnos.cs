@@ -118,6 +118,18 @@ namespace prySistema_prestamos_libros
             }
         }
 
+        // Bloquea cualquier carácter que no sea letra, número o espacio, para que no
+        // se puedan escribir símbolos (%, ', ;, --, etc.) en la barra de búsqueda.
+        private void txtBuscarAlumno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
         private void txtBuscarAlumno_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtBuscarAlumno.Text))
@@ -130,13 +142,13 @@ namespace prySistema_prestamos_libros
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             try
             {
-                alumno.Matricula = int.Parse(txtBuscarAlumno.Text);
+                alumno.Busqueda = txtBuscarAlumno.Text;
                 dgvAlumnos.DataSource = alumno.Consultar();
                 OcultarColumnas();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Requiere asignar datos" + ex.Message);
+                MessageBox.Show("Error al buscar: " + ex.Message);
             }
         }
     }

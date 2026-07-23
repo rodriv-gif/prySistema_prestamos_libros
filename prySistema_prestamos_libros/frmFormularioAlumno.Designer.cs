@@ -219,9 +219,11 @@
             txtApellidoPaterno.Location = new Point(564, 54);
             txtApellidoPaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoPaterno.Multiline = true;
+            txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(215, 24);
             txtApellidoPaterno.TabIndex = 58;
+            txtApellidoPaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // txtNombres
             // 
@@ -229,9 +231,11 @@
             txtNombres.Location = new Point(294, 55);
             txtNombres.Margin = new Padding(3, 2, 3, 2);
             txtNombres.Multiline = true;
+            txtNombres.MaxLength = 50;
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(215, 24);
             txtNombres.TabIndex = 56;
+            txtNombres.KeyPress += SoloLetras_KeyPress;
             // 
             // txtMatricula
             // 
@@ -239,9 +243,11 @@
             txtMatricula.Location = new Point(25, 55);
             txtMatricula.Margin = new Padding(3, 2, 3, 2);
             txtMatricula.Multiline = true;
+            txtMatricula.MaxLength = 9;
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(215, 24);
             txtMatricula.TabIndex = 54;
+            txtMatricula.KeyPress += SoloNumeros_KeyPress;
             // 
             // lblApellidoMaterno
             // 
@@ -379,9 +385,11 @@
             txtApellidoMaterno.Location = new Point(841, 54);
             txtApellidoMaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoMaterno.Multiline = true;
+            txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(215, 24);
             txtApellidoMaterno.TabIndex = 81;
+            txtApellidoMaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // txtTelefono
             // 
@@ -389,9 +397,11 @@
             txtTelefono.Location = new Point(24, 116);
             txtTelefono.Margin = new Padding(3, 2, 3, 2);
             txtTelefono.Multiline = true;
+            txtTelefono.MaxLength = 10;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(215, 24);
             txtTelefono.TabIndex = 82;
+            txtTelefono.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtCorreo
             // 
@@ -399,6 +409,7 @@
             txtCorreo.Location = new Point(297, 116);
             txtCorreo.Margin = new Padding(3, 2, 3, 2);
             txtCorreo.Multiline = true;
+            txtCorreo.MaxLength = 100;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(215, 24);
             txtCorreo.TabIndex = 83;
@@ -409,9 +420,11 @@
             txtCalle.Location = new Point(835, 272);
             txtCalle.Margin = new Padding(3, 2, 3, 2);
             txtCalle.Multiline = true;
+            txtCalle.MaxLength = 100;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(215, 24);
             txtCalle.TabIndex = 86;
+            txtCalle.KeyPress += txtCalle_KeyPress;
             // 
             // txtCodigoPostal
             // 
@@ -419,10 +432,12 @@
             txtCodigoPostal.Location = new Point(25, 274);
             txtCodigoPostal.Margin = new Padding(3, 2, 3, 2);
             txtCodigoPostal.Multiline = true;
+            txtCodigoPostal.MaxLength = 5;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(215, 24);
             txtCodigoPostal.TabIndex = 88;
             txtCodigoPostal.TextChanged += txtCodigoPostal_TextChanged;
+            txtCodigoPostal.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtGrado
             // 
@@ -430,9 +445,11 @@
             txtGrado.Location = new Point(294, 404);
             txtGrado.Margin = new Padding(3, 2, 3, 2);
             txtGrado.Multiline = true;
+            txtGrado.MaxLength = 2;
             txtGrado.Name = "txtGrado";
             txtGrado.Size = new Size(215, 24);
             txtGrado.TabIndex = 89;
+            txtGrado.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtGrupo
             // 
@@ -440,9 +457,11 @@
             txtGrupo.Location = new Point(564, 405);
             txtGrupo.Margin = new Padding(3, 2, 3, 2);
             txtGrupo.Multiline = true;
+            txtGrupo.MaxLength = 10;
             txtGrupo.Name = "txtGrupo";
             txtGrupo.Size = new Size(215, 24);
             txtGrupo.TabIndex = 90;
+            txtGrupo.KeyPress += txtGrupo_KeyPress;
             // 
             // dtpFechaRegistro
             // 

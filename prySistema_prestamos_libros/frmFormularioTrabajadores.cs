@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace prySistema_prestamos_libros
@@ -52,8 +53,7 @@ namespace prySistema_prestamos_libros
             // que carga Municipio y llena cmbColonia con las colonias de ese CP.
             txtCodigoPostal.Text = fila.Cells["Código Postal"].Value?.ToString();
 
-            // Ya con cmbColonia llena la línea de arriba lo carga de forma síncrona(osea enviar datos en bloques,
-            // se selecciona la colonia que ya tenía el trabajador.
+            // Ya con cmbColonia llena la línea de arriba lo carga de forma síncrona(osea enviar datos en bloques,se selecciona la colonia que ya tenía el trabajador.
             string idColonia = fila.Cells["id_colonia"].Value?.ToString();
             if (!string.IsNullOrEmpty(idColonia))
                 cmbColonia.SelectedValue = Convert.ToInt32(idColonia);
@@ -64,8 +64,104 @@ namespace prySistema_prestamos_libros
                 cmbCarreraArea.SelectedValue = Convert.ToInt32(idCarrera);
         }
 
+        // Solo dígitos (numero de control, teléfono, código postal). Se usa en los tres campos porque ninguno de ellos acepta letras ni símbolos.
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        // Solo letras y espacio (nombre, apellidos). char.IsLetter ya incluye acentos y Ñ.
+        private void SoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        // La calle sí necesita números y algunos símbolos de dirección (# . , -), además de letras y espacio, por eso tiene su propio filtro en vez de reusar los de arriba.
+        private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            bool permitido = char.IsLetterOrDigit(e.KeyChar) || " #.,-".IndexOf(e.KeyChar) >= 0;
+            if (!permitido)
+                e.Handled = true;
+        }
+
+        // Revisa que cada campo tenga el tipo de dato y el largo correcto antes de mandarlo
+        // a la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNumeroControl.Text))
+            {
+                MessageBox.Show("Captura el número de control (solo números).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumeroControl.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("Captura el nombre (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellidoPaterno.Text))
+            {
+                MessageBox.Show("Captura el apellido paterno (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellidoPaterno.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellidoMaterno.Text))
+            {
+                MessageBox.Show("Captura el apellido materno (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellidoMaterno.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text) ||
+                !Regex.IsMatch(txtCorreo.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("El correo no tiene un formato válido. Debe ser algo como ejemplo@dominio.com.",
+                    "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCorreo.Focus();
+                return false;
+            }
+
+            if (txtTelefono.Text.Trim().Length != 10)
+            {
+                MessageBox.Show("El teléfono debe tener exactamente 10 dígitos.", "Teléfono inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTelefono.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCalle.Text))
+            {
+                MessageBox.Show("Captura la calle.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCalle.Focus();
+                return false;
+            }
+
+            if (txtCodigoPostal.Text.Trim().Length != 5)
+            {
+                MessageBox.Show("El código postal debe tener exactamente 5 dígitos.", "Código postal inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCodigoPostal.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
+
             try
             {
                 clsTrabajador nuevoTrabajador = new clsTrabajador();

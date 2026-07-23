@@ -9,16 +9,13 @@ namespace prySistema_prestamos_libros
     internal class clsGestionLibros
     {
         // atributo
-        private string isbn;
+        private string busqueda;
 
         // propiedad
-        public string Isbn { get => isbn; set => isbn = value; }
+        // Ahora acepta tanto ISBN como título, mismo criterio que las demás búsquedas del proyecto (Trabajadores, Alumnos).
+        public string Busqueda { get => busqueda; set => busqueda = value; }
         public int BuscarClave { get; internal set; }
 
-        // Trae los ejemplares que coincidan con el ISBN tecleado.
-        // Un mismo libro puede tener varios ejemplares, por eso puede regresar más de una fila,
-        // una por cada copia física distinta.
-        //
         // Los autores son muchos a muchos (tbllibro_autor), así que si no se agruparan,
         // un libro con 2 autores regresaría 2 filas duplicadas (una por autor), duplicando
         // también el ejemplar. GROUP_CONCAT junta todos los autores de un mismo libro en un
@@ -47,13 +44,13 @@ namespace prySistema_prestamos_libros
                                 "LEFT JOIN tblidiomas idi ON l.id_idioma = idi.id_idioma " +
                                 "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
                                 "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
-                                "WHERE l.ISBN LIKE @isbn " +
+                                "WHERE l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda " +
                                 "GROUP BY l.id_libro, e.id_ejemplar, l.titulo_libro, l.ISBN, " +
                                     "ed.nombre_editorial, cat.nombre, idi.nombre_idioma, e.localizacion, e.inventario;";
 
                     using (var comando = new MySqlCommand(sql, conexion))
                     {
-                        comando.Parameters.AddWithValue("@isbn", "%" + isbn + "%");
+                        comando.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
                         using (var adaptador = new MySqlDataAdapter(comando))
                         {
                             adaptador.Fill(tabla);
@@ -69,8 +66,7 @@ namespace prySistema_prestamos_libros
         }
 
         // Búsqueda de libros para el formulario de Ejemplares: aquí no importa si el
-        // libro ya tiene ejemplares o no (por eso no hay JOIN con tblejemplares), porque
-        // el objetivo es encontrar el libro al que se le van a agregar ejemplares nuevos.
+        // libro ya tiene ejemplares o no (por eso no hay JOIN con tblejemplares), porque el objetivo es encontrar el libro al que se le van a agregar ejemplares nuevos.
         public DataTable BuscarLibroParaEjemplar(string isbnBuscado)
         {
             DataTable tabla = new DataTable();

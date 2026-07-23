@@ -104,24 +104,29 @@
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(954, 75);
             txtApellidoMaterno.Multiline = true;
+            txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 27;
+            txtApellidoMaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(649, 75);
             txtApellidoPaterno.Multiline = true;
+            txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 25;
+            txtApellidoPaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.Location = new Point(337, 156);
             txtCorreo.Multiline = true;
+            txtCorreo.MaxLength = 100;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(245, 30);
             txtCorreo.TabIndex = 24;
@@ -131,27 +136,33 @@
             txtNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(337, 75);
             txtNombre.Multiline = true;
+            txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(245, 30);
             txtNombre.TabIndex = 23;
+            txtNombre.KeyPress += SoloLetras_KeyPress;
             // 
             // txtTelefono
             // 
             txtTelefono.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.Location = new Point(32, 156);
             txtTelefono.Multiline = true;
+            txtTelefono.MaxLength = 10;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(245, 30);
             txtTelefono.TabIndex = 22;
+            txtTelefono.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtNumeroControl
             // 
             txtNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroControl.Location = new Point(32, 75);
             txtNumeroControl.Multiline = true;
+            txtNumeroControl.MaxLength = 9;
             txtNumeroControl.Name = "txtNumeroControl";
             txtNumeroControl.Size = new Size(245, 30);
             txtNumeroControl.TabIndex = 21;
+            txtNumeroControl.KeyPress += SoloNumeros_KeyPress;
             // 
             // lblApellidoMaterno
             // 
@@ -258,19 +269,23 @@
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigoPostal.Location = new Point(32, 351);
             txtCodigoPostal.Multiline = true;
+            txtCodigoPostal.MaxLength = 5;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
             txtCodigoPostal.TabIndex = 31;
             txtCodigoPostal.TextChanged += txtCodigoPostal_TextChanged;
+            txtCodigoPostal.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtCalle
             // 
             txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCalle.Location = new Point(954, 351);
             txtCalle.Multiline = true;
+            txtCalle.MaxLength = 100;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(245, 30);
             txtCalle.TabIndex = 29;
+            txtCalle.KeyPress += txtCalle_KeyPress;
             // 
             // lblArea
             // 

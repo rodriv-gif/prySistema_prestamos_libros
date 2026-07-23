@@ -44,17 +44,23 @@ namespace prySistema_prestamos_libros
             // "Cantidad" solo aplica cuando se capturan varios ejemplares nuevos de golpe;
             // al editar uno que ya existe no tiene sentido, así que se deshabilita.
             nudCantidad.Enabled = false;
+
+            // El TextChanged de txtLibroPerteneciete no se dispara solo con asignar .Text
+            // en el mismo orden esperado (y además está bloqueado en modo edición), así que
+            // el grid del libro se cargaba vacío. Se carga manualmente aquí para que se vea
+            // el libro completo, con su checkbox ya marcado.
+            txtLibroPerteneciete.ReadOnly = true;
+            CargarLibroEnGrid(txtLibroPerteneciete.Text);
         }
 
         // Busca el libro por ISBN y lo muestra en el grid para que el bibliotecario
         // lo marque con el checkbox (así se sabe a qué libro pertenecerán los ejemplares).
-        private void txtLibroPerteneciete_TextChanged(object sender, EventArgs e)
+        // En modo edición, además, marca automáticamente el checkbox del libro que ya
+        // tiene asignado este ejemplar, y el grid queda de solo lectura (cambiar el libro
+        // de un ejemplar ya existente no está permitido; ActualizarEjemplar no lo toca).
+        private void CargarLibroEnGrid(string isbnBuscado)
         {
-            if (modoEdicion) return; // en edición el libro ya viene fijo, no se vuelve a buscar
-
-            string isbnTexto = txtLibroPerteneciete.Text.Trim();
-
-            if (string.IsNullOrEmpty(isbnTexto))
+            if (string.IsNullOrWhiteSpace(isbnBuscado))
             {
                 dgvLibrosPerteneciente.DataSource = null;
                 return;
@@ -63,16 +69,33 @@ namespace prySistema_prestamos_libros
             try
             {
                 clsGestionLibros libro = new clsGestionLibros();
-                DataTable dtLibros = libro.BuscarLibroParaEjemplar(isbnTexto);
+                DataTable dtLibros = libro.BuscarLibroParaEjemplar(isbnBuscado);
                 dgvLibrosPerteneciente.DataSource = dtLibros;
 
                 if (dgvLibrosPerteneciente.Columns["id_libro"] != null)
                     dgvLibrosPerteneciente.Columns["id_libro"].Visible = false;
+
+                if (modoEdicion)
+                {
+                    foreach (DataGridViewRow filaGrid in dgvLibrosPerteneciente.Rows)
+                    {
+                        int idLibroFila = Convert.ToInt32(filaGrid.Cells["id_libro"].Value);
+                        filaGrid.Cells["chkSeleccionar"].Value = (idLibroFila == idLibroSeleccionado);
+                    }
+                    dgvLibrosPerteneciente.ReadOnly = true;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar el libro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtLibroPerteneciete_TextChanged(object sender, EventArgs e)
+        {
+            if (modoEdicion) return; // en edición el libro ya viene fijo, no se vuelve a buscar
+
+            CargarLibroEnGrid(txtLibroPerteneciete.Text.Trim());
         }
 
         // Al marcar el checkbox de una fila se guarda el id_libro de esa fila. Se

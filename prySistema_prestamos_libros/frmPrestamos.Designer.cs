@@ -130,7 +130,7 @@
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(41, 20);
             lblISBN.TabIndex = 10;
-            lblISBN.Text = "ISBN";
+            lblISBN.Text = "ISBN o Título";
             // 
             // txtISBN
             // 
@@ -244,6 +244,7 @@
             btnRegistrar.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnLimpiarPrestamo
             // 
@@ -260,6 +261,7 @@
             btnLimpiarPrestamo.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarPrestamo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiarPrestamo.UseVisualStyleBackColor = false;
+            btnLimpiarPrestamo.Click += btnLimpiarPrestamo_Click;
             // 
             // btnCancelarPrestamo
             // 
@@ -276,6 +278,7 @@
             btnCancelarPrestamo.TextAlign = ContentAlignment.MiddleRight;
             btnCancelarPrestamo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelarPrestamo.UseVisualStyleBackColor = false;
+            btnCancelarPrestamo.Click += btnCancelarPrestamo_Click;
             // 
             // lblTipoPrestamo
             // 
@@ -343,6 +346,7 @@
             dtpFechaPrestamo.Name = "dtpFechaPrestamo";
             dtpFechaPrestamo.Size = new Size(245, 27);
             dtpFechaPrestamo.TabIndex = 49;
+            dtpFechaPrestamo.ValueChanged += dtpFechaPrestamo_ValueChanged;
             // 
             // dtpFechaDevolucion
             // 
