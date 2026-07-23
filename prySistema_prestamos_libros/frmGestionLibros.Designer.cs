@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionLibros));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             pcbContenedorGestion = new PictureBox();
             lblBuscar = new Label();
             txtBuscarLibro = new TextBox();
@@ -73,29 +73,30 @@
             txtBuscarLibro.Name = "txtBuscarLibro";
             txtBuscarLibro.Size = new Size(245, 30);
             txtBuscarLibro.TabIndex = 2;
+            txtBuscarLibro.TextChanged += txtBuscarLibro_TextChanged;
             // 
             // dgvLibros
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvLibros.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibros.EnableHeadersVisualStyles = false;
             dgvLibros.Location = new Point(123, 238);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvLibros.Size = new Size(1249, 568);
             dgvLibros.TabIndex = 9;
             // 
@@ -131,6 +132,7 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -147,6 +149,7 @@
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // frmGestionLibros
             // 

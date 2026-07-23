@@ -34,7 +34,7 @@
             lblNombreAutor = new Label();
             lblApellidoPaterno = new Label();
             lblApellidoMaterno = new Label();
-            rxtNombreAutor = new TextBox();
+            txtNombreAutor = new TextBox();
             txtApellidoPaterno = new TextBox();
             txtApellidoMaterno = new TextBox();
             btnRegistrar = new Button();
@@ -94,13 +94,13 @@
             lblApellidoMaterno.TabIndex = 4;
             lblApellidoMaterno.Text = "ApellidoMaterno";
             // 
-            // rxtNombreAutor
+            // txtNombreAutor
             // 
-            rxtNombreAutor.Location = new Point(46, 95);
-            rxtNombreAutor.Multiline = true;
-            rxtNombreAutor.Name = "rxtNombreAutor";
-            rxtNombreAutor.Size = new Size(245, 30);
-            rxtNombreAutor.TabIndex = 5;
+            txtNombreAutor.Location = new Point(46, 95);
+            txtNombreAutor.Multiline = true;
+            txtNombreAutor.Name = "txtNombreAutor";
+            txtNombreAutor.Size = new Size(245, 30);
+            txtNombreAutor.TabIndex = 5;
             // 
             // txtApellidoPaterno
             // 
@@ -133,6 +133,7 @@
             btnRegistrar.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnCancelar
             // 
@@ -149,6 +150,7 @@
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // frmFormularioAutores
             // 
@@ -160,7 +162,7 @@
             Controls.Add(btnRegistrar);
             Controls.Add(txtApellidoMaterno);
             Controls.Add(txtApellidoPaterno);
-            Controls.Add(rxtNombreAutor);
+            Controls.Add(txtNombreAutor);
             Controls.Add(lblApellidoMaterno);
             Controls.Add(lblApellidoPaterno);
             Controls.Add(lblNombreAutor);
@@ -180,7 +182,7 @@
         private Label lblNombreAutor;
         private Label lblApellidoPaterno;
         private Label lblApellidoMaterno;
-        private TextBox rxtNombreAutor;
+        private TextBox txtNombreAutor;
         private TextBox txtApellidoPaterno;
         private TextBox txtApellidoMaterno;
         private Button btnRegistrar;
