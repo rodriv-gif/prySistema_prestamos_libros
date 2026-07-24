@@ -61,9 +61,9 @@
             lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(119, 20);
+            lblBuscar.Size = new Size(170, 20);
             lblBuscar.TabIndex = 1;
-            lblBuscar.Text = "Buscar por ISBN ";
+            lblBuscar.Text = "Buscar por ISBN o Titulo";
             // 
             // txtBuscarLibro
             // 
@@ -73,6 +73,7 @@
             txtBuscarLibro.Name = "txtBuscarLibro";
             txtBuscarLibro.Size = new Size(245, 30);
             txtBuscarLibro.TabIndex = 2;
+            txtBuscarLibro.TextChanged += txtBuscarLibro_TextChanged;
             // 
             // dgvLibros
             // 
@@ -131,6 +132,7 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -147,6 +149,7 @@
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // frmGestionLibros
             // 
