@@ -128,7 +128,7 @@
             lblISBN.ForeColor = Color.FromArgb(31, 31, 31);
             lblISBN.Location = new Point(116, 420);
             lblISBN.Name = "lblISBN";
-            lblISBN.Size = new Size(41, 20);
+            lblISBN.Size = new Size(96, 20);
             lblISBN.TabIndex = 10;
             lblISBN.Text = "ISBN o Título";
             // 
@@ -165,7 +165,7 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvLibros.Size = new Size(1188, 112);
+            dgvLibros.Size = new Size(1016, 112);
             dgvLibros.TabIndex = 12;
             dgvLibros.SelectionChanged += dgvLibros_SelectionChanged;
             // 
@@ -219,7 +219,7 @@
             btnAgregar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.FromArgb(201, 168, 76);
             btnAgregar.Image = (Image)resources.GetObject("btnAgregar.Image");
-            btnAgregar.Location = new Point(1155, 599);
+            btnAgregar.Location = new Point(1178, 516);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(150, 45);
             btnAgregar.TabIndex = 17;

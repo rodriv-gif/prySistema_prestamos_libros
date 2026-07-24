@@ -114,6 +114,56 @@ namespace prySistema_prestamos_libros
             }
             return tabla;
         }
+        // Búsqueda específica para el formulario de Préstamos: aquí sí importa el ejemplar
+        // físico (localización, inventario, id_ejemplar), porque lo que se presta es una
+        // copia concreta, no "el libro" en abstracto. Por eso NO reutiliza Consultar() de
+        // arriba (esa es para el catálogo de frmGestionLibros y ya no trae ejemplares) —
+        // son responsabilidades distintas aunque ambas empiecen en tbllibros.
+        public DataTable BuscarLibrosConEjemplares(string busquedaTexto)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT l.titulo_libro AS 'Título', " +
+                                    "l.ISBN AS 'ISBN', " +
+                                    "ed.nombre_editorial AS 'Editorial', " +
+                                    "cat.nombre AS 'Categoría', " +
+                                    "idi.nombre_idioma AS 'Idioma', " +
+                                    "GROUP_CONCAT(DISTINCT CONCAT(a.nombre, ' ', a.apellido_paterno) SEPARATOR ', ') AS 'Autores', " +
+                                    "e.localizacion AS 'Localización', " +
+                                    "(SELECT COUNT(*) FROM tblejemplares e2 WHERE e2.id_libro = l.id_libro) AS 'Inventario', " +
+                                    "e.id_ejemplar AS 'id_ejemplar' " +
+                                "FROM tbllibros l " +
+                                "INNER JOIN tblejemplares e ON l.id_libro = e.id_libro " +
+                                "LEFT JOIN tbleditoriales ed ON l.id_editorial = ed.id_editorial " +
+                                "LEFT JOIN tblcategorias cat ON l.id_categoria = cat.id_categoria " +
+                                "LEFT JOIN tblidiomas idi ON l.id_idioma = idi.id_idioma " +
+                                "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
+                                "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
+                                "WHERE (l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda) " +
+                                "GROUP BY l.id_libro, e.id_ejemplar, l.titulo_libro, l.ISBN, " +
+                                    "ed.nombre_editorial, cat.nombre, idi.nombre_idioma, e.localizacion, e.inventario;";
+
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@busqueda", "%" + (busquedaTexto ?? "") + "%");
+                        using (var adaptador = new MySqlDataAdapter(comando))
+                        {
+                            adaptador.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar el libro: " + ex.Message);
+            }
+            return tabla;
+        }
+
         public DataTable BuscarLibroParaEjemplar(string isbnBuscado)
         {
             DataTable tabla = new DataTable();

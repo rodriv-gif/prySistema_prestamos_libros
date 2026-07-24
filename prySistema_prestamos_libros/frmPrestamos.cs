@@ -202,14 +202,18 @@ namespace prySistema_prestamos_libros
             if (string.IsNullOrEmpty(busquedaTexto))
             {
                 dgvLibros.DataSource = null;
+                // Si se limpia la búsqueda, la selección anterior ya no aplica a nada
+                // visible; hay que resetearla para que btnAgregar no la use por error.
+                txtLocalizacion.Clear();
+                txtInventario.Clear();
+                idEjemplarSeleccionado = 0;
                 return;
             }
 
             clsGestionLibros libro = new clsGestionLibros();
             try
             {
-                libro.Busqueda = busquedaTexto;
-                DataTable dtLibros = libro.Consultar();
+                DataTable dtLibros = libro.BuscarLibrosConEjemplares(busquedaTexto);
                 dgvLibros.DataSource = dtLibros;
                 OcultarColumnas();
             }
@@ -243,6 +247,16 @@ namespace prySistema_prestamos_libros
                 return;
             }
 
+            // Cuando se retecla en txtISBN muy rápido, dgvLibros.DataSource se reasigna
+            // antes de que termine de procesarse el SelectionChanged anterior; en ese
+            // instante la fila puede seguir "viva" mientras las columnas ya se están
+            // regenerando para el nuevo DataTable. Esta validación evita el
+            // ArgumentException de "columna no encontrada" en ese momento intermedio.
+            if (dgvLibros.Columns["Localización"] == null)
+            {
+                return;
+            }
+
             txtLocalizacion.Text = fila.Cells["Localización"].Value?.ToString();
             txtInventario.Text = fila.Cells["Inventario"].Value?.ToString();
             idEjemplarSeleccionado = Convert.ToInt32(fila.Cells["id_ejemplar"].Value);
@@ -269,6 +283,16 @@ namespace prySistema_prestamos_libros
 
             //Tomar de nuevo la fila seleccionada en dgvLibros
             DataGridViewRow filaSeleccionada = dgvLibros.CurrentRow;
+
+            // Por si idEjemplarSeleccionado quedó con un valor viejo pero el grid ya no
+            // tiene ninguna fila seleccionada (por ejemplo, se limpió la búsqueda).
+            if (filaSeleccionada == null)
+            {
+                MessageBox.Show("Selecciona un libro primero");
+                idEjemplarSeleccionado = 0;
+                return;
+            }
+
              librosAPrestar.Rows.Add(
                 filaSeleccionada.Cells["Título"].Value,
                 filaSeleccionada.Cells["ISBN"].Value,

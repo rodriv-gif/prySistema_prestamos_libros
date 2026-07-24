@@ -36,6 +36,7 @@ namespace prySistema_prestamos_libros
                     id_carrera, id_direccion e id_colonia van al final y se ocultan en la grid,
                     solo sirven para preseleccionar combos al editar.*/
                     string sql = "SELECT a.matricula AS 'Matricula', " +
+                                    "CONCAT(a.nombre,' ', a.apellido_paterno,' ', a.apellido_materno) AS 'Nombre completo', " +
                                     "a.nombre AS 'Nombre', " +
                                     "a.apellido_paterno AS 'Apellido Paterno', " +
                                     "a.apellido_materno AS 'Apellido Materno', " +
@@ -83,6 +84,7 @@ namespace prySistema_prestamos_libros
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql = "SELECT a.matricula AS 'Matricula', " +
+                                    "CONCAT(a.nombre,' ', a.apellido_paterno,' ', a.apellido_materno) AS 'Nombre completo', " +
                                     "a.nombre AS 'Nombre', " +
                                     "a.apellido_paterno AS 'Apellido Paterno', " +
                                     "a.apellido_materno AS 'Apellido Materno', " +
