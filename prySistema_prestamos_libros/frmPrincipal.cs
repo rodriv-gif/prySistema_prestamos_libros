@@ -35,7 +35,8 @@ namespace prySistema_prestamos_libros
                 btnTrabajadores,
                 btnUsuario,
                 btnLibro,
-                btnEjemplar
+                btnEjemplar,
+                btnReportes
             };
         }
 

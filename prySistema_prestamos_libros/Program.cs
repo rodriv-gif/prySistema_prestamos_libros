@@ -11,20 +11,18 @@ namespace prySistema_prestamos_libros
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
-            using (frmLogin login = new frmLogin())
+            
+            /*using (frmLogin login = new frmLogin())
             {
                 if (login.ShowDialog() == DialogResult.OK)
                 {
                     Application.Run(new frmPrincipal());
                 }
             }
-
-            /*Application.Run(new frmPrestamos());
-            Application.Run(new frmFormularioAlumno());
-            Application.Run(new frmPrincipal());
-            Application.Run(new frmGestionAlumnos());
             */
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+            Application.Run(new frmReportes());
+            
         }
     }
 }

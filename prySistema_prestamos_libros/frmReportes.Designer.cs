@@ -32,21 +32,19 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
-            rdbOpcion4 = new RadioButton();
             rdbOpcion3 = new RadioButton();
             rdbOpcion2 = new RadioButton();
             rdbOpcion1 = new RadioButton();
             dgvReportes = new DataGridView();
             btnGenerarPDF = new Button();
             label1 = new Label();
-            button1 = new Button();
+            btnVer = new Button();
             gpbOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
             SuspendLayout();
             // 
             // gpbOpciones
             // 
-            gpbOpciones.Controls.Add(rdbOpcion4);
             gpbOpciones.Controls.Add(rdbOpcion3);
             gpbOpciones.Controls.Add(rdbOpcion2);
             gpbOpciones.Controls.Add(rdbOpcion1);
@@ -58,18 +56,6 @@
             gpbOpciones.TabIndex = 0;
             gpbOpciones.TabStop = false;
             gpbOpciones.Text = "Opciones";
-            // 
-            // rdbOpcion4
-            // 
-            rdbOpcion4.AutoSize = true;
-            rdbOpcion4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rdbOpcion4.Location = new Point(21, 152);
-            rdbOpcion4.Name = "rdbOpcion4";
-            rdbOpcion4.Size = new Size(461, 32);
-            rdbOpcion4.TabIndex = 3;
-            rdbOpcion4.TabStop = true;
-            rdbOpcion4.Text = "Mostrar reporte de libros prestados en la semana";
-            rdbOpcion4.UseVisualStyleBackColor = true;
             // 
             // rdbOpcion3
             // 
@@ -89,10 +75,10 @@
             rdbOpcion2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion2.Location = new Point(21, 76);
             rdbOpcion2.Name = "rdbOpcion2";
-            rdbOpcion2.Size = new Size(363, 32);
+            rdbOpcion2.Size = new Size(377, 32);
             rdbOpcion2.TabIndex = 1;
             rdbOpcion2.TabStop = true;
-            rdbOpcion2.Text = "Mostrar reporte de multas pendientes";
+            rdbOpcion2.Text = "Mostrar reporte de préstamos vencidos";
             rdbOpcion2.UseVisualStyleBackColor = true;
             // 
             // rdbOpcion1
@@ -122,13 +108,13 @@
             dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
-            dgvReportes.Location = new Point(117, 432);
+            dgvReportes.Location = new Point(128, 432);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvReportes.Size = new Size(1256, 340);
+            dgvReportes.Size = new Size(1229, 340);
             dgvReportes.TabIndex = 13;
             // 
             // btnGenerarPDF
@@ -142,6 +128,7 @@
             btnGenerarPDF.TabIndex = 14;
             btnGenerarPDF.Text = "Generar PDF";
             btnGenerarPDF.UseVisualStyleBackColor = false;
+            btnGenerarPDF.Click += btnGenerarPDF_Click;
             // 
             // label1
             // 
@@ -154,17 +141,18 @@
             label1.TabIndex = 1;
             label1.Text = "Reportes";
             // 
-            // button1
+            // btnVer
             // 
-            button1.BackColor = Color.FromArgb(17, 30, 71);
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(201, 168, 76);
-            button1.Location = new Point(592, 366);
-            button1.Name = "button1";
-            button1.Size = new Size(280, 50);
-            button1.TabIndex = 15;
-            button1.Text = "Ver";
-            button1.UseVisualStyleBackColor = false;
+            btnVer.BackColor = Color.FromArgb(17, 30, 71);
+            btnVer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVer.ForeColor = Color.FromArgb(201, 168, 76);
+            btnVer.Location = new Point(592, 366);
+            btnVer.Name = "btnVer";
+            btnVer.Size = new Size(280, 50);
+            btnVer.TabIndex = 15;
+            btnVer.Text = "Ver";
+            btnVer.UseVisualStyleBackColor = false;
+            btnVer.Click += btnVer_Click;
             // 
             // frmReportes
             // 
@@ -172,7 +160,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1475, 875);
-            Controls.Add(button1);
+            Controls.Add(btnVer);
             Controls.Add(label1);
             Controls.Add(btnGenerarPDF);
             Controls.Add(dgvReportes);
@@ -194,8 +182,7 @@
         private DataGridView dgvReportes;
         private Button btnGenerarPDF;
         private Label label1;
-        private RadioButton rdbOpcion4;
         private RadioButton rdbOpcion3;
-        private Button button1;
+        private Button btnVer;
     }
 }

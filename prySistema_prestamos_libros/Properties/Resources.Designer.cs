@@ -93,6 +93,26 @@ namespace prySistema_prestamos_libros.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Guardar {
             get {
                 object obj = ResourceManager.GetObject("Guardar", resourceCulture);
