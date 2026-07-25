@@ -158,6 +158,7 @@
             btnAgregarTrabajador.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarTrabajador.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAgregarTrabajador.UseVisualStyleBackColor = false;
+            btnAgregarTrabajador.Click += btnAgregarTrabajador_Click;
             // 
             // lblAccesoSistema
             // 
@@ -213,6 +214,7 @@
             cmbPerfil.Name = "cmbPerfil";
             cmbPerfil.Size = new Size(245, 28);
             cmbPerfil.TabIndex = 14;
+            cmbPerfil.SelectedIndexChanged += cmbPerfil_SelectedIndexChanged;
             // 
             // txtUsuario
             // 
@@ -249,6 +251,7 @@
             btnGuardar.Text = "Guardar";
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnLimpiar
             // 
@@ -265,6 +268,7 @@
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnCancelar
             // 
@@ -280,6 +284,7 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // txtApellidoPaternoTrabajador
             // 
@@ -330,6 +335,7 @@
             txtNumControl.Name = "txtNumControl";
             txtNumControl.Size = new Size(245, 30);
             txtNumControl.TabIndex = 25;
+            txtNumControl.TextChanged += txtNumControl_TextChanged;
             // 
             // frmFormularioUsuario
             // 
