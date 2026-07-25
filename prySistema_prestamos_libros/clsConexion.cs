@@ -77,6 +77,11 @@ namespace prySistema_prestamos_libros
                 throw new Exception("Error al cerrar la conexion con la base de datos: " + ex.Message, ex);
             }
         }
+
+        internal void CerrarConexion()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
