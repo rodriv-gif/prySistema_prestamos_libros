@@ -70,8 +70,8 @@
             cmbEstadoPrestamo = new ComboBox();
             lblEstadoPrestamo = new Label();
             panel1 = new Panel();
-            txtBibliotecario = new TextBox();
             lblBibliotecario = new Label();
+            txtBibliotecario = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).BeginInit();
@@ -152,7 +152,7 @@
             // 
             // txtApellidoMaterno
             // 
-            txtApellidoMaterno.BackColor = Color.WhiteSmoke;
+            txtApellidoMaterno.BackColor = Color.White;
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(1035, 52);
             txtApellidoMaterno.Multiline = true;
@@ -540,16 +540,6 @@
             panel1.Size = new Size(1310, 784);
             panel1.TabIndex = 45;
             // 
-            // txtBibliotecario
-            // 
-            txtBibliotecario.BackColor = Color.White;
-            txtBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBibliotecario.Location = new Point(704, 458);
-            txtBibliotecario.Multiline = true;
-            txtBibliotecario.Name = "txtBibliotecario";
-            txtBibliotecario.Size = new Size(245, 30);
-            txtBibliotecario.TabIndex = 45;
-            // 
             // lblBibliotecario
             // 
             lblBibliotecario.AutoSize = true;
@@ -560,6 +550,16 @@
             lblBibliotecario.Size = new Size(177, 20);
             lblBibliotecario.TabIndex = 46;
             lblBibliotecario.Text = "Bibliotecario que registra";
+            // 
+            // txtBibliotecario
+            // 
+            txtBibliotecario.BackColor = Color.White;
+            txtBibliotecario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBibliotecario.Location = new Point(704, 458);
+            txtBibliotecario.Multiline = true;
+            txtBibliotecario.Name = "txtBibliotecario";
+            txtBibliotecario.Size = new Size(245, 30);
+            txtBibliotecario.TabIndex = 45;
             // 
             // frmDevolucion
             // 

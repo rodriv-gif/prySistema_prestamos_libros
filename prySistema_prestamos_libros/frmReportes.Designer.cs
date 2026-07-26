@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
             rdbOpcion3 = new RadioButton();
             rdbOpcion2 = new RadioButton();
@@ -61,6 +61,7 @@
             // 
             rdbOpcion3.AutoSize = true;
             rdbOpcion3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdbOpcion3.ForeColor = Color.Black;
             rdbOpcion3.Location = new Point(21, 114);
             rdbOpcion3.Name = "rdbOpcion3";
             rdbOpcion3.Size = new Size(461, 32);
@@ -73,6 +74,7 @@
             // 
             rdbOpcion2.AutoSize = true;
             rdbOpcion2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdbOpcion2.ForeColor = Color.Black;
             rdbOpcion2.Location = new Point(21, 76);
             rdbOpcion2.Name = "rdbOpcion2";
             rdbOpcion2.Size = new Size(377, 32);
@@ -85,6 +87,7 @@
             // 
             rdbOpcion1.AutoSize = true;
             rdbOpcion1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdbOpcion1.ForeColor = Color.Black;
             rdbOpcion1.Location = new Point(21, 38);
             rdbOpcion1.Name = "rdbOpcion1";
             rdbOpcion1.Size = new Size(492, 32);
@@ -95,26 +98,26 @@
             // 
             // dgvReportes
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvReportes.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvReportes.BackgroundColor = Color.White;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
-            dgvReportes.Location = new Point(128, 432);
+            dgvReportes.Location = new Point(221, 422);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvReportes.Size = new Size(1229, 340);
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dgvReportes.Size = new Size(1016, 340);
             dgvReportes.TabIndex = 13;
             // 
             // btnGenerarPDF

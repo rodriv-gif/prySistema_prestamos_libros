@@ -144,6 +144,23 @@ namespace prySistema_prestamos_libros
                                 "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
                                 "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
                                 "WHERE (l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda) " +
+                                    "AND e.estado = 'Activo' " +
+                                    "AND NOT EXISTS ( " +
+                                        "SELECT 1 FROM tblprestamos p2 " +
+                                        "WHERE p2.id_ejemplar = e.id_ejemplar " +
+                                        "AND p2.fecha_devolucion_real IS NULL " +
+                                    ") " +
+                                    // Si solo queda 1 disponible, ese ES el de referencia, así que la condición lo excluye automáticamente.
+                                    "AND e.inventario > ( " +
+                                        "SELECT MIN(e3.inventario) FROM tblejemplares e3 " +
+                                        "WHERE e3.id_libro = e.id_libro " +
+                                        "AND e3.estado = 'Activo' " +
+                                        "AND NOT EXISTS ( " +
+                                            "SELECT 1 FROM tblprestamos p3 " +
+                                            "WHERE p3.id_ejemplar = e3.id_ejemplar " +
+                                            "AND p3.fecha_devolucion_real IS NULL " +
+                                        ") " +
+                                    ") " +
                                 "GROUP BY l.id_libro, e.id_ejemplar, l.titulo_libro, l.ISBN, " +
                                     "ed.nombre_editorial, cat.nombre, idi.nombre_idioma, e.localizacion, e.inventario;";
 

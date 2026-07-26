@@ -298,7 +298,7 @@
             // dgvAlmacenarAutor
             // 
             dgvAlmacenarAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAlmacenarAutor.Location = new Point(41, 227);
+            dgvAlmacenarAutor.Location = new Point(61, 230);
             dgvAlmacenarAutor.Name = "dgvAlmacenarAutor";
             dgvAlmacenarAutor.RowHeadersWidth = 51;
             dgvAlmacenarAutor.Size = new Size(370, 95);
@@ -312,7 +312,7 @@
             btnBorrar.ForeColor = Color.FromArgb(250, 247, 242);
             btnBorrar.Image = (Image)resources.GetObject("btnBorrar.Image");
             btnBorrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBorrar.Location = new Point(438, 251);
+            btnBorrar.Location = new Point(469, 255);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(150, 45);
             btnBorrar.TabIndex = 43;

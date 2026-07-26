@@ -173,6 +173,7 @@
             // cmbCarrera
             // 
             cmbCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbCarrera.ForeColor = Color.Black;
             cmbCarrera.FormattingEnabled = true;
             cmbCarrera.Location = new Point(29, 540);
             cmbCarrera.Name = "cmbCarrera";
@@ -212,6 +213,7 @@
             // txtApellidoPaterno
             // 
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaterno.ForeColor = Color.Black;
             txtApellidoPaterno.Location = new Point(645, 72);
             txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Multiline = true;
@@ -223,6 +225,7 @@
             // txtNombres
             // 
             txtNombres.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombres.ForeColor = Color.Black;
             txtNombres.Location = new Point(336, 73);
             txtNombres.MaxLength = 50;
             txtNombres.Multiline = true;
@@ -234,6 +237,7 @@
             // txtMatricula
             // 
             txtMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMatricula.ForeColor = Color.Black;
             txtMatricula.Location = new Point(29, 73);
             txtMatricula.MaxLength = 9;
             txtMatricula.Multiline = true;
@@ -246,7 +250,7 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.ForeColor = SystemColors.ControlText;
+            lblApellidoMaterno.ForeColor = Color.Black;
             lblApellidoMaterno.Location = new Point(961, 51);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -257,7 +261,7 @@
             // 
             lblFechaRegistro.AutoSize = true;
             lblFechaRegistro.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaRegistro.ForeColor = SystemColors.ControlText;
+            lblFechaRegistro.ForeColor = Color.Black;
             lblFechaRegistro.Location = new Point(686, 131);
             lblFechaRegistro.Name = "lblFechaRegistro";
             lblFechaRegistro.Size = new Size(123, 20);
@@ -279,7 +283,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.BackColor = Color.FromArgb(250, 247, 242);
-            lblCorreo.ForeColor = SystemColors.ControlText;
+            lblCorreo.ForeColor = Color.Black;
             lblCorreo.Location = new Point(339, 131);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(132, 20);
@@ -301,7 +305,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.BackColor = Color.FromArgb(250, 247, 242);
-            lblTelefono.ForeColor = SystemColors.ControlText;
+            lblTelefono.ForeColor = Color.Black;
             lblTelefono.Location = new Point(27, 131);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(67, 20);
@@ -312,7 +316,7 @@
             // 
             lblMatricula.AutoSize = true;
             lblMatricula.BackColor = Color.FromArgb(250, 247, 242);
-            lblMatricula.ForeColor = SystemColors.ControlText;
+            lblMatricula.ForeColor = Color.Black;
             lblMatricula.Location = new Point(27, 49);
             lblMatricula.Name = "lblMatricula";
             lblMatricula.Size = new Size(71, 20);
@@ -371,7 +375,9 @@
             // 
             // txtApellidoMaterno
             // 
+            txtApellidoMaterno.BackColor = Color.White;
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaterno.ForeColor = Color.Black;
             txtApellidoMaterno.Location = new Point(961, 72);
             txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Multiline = true;
@@ -383,6 +389,7 @@
             // txtTelefono
             // 
             txtTelefono.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefono.ForeColor = Color.Black;
             txtTelefono.Location = new Point(27, 155);
             txtTelefono.MaxLength = 10;
             txtTelefono.Multiline = true;
@@ -394,6 +401,7 @@
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCorreo.ForeColor = Color.Black;
             txtCorreo.Location = new Point(339, 155);
             txtCorreo.MaxLength = 100;
             txtCorreo.Multiline = true;
@@ -404,6 +412,7 @@
             // txtCalle
             // 
             txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCalle.ForeColor = Color.Black;
             txtCalle.Location = new Point(954, 363);
             txtCalle.MaxLength = 100;
             txtCalle.Multiline = true;
@@ -415,6 +424,7 @@
             // txtCodigoPostal
             // 
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCodigoPostal.ForeColor = Color.Black;
             txtCodigoPostal.Location = new Point(29, 365);
             txtCodigoPostal.MaxLength = 5;
             txtCodigoPostal.Multiline = true;
@@ -427,6 +437,7 @@
             // txtGrado
             // 
             txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrado.ForeColor = Color.Black;
             txtGrado.Location = new Point(336, 539);
             txtGrado.MaxLength = 2;
             txtGrado.Multiline = true;
@@ -438,6 +449,7 @@
             // txtGrupo
             // 
             txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrupo.ForeColor = Color.Black;
             txtGrupo.Location = new Point(645, 540);
             txtGrupo.MaxLength = 10;
             txtGrupo.Multiline = true;
@@ -448,6 +460,8 @@
             // 
             // dtpFechaRegistro
             // 
+            dtpFechaRegistro.CalendarForeColor = Color.Black;
+            dtpFechaRegistro.CalendarMonthBackground = Color.White;
             dtpFechaRegistro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaRegistro.Format = DateTimePickerFormat.Short;
             dtpFechaRegistro.Location = new Point(645, 157);
@@ -501,6 +515,7 @@
             // txtMunicipio
             // 
             txtMunicipio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMunicipio.ForeColor = Color.Black;
             txtMunicipio.Location = new Point(336, 365);
             txtMunicipio.Multiline = true;
             txtMunicipio.Name = "txtMunicipio";
@@ -520,6 +535,7 @@
             // cmbColonia
             // 
             cmbColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbColonia.ForeColor = Color.Black;
             cmbColonia.FormattingEnabled = true;
             cmbColonia.Location = new Point(649, 364);
             cmbColonia.Name = "cmbColonia";

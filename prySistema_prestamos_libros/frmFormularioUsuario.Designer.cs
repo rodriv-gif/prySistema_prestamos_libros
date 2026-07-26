@@ -93,7 +93,7 @@
             // 
             lblNumControl.AutoSize = true;
             lblNumControl.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumControl.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNumControl.ForeColor = Color.Black;
             lblNumControl.Location = new Point(57, 52);
             lblNumControl.Name = "lblNumControl";
             lblNumControl.Size = new Size(135, 20);
@@ -104,7 +104,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNombre.ForeColor = Color.Black;
             lblNombre.Location = new Point(57, 130);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(64, 20);
@@ -115,7 +115,7 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoPaterno.ForeColor = Color.Black;
             lblApellidoPaterno.Location = new Point(345, 130);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -126,7 +126,7 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoMaterno.ForeColor = Color.Black;
             lblApellidoMaterno.Location = new Point(652, 130);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -137,7 +137,7 @@
             // 
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
-            lblCarrera.ForeColor = Color.FromArgb(31, 31, 31);
+            lblCarrera.ForeColor = Color.Black;
             lblCarrera.Location = new Point(940, 130);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(94, 20);
@@ -176,7 +176,7 @@
             // 
             lblPerfil.AutoSize = true;
             lblPerfil.BackColor = Color.FromArgb(250, 247, 242);
-            lblPerfil.ForeColor = Color.FromArgb(31, 31, 31);
+            lblPerfil.ForeColor = Color.Black;
             lblPerfil.Location = new Point(57, 341);
             lblPerfil.Name = "lblPerfil";
             lblPerfil.Size = new Size(42, 20);
@@ -187,7 +187,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.BackColor = Color.FromArgb(250, 247, 242);
-            lblUsuario.ForeColor = Color.FromArgb(31, 31, 31);
+            lblUsuario.ForeColor = Color.Black;
             lblUsuario.Location = new Point(345, 343);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 20);
@@ -198,7 +198,7 @@
             // 
             lblContrasenia.AutoSize = true;
             lblContrasenia.BackColor = Color.FromArgb(250, 247, 242);
-            lblContrasenia.ForeColor = Color.FromArgb(31, 31, 31);
+            lblContrasenia.ForeColor = Color.Black;
             lblContrasenia.Location = new Point(652, 341);
             lblContrasenia.Name = "lblContrasenia";
             lblContrasenia.Size = new Size(83, 20);
@@ -209,6 +209,7 @@
             // 
             cmbPerfil.BackColor = Color.White;
             cmbPerfil.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbPerfil.ForeColor = Color.Black;
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Location = new Point(57, 364);
             cmbPerfil.Name = "cmbPerfil";
@@ -220,6 +221,7 @@
             // 
             txtUsuario.BackColor = Color.White;
             txtUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = Color.Black;
             txtUsuario.Location = new Point(345, 366);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
@@ -230,6 +232,7 @@
             // 
             txtContrasena.BackColor = Color.White;
             txtContrasena.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContrasena.ForeColor = Color.Black;
             txtContrasena.Location = new Point(652, 364);
             txtContrasena.Multiline = true;
             txtContrasena.Name = "txtContrasena";
@@ -290,6 +293,7 @@
             // 
             txtApellidoPaternoTrabajador.BackColor = Color.White;
             txtApellidoPaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaternoTrabajador.ForeColor = Color.Black;
             txtApellidoPaternoTrabajador.Location = new Point(345, 153);
             txtApellidoPaternoTrabajador.Multiline = true;
             txtApellidoPaternoTrabajador.Name = "txtApellidoPaternoTrabajador";
@@ -300,6 +304,7 @@
             // 
             txtApellidoMaternoTrabajador.BackColor = Color.White;
             txtApellidoMaternoTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaternoTrabajador.ForeColor = Color.Black;
             txtApellidoMaternoTrabajador.Location = new Point(652, 153);
             txtApellidoMaternoTrabajador.Multiline = true;
             txtApellidoMaternoTrabajador.Name = "txtApellidoMaternoTrabajador";
@@ -310,6 +315,7 @@
             // 
             txtCarreraTrabajador.BackColor = Color.White;
             txtCarreraTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCarreraTrabajador.ForeColor = Color.Black;
             txtCarreraTrabajador.Location = new Point(940, 153);
             txtCarreraTrabajador.Multiline = true;
             txtCarreraTrabajador.Name = "txtCarreraTrabajador";
@@ -320,6 +326,7 @@
             // 
             txtNombreTrabajador.BackColor = Color.White;
             txtNombreTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreTrabajador.ForeColor = Color.Black;
             txtNombreTrabajador.Location = new Point(57, 153);
             txtNombreTrabajador.Multiline = true;
             txtNombreTrabajador.Name = "txtNombreTrabajador";
@@ -330,6 +337,7 @@
             // 
             txtNumControl.BackColor = Color.White;
             txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumControl.ForeColor = Color.Black;
             txtNumControl.Location = new Point(57, 76);
             txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";

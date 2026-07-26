@@ -109,7 +109,7 @@
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscar.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBuscar.ForeColor = Color.Black;
             lblBuscar.Location = new Point(123, 101);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(241, 20);
@@ -120,7 +120,7 @@
             // 
             txtBuscarAlumno.BackColor = Color.White;
             txtBuscarAlumno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarAlumno.ForeColor = Color.FromArgb(31, 31, 31);
+            txtBuscarAlumno.ForeColor = Color.Black;
             txtBuscarAlumno.Location = new Point(123, 125);
             txtBuscarAlumno.Multiline = true;
             txtBuscarAlumno.Name = "txtBuscarAlumno";

@@ -25,11 +25,16 @@ namespace prySistema_prestamos_libros
                 {
                     string sql = "SELECT c.nombre AS 'Categoría', " +
                                     "l.titulo_libro AS 'Libro', " +
-                                    "COUNT(p.id_prestamo) AS 'Total de Préstamos' " +
+                                    "COUNT(p.id_prestamo) AS 'Total de Préstamos', " +
+                                    "GROUP_CONCAT(DISTINCT COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo') SEPARATOR ', ') AS 'Carreras' " +
                                 "FROM tblprestamos p " +
                                 "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
                                 "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
                                 "INNER JOIN tblcategorias c ON l.id_categoria = c.id_categoria " +
+                                "LEFT JOIN tblalumnos a ON a.matricula = p.matricula " +
+                                "LEFT JOIN tbltrabajadores t ON t.numero_control = p.numero_control " +
+                                "LEFT JOIN tblcarreras ca ON a.id_carrera = ca.id_carrera " +
+                                "LEFT JOIN tblcarreras ct ON t.id_carrera = ct.id_carrera " +
                                 "WHERE MONTH(p.fecha_prestamo) = MONTH(CURRENT_DATE()) " +
                                 "AND YEAR(p.fecha_prestamo) = YEAR(CURRENT_DATE()) " +
                                 "GROUP BY c.nombre, l.titulo_libro " +
@@ -62,13 +67,17 @@ namespace prySistema_prestamos_libros
                                         "COALESCE(A.telefono, T.telefono) AS Telefono, " +
                                         "P.matricula AS Matricula, " +
                                         "P.numero_control AS 'Numero de Control', " +
-                                        "L.titulo_libro AS 'Titulo del Libro' " +
+                                        "L.titulo_libro AS 'Titulo del Libro', " +
+                                        "P.fecha_prestamo AS 'Fecha de Préstamo', " +
+                                        "P.fecha_devolucion AS 'Fecha en que Venció', " +
+                                        "DATEDIFF(CURRENT_DATE(), P.fecha_devolucion) AS 'Días de Atraso' " +
                                     "FROM tblprestamos P " +
                                     "LEFT JOIN tblalumnos A ON A.matricula = P.matricula " +
                                     "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
                                     "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
                                     "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
-                                    "WHERE P.id_estado_prestamo = 3; ";
+                                    "WHERE P.id_estado_prestamo = 3 " +
+                                    "AND P.fecha_devolucion_real IS NULL; ";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {

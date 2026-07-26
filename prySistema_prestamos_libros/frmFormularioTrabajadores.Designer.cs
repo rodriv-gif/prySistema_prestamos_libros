@@ -57,7 +57,7 @@
             btnGuardar = new Button();
             lblDatosTrabajador = new Label();
             lblDireccion = new Label();
-            iblDatosLaborales = new Label();
+            lblDatosLaborales = new Label();
             dtpFechaRegistro = new DateTimePicker();
             panel1 = new Panel();
             cmbColonia = new ComboBox();
@@ -103,8 +103,8 @@
             // 
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoMaterno.Location = new Point(954, 75);
-            txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.MaxLength = 50;
+            txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 27;
@@ -114,8 +114,8 @@
             // 
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.Location = new Point(649, 75);
-            txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.MaxLength = 50;
+            txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 25;
@@ -125,8 +125,8 @@
             // 
             txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.Location = new Point(337, 156);
-            txtCorreo.Multiline = true;
             txtCorreo.MaxLength = 100;
+            txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(245, 30);
             txtCorreo.TabIndex = 24;
@@ -135,8 +135,8 @@
             // 
             txtNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(337, 75);
-            txtNombre.Multiline = true;
             txtNombre.MaxLength = 50;
+            txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(245, 30);
             txtNombre.TabIndex = 23;
@@ -146,8 +146,8 @@
             // 
             txtTelefono.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.Location = new Point(32, 156);
-            txtTelefono.Multiline = true;
             txtTelefono.MaxLength = 10;
+            txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(245, 30);
             txtTelefono.TabIndex = 22;
@@ -157,8 +157,8 @@
             // 
             txtNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroControl.Location = new Point(32, 75);
-            txtNumeroControl.Multiline = true;
             txtNumeroControl.MaxLength = 9;
+            txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
             txtNumeroControl.Size = new Size(245, 30);
             txtNumeroControl.TabIndex = 21;
@@ -268,8 +268,8 @@
             // 
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigoPostal.Location = new Point(32, 351);
-            txtCodigoPostal.Multiline = true;
             txtCodigoPostal.MaxLength = 5;
+            txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
             txtCodigoPostal.TabIndex = 31;
@@ -280,8 +280,8 @@
             // 
             txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCalle.Location = new Point(954, 351);
-            txtCalle.Multiline = true;
             txtCalle.MaxLength = 100;
+            txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(245, 30);
             txtCalle.TabIndex = 29;
@@ -381,17 +381,17 @@
             lblDireccion.TabIndex = 42;
             lblDireccion.Text = "Dirección";
             // 
-            // iblDatosLaborales
+            // lblDatosLaborales
             // 
-            iblDatosLaborales.AutoSize = true;
-            iblDatosLaborales.BackColor = Color.FromArgb(250, 247, 242);
-            iblDatosLaborales.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iblDatosLaborales.ForeColor = Color.FromArgb(27, 46, 107);
-            iblDatosLaborales.Location = new Point(21, 481);
-            iblDatosLaborales.Name = "iblDatosLaborales";
-            iblDatosLaborales.Size = new Size(133, 23);
-            iblDatosLaborales.TabIndex = 43;
-            iblDatosLaborales.Text = "Datos laborales";
+            lblDatosLaborales.AutoSize = true;
+            lblDatosLaborales.BackColor = Color.FromArgb(250, 247, 242);
+            lblDatosLaborales.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDatosLaborales.ForeColor = Color.FromArgb(27, 46, 107);
+            lblDatosLaborales.Location = new Point(21, 481);
+            lblDatosLaborales.Name = "lblDatosLaborales";
+            lblDatosLaborales.Size = new Size(133, 23);
+            lblDatosLaborales.TabIndex = 43;
+            lblDatosLaborales.Text = "Datos laborales";
             // 
             // dtpFechaRegistro
             // 
@@ -408,7 +408,7 @@
             panel1.Controls.Add(txtMunicipio);
             panel1.Controls.Add(lblMunicipio);
             panel1.Controls.Add(dtpFechaRegistro);
-            panel1.Controls.Add(iblDatosLaborales);
+            panel1.Controls.Add(lblDatosLaborales);
             panel1.Controls.Add(lblDireccion);
             panel1.Controls.Add(lblDatosTrabajador);
             panel1.Controls.Add(lblArea);
@@ -467,7 +467,7 @@
             lblMunicipio.TabIndex = 45;
             lblMunicipio.Text = "Municipio";
             // 
-            // frmFormularioTrabajadores
+            // frmFormularioLibross
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -477,7 +477,7 @@
             Controls.Add(btnLimpiar);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
-            Name = "frmFormularioTrabajadores";
+            Name = "frmFormularioLibross";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Trabajador";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
@@ -518,7 +518,7 @@
         private Button btnGuardar;
         private Label lblDatosTrabajador;
         private Label lblDireccion;
-        private Label iblDatosLaborales;
+        private Label lblDatosLaborales;
         private DateTimePicker dtpFechaRegistro;
         private Panel panel1;
         private TextBox txtMunicipio;
