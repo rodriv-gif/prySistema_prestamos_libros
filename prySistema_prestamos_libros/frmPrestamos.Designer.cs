@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
             pcbContenendorBusqueda = new PictureBox();
             lblBusquedaLibro = new Label();
             pcbContenedorCompacto = new PictureBox();
@@ -146,25 +146,25 @@
             // 
             // dgvLibros
             // 
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle22.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             dgvLibros.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle23.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
+            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibros.EnableHeadersVisualStyles = false;
             dgvLibros.Location = new Point(117, 479);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle24.BackColor = Color.White;
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle24;
             dgvLibros.Size = new Size(1016, 112);
             dgvLibros.TabIndex = 12;
             dgvLibros.SelectionChanged += dgvLibros_SelectionChanged;
@@ -199,8 +199,9 @@
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
             txtLocalizacion.Location = new Point(117, 617);
+            txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
-            txtLocalizacion.Size = new Size(576, 27);
+            txtLocalizacion.Size = new Size(576, 30);
             txtLocalizacion.TabIndex = 15;
             // 
             // txtInventario
@@ -567,33 +568,33 @@
             // 
             // dgvLibrosPrestar
             // 
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle25.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             dgvLibrosPrestar.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle26.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle26.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             dgvLibrosPrestar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Window;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
-            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = SystemColors.Window;
+            dataGridViewCellStyle27.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle27.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
+            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle27;
             dgvLibrosPrestar.EnableHeadersVisualStyles = false;
             dgvLibrosPrestar.Location = new Point(116, 256);
             dgvLibrosPrestar.Name = "dgvLibrosPrestar";
             dgvLibrosPrestar.RowHeadersWidth = 51;
-            dataGridViewCellStyle14.BackColor = Color.White;
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle28.BackColor = Color.White;
+            dataGridViewCellStyle28.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle28;
             dgvLibrosPrestar.Size = new Size(1017, 99);
             dgvLibrosPrestar.TabIndex = 70;
             // 
