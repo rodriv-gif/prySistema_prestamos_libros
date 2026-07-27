@@ -74,6 +74,7 @@
             txtBuscarUsuario.Name = "txtBuscarUsuario";
             txtBuscarUsuario.Size = new Size(245, 30);
             txtBuscarUsuario.TabIndex = 2;
+            txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
             // btnNuevo
             // 
@@ -107,6 +108,7 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -147,6 +149,7 @@
             dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvUsuarios.Size = new Size(1249, 568);
             dgvUsuarios.TabIndex = 6;
+            dgvUsuarios.CellContentClick += dgvUsuarios_CellContentClick;
             // 
             // frmGestionUsuarios
             // 

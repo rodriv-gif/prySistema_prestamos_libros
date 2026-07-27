@@ -8,132 +8,364 @@ namespace prySistema_prestamos_libros
 {
     internal class clsUsuarios
     {
-        clsConexion cn = new clsConexion();
+        clsConexion conexion = new clsConexion();
 
-        // son las propiedades 
-        public string NumeroControl { get; set; }
+        public int IdBibliotecario { get; set; }
         public int IdPerfil { get; set; }
+        public int NumeroControl { get; set; }
         public string Usuario { get; set; }
-        public string Password { get; set; }
-        public string NumControl { get; internal set; }
+        public string Contrasenia { get; set; }
+
+      
+        public DataTable CargarDataGrid()
+        {
+            DataTable dt = new DataTable();
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"SELECT
+                                    b.id_bibliotecario,
+                                    t.numero_control,
+                                    CONCAT(t.nombre,' ',t.apellido_paterno,' ',t.apellido_materno) AS Nombre,
+                                    p.nombre_perfil,
+                                    b.usuario
+                                   FROM tblbibliotecario b
+                                   INNER JOIN tbltrabajadores t
+                                   ON b.numero_control = t.numero_control
+                                   INNER JOIN tblperfil p
+                                   ON b.id_perfil = p.id_perfil
+                                   ORDER BY t.numero_control";
+
+                MySqlDataAdapter da = new MySqlDataAdapter(consulta, cn);
+
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los usuarios.\n" + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return dt;
+        }
 
        
-        //en esta parte se buscan a los trabajadores
-        public DataTable BuscaTrabajador(string numeroControl)
+        public DataTable BuscarTrabajador(int numeroControl)
         {
             DataTable dt = new DataTable();
 
+            MySqlConnection cn = null;
+
             try
             {
-                MySqlConnection conexion = cn.AbrirConexion();
+                cn = conexion.AbrirConexion();
 
-                MySqlCommand cmd = new MySqlCommand(
-                "SELECT Nombre,ApellidoPaterno,ApellidoMaterno,Area " +
-                "FROM trabajador WHERE NumeroControl=@NumeroControl",
-                conexion);
+                string consulta = @"SELECT
+                                    numero_control,
+                                    nombre,
+                                    apellido_paterno,
+                                    apellido_materno,
+                                    id_carrera
+                                   FROM tbltrabajadores
+                                   WHERE numero_control=@numero";
 
-                cmd.Parameters.AddWithValue("@NumeroControl", numeroControl);
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@numero", numeroControl);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
 
-                cn.CerrarConexion();
+                da.Fill(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
             }
 
             return dt;
         }
 
-        
-
-        public DataTable CargarPerfiles()
+        public DataTable CargarPerfiles
         {
-            DataTable dt = new DataTable();
-
-            try
+            get
             {
-                MySqlConnection conexion = cn.AbrirConexion();
+                DataTable dt = new DataTable();
 
-                MySqlDataAdapter da = new MySqlDataAdapter(
-                "SELECT IdPerfil,Perfil FROM perfil",
-                conexion);
+                MySqlConnection cn = null;
 
-                da.Fill(dt);
+                try
+                {
+                    cn = conexion.AbrirConexion();
 
-                cn.CerrarConexion();
+                    string consulta = @"SELECT
+                                    id_perfil,
+                                    nombre_perfil
+                                   FROM tblperfil";
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(consulta, cn);
+
+                    da.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.CerrarConexion(cn);
+                }
+
+                return dt;
             }
-            catch
-            {
-                throw;
-            }
-
-            return dt;
         }
 
-        
-        public bool Guardar()
-        {
-            bool respuesta = false;
+        public object? Contrasena { get; private set; }
 
-            try
-            {
-                MySqlConnection conexion = cn.AbrirConexion();
-
-                MySqlCommand cmd = new MySqlCommand(
-                "INSERT INTO usuarios(NumeroControl,IdPerfil,Usuario,Password) " +
-                "VALUES(@NumeroControl,@IdPerfil,@Usuario,@Password)",
-                conexion);
-
-                cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
-                cmd.Parameters.AddWithValue("@IdPerfil", IdPerfil);
-                cmd.Parameters.AddWithValue("@Usuario", Usuario);
-                cmd.Parameters.AddWithValue("@Password", Password);
-
-                if (cmd.ExecuteNonQuery() > 0)
-                    respuesta = true;
-
-                cn.CerrarConexion();
-            }
-            catch
-            {
-                throw;
-            }
-
-            return respuesta;
-        }
-
-        
-        public bool ExisteUsuario()
+        public bool ExisteUsuario(string usuario)
         {
             bool existe = false;
 
+            MySqlConnection cn = null;
+
             try
             {
-                MySqlConnection conexion = cn.AbrirConexion();
+                cn = conexion.AbrirConexion();
 
-                MySqlCommand cmd = new MySqlCommand(
-                "SELECT COUNT(*) FROM usuarios WHERE Usuario=@Usuario",
-                conexion);
+                string consulta = @"SELECT COUNT(*)
+                                    FROM tblbibliotecario
+                                    WHERE usuario=@usuario";
 
-                cmd.Parameters.AddWithValue("@Usuario", Usuario);
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
 
-                int total = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                if (total > 0)
-                    existe = true;
+                int cantidad = Convert.ToInt32(cmd.ExecuteScalar());
 
-                cn.CerrarConexion();
+                existe = cantidad > 0;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
             }
 
             return existe;
         }
+       
+        public bool GuardarUsuario()
+        {
+            bool resultado = false;
 
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"INSERT INTO tblbibliotecario
+                            (id_perfil,
+                             numero_control,
+                             usuario,
+                             contrasenia)
+                            VALUES
+                            (@idPerfil,
+                             @NumControl,
+                             @Usuario,
+                             @Contrasena)";
+
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@idPerfil", IdPerfil);
+                cmd.Parameters.AddWithValue("@NumControl", NumeroControl);
+                cmd.Parameters.AddWithValue("@Usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contrasena", Contrasena);
+
+                resultado = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar el usuario.\n" + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return resultado;
+        }
+
+        
+        public bool EditarUsuario()
+        {
+            bool resultado = false;
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"UPDATE tblbibliotecario
+                            SET
+                            id_perfil=@idPerfil,
+                            usuario=@Usuario,
+                            contrasena=@contrasena
+                            WHERE id_bibliotecario=@idBibliotecario";
+
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@idPerfil", IdPerfil);
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contrasenia", Contrasenia);
+                cmd.Parameters.AddWithValue("@idBibliotecario", IdBibliotecario);
+
+                resultado = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al editar el usuario.\n" + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return resultado;
+        }
+
+
+        public DataTable BuscarUsuario(int idBibliotecario)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"SELECT
+                            b.id_bibliotecario,
+                            b.numero_control,
+                            b.id_perfil,
+                            b.usuario,
+                            b.contrasenia,
+                            t.nombre,
+                            t.apellido_paterno,
+                            t.apellido_materno,
+                            t.id_carrera
+                            FROM tblbibliotecario b
+                            INNER JOIN tbltrabajadores t
+                            ON b.numero_control=t.numero_control
+                            WHERE b.id_bibliotecario=@id";
+
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@id", idBibliotecario);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return dt;
+        }
+
+
+        public DataTable BuscarGrid(string numeroControl)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"SELECT
+                            b.id_bibliotecario,
+                            t.numero_control,
+                            CONCAT(t.nombre,' ',t.apellido_paterno,' ',t.apellido_materno) AS Nombre,
+                            p.nombre_perfil,
+                            b.usuario
+                            FROM tblbibliotecario b
+                            INNER JOIN tbltrabajadores t
+                            ON b.numero_control=t.numero_control
+                            INNER JOIN tblperfil p
+                            ON b.id_perfil=p.id_perfil
+                            WHERE t.numero_control LIKE @numero";
+
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@numero", "%" + numeroControl + "%");
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return dt;
+        }
+        public DataTable CargarPerfil()
+        {
+            DataTable dt = new DataTable();
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"SELECT
+                            id_perfil,
+                            id_perfil
+                            FROM tblperfil
+                            ORDER BY nombre_perfil";
+
+                MySqlDataAdapter da = new MySqlDataAdapter(consulta, cn);
+
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
+
+            return dt;
+        }
     }
 }

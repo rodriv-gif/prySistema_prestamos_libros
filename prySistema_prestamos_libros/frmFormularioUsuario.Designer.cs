@@ -158,7 +158,7 @@
             btnAgregarTrabajador.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarTrabajador.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAgregarTrabajador.UseVisualStyleBackColor = false;
-            btnAgregarTrabajador.Click += btnAgregarTrabajador_Click;
+            btnAgregarTrabajador.Click += btnAgregarTrabajador_Click_1;
             // 
             // lblAccesoSistema
             // 
@@ -343,7 +343,6 @@
             txtNumControl.Name = "txtNumControl";
             txtNumControl.Size = new Size(245, 30);
             txtNumControl.TabIndex = 25;
-            txtNumControl.TextChanged += txtNumControl_TextChanged;
             // 
             // frmFormularioUsuario
             // 
