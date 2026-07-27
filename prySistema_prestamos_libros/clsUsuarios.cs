@@ -31,7 +31,7 @@ namespace prySistema_prestamos_libros
                                     b.id_bibliotecario,
                                     t.numero_control,
                                     CONCAT(t.nombre,' ',t.apellido_paterno,' ',t.apellido_materno) AS Nombre,
-                                    p.nombre_perfil,
+                                    p.perfil,
                                     b.usuario
                                    FROM tblbibliotecario b
                                    INNER JOIN tbltrabajadores t
@@ -110,7 +110,7 @@ namespace prySistema_prestamos_libros
 
                     string consulta = @"SELECT
                                     id_perfil,
-                                    nombre_perfil
+                                    perfil
                                    FROM tblperfil";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(consulta, cn);

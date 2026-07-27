@@ -26,6 +26,7 @@ namespace prySistema_prestamos_libros
             frm.ShowDialog(this);
             CargarGrid();
         }
+
         private void CargarGrid()
         {
             try
@@ -36,8 +37,7 @@ namespace prySistema_prestamos_libros
 
                 dgvUsuarios.DataSource = usuario.CargarDataGrid();
 
-                dgvUsuarios.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
+                dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 dgvUsuarios.ClearSelection();
             }
