@@ -139,6 +139,7 @@ namespace prySistema_prestamos_libros
             btnUsuario.Enabled = clsLogin.EsAdministrador;
             btnLibro.Enabled = clsLogin.EsAdministrador;
             btnEjemplar.Enabled = clsLogin.EsAdministrador;
+            btnReportes.Enabled = clsLogin.EsAdministrador;
 
 
         }
