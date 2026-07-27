@@ -15,13 +15,39 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
         }
+
+        // Solo letras y espacio (char.IsLetter ya incluye acentos y Ñ).
+        private void SoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombreAutor.Text))
+            {
+                MessageBox.Show("Captura el nombre del autor (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreAutor.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellidoPaterno.Text))
+            {
+                MessageBox.Show("Captura el apellido paterno del autor (solo letras).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellidoPaterno.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombreAutor.Text) || string.IsNullOrWhiteSpace(txtApellidoPaterno.Text))
-            {
-                MessageBox.Show("El nombre y el apellido paterno son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (!ValidarCampos())
                 return;
-            }
 
             try
             {

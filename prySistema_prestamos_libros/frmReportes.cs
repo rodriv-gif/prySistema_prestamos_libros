@@ -22,7 +22,10 @@ namespace prySistema_prestamos_libros
             reportes = new clsReportes();
             tabla = new DataTable();
             dgvReportes.DataSource = null;
-            dgvReportes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvReportes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvReportes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvReportes.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             try
             {
                 if (rdbOpcion1.Checked == true)
@@ -43,6 +46,11 @@ namespace prySistema_prestamos_libros
                     //llamar la consulta para cargar el grid
                     tabla = reportes.LibrosPrestadosEnSemana();
                     dgvReportes.DataSource = tabla;
+                }
+                else if(rdbOpcion4.Checked == true)
+                {
+                    tabla = reportes.DisponibilidadTotalLibros();
+                    dgvReportes.DataSource= tabla;
                 }
             }
             catch (Exception ex)
@@ -67,6 +75,10 @@ namespace prySistema_prestamos_libros
             else if (rdbOpcion3.Checked == true)
             {
                 reportes.ExportarPDF(tabla, "Reporte de los libros que se han prestado durante la semana", "Libros prestados por semana.pdf");
+            }
+            else if (rdbOpcion4.Checked == true)
+            {
+                reportes.ExportarPDF(tabla, "Reporte del total de libros y la disponibilidad", "Total libros y disponibilidad.pdf");
             }
         }
     }

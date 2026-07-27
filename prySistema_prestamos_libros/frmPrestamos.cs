@@ -22,6 +22,7 @@ namespace prySistema_prestamos_libros
             librosAPrestar.Columns.Add("Idioma");
             librosAPrestar.Columns.Add("Autores");
             librosAPrestar.Columns.Add("id_ejemplar");
+            dgvLibrosPrestar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLibrosPrestar.DataSource = librosAPrestar;
             dgvLibrosPrestar.Columns["id_ejemplar"].HeaderText = "Ejemplar";
         }
@@ -35,13 +36,13 @@ namespace prySistema_prestamos_libros
 
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
-            txtTipoSolicitante.Enabled = false;
-            txtNombre.Enabled = false;
-            txtApellidoPaterno.Enabled = false;
-            txtApellidoMaterno.Enabled = false;
-            txtGrado.Enabled = false;
-            txtGrupo.Enabled = false;
-            txtCarrera.Enabled = false;
+            txtTipoSolicitante.ReadOnly = true;
+            txtNombre.ReadOnly = true;
+            txtApellidoPaterno.ReadOnly = true;
+            txtApellidoMaterno.ReadOnly = true;
+            txtGrado.ReadOnly = true;
+            txtGrupo.ReadOnly = true;
+            txtCarrera.ReadOnly = true;
 
             // El bibliotecario que registra siempre es quien inició sesión, no se escribe
             // a mano (evita que alguien registre a nombre de otro bibliotecario).
@@ -214,6 +215,7 @@ namespace prySistema_prestamos_libros
             try
             {
                 DataTable dtLibros = libro.BuscarLibrosConEjemplares(busquedaTexto);
+                dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvLibros.DataSource = dtLibros;
                 OcultarColumnas();
             }

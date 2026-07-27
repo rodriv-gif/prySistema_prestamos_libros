@@ -16,9 +16,18 @@ namespace prySistema_prestamos_libros
         private int idEjemplarOriginal = 0;
         private int idLibroSeleccionado = 0;
 
+        // Evita que el grid se recargue (y parpadee) con cada tecla presionada: en vez de
+        // buscar de inmediato en cada TextChanged, se reinicia este temporizador; solo se
+        // dispara la búsqueda cuando el usuario deja de escribir por 400 ms.
+        private System.Windows.Forms.Timer timerBusquedaLibro;
+
         public frmFormularioEjemplares()
         {
             InitializeComponent();
+
+            timerBusquedaLibro = new System.Windows.Forms.Timer();
+            timerBusquedaLibro.Interval = 400;
+            timerBusquedaLibro.Tick += TimerBusquedaLibro_Tick;
         }
 
         // Constructor para modo edición: recibe la fila seleccionada en el DataGridView
@@ -70,6 +79,7 @@ namespace prySistema_prestamos_libros
             {
                 clsGestionLibros libro = new clsGestionLibros();
                 DataTable dtLibros = libro.BuscarLibroParaEjemplar(isbnBuscado);
+                dgvLibrosPerteneciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvLibrosPerteneciente.DataSource = dtLibros;
 
                 if (dgvLibrosPerteneciente.Columns["id_libro"] != null)
@@ -95,6 +105,15 @@ namespace prySistema_prestamos_libros
         {
             if (modoEdicion) return; // en edición el libro ya viene fijo, no se vuelve a buscar
 
+            // Reinicia el temporizador en cada tecla; la búsqueda real ocurre en
+            // TimerBusquedaLibro_Tick, solo cuando el usuario deja de escribir.
+            timerBusquedaLibro.Stop();
+            timerBusquedaLibro.Start();
+        }
+
+        private void TimerBusquedaLibro_Tick(object sender, EventArgs e)
+        {
+            timerBusquedaLibro.Stop();
             CargarLibroEnGrid(txtLibroPerteneciete.Text.Trim());
         }
 

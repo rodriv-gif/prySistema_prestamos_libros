@@ -157,7 +157,7 @@
             // 
             txtNumeroControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroControl.Location = new Point(32, 75);
-            txtNumeroControl.MaxLength = 9;
+            txtNumeroControl.MaxLength = 6;
             txtNumeroControl.Multiline = true;
             txtNumeroControl.Name = "txtNumeroControl";
             txtNumeroControl.Size = new Size(245, 30);

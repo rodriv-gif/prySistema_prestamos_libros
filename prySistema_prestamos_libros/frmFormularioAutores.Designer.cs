@@ -97,26 +97,32 @@
             // txtNombreAutor
             // 
             txtNombreAutor.Location = new Point(46, 95);
+            txtNombreAutor.MaxLength = 50;
             txtNombreAutor.Multiline = true;
             txtNombreAutor.Name = "txtNombreAutor";
             txtNombreAutor.Size = new Size(245, 30);
             txtNombreAutor.TabIndex = 5;
-            // 
+            txtNombreAutor.KeyPress += SoloLetras_KeyPress;
+            //
             // txtApellidoPaterno
-            // 
+            //
             txtApellidoPaterno.Location = new Point(339, 95);
+            txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 6;
-            // 
+            txtApellidoPaterno.KeyPress += SoloLetras_KeyPress;
+            //
             // txtApellidoMaterno
-            // 
+            //
             txtApellidoMaterno.Location = new Point(46, 167);
+            txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 7;
+            txtApellidoMaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // btnRegistrar
             // 

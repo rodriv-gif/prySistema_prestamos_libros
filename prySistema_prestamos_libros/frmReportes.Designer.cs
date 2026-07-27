@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
+            rdbOpcion4 = new RadioButton();
             rdbOpcion3 = new RadioButton();
             rdbOpcion2 = new RadioButton();
             rdbOpcion1 = new RadioButton();
@@ -45,6 +46,7 @@
             // 
             // gpbOpciones
             // 
+            gpbOpciones.Controls.Add(rdbOpcion4);
             gpbOpciones.Controls.Add(rdbOpcion3);
             gpbOpciones.Controls.Add(rdbOpcion2);
             gpbOpciones.Controls.Add(rdbOpcion1);
@@ -56,6 +58,19 @@
             gpbOpciones.TabIndex = 0;
             gpbOpciones.TabStop = false;
             gpbOpciones.Text = "Opciones";
+            // 
+            // rdbOpcion4
+            // 
+            rdbOpcion4.AutoSize = true;
+            rdbOpcion4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdbOpcion4.ForeColor = Color.Black;
+            rdbOpcion4.Location = new Point(21, 152);
+            rdbOpcion4.Name = "rdbOpcion4";
+            rdbOpcion4.Size = new Size(472, 32);
+            rdbOpcion4.TabIndex = 3;
+            rdbOpcion4.TabStop = true;
+            rdbOpcion4.Text = "Mostrar reporte de disponibilidad y total de libros";
+            rdbOpcion4.UseVisualStyleBackColor = true;
             // 
             // rdbOpcion3
             // 
@@ -98,26 +113,26 @@
             // 
             // dgvReportes
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvReportes.BackgroundColor = Color.White;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
-            dgvReportes.Location = new Point(221, 422);
+            dgvReportes.Location = new Point(140, 433);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dgvReportes.Size = new Size(1016, 340);
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgvReportes.Size = new Size(1199, 340);
             dgvReportes.TabIndex = 13;
             // 
             // btnGenerarPDF
@@ -187,5 +202,6 @@
         private Label label1;
         private RadioButton rdbOpcion3;
         private Button btnVer;
+        private RadioButton rdbOpcion4;
     }
 }

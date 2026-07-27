@@ -54,6 +54,7 @@ namespace prySistema_prestamos_libros
                                  "LEFT JOIN tblidiomas idi ON l.id_idioma = idi.id_idioma " +
                                  "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
                                  "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
+                                 "WHERE l.estado = 'Activo' " +
                                  "GROUP BY l.id_libro, l.ISBN, l.titulo_libro, ed.nombre_editorial, " +
                                  "cat.nombre, idi.nombre_idioma, l.paginas, l.id_editorial, l.id_categoria, l.id_idioma;";
 
@@ -94,7 +95,8 @@ namespace prySistema_prestamos_libros
                                  "LEFT JOIN tblidiomas idi ON l.id_idioma = idi.id_idioma " +
                                  "LEFT JOIN tbllibro_autor la ON l.id_libro = la.id_libro " +
                                  "LEFT JOIN tblautores a ON la.id_autor = a.id_autor " +
-                                 "WHERE l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda " +
+                                 "WHERE (l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda) " +
+                                 "AND l.estado = 'Activo' " +
                                  "GROUP BY l.id_libro, l.ISBN, l.titulo_libro, ed.nombre_editorial, " +
                                  "cat.nombre, idi.nombre_idioma, l.paginas, l.id_editorial, l.id_categoria, l.id_idioma;";
 
@@ -181,7 +183,7 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        public DataTable BuscarLibroParaEjemplar(string isbnBuscado)
+        public DataTable BuscarLibroParaEjemplar(string busquedaTexto)
         {
             DataTable tabla = new DataTable();
             try
@@ -193,11 +195,12 @@ namespace prySistema_prestamos_libros
                                  "l.titulo_libro AS 'Título', " +
                                  "l.ISBN AS 'ISBN' " +
                                  "FROM tbllibros l " +
-                                 "WHERE l.ISBN LIKE @isbn;";
+                                 "WHERE (l.ISBN LIKE @busqueda OR l.titulo_libro LIKE @busqueda) " +
+                                 "AND l.estado = 'Activo';";
 
                     using (var comando = new MySqlCommand(sql, conexion))
                     {
-                        comando.Parameters.AddWithValue("@isbn", "%" + isbnBuscado + "%");
+                        comando.Parameters.AddWithValue("@busqueda", "%" + busquedaTexto + "%");
                         using (var adaptador = new MySqlDataAdapter(comando))
                         {
                             adaptador.Fill(tabla);
@@ -220,16 +223,16 @@ namespace prySistema_prestamos_libros
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "DELETE FROM tbllibros WHERE id_libro = @idLibro;";
+                    string sql = "UPDATE tbllibros SET estado = 'Inactivo' WHERE id_libro = @idLibro;";
                     using (var comando = new MySqlCommand(sql, conexion))
                     {
                         comando.Parameters.AddWithValue("@idLibro", idLibro);
                         int filasAfectadas = comando.ExecuteNonQuery();
 
                         if (filasAfectadas > 0)
-                            mensaje = "El libro fue eliminado correctamente del catálogo.";
+                            mensaje = "El libro fue dado de baja correctamente.";
                         else
-                            mensaje = "No se encontró el libro a eliminar.";
+                            mensaje = "No se encontró el libro a dar de baja.";
                     }
                 }
             }
@@ -315,8 +318,8 @@ namespace prySistema_prestamos_libros
                 {
                     try
                     {
-                        string sqlLibro = "INSERT INTO tbllibros (id_editorial, id_categoria, id_idioma, titulo_libro, paginas, ISBN) " +
-                                          "VALUES (@editorial, @categoria, @idioma, @titulo, @paginas, @isbn);";
+                        string sqlLibro = "INSERT INTO tbllibros (id_editorial, id_categoria, id_idioma, titulo_libro, paginas, ISBN, estado) " +
+                                          "VALUES (@editorial, @categoria, @idioma, @titulo, @paginas, @isbn, 'Activo');";
 
                         long idLibroGenerado = 0;
                         using (var cmdLibro = new MySqlCommand(sqlLibro, conexion, transaccion))

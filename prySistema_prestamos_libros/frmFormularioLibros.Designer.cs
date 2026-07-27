@@ -85,28 +85,34 @@
             // 
             txtNumPaginas.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumPaginas.Location = new Point(755, 77);
+            txtNumPaginas.MaxLength = 5;
             txtNumPaginas.Multiline = true;
             txtNumPaginas.Name = "txtNumPaginas";
             txtNumPaginas.Size = new Size(245, 30);
             txtNumPaginas.TabIndex = 22;
-            // 
+            txtNumPaginas.KeyPress += SoloNumeros_KeyPress;
+            //
             // txtTitulo
-            // 
+            //
             txtTitulo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTitulo.Location = new Point(411, 77);
+            txtTitulo.MaxLength = 150;
             txtTitulo.Multiline = true;
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(245, 30);
             txtTitulo.TabIndex = 20;
-            // 
+            txtTitulo.KeyPress += txtTitulo_KeyPress;
+            //
             // txtISBN
-            // 
+            //
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtISBN.Location = new Point(61, 77);
+            txtISBN.MaxLength = 13;
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(245, 30);
             txtISBN.TabIndex = 18;
+            txtISBN.KeyPress += SoloNumeros_KeyPress;
             // 
             // lblIdioma
             // 

@@ -74,6 +74,7 @@
             txtBuscarLibro.Size = new Size(245, 30);
             txtBuscarLibro.TabIndex = 2;
             txtBuscarLibro.TextChanged += txtBuscarLibro_TextChanged;
+            txtBuscarLibro.KeyPress += txtBuscarLibro_KeyPress;
             // 
             // dgvLibros
             // 

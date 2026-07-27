@@ -15,13 +15,16 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
             CargarGrid();
+
+            // Solo el Administrador puede dar de baja trabajadores; un Bibliotecario no.
+            btnDarBaja.Enabled = clsLogin.EsAdministrador;
         }
 
         public void CargarGrid()
         {
             trabajador = new clsGestionTrabajador();
             dgvTrabajadores.DataSource = null;
-            dgvTrabajadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTrabajadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 dgvTrabajadores.DataSource = trabajador.CargarDataGrid();
@@ -144,7 +147,7 @@ namespace prySistema_prestamos_libros
             }
             trabajador = new clsGestionTrabajador();
             dgvTrabajadores.DataSource = null;
-            dgvTrabajadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTrabajadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 trabajador.Busqueda = txtBuscarTrabajador.Text;

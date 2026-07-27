@@ -125,6 +125,45 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
+        public DataTable DisponibilidadTotalLibros()
+        {
+            tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT l.titulo_libro AS 'Libro', " +
+                                    "COUNT(e.id_ejemplar) AS 'Total de Ejemplares', " +
+                                    "SUM(CASE WHEN EXISTS (" +
+                                        "SELECT 1 FROM tblprestamos p " +
+                                        "WHERE p.id_ejemplar = e.id_ejemplar " +
+                                        "AND p.fecha_devolucion_real IS NULL" +
+                                    ") THEN 1 ELSE 0 END) AS 'Prestados', " +
+                                    "COUNT(e.id_ejemplar) - SUM(CASE WHEN EXISTS (" +
+                                        "SELECT 1 FROM tblprestamos p " +
+                                        "WHERE p.id_ejemplar = e.id_ejemplar " +
+                                        "AND p.fecha_devolucion_real IS NULL" +
+                                    ") THEN 1 ELSE 0 END) AS 'Disponibles' " +
+                                "FROM tbllibros l " +
+                                "INNER JOIN tblejemplares e ON l.id_libro = e.id_libro " +
+                                "WHERE e.estado = 'Activo' " +
+                                "GROUP BY l.id_libro, l.titulo_libro " +
+                                "ORDER BY l.titulo_libro; ";
+
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    {
+                        consulta.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al consultar las categorias mas solicitadas al mes: " + ex.Message);
+            }
+            return tabla;
+        }
+
         public void ExportarPDF(DataTable tabla, string tituloReporte, string nombreArchivoSugerido)
         {
             if(tabla == null || tabla.Rows.Count == 0)

@@ -106,6 +106,81 @@ namespace prySistema_prestamos_libros
             }
         }
 
+        // Solo dígitos (ISBN y número de páginas).
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        // El título permite letras, números, espacio y puntuación común de títulos
+        // (: , . ' -), a diferencia de Nombre/Apellidos que solo aceptan letras.
+        private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+
+            bool permitido = char.IsLetterOrDigit(e.KeyChar) || " :,.'-".IndexOf(e.KeyChar) >= 0;
+            if (!permitido)
+                e.Handled = true;
+        }
+
+        // Revisa que cada campo tenga el tipo de dato y el largo correcto antes de mandarlo
+        // a la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
+        private bool ValidarCampos()
+        {
+            if (txtISBN.Text.Trim().Length != 13)
+            {
+                MessageBox.Show("El ISBN debe tener exactamente 13 dígitos.", "ISBN inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtISBN.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text))
+            {
+                MessageBox.Show("Captura el título del libro.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTitulo.Focus();
+                return false;
+            }
+
+            if (!int.TryParse(txtNumPaginas.Text, out int paginas) || paginas <= 0)
+            {
+                MessageBox.Show("El número de páginas debe ser un número mayor a 0.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumPaginas.Focus();
+                return false;
+            }
+
+            if (cmbEditorial.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona una editorial.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbEditorial.Focus();
+                return false;
+            }
+
+            if (cmbCategoria.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona una categoría.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbCategoria.Focus();
+                return false;
+            }
+
+            if (cmbIdioma.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona un idioma.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbIdioma.Focus();
+                return false;
+            }
+
+            if (dgvAlmacenarAutor.Rows.Count == 0 || (dgvAlmacenarAutor.Rows.Count == 1 && dgvAlmacenarAutor.Rows[0].IsNewRow))
+            {
+                MessageBox.Show("Debes agregar al menos un autor al libro.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
         private void dgvAutor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnAgregarAutor.PerformClick();
@@ -160,11 +235,8 @@ namespace prySistema_prestamos_libros
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (dgvAlmacenarAutor.Rows.Count == 0 || (dgvAlmacenarAutor.Rows.Count == 1 && dgvAlmacenarAutor.Rows[0].IsNewRow))
-            {
-                MessageBox.Show("Debes agregar al menos un autor al libro.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (!ValidarCampos())
                 return;
-            }
 
             try
             {

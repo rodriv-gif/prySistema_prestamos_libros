@@ -30,7 +30,8 @@ namespace prySistema_prestamos_libros
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 

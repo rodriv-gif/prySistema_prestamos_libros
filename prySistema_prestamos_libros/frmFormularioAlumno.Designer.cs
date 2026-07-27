@@ -239,7 +239,7 @@
             txtMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMatricula.ForeColor = Color.Black;
             txtMatricula.Location = new Point(29, 73);
-            txtMatricula.MaxLength = 9;
+            txtMatricula.MaxLength = 7;
             txtMatricula.Multiline = true;
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(245, 30);

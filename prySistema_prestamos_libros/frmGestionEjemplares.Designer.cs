@@ -63,16 +63,17 @@
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(117, 20);
             lblBuscar.TabIndex = 3;
-            lblBuscar.Text = "Buscar por clave";
-            // 
+            lblBuscar.Text = "Buscar por clave o título";
+            //
             // txtBuscarClave
-            // 
+            //
             txtBuscarClave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarClave.Location = new Point(123, 125);
             txtBuscarClave.Multiline = true;
             txtBuscarClave.Name = "txtBuscarClave";
             txtBuscarClave.Size = new Size(245, 30);
             txtBuscarClave.TabIndex = 3;
+            txtBuscarClave.KeyPress += txtBuscarClave_KeyPress;
             txtBuscarClave.TextChanged += txtBuscarClave_TextChanged;
             // 
             // dgvEjemplares

@@ -163,5 +163,20 @@ namespace prySistema_prestamos_libros
                 MessageBox.Show("Error al buscar: " + ex.Message);
             }
         }
+
+        // Bloquea cualquier carácter que no sea letra, número o espacio, para que no
+        // se puedan escribir símbolos (%, ', ;, --, etc.) en la barra de búsqueda.
+        // Solo se puede buscar por ISBN o por título del libro.
+        private void txtBuscarLibro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se puede buscar por ISBN o por título del libro. No se permiten símbolos.",
+                                 "Búsqueda no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

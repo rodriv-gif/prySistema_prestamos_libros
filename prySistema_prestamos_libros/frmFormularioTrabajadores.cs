@@ -96,9 +96,9 @@ namespace prySistema_prestamos_libros
         // a la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
         private bool ValidarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtNumeroControl.Text))
+            if (txtNumeroControl.Text.Trim().Length != 6)
             {
-                MessageBox.Show("Captura el número de control (solo números).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El número de control debe tener exactamente 6 dígitos.", "Número de control inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNumeroControl.Focus();
                 return false;
             }

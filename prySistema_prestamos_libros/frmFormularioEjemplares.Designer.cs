@@ -84,7 +84,7 @@
             lblSeleccionLibro.Name = "lblSeleccionLibro";
             lblSeleccionLibro.Size = new Size(265, 20);
             lblSeleccionLibro.TabIndex = 4;
-            lblSeleccionLibro.Text = "Buscar por ISBN al libro que pertenece";
+            lblSeleccionLibro.Text = "Buscar por ISBN o título del libro al que pertenece";
             // 
             // lblCantidad
             // 
@@ -240,7 +240,8 @@
             chkSeleccionar.Width = 125;
             // 
             // txtLibroPerteneciete
-            // 
+            //
+            txtLibroPerteneciete.BackColor = Color.White;
             txtLibroPerteneciete.Location = new Point(61, 83);
             txtLibroPerteneciete.Multiline = true;
             txtLibroPerteneciete.Name = "txtLibroPerteneciete";

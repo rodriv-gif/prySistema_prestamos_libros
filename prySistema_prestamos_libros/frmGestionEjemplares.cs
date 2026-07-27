@@ -34,6 +34,7 @@ namespace prySistema_prestamos_libros
                 dgvEjemplares.AutoGenerateColumns = true;
                 dgvEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvEjemplares.DataSource = ejemplar.CargarDataGrid();
+                OcultarColumnas();
             }
             catch (Exception ex)
             {
@@ -42,6 +43,17 @@ namespace prySistema_prestamos_libros
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Error);
             }
+        }
+
+        // Cada vez que se reasigna el DataSource, la grid regenera sus columnas y pierde
+        // la visibilidad anterior, por eso este método se llama en todos los lugares
+        // donde se asigna dgvEjemplares.DataSource.
+        private void OcultarColumnas()
+        {
+            if (dgvEjemplares.Columns["id_libro"] != null)
+                dgvEjemplares.Columns["id_libro"].Visible = false;
+            if (dgvEjemplares.Columns["Inventario"] != null)
+                dgvEjemplares.Columns["Inventario"].Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -102,15 +114,31 @@ namespace prySistema_prestamos_libros
             }
             Ejemplar = new clsGestionEjemplares();
             dgvEjemplares.DataSource = null;
-            dgvEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
-                Ejemplar.BuscarPorClave = int.Parse(txtBuscarClave.Text);
+                Ejemplar.Busqueda = txtBuscarClave.Text;
                 dgvEjemplares.DataSource = Ejemplar.Consultar();
+                OcultarColumnas();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Requiere asignar datos" + ex.Message);
+                MessageBox.Show("Error al buscar: " + ex.Message);
+            }
+        }
+
+        // Bloquea cualquier carácter que no sea letra, número o espacio, para que no
+        // se puedan escribir símbolos (%, ', ;, --, etc.) en la barra de búsqueda.
+        // Solo se puede buscar por clave (ID Ejemplar) o por título del libro.
+        private void txtBuscarClave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return; // permite backspace
+
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se puede buscar por clave (ID Ejemplar) o por título del libro. No se permiten símbolos.",
+                                 "Búsqueda no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

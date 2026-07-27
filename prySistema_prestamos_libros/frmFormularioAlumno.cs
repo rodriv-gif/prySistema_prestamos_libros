@@ -117,9 +117,9 @@ namespace prySistema_prestamos_libros
         // a la base de datos. Si algo falla, regresa false y ya deja el mensaje mostrado.
         private bool ValidarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtMatricula.Text))
+            if (txtMatricula.Text.Trim().Length != 7)
             {
-                MessageBox.Show("Captura la matrícula (solo números).", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La matrícula debe tener exactamente 7 dígitos.", "Matrícula inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMatricula.Focus();
                 return false;
             }

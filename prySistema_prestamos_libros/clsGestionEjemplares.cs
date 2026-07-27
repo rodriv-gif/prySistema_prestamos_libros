@@ -8,13 +8,13 @@ namespace prySistema_prestamos_libros
 {
     internal class clsGestionEjemplares
     {
-        private int buscarPorClave;
+        private string busqueda;
 
         private MySqlDataAdapter consulta;
         private DataTable tabla;
 
         // propiedad
-        public int BuscarPorClave { get => buscarPorClave; set => buscarPorClave = value; }
+        public string Busqueda { get => busqueda; set => busqueda = value; }
         public int IdLibro { get; internal set; }
         public string Localizacion { get; internal set; }
         public int Inventario { get; internal set; }
@@ -39,7 +39,8 @@ namespace prySistema_prestamos_libros
                                     "e.estado AS 'Estado', " +
                                     "e.id_libro AS 'id_libro' " +
                                 "FROM tblejemplares e " +
-                                "LEFT JOIN tbllibros l ON e.id_libro = l.id_libro;";
+                                "LEFT JOIN tbllibros l ON e.id_libro = l.id_libro " +
+                                "WHERE e.estado = 'Activo';";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
@@ -54,9 +55,8 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        // Búsqueda por id_ejemplar (la "clave" que teclea el bibliotecario en la barra
-        // de búsqueda), con LIKE para que funcione igual que las demás barras de búsqueda
-        // del proyecto (Trabajadores, Alumnos).
+        // Búsqueda por id_ejemplar (clave) o por título del libro, con LIKE para que
+        // funcione igual que las demás barras de búsqueda del proyecto (Trabajadores, Alumnos).
         public DataTable Consultar()
         {
             tabla = new DataTable();
@@ -75,11 +75,12 @@ namespace prySistema_prestamos_libros
                                     "e.id_libro AS 'id_libro' " +
                                 "FROM tblejemplares e " +
                                 "LEFT JOIN tbllibros l ON e.id_libro = l.id_libro " +
-                                "WHERE e.id_ejemplar LIKE @clave;";
+                                "WHERE (e.id_ejemplar LIKE @busqueda OR l.titulo_libro LIKE @busqueda) " +
+                                "AND e.estado = 'Activo';";
 
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
-                        consultar.Parameters.AddWithValue("@clave", "%" + buscarPorClave + "%");
+                        consultar.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
 
                         using (consulta = new MySqlDataAdapter(consultar))
                         {
