@@ -55,11 +55,7 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        // Cuenta cuántos préstamos sigue teniendo activos (sin devolver) un alumno o
-        // trabajador ahorita mismo. Se usa para no dejar que se pase del límite de libros
-        // permitidos (4 para alumnos, 6 para trabajadores). El mismo idSolicitante puede
-        // ser matrícula o número de control; como en cada préstamo solo una de esas dos
-        // columnas tiene valor (la otra queda NULL), el OR cubre ambos casos sin problema.
+        // Cuenta los préstamos activos (sin devolver) de un solicitante, para el límite de libros.
         public int ContarPrestamosActivos(int idSolicitante)
         {
             int total = 0;
@@ -89,10 +85,7 @@ namespace prySistema_prestamos_libros
             return total;
         }
 
-        // Registra un préstamo por cada ejemplar en el carrito (idsEjemplares), todos con
-        // los mismos datos generales (solicitante, tipo, fechas, estado, bibliotecario).
-        // Solo uno de matricula/numeroControl debe traer valor; el otro se manda NULL,
-        // según si el solicitante es Alumno o Trabajador.
+        // Registra un préstamo por cada ejemplar del carrito; solo uno de matricula/numeroControl trae valor.
         public string RegistrarPrestamo(int? matricula, int? numeroControl, int idTipoPrestamo,
             int idEstadoPrestamo, DateTime fechaPrestamo, DateTime fechaDevolucion,
             int idBibliotecario, List<int> idsEjemplares)

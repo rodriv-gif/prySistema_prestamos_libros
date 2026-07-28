@@ -76,11 +76,7 @@ namespace prySistema_prestamos_libros
                                     "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
                                     "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
                                     "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
-                                    // Un préstamo está "vencido" si todavía no se ha devuelto (fecha_devolucion_real
-                                    // sigue en NULL) y ya se pasó su fecha límite (fecha_devolucion). No se filtra
-                                    // por id_estado_prestamo porque ese valor nunca se actualiza solo con el paso
-                                    // del tiempo; comparando fechas, el préstamo aparece aquí automáticamente en
-                                    // cuanto se atrasa y desaparece solo en cuanto se devuelve.
+                                    // Vencido = no devuelto y ya pasó su fecha límite (se calcula, no se guarda).
                                     "WHERE P.fecha_devolucion_real IS NULL " +
                                     "AND P.fecha_devolucion < CURRENT_DATE(); ";
 

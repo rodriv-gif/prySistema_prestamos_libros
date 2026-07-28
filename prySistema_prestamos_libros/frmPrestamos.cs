@@ -34,8 +34,7 @@ namespace prySistema_prestamos_libros
         private const int DiasPrestamoAlumno = 15;
         private const int DiasPrestamoTrabajador = 20;
 
-        // Límite de libros que puede tener prestados AL MISMO TIEMPO un solicitante
-        // (sin devolver). Tampoco lo decide el bibliotecario.
+        // Máximo de libros que puede tener prestados un solicitante al mismo tiempo.
         private const int LimitePrestamosAlumno = 4;
         private const int LimitePrestamosTrabajador = 6;
 
@@ -328,9 +327,7 @@ namespace prySistema_prestamos_libros
                 return false;
             }
 
-            // No dejamos que el solicitante se pase del límite de libros prestados al
-            // mismo tiempo (4 para alumnos, 6 para trabajadores): se suman los que YA
-            // tiene prestados sin devolver más los que está a punto de agregar ahorita.
+            // Suma préstamos activos + los que se van a agregar, contra el límite.
             int idSolicitante = Convert.ToInt32(txtNumControlSolicitante.Text.Trim());
             int limitePrestamos = txtTipoSolicitante.Text == "Alumno" ? LimitePrestamosAlumno : LimitePrestamosTrabajador;
 

@@ -46,12 +46,7 @@ namespace prySistema_prestamos_libros
             return dt;
         }
 
-        // Método para marcar el libro como devuelto. Recibe la fecha real de devolución
-        // y el estado elegidos en el formulario (antes estaban fijos a CURRENT_DATE() y
-        // al estado 2 "a fuerzas", ignorando lo que el bibliotecario seleccionara).
-        // OJO: esto solo toca fecha_devolucion_real (cuándo se devolvió de verdad), nunca
-        // fecha_devolucion (la fecha límite que se fijó desde Préstamos) — esa no se debe
-        // tocar aquí, o se perdería el dato original de cuándo vencía el préstamo.
+        // Marca el libro como devuelto; solo toca fecha_devolucion_real, nunca fecha_devolucion.
         public bool DevolverLibro(int idPrestamo, DateTime fechaDevolucionReal, int idEstadoPrestamo)
         {
             clsConexion conexionBD = new clsConexion();
@@ -83,12 +78,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Método para registrar la multa si hubo retraso. Por defecto nace 'Pendiente'
-        // y sin fecha_pago (NULL). Pero si el solicitante decide pagarla ahí mismo (por
-        // ejemplo, es su única multa y trae dinero), se puede crear directamente como
-        // 'Pagado' con la fecha en que se está pagando, pasando pagadaDeInmediato=true.
-        // Usa parámetros en vez de concatenar el texto directo en el SQL (motivo puede
-        // traer comillas o caracteres raros del título del libro).
+        // Registra la multa; nace 'Pendiente' o 'Pagado' si pagadaDeInmediato=true.
         public bool GuardarMulta(int idPrestamo, decimal monto, string motivo, int diasAtrasados,
                                   bool pagadaDeInmediato, DateTime? fechaPago)
         {
@@ -124,10 +114,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Trae las multas de visitas anteriores que ese alumno/trabajador todavía debe
-        // (estado_pago = 'Pendiente'). Se usa al buscar al solicitante en Devoluciones,
-        // para que el bibliotecario pueda cobrarlas aunque no tengan relación con los
-        // libros que se están devolviendo en este momento.
+        // Trae las multas pendientes de visitas anteriores de ese solicitante.
         public DataTable ObtenerMultasPendientes(int idSolicitante)
         {
             DataTable dt = new DataTable();
@@ -167,10 +154,7 @@ namespace prySistema_prestamos_libros
             return dt;
         }
 
-        // Marca como 'Pagado' UNA multa que el bibliotecario palomeó en el grid de multas
-        // pendientes, guardando la fecha real en la que se pagó. Se llama una vez por
-        // cada renglón palomeado (igual que DevolverLibro/GuardarMulta), en vez de recibir
-        // varios ids juntos.
+        // Marca como 'Pagado' una multa; se llama una vez por cada renglón palomeado.
         public bool RegistrarPagoMulta(int idMulta, DateTime fechaPago)
         {
             clsConexion conexionBD = new clsConexion();
