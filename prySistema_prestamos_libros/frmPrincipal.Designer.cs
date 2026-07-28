@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             pnlMenu = new Panel();
+            btnReportes = new Button();
             lblRegistros = new Label();
             lblOperaciones = new Label();
             btnCerrarSesion = new Button();
@@ -52,7 +53,6 @@
             pnlContenedor = new Panel();
             pnlBienvenida = new Panel();
             lblBienvenida = new Label();
-            btnReportes = new Button();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
@@ -81,6 +81,19 @@
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(407, 1049);
             pnlMenu.TabIndex = 0;
+            // 
+            // btnReportes
+            // 
+            btnReportes.BackColor = Color.FromArgb(201, 168, 76);
+            btnReportes.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReportes.ForeColor = Color.FromArgb(17, 30, 71);
+            btnReportes.Location = new Point(107, 882);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(212, 52);
+            btnReportes.TabIndex = 12;
+            btnReportes.Text = "Reportes";
+            btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // lblRegistros
             // 
@@ -316,7 +329,7 @@
             // pnlBienvenida
             // 
             pnlBienvenida.Controls.Add(lblBienvenida);
-            pnlBienvenida.Location = new Point(73, 85);
+            pnlBienvenida.Location = new Point(91, 85);
             pnlBienvenida.Name = "pnlBienvenida";
             pnlBienvenida.Size = new Size(1105, 302);
             pnlBienvenida.TabIndex = 0;
@@ -332,19 +345,6 @@
             lblBienvenida.Size = new Size(796, 54);
             lblBienvenida.TabIndex = 3;
             lblBienvenida.Text = "Bienvenido Administrador / Bibliotecario";
-            // 
-            // btnReportes
-            // 
-            btnReportes.BackColor = Color.FromArgb(201, 168, 76);
-            btnReportes.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReportes.ForeColor = Color.FromArgb(17, 30, 71);
-            btnReportes.Location = new Point(107, 882);
-            btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(212, 52);
-            btnReportes.TabIndex = 12;
-            btnReportes.Text = "Reportes";
-            btnReportes.UseVisualStyleBackColor = false;
-            btnReportes.Click += btnReportes_Click;
             // 
             // frmPrincipal
             // 

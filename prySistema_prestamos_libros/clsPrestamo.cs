@@ -55,6 +55,40 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
+        // Cuenta cuántos préstamos sigue teniendo activos (sin devolver) un alumno o
+        // trabajador ahorita mismo. Se usa para no dejar que se pase del límite de libros
+        // permitidos (4 para alumnos, 6 para trabajadores). El mismo idSolicitante puede
+        // ser matrícula o número de control; como en cada préstamo solo una de esas dos
+        // columnas tiene valor (la otra queda NULL), el OR cubre ambos casos sin problema.
+        public int ContarPrestamosActivos(int idSolicitante)
+        {
+            int total = 0;
+            clsConexion conexionBD = new clsConexion();
+
+            string sql = @"
+                SELECT COUNT(*)
+                FROM tblprestamos
+                WHERE (matricula = @idSolicitante OR numero_control = @idSolicitante)
+                  AND fecha_devolucion_real IS NULL;";
+
+            try
+            {
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                    cmd.Parameters.AddWithValue("@idSolicitante", idSolicitante);
+                    object resultado = cmd.ExecuteScalar();
+                    total = Convert.ToInt32(resultado);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al contar los préstamos activos: " + ex.Message);
+            }
+
+            return total;
+        }
+
         // Registra un préstamo por cada ejemplar en el carrito (idsEjemplares), todos con
         // los mismos datos generales (solicitante, tipo, fechas, estado, bibliotecario).
         // Solo uno de matricula/numeroControl debe traer valor; el otro se manda NULL,

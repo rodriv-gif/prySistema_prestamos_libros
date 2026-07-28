@@ -46,22 +46,30 @@ namespace prySistema_prestamos_libros
             return dt;
         }
 
-        //Método para marcar el libro como devuelto
-        public bool DevolverLibro(int idPrestamo)
+        // Método para marcar el libro como devuelto. Recibe la fecha real de devolución
+        // y el estado elegidos en el formulario (antes estaban fijos a CURRENT_DATE() y
+        // al estado 2 "a fuerzas", ignorando lo que el bibliotecario seleccionara).
+        // OJO: esto solo toca fecha_devolucion_real (cuándo se devolvió de verdad), nunca
+        // fecha_devolucion (la fecha límite que se fijó desde Préstamos) — esa no se debe
+        // tocar aquí, o se perdería el dato original de cuándo vencía el préstamo.
+        public bool DevolverLibro(int idPrestamo, DateTime fechaDevolucionReal, int idEstadoPrestamo)
         {
             clsConexion conexionBD = new clsConexion();
             MySqlConnection conexion = null;
 
             string sql = @"
-                UPDATE tblprestamos 
-                SET fecha_devolucion_real = CURRENT_DATE(), 
-                    id_estado_prestamo = 2 
-                WHERE id_prestamo = " + idPrestamo + ";";
+                UPDATE tblprestamos
+                SET fecha_devolucion_real = @fechaReal,
+                    id_estado_prestamo = @idEstado
+                WHERE id_prestamo = @idPrestamo;";
 
             try
             {
                 conexion = conexionBD.AbrirConexion();
                 MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@fechaReal", fechaDevolucionReal.Date);
+                cmd.Parameters.AddWithValue("@idEstado", idEstadoPrestamo);
+                cmd.Parameters.AddWithValue("@idPrestamo", idPrestamo);
                 int filasAfectadas = cmd.ExecuteNonQuery();
                 return filasAfectadas > 0;
             }
@@ -75,26 +83,116 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Método para registrar la multa si hubo retraso
-        public bool GuardarMulta(int idPrestamo, decimal monto, string motivo, int diasAtrasados, string fechaPago)
+        // Método para registrar la multa si hubo retraso. Por defecto nace 'Pendiente'
+        // y sin fecha_pago (NULL). Pero si el solicitante decide pagarla ahí mismo (por
+        // ejemplo, es su única multa y trae dinero), se puede crear directamente como
+        // 'Pagado' con la fecha en que se está pagando, pasando pagadaDeInmediato=true.
+        // Usa parámetros en vez de concatenar el texto directo en el SQL (motivo puede
+        // traer comillas o caracteres raros del título del libro).
+        public bool GuardarMulta(int idPrestamo, decimal monto, string motivo, int diasAtrasados,
+                                  bool pagadaDeInmediato, DateTime? fechaPago)
         {
             clsConexion conexionBD = new clsConexion();
             MySqlConnection conexion = null;
 
+            string estadoPago = pagadaDeInmediato ? "Pagado" : "Pendiente";
+
             string sql = @"
-                INSERT INTO tblmultas (id_prestamo, monto, motivo, fecha_pago, dias_atrasados)
-                VALUES (" + idPrestamo + ", " + monto.ToString(System.Globalization.CultureInfo.InvariantCulture) + ", '" + motivo + "', '" + fechaPago + "', " + diasAtrasados + ");";
+                INSERT INTO tblmultas (id_prestamo, monto, motivo, dias_atrasados, estado_pago, fecha_pago)
+                VALUES (@idPrestamo, @monto, @motivo, @dias, @estadoPago, @fechaPago);";
 
             try
             {
                 conexion = conexionBD.AbrirConexion();
                 MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@idPrestamo", idPrestamo);
+                cmd.Parameters.AddWithValue("@monto", monto);
+                cmd.Parameters.AddWithValue("@motivo", motivo);
+                cmd.Parameters.AddWithValue("@dias", diasAtrasados);
+                cmd.Parameters.AddWithValue("@estadoPago", estadoPago);
+                cmd.Parameters.AddWithValue("@fechaPago", (object)fechaPago?.Date ?? DBNull.Value);
                 int filasAfectadas = cmd.ExecuteNonQuery();
                 return filasAfectadas > 0;
             }
             catch (Exception ex)
             {
                 throw new Exception("Error al guardar la multa: " + ex.Message);
+            }
+            finally
+            {
+                conexionBD.CerrarConexion(conexion);
+            }
+        }
+
+        // Trae las multas de visitas anteriores que ese alumno/trabajador todavía debe
+        // (estado_pago = 'Pendiente'). Se usa al buscar al solicitante en Devoluciones,
+        // para que el bibliotecario pueda cobrarlas aunque no tengan relación con los
+        // libros que se están devolviendo en este momento.
+        public DataTable ObtenerMultasPendientes(int idSolicitante)
+        {
+            DataTable dt = new DataTable();
+            clsConexion conexionBD = new clsConexion();
+            MySqlConnection conexion = null;
+
+            string sql = @"
+                SELECT m.id_multa,
+                       l.titulo_libro AS 'Título',
+                       m.motivo AS 'Motivo',
+                       m.monto AS 'Monto',
+                       m.dias_atrasados AS 'Días Atrasados'
+                FROM tblmultas m
+                INNER JOIN tblprestamos p ON m.id_prestamo = p.id_prestamo
+                INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar
+                INNER JOIN tbllibros l ON e.id_libro = l.id_libro
+                WHERE (p.matricula = @idSolicitante OR p.numero_control = @idSolicitante)
+                  AND m.estado_pago = 'Pendiente';";
+
+            try
+            {
+                conexion = conexionBD.AbrirConexion();
+                MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@idSolicitante", idSolicitante);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al consultar las multas pendientes: " + ex.Message);
+            }
+            finally
+            {
+                conexionBD.CerrarConexion(conexion);
+            }
+
+            return dt;
+        }
+
+        // Marca como 'Pagado' UNA multa que el bibliotecario palomeó en el grid de multas
+        // pendientes, guardando la fecha real en la que se pagó. Se llama una vez por
+        // cada renglón palomeado (igual que DevolverLibro/GuardarMulta), en vez de recibir
+        // varios ids juntos.
+        public bool RegistrarPagoMulta(int idMulta, DateTime fechaPago)
+        {
+            clsConexion conexionBD = new clsConexion();
+            MySqlConnection conexion = null;
+
+            string sql = @"
+                UPDATE tblmultas
+                SET estado_pago = 'Pagado', fecha_pago = @fechaPago
+                WHERE id_multa = @idMulta;";
+
+            try
+            {
+                conexion = conexionBD.AbrirConexion();
+                MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@fechaPago", fechaPago.Date);
+                cmd.Parameters.AddWithValue("@idMulta", idMulta);
+                int filasAfectadas = cmd.ExecuteNonQuery();
+                return filasAfectadas > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al registrar el pago de la multa: " + ex.Message);
             }
             finally
             {

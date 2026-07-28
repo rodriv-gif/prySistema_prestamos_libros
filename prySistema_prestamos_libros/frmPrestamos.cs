@@ -34,6 +34,11 @@ namespace prySistema_prestamos_libros
         private const int DiasPrestamoAlumno = 15;
         private const int DiasPrestamoTrabajador = 20;
 
+        // Límite de libros que puede tener prestados AL MISMO TIEMPO un solicitante
+        // (sin devolver). Tampoco lo decide el bibliotecario.
+        private const int LimitePrestamosAlumno = 4;
+        private const int LimitePrestamosTrabajador = 6;
+
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
             txtTipoSolicitante.ReadOnly = true;
@@ -320,6 +325,33 @@ namespace prySistema_prestamos_libros
             if (librosAPrestar.Rows.Count == 0)
             {
                 MessageBox.Show("Agrega al menos un libro a la lista de préstamo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // No dejamos que el solicitante se pase del límite de libros prestados al
+            // mismo tiempo (4 para alumnos, 6 para trabajadores): se suman los que YA
+            // tiene prestados sin devolver más los que está a punto de agregar ahorita.
+            int idSolicitante = Convert.ToInt32(txtNumControlSolicitante.Text.Trim());
+            int limitePrestamos = txtTipoSolicitante.Text == "Alumno" ? LimitePrestamosAlumno : LimitePrestamosTrabajador;
+
+            try
+            {
+                clsPrestamo prestamoConsulta = new clsPrestamo();
+                int prestamosActivos = prestamoConsulta.ContarPrestamosActivos(idSolicitante);
+                int totalConEstePrestamo = prestamosActivos + librosAPrestar.Rows.Count;
+
+                if (totalConEstePrestamo > limitePrestamos)
+                {
+                    MessageBox.Show(
+                        txtTipoSolicitante.Text + " ya tiene " + prestamosActivos + " libro(s) prestado(s) y el límite es de " +
+                        limitePrestamos + ". Con este préstamo llegaría a " + totalConEstePrestamo + ".",
+                        "Límite de préstamos alcanzado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo validar el límite de préstamos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
