@@ -45,6 +45,8 @@
             btnDevoluciones = new Button();
             lblTituloSistema = new Label();
             pnlSuperior = new Panel();
+            pcbMenos = new PictureBox();
+            pcbMas = new PictureBox();
             lblRol = new Label();
             lblAyuda = new Label();
             pcbAyuda = new PictureBox();
@@ -56,6 +58,8 @@
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbMenos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbMas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbAyuda).BeginInit();
             pnlContenedor.SuspendLayout();
             pnlBienvenida.SuspendLayout();
@@ -246,7 +250,7 @@
             lblTituloSistema.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloSistema.ForeColor = Color.FromArgb(201, 168, 76);
             lblTituloSistema.ImageAlign = ContentAlignment.BottomCenter;
-            lblTituloSistema.Location = new Point(410, 27);
+            lblTituloSistema.Location = new Point(349, 24);
             lblTituloSistema.Name = "lblTituloSistema";
             lblTituloSistema.Size = new Size(705, 54);
             lblTituloSistema.TabIndex = 2;
@@ -255,6 +259,8 @@
             // pnlSuperior
             // 
             pnlSuperior.BackColor = Color.FromArgb(17, 30, 71);
+            pnlSuperior.Controls.Add(pcbMenos);
+            pnlSuperior.Controls.Add(pcbMas);
             pnlSuperior.Controls.Add(lblRol);
             pnlSuperior.Controls.Add(lblAyuda);
             pnlSuperior.Controls.Add(pcbAyuda);
@@ -266,12 +272,32 @@
             pnlSuperior.Size = new Size(1518, 110);
             pnlSuperior.TabIndex = 1;
             // 
+            // pcbMenos
+            // 
+            pcbMenos.Image = (Image)resources.GetObject("pcbMenos.Image");
+            pcbMenos.Location = new Point(1461, 36);
+            pcbMenos.Name = "pcbMenos";
+            pcbMenos.Size = new Size(41, 40);
+            pcbMenos.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbMenos.TabIndex = 14;
+            pcbMenos.TabStop = false;
+            // 
+            // pcbMas
+            // 
+            pcbMas.Image = (Image)resources.GetObject("pcbMas.Image");
+            pcbMas.Location = new Point(1424, 37);
+            pcbMas.Name = "pcbMas";
+            pcbMas.Size = new Size(42, 39);
+            pcbMas.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbMas.TabIndex = 3;
+            pcbMas.TabStop = false;
+            // 
             // lblRol
             // 
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRol.ForeColor = Color.FromArgb(201, 168, 76);
-            lblRol.Location = new Point(1230, 38);
+            lblRol.Location = new Point(1157, 40);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(126, 25);
             lblRol.TabIndex = 13;
@@ -282,7 +308,7 @@
             lblAyuda.AutoSize = true;
             lblAyuda.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblAyuda.ForeColor = Color.FromArgb(201, 168, 76);
-            lblAyuda.Location = new Point(1382, 38);
+            lblAyuda.Location = new Point(1291, 40);
             lblAyuda.Name = "lblAyuda";
             lblAyuda.Size = new Size(72, 25);
             lblAyuda.TabIndex = 12;
@@ -291,7 +317,7 @@
             // pcbAyuda
             // 
             pcbAyuda.Image = (Image)resources.GetObject("pcbAyuda.Image");
-            pcbAyuda.Location = new Point(1445, 27);
+            pcbAyuda.Location = new Point(1360, 27);
             pcbAyuda.Name = "pcbAyuda";
             pcbAyuda.Size = new Size(57, 54);
             pcbAyuda.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -303,7 +329,7 @@
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.FromArgb(201, 168, 76);
-            lblUsuario.Location = new Point(1148, 38);
+            lblUsuario.Location = new Point(1073, 40);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(87, 25);
             lblUsuario.TabIndex = 11;
@@ -329,7 +355,7 @@
             // pnlBienvenida
             // 
             pnlBienvenida.Controls.Add(lblBienvenida);
-            pnlBienvenida.Location = new Point(91, 85);
+            pnlBienvenida.Location = new Point(172, 107);
             pnlBienvenida.Name = "pnlBienvenida";
             pnlBienvenida.Size = new Size(1105, 302);
             pnlBienvenida.TabIndex = 0;
@@ -340,7 +366,7 @@
             lblBienvenida.BackColor = Color.FromArgb(250, 247, 242);
             lblBienvenida.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBienvenida.ForeColor = Color.FromArgb(27, 46, 107);
-            lblBienvenida.Location = new Point(248, 97);
+            lblBienvenida.Location = new Point(167, 95);
             lblBienvenida.Name = "lblBienvenida";
             lblBienvenida.Size = new Size(796, 54);
             lblBienvenida.TabIndex = 3;
@@ -364,6 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlSuperior.ResumeLayout(false);
             pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbMenos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbMas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbAyuda).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlBienvenida.ResumeLayout(false);
@@ -397,5 +425,7 @@
         private Label lblAyuda;
         private Label lblRol;
         private Button btnReportes;
+        private PictureBox pcbMenos;
+        private PictureBox pcbMas;
     }
 }

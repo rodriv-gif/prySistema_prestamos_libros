@@ -308,7 +308,7 @@
             colSeleccionar.MinimumWidth = 6;
             colSeleccionar.Name = "colSeleccionar";
             colSeleccionar.Width = 125;
-            //
+            // 
             // lblRegistroDevolucion
             // 
             lblRegistroDevolucion.AutoSize = true;
@@ -351,9 +351,9 @@
             lblLibrosVencidos.ForeColor = Color.FromArgb(31, 31, 31);
             lblLibrosVencidos.Location = new Point(24, 588);
             lblLibrosVencidos.Name = "lblLibrosVencidos";
-            lblLibrosVencidos.Size = new Size(335, 20);
+            lblLibrosVencidos.Size = new Size(194, 20);
             lblLibrosVencidos.TabIndex = 25;
-            lblLibrosVencidos.Text = "Multas pendientes de pago (de visitas anteriores)";
+            lblLibrosVencidos.Text = "Multas pendientes de pago ";
             // 
             // lblDiasRetraso
             // 
@@ -451,7 +451,7 @@
             txtMotivo.Name = "txtMotivo";
             txtMotivo.Size = new Size(245, 30);
             txtMotivo.TabIndex = 47;
-            //
+            // 
             // btnRegistrarDevolucion
             // 
             btnRegistrarDevolucion.BackColor = Color.FromArgb(201, 168, 76);
