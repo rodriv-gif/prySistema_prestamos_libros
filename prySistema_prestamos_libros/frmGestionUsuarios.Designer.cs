@@ -74,6 +74,7 @@
             txtBuscarUsuario.Name = "txtBuscarUsuario";
             txtBuscarUsuario.Size = new Size(245, 30);
             txtBuscarUsuario.TabIndex = 2;
+            txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
             // btnNuevo
             // 
@@ -107,6 +108,7 @@
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnDarBaja
             // 
@@ -123,6 +125,7 @@
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDarBaja.UseVisualStyleBackColor = false;
+            btnDarBaja.Click += btnDarBaja_Click;
             // 
             // dgvUsuarios
             // 
@@ -163,6 +166,7 @@
             Controls.Add(pcbContenedorGestion);
             Name = "frmGestionUsuarios";
             Text = "Gestion de Usuarios";
+            Load += frmGestionUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)pcbContenedorGestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ResumeLayout(false);

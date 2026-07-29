@@ -10,7 +10,11 @@ namespace prySistema_prestamos_libros
 {
     public partial class frmFormularioUsuario : Form
     {
-        private object dt;
+        clsUsuarios usuario = new clsUsuarios();
+
+        public bool EsEdicion = false;
+
+        public int IdBibliotecario = 0;
 
         public frmFormularioUsuario()
         {
@@ -38,10 +42,69 @@ namespace prySistema_prestamos_libros
             txtApellidoMaternoTrabajador.Clear();
             txtCarreraTrabajador.Clear();
         }
+        private void LlenarComboPerfiles()
+        {
+            try
+            {
+                DataTable dt = usuario.CargarPerfiles();
 
 
+                cmbPerfil.DataSource = dt;
+
+                cmbPerfil.DisplayMember = "Perfil";
+
+                cmbPerfil.ValueMember = "id_perfil";
+
+                cmbPerfil.SelectedIndex = -1;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void BuscarTrabajador()
+        {
+            try
+            {
+
+                DataTable dt = usuario.BuscarTrabajador(
+                    Convert.ToInt32(txtNumControl.Text));
+
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    txtNombreTrabajador.Text =
+                        dt.Rows[0]["nombre"].ToString();
+
+
+                    txtApellidoPaternoTrabajador.Text =
+                        dt.Rows[0]["apellido_paterno"].ToString();
+
+
+                    txtApellidoMaternoTrabajador.Text =
+                        dt.Rows[0]["apellido_materno"].ToString();
+
+
+                    txtCarreraTrabajador.Text =
+                        dt.Rows[0]["id_carrera"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Trabajador no encontrado.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void btnAgregarTrabajador_Click(object sender, EventArgs e)
         {
+
             if (txtNumControl.Text.Trim() == "")
             {
                 MessageBox.Show("Ingrese el número de control.");
@@ -49,42 +112,20 @@ namespace prySistema_prestamos_libros
                 return;
             }
 
-            try
-            {
-                //en esta parte falta que se cree la clase donde se empleen estos metodos
-                //QUITAR LOS PARENTESIS
-                clsUsuarios usuario = new clsUsuarios();
-
-                DataTable dt = usuario.BuscaTrabajador(txtNumControl.Text);
-
-                if (dt.Rows.Count > 0)
-                {
-                    txtNombreTrabajador.Text = dt.Rows[0]["Nombre"].ToString();
-                    txtApellidoPaternoTrabajador.Text =dt.Rows[0]["ApellidoPaterno"].ToString();
-                    txtApellidoMaternoTrabajador.Text = dt.Rows[0]["ApellidoMaterno"].ToString();
-                    txtCarreraTrabajador.Text = dt.Rows[0]["Area"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Trabajador no encontrado.");
-                    LimpiarTrabajador();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            BuscarTrabajador();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            try
             {
+
                 if (txtNumControl.Text == "")
                 {
-                    MessageBox.Show("Seleccione un trabajador.");
+                    MessageBox.Show("Ingrese número de control.");
                     return;
                 }
+
 
                 if (cmbPerfil.SelectedIndex == -1)
                 {
@@ -92,49 +133,67 @@ namespace prySistema_prestamos_libros
                     return;
                 }
 
+
                 if (txtUsuario.Text == "")
                 {
-                    MessageBox.Show("Ingrese un usuario.");
-                    txtUsuario.Focus();
+                    MessageBox.Show("Ingrese usuario.");
                     return;
                 }
+
 
                 if (txtContrasena.Text == "")
                 {
-                    MessageBox.Show("Ingrese una contraseña.");
-                    txtContrasena.Focus();
+                    MessageBox.Show("Ingrese contraseña.");
                     return;
                 }
 
-                try
-                {
-                    
-                    // falta crear la clase 
-                    
-                    clsUsuarios usuario = new clsUsuarios();
+                usuario.NumeroControl = Convert.ToInt32(txtNumControl.Text);
+                usuario.IdPerfil = Convert.ToInt32(cmbPerfil.SelectedValue);
+                usuario.Usuario = txtUsuario.Text.Trim();
+                usuario.Contrasena = txtContrasena.Text.Trim();
 
-                    usuario.NumControl = txtNumControl.Text;
-                    usuario.IdPerfil = Convert.ToInt32(cmbPerfil.SelectedValue);
-                    usuario.Usuario = txtUsuario.Text.Trim();
-                    usuario.Password = txtContrasena.Text.Trim();
-
-                    if (usuario.Guardar())
-                    {
-                        MessageBox.Show("Usuario registrado correctamente.");
-                        Limpiar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo guardar.");
-                    }
-                }
-                catch (Exception ex)
+                if (!EsEdicion)
                 {
-                    MessageBox.Show(ex.Message);
-                    
+
+                    if (usuario.ExisteUsuario(txtUsuario.Text))
+                    {
+                        MessageBox.Show("El usuario ya existe.");
+                        return;
+                    }
+
+
+                    if (usuario.GuardarUsuario())
+                    {
+                        MessageBox.Show("Usuario guardado correctamente.");
+
+                        Close();
+                    }
+
                 }
+                else
+                {
+
+                    usuario.IdBibliotecario = IdBibliotecario;
+
+
+                    if (usuario.EditarUsuario())
+                    {
+                        MessageBox.Show("Usuario actualizado.");
+
+                        Close();
+                    }
+
+                }
+
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+
+            }
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -149,28 +208,105 @@ namespace prySistema_prestamos_libros
 
         private void cmbPerfil_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // misma indicacion qitar comentarios ddes pues de crear clase de usuarios
-            clsUsuarios usuario = new clsUsuarios();
 
-            cmbPerfil.DataSource = usuario.CargarPerfiles();
-            cmbPerfil.DisplayMember = "Perfil";
-            cmbPerfil.ValueMember = "IdPerfil";
-            cmbPerfil.SelectedIndex = -1;
         }
-
-        // intento de validacion  
         private void txtNumControl_TextChanged(object sender, EventArgs e)
         {
-            /*
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            */
+            BuscarTrabajadorAutomatico();
+        }
 
+        private void frmFormularioUsuario_Load(object sender, EventArgs e)
+        {
+            LlenarComboPerfiles();
+
+            if (EsEdicion)
+            {
+                CargarDatos();
+            }
+        }
+        private void CargarDatos()
+        {
+            try
+            {
+                DataTable dt = usuario.BuscarUsuario(IdBibliotecario);
+
+                if (dt.Rows.Count > 0)
+                {
+                    txtNumControl.Text = dt.Rows[0]["numero_control"].ToString();
+
+                    txtNombreTrabajador.Text = dt.Rows[0]["nombre"].ToString();
+
+                    txtApellidoPaternoTrabajador.Text = dt.Rows[0]["apellido_paterno"].ToString();
+
+                    txtApellidoMaternoTrabajador.Text = dt.Rows[0]["apellido_materno"].ToString();
+
+                    txtCarreraTrabajador.Text = dt.Rows[0]["id_carrera"].ToString();
+
+                    txtUsuario.Text = dt.Rows[0]["usuario"].ToString();
+
+                    txtContrasena.Text = dt.Rows[0]["contrasena"].ToString();
+
+                    cmbPerfil.SelectedValue = Convert.ToInt32(dt.Rows[0]["id_perfil"]);
+
+                    // Evita cambiar el trabajador al editar
+                    txtNumControl.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron los datos del usuario.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BuscarTrabajadorAutomatico()
+        {
+            try
+            {
+                int numeroControl;
+
+                if (!int.TryParse(txtNumControl.Text, out numeroControl))
+                {
+                    txtNombreTrabajador.Clear();
+                    txtApellidoPaternoTrabajador.Clear();
+                    txtApellidoMaternoTrabajador.Clear();
+                    txtCarreraTrabajador.Clear();
+                    return;
+                }
+
+                DataTable dt = usuario.BuscarTrabajador(numeroControl);
+
+                if (dt.Rows.Count > 0)
+                {
+                    txtNombreTrabajador.Text = dt.Rows[0]["nombre"].ToString();
+
+                    txtApellidoPaternoTrabajador.Text = dt.Rows[0]["apellido_paterno"].ToString();
+
+                    txtApellidoMaternoTrabajador.Text = dt.Rows[0]["apellido_materno"].ToString();
+
+                    txtCarreraTrabajador.Text = dt.Rows[0]["id_carrera"].ToString();
+                }
+                else
+                {
+                    txtNombreTrabajador.Clear();
+
+                    txtApellidoPaternoTrabajador.Clear();
+
+                    txtApellidoMaternoTrabajador.Clear();
+
+                    txtCarreraTrabajador.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
-    
+
 }   
                 
    
