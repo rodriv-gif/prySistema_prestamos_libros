@@ -378,6 +378,7 @@
             Name = "frmFormularioUsuario";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Usuarios";
+            Load += frmFormularioUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCompacto).EndInit();
             ResumeLayout(false);
