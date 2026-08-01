@@ -58,7 +58,7 @@
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscar.ForeColor = SystemColors.ControlText;
+            lblBuscar.ForeColor = Color.Black;
             lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(170, 20);
@@ -67,7 +67,9 @@
             // 
             // txtBuscarLibro
             // 
+            txtBuscarLibro.BackColor = Color.White;
             txtBuscarLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarLibro.ForeColor = Color.Black;
             txtBuscarLibro.Location = new Point(123, 125);
             txtBuscarLibro.Multiline = true;
             txtBuscarLibro.Name = "txtBuscarLibro";

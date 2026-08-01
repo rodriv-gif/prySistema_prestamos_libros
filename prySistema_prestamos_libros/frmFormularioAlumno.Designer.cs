@@ -172,6 +172,7 @@
             // 
             // cmbCarrera
             // 
+            cmbCarrera.BackColor = Color.White;
             cmbCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCarrera.ForeColor = Color.Black;
             cmbCarrera.FormattingEnabled = true;
@@ -184,6 +185,7 @@
             // 
             lblCodigoPostal.AutoSize = true;
             lblCodigoPostal.BackColor = Color.FromArgb(250, 247, 242);
+            lblCodigoPostal.ForeColor = Color.Black;
             lblCodigoPostal.Location = new Point(29, 341);
             lblCodigoPostal.Name = "lblCodigoPostal";
             lblCodigoPostal.Size = new Size(103, 20);
@@ -212,6 +214,7 @@
             // 
             // txtApellidoPaterno
             // 
+            txtApellidoPaterno.BackColor = Color.White;
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellidoPaterno.ForeColor = Color.Black;
             txtApellidoPaterno.Location = new Point(645, 72);
@@ -224,6 +227,7 @@
             // 
             // txtNombres
             // 
+            txtNombres.BackColor = Color.White;
             txtNombres.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombres.ForeColor = Color.Black;
             txtNombres.Location = new Point(336, 73);
@@ -236,6 +240,7 @@
             // 
             // txtMatricula
             // 
+            txtMatricula.BackColor = Color.White;
             txtMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMatricula.ForeColor = Color.Black;
             txtMatricula.Location = new Point(29, 73);
@@ -262,7 +267,7 @@
             lblFechaRegistro.AutoSize = true;
             lblFechaRegistro.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaRegistro.ForeColor = Color.Black;
-            lblFechaRegistro.Location = new Point(686, 131);
+            lblFechaRegistro.Location = new Point(645, 134);
             lblFechaRegistro.Name = "lblFechaRegistro";
             lblFechaRegistro.Size = new Size(123, 20);
             lblFechaRegistro.TabIndex = 52;
@@ -273,7 +278,7 @@
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoPaterno.ForeColor = Color.Black;
-            lblApellidoPaterno.Location = new Point(697, 49);
+            lblApellidoPaterno.Location = new Point(649, 51);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
             lblApellidoPaterno.TabIndex = 51;
@@ -388,6 +393,7 @@
             // 
             // txtTelefono
             // 
+            txtTelefono.BackColor = Color.White;
             txtTelefono.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.ForeColor = Color.Black;
             txtTelefono.Location = new Point(27, 155);
@@ -400,6 +406,7 @@
             // 
             // txtCorreo
             // 
+            txtCorreo.BackColor = Color.White;
             txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.ForeColor = Color.Black;
             txtCorreo.Location = new Point(339, 155);
@@ -411,6 +418,7 @@
             // 
             // txtCalle
             // 
+            txtCalle.BackColor = Color.White;
             txtCalle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCalle.ForeColor = Color.Black;
             txtCalle.Location = new Point(954, 363);
@@ -423,6 +431,7 @@
             // 
             // txtCodigoPostal
             // 
+            txtCodigoPostal.BackColor = Color.White;
             txtCodigoPostal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigoPostal.ForeColor = Color.Black;
             txtCodigoPostal.Location = new Point(29, 365);
@@ -436,6 +445,7 @@
             // 
             // txtGrado
             // 
+            txtGrado.BackColor = Color.White;
             txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrado.ForeColor = Color.Black;
             txtGrado.Location = new Point(336, 539);
@@ -448,6 +458,7 @@
             // 
             // txtGrupo
             // 
+            txtGrupo.BackColor = Color.White;
             txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGrupo.ForeColor = Color.Black;
             txtGrupo.Location = new Point(645, 540);
@@ -514,6 +525,7 @@
             // 
             // txtMunicipio
             // 
+            txtMunicipio.BackColor = Color.White;
             txtMunicipio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMunicipio.ForeColor = Color.Black;
             txtMunicipio.Location = new Point(336, 365);
@@ -534,6 +546,7 @@
             // 
             // cmbColonia
             // 
+            cmbColonia.BackColor = Color.White;
             cmbColonia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbColonia.ForeColor = Color.Black;
             cmbColonia.FormattingEnabled = true;

@@ -89,7 +89,9 @@
             // 
             // txtNumPaginas
             // 
+            txtNumPaginas.BackColor = Color.White;
             txtNumPaginas.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumPaginas.ForeColor = Color.Black;
             txtNumPaginas.Location = new Point(755, 77);
             txtNumPaginas.MaxLength = 5;
             txtNumPaginas.Multiline = true;
@@ -100,7 +102,9 @@
             // 
             // txtTitulo
             // 
+            txtTitulo.BackColor = Color.White;
             txtTitulo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTitulo.ForeColor = Color.Black;
             txtTitulo.Location = new Point(411, 77);
             txtTitulo.MaxLength = 150;
             txtTitulo.Multiline = true;
@@ -111,7 +115,9 @@
             // 
             // txtISBN
             // 
+            txtISBN.BackColor = Color.White;
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtISBN.ForeColor = Color.Black;
             txtISBN.Location = new Point(61, 77);
             txtISBN.MaxLength = 13;
             txtISBN.Multiline = true;
@@ -124,6 +130,7 @@
             // 
             lblIdioma.AutoSize = true;
             lblIdioma.BackColor = Color.FromArgb(250, 247, 242);
+            lblIdioma.ForeColor = Color.Black;
             lblIdioma.Location = new Point(755, 143);
             lblIdioma.Name = "lblIdioma";
             lblIdioma.Size = new Size(56, 20);
@@ -134,6 +141,7 @@
             // 
             lblNumPaginas.AutoSize = true;
             lblNumPaginas.BackColor = Color.FromArgb(250, 247, 242);
+            lblNumPaginas.ForeColor = Color.Black;
             lblNumPaginas.Location = new Point(755, 51);
             lblNumPaginas.Name = "lblNumPaginas";
             lblNumPaginas.Size = new Size(140, 20);
@@ -144,6 +152,7 @@
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.BackColor = Color.FromArgb(250, 247, 242);
+            lblCategoria.ForeColor = Color.Black;
             lblCategoria.Location = new Point(411, 143);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(74, 20);
@@ -154,6 +163,7 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.FromArgb(250, 247, 242);
+            lblTitulo.ForeColor = Color.Black;
             lblTitulo.Location = new Point(411, 54);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(107, 20);
@@ -164,6 +174,7 @@
             // 
             lblEditorial.AutoSize = true;
             lblEditorial.BackColor = Color.FromArgb(250, 247, 242);
+            lblEditorial.ForeColor = Color.Black;
             lblEditorial.Location = new Point(61, 145);
             lblEditorial.Name = "lblEditorial";
             lblEditorial.Size = new Size(65, 20);
@@ -174,6 +185,7 @@
             // 
             lblISBN.AutoSize = true;
             lblISBN.BackColor = Color.FromArgb(250, 247, 242);
+            lblISBN.ForeColor = Color.Black;
             lblISBN.Location = new Point(61, 51);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(41, 20);
@@ -184,6 +196,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombre.ForeColor = Color.Black;
             lblNombre.Location = new Point(165, 412);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(80, 20);
@@ -266,6 +279,8 @@
             // 
             // cmbEditorial
             // 
+            cmbEditorial.BackColor = Color.White;
+            cmbEditorial.ForeColor = Color.Black;
             cmbEditorial.FormattingEnabled = true;
             cmbEditorial.Location = new Point(61, 168);
             cmbEditorial.Name = "cmbEditorial";
@@ -274,6 +289,8 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.BackColor = Color.White;
+            cmbCategoria.ForeColor = Color.Black;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Location = new Point(411, 168);
             cmbCategoria.Name = "cmbCategoria";
@@ -282,6 +299,8 @@
             // 
             // cmbIdioma
             // 
+            cmbIdioma.BackColor = Color.White;
+            cmbIdioma.ForeColor = Color.Black;
             cmbIdioma.FormattingEnabled = true;
             cmbIdioma.Location = new Point(755, 168);
             cmbIdioma.Name = "cmbIdioma";
@@ -290,16 +309,19 @@
             // 
             // txtBuscarAutor
             // 
+            txtBuscarAutor.BackColor = Color.White;
+            txtBuscarAutor.ForeColor = Color.Black;
             txtBuscarAutor.Location = new Point(251, 409);
             txtBuscarAutor.Multiline = true;
             txtBuscarAutor.Name = "txtBuscarAutor";
             txtBuscarAutor.Size = new Size(322, 30);
             txtBuscarAutor.TabIndex = 39;
             txtBuscarAutor.TextChanged += txtBuscarAutor_TextChanged;
-            //
+            // 
             // dgvAutor
-            //
+            // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -321,10 +343,11 @@
             dgvAutor.Size = new Size(423, 128);
             dgvAutor.TabIndex = 41;
             dgvAutor.CellDoubleClick += dgvAutor_CellDoubleClick;
-            //
+            // 
             // dgvAlmacenarAutor
-            //
+            // 
             dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAlmacenarAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvAlmacenarAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;

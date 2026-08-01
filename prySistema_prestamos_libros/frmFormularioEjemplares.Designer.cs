@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioEjemplares));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pcbContenedorBusqueda = new PictureBox();
             lblDatosEjemplar = new Label();
             lblSeleccionLibro = new Label();
@@ -79,7 +79,7 @@
             lblSeleccionLibro.AutoSize = true;
             lblSeleccionLibro.BackColor = Color.FromArgb(250, 247, 242);
             lblSeleccionLibro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSeleccionLibro.ForeColor = SystemColors.ControlText;
+            lblSeleccionLibro.ForeColor = Color.Black;
             lblSeleccionLibro.Location = new Point(61, 60);
             lblSeleccionLibro.Name = "lblSeleccionLibro";
             lblSeleccionLibro.Size = new Size(171, 20);
@@ -91,7 +91,7 @@
             lblCantidad.AutoSize = true;
             lblCantidad.BackColor = Color.FromArgb(250, 247, 242);
             lblCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCantidad.ForeColor = SystemColors.ControlText;
+            lblCantidad.ForeColor = Color.Black;
             lblCantidad.Location = new Point(397, 412);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(69, 20);
@@ -103,7 +103,7 @@
             lblFechaAdquisicion.AutoSize = true;
             lblFechaAdquisicion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFechaAdquisicion.ForeColor = SystemColors.ControlText;
+            lblFechaAdquisicion.ForeColor = Color.Black;
             lblFechaAdquisicion.Location = new Point(61, 412);
             lblFechaAdquisicion.Name = "lblFechaAdquisicion";
             lblFechaAdquisicion.Size = new Size(148, 20);
@@ -115,7 +115,7 @@
             lblLocalizacion.AutoSize = true;
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLocalizacion.ForeColor = SystemColors.ControlText;
+            lblLocalizacion.ForeColor = Color.Black;
             lblLocalizacion.Location = new Point(61, 337);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
@@ -126,7 +126,7 @@
             // 
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
+            txtLocalizacion.ForeColor = Color.Black;
             txtLocalizacion.Location = new Point(61, 360);
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
@@ -135,7 +135,8 @@
             // 
             // dtpFechaAdquisicion
             // 
-            dtpFechaAdquisicion.CalendarForeColor = SystemColors.ControlLightLight;
+            dtpFechaAdquisicion.CalendarForeColor = Color.Black;
+            dtpFechaAdquisicion.CalendarMonthBackground = Color.White;
             dtpFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaAdquisicion.Format = DateTimePickerFormat.Short;
             dtpFechaAdquisicion.Location = new Point(61, 435);
@@ -145,7 +146,9 @@
             // 
             // nudCantidad
             // 
+            nudCantidad.BackColor = Color.White;
             nudCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nudCantidad.ForeColor = Color.Black;
             nudCantidad.Location = new Point(397, 435);
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(245, 27);
@@ -208,26 +211,26 @@
             // 
             // dgvLibrosPerteneciente
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvLibrosPerteneciente.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvLibrosPerteneciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibrosPerteneciente.Columns.AddRange(new DataGridViewColumn[] { chkSeleccionar });
             dgvLibrosPerteneciente.EnableHeadersVisualStyles = false;
             dgvLibrosPerteneciente.Location = new Point(61, 119);
             dgvLibrosPerteneciente.Name = "dgvLibrosPerteneciente";
             dgvLibrosPerteneciente.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvLibrosPerteneciente.Size = new Size(830, 205);
             dgvLibrosPerteneciente.TabIndex = 19;
             dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
@@ -242,6 +245,7 @@
             // txtLibroPerteneciete
             // 
             txtLibroPerteneciete.BackColor = Color.White;
+            txtLibroPerteneciete.ForeColor = Color.Black;
             txtLibroPerteneciete.Location = new Point(61, 83);
             txtLibroPerteneciete.Multiline = true;
             txtLibroPerteneciete.Name = "txtLibroPerteneciete";

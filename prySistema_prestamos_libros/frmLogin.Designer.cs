@@ -111,6 +111,7 @@
             // 
             // txtUsuario
             // 
+            txtUsuario.BackColor = Color.White;
             txtUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsuario.ForeColor = Color.Black;
             txtUsuario.Location = new Point(364, 339);

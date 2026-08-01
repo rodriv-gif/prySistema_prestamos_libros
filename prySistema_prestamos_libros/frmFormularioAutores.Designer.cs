@@ -68,6 +68,7 @@
             // 
             lblNombreAutor.AutoSize = true;
             lblNombreAutor.BackColor = Color.FromArgb(250, 247, 242);
+            lblNombreAutor.ForeColor = Color.Black;
             lblNombreAutor.Location = new Point(46, 72);
             lblNombreAutor.Name = "lblNombreAutor";
             lblNombreAutor.Size = new Size(64, 20);
@@ -78,6 +79,7 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoPaterno.ForeColor = Color.Black;
             lblApellidoPaterno.Location = new Point(339, 72);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -88,6 +90,7 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
+            lblApellidoMaterno.ForeColor = Color.Black;
             lblApellidoMaterno.Location = new Point(46, 144);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -96,6 +99,8 @@
             // 
             // txtNombreAutor
             // 
+            txtNombreAutor.BackColor = Color.White;
+            txtNombreAutor.ForeColor = Color.Black;
             txtNombreAutor.Location = new Point(46, 95);
             txtNombreAutor.MaxLength = 50;
             txtNombreAutor.Multiline = true;
@@ -106,6 +111,8 @@
             // 
             // txtApellidoPaterno
             // 
+            txtApellidoPaterno.BackColor = Color.White;
+            txtApellidoPaterno.ForeColor = Color.Black;
             txtApellidoPaterno.Location = new Point(339, 95);
             txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Multiline = true;
@@ -116,6 +123,8 @@
             // 
             // txtApellidoMaterno
             // 
+            txtApellidoMaterno.BackColor = Color.White;
+            txtApellidoMaterno.ForeColor = Color.Black;
             txtApellidoMaterno.Location = new Point(46, 167);
             txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Multiline = true;

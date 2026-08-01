@@ -58,6 +58,7 @@
             // 
             txtBuscarTrabajador.BackColor = Color.White;
             txtBuscarTrabajador.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarTrabajador.ForeColor = Color.Black;
             txtBuscarTrabajador.Location = new Point(123, 125);
             txtBuscarTrabajador.Multiline = true;
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";
@@ -131,6 +132,7 @@
             // dgvTrabajadores
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvTrabajadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvTrabajadores.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;

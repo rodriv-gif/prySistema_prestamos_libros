@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             pcbContenendorBusqueda = new PictureBox();
             lblBusquedaLibro = new Label();
             pcbContenedorCompacto = new PictureBox();
@@ -125,7 +125,7 @@
             lblISBN.AutoSize = true;
             lblISBN.BackColor = Color.FromArgb(250, 247, 242);
             lblISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblISBN.ForeColor = Color.FromArgb(31, 31, 31);
+            lblISBN.ForeColor = Color.Black;
             lblISBN.Location = new Point(116, 420);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(96, 20);
@@ -136,7 +136,7 @@
             // 
             txtISBN.BackColor = Color.White;
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtISBN.ForeColor = Color.FromArgb(31, 31, 31);
+            txtISBN.ForeColor = Color.Black;
             txtISBN.Location = new Point(116, 443);
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
@@ -146,25 +146,26 @@
             // 
             // dgvLibros
             // 
-            dataGridViewCellStyle22.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             dgvLibros.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle23.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle23.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
-            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibros.EnableHeadersVisualStyles = false;
             dgvLibros.Location = new Point(117, 479);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle24.BackColor = Color.White;
-            dataGridViewCellStyle24.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle10;
             dgvLibros.Size = new Size(1016, 112);
             dgvLibros.TabIndex = 12;
             dgvLibros.SelectionChanged += dgvLibros_SelectionChanged;
@@ -174,7 +175,7 @@
             lblLocalizacion.AutoSize = true;
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
+            lblLocalizacion.ForeColor = Color.Black;
             lblLocalizacion.Location = new Point(116, 594);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
@@ -186,7 +187,7 @@
             lblInventario.AutoSize = true;
             lblInventario.BackColor = Color.FromArgb(250, 247, 242);
             lblInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInventario.ForeColor = Color.FromArgb(31, 31, 31);
+            lblInventario.ForeColor = Color.Black;
             lblInventario.Location = new Point(787, 594);
             lblInventario.Name = "lblInventario";
             lblInventario.Size = new Size(156, 20);
@@ -197,7 +198,7 @@
             // 
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLocalizacion.ForeColor = Color.FromArgb(31, 31, 31);
+            txtLocalizacion.ForeColor = Color.Black;
             txtLocalizacion.Location = new Point(117, 617);
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
@@ -206,8 +207,9 @@
             // 
             // txtInventario
             // 
+            txtInventario.BackColor = Color.White;
             txtInventario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtInventario.ForeColor = Color.FromArgb(31, 31, 31);
+            txtInventario.ForeColor = Color.Black;
             txtInventario.Location = new Point(787, 614);
             txtInventario.Multiline = true;
             txtInventario.Name = "txtInventario";
@@ -286,7 +288,7 @@
             lblTipoPrestamo.AutoSize = true;
             lblTipoPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTipoPrestamo.ForeColor = Color.FromArgb(31, 31, 31);
+            lblTipoPrestamo.ForeColor = Color.Black;
             lblTipoPrestamo.Location = new Point(112, 728);
             lblTipoPrestamo.Name = "lblTipoPrestamo";
             lblTipoPrestamo.Size = new Size(127, 20);
@@ -298,6 +300,7 @@
             lblFechaPrestamo.AutoSize = true;
             lblFechaPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFechaPrestamo.ForeColor = Color.Black;
             lblFechaPrestamo.Location = new Point(447, 728);
             lblFechaPrestamo.Name = "lblFechaPrestamo";
             lblFechaPrestamo.Size = new Size(135, 20);
@@ -309,6 +312,7 @@
             lblFechaDevolucion.AutoSize = true;
             lblFechaDevolucion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFechaDevolucion.ForeColor = Color.Black;
             lblFechaDevolucion.Location = new Point(787, 728);
             lblFechaDevolucion.Name = "lblFechaDevolucion";
             lblFechaDevolucion.Size = new Size(145, 20);
@@ -331,6 +335,7 @@
             // 
             cmbTipoPrestamo.BackColor = Color.White;
             cmbTipoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbTipoPrestamo.ForeColor = Color.Black;
             cmbTipoPrestamo.FormattingEnabled = true;
             cmbTipoPrestamo.Location = new Point(112, 754);
             cmbTipoPrestamo.Margin = new Padding(3, 4, 3, 4);
@@ -341,6 +346,8 @@
             // 
             // dtpFechaPrestamo
             // 
+            dtpFechaPrestamo.CalendarForeColor = Color.Black;
+            dtpFechaPrestamo.CalendarMonthBackground = Color.White;
             dtpFechaPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPrestamo.Format = DateTimePickerFormat.Short;
             dtpFechaPrestamo.Location = new Point(447, 750);
@@ -352,6 +359,8 @@
             // 
             // dtpFechaDevolucion
             // 
+            dtpFechaDevolucion.CalendarForeColor = Color.Black;
+            dtpFechaDevolucion.CalendarMonthBackground = Color.White;
             dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
             dtpFechaDevolucion.Location = new Point(787, 750);
@@ -365,6 +374,7 @@
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
             lblCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCarrera.ForeColor = Color.Black;
             lblCarrera.Location = new Point(787, 177);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(102, 20);
@@ -387,7 +397,7 @@
             lblGrupo.AutoSize = true;
             lblGrupo.BackColor = Color.FromArgb(250, 247, 242);
             lblGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGrupo.ForeColor = Color.FromArgb(31, 31, 31);
+            lblGrupo.ForeColor = Color.Black;
             lblGrupo.Location = new Point(452, 177);
             lblGrupo.Name = "lblGrupo";
             lblGrupo.Size = new Size(50, 20);
@@ -399,7 +409,7 @@
             lblGrado.AutoSize = true;
             lblGrado.BackColor = Color.FromArgb(250, 247, 242);
             lblGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGrado.ForeColor = Color.FromArgb(31, 31, 31);
+            lblGrado.ForeColor = Color.Black;
             lblGrado.Location = new Point(112, 177);
             lblGrado.Name = "lblGrado";
             lblGrado.Size = new Size(50, 20);
@@ -411,7 +421,7 @@
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoMaterno.ForeColor = Color.Black;
             lblApellidoMaterno.Location = new Point(787, 110);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -423,7 +433,7 @@
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoPaterno.ForeColor = Color.Black;
             lblApellidoPaterno.Location = new Point(452, 110);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -435,7 +445,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
             lblNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNombre.ForeColor = Color.Black;
             lblNombre.Location = new Point(112, 110);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(64, 20);
@@ -447,7 +457,7 @@
             lblTipoSolicitante.AutoSize = true;
             lblTipoSolicitante.BackColor = Color.FromArgb(250, 247, 242);
             lblTipoSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTipoSolicitante.ForeColor = Color.FromArgb(31, 31, 31);
+            lblTipoSolicitante.ForeColor = Color.Black;
             lblTipoSolicitante.Location = new Point(452, 48);
             lblTipoSolicitante.Name = "lblTipoSolicitante";
             lblTipoSolicitante.Size = new Size(132, 20);
@@ -525,6 +535,7 @@
             // 
             txtNumControlSolicitante.BackColor = Color.White;
             txtNumControlSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumControlSolicitante.ForeColor = Color.Black;
             txtNumControlSolicitante.Location = new Point(112, 70);
             txtNumControlSolicitante.Multiline = true;
             txtNumControlSolicitante.Name = "txtNumControlSolicitante";
@@ -537,7 +548,7 @@
             lblNumControlSolicitante.AutoSize = true;
             lblNumControlSolicitante.BackColor = Color.FromArgb(250, 247, 242);
             lblNumControlSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNumControlSolicitante.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNumControlSolicitante.ForeColor = Color.Black;
             lblNumControlSolicitante.Location = new Point(112, 45);
             lblNumControlSolicitante.Name = "lblNumControlSolicitante";
             lblNumControlSolicitante.Size = new Size(211, 20);
@@ -568,33 +579,34 @@
             // 
             // dgvLibrosPrestar
             // 
-            dataGridViewCellStyle25.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             dgvLibrosPrestar.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle26.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle26.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvLibrosPrestar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = SystemColors.Window;
-            dataGridViewCellStyle27.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle27.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle27.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
-            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = SystemColors.Window;
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
+            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle13;
             dgvLibrosPrestar.EnableHeadersVisualStyles = false;
             dgvLibrosPrestar.Location = new Point(116, 256);
             dgvLibrosPrestar.Name = "dgvLibrosPrestar";
             dgvLibrosPrestar.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = Color.White;
-            dataGridViewCellStyle28.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle14.BackColor = Color.White;
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle14;
             dgvLibrosPrestar.Size = new Size(1017, 99);
             dgvLibrosPrestar.TabIndex = 70;
             // 
@@ -603,6 +615,7 @@
             lblLibroPrestar.AutoSize = true;
             lblLibroPrestar.BackColor = Color.FromArgb(250, 247, 242);
             lblLibroPrestar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLibroPrestar.ForeColor = Color.Black;
             lblLibroPrestar.Location = new Point(116, 233);
             lblLibroPrestar.Name = "lblLibroPrestar";
             lblLibroPrestar.Size = new Size(111, 20);
@@ -613,6 +626,7 @@
             // 
             cmbEstadoPrestamo.BackColor = Color.White;
             cmbEstadoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbEstadoPrestamo.ForeColor = Color.Black;
             cmbEstadoPrestamo.FormattingEnabled = true;
             cmbEstadoPrestamo.Location = new Point(1120, 749);
             cmbEstadoPrestamo.Margin = new Padding(3, 4, 3, 4);
@@ -625,7 +639,7 @@
             lblEstadoPrestamo.AutoSize = true;
             lblEstadoPrestamo.BackColor = Color.FromArgb(250, 247, 242);
             lblEstadoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEstadoPrestamo.ForeColor = Color.FromArgb(31, 31, 31);
+            lblEstadoPrestamo.ForeColor = Color.Black;
             lblEstadoPrestamo.Location = new Point(1120, 725);
             lblEstadoPrestamo.Name = "lblEstadoPrestamo";
             lblEstadoPrestamo.Size = new Size(146, 20);
@@ -637,7 +651,7 @@
             lblBibliotecarioRegistro.AutoSize = true;
             lblBibliotecarioRegistro.BackColor = Color.FromArgb(250, 247, 242);
             lblBibliotecarioRegistro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBibliotecarioRegistro.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBibliotecarioRegistro.ForeColor = Color.Black;
             lblBibliotecarioRegistro.Location = new Point(112, 786);
             lblBibliotecarioRegistro.Name = "lblBibliotecarioRegistro";
             lblBibliotecarioRegistro.Size = new Size(177, 20);
@@ -646,6 +660,8 @@
             // 
             // txtBibliotecario
             // 
+            txtBibliotecario.BackColor = Color.White;
+            txtBibliotecario.ForeColor = Color.Black;
             txtBibliotecario.Location = new Point(112, 809);
             txtBibliotecario.Multiline = true;
             txtBibliotecario.Name = "txtBibliotecario";

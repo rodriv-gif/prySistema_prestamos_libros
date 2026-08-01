@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevolucion));
             pcbContenedorBusqueda = new PictureBox();
             pcbContenedorCaptura = new PictureBox();
@@ -128,7 +128,9 @@
             // 
             // txtNumControl
             // 
+            txtNumControl.BackColor = Color.White;
             txtNumControl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumControl.ForeColor = Color.Black;
             txtNumControl.Location = new Point(24, 52);
             txtNumControl.Multiline = true;
             txtNumControl.Name = "txtNumControl";
@@ -140,6 +142,7 @@
             // 
             txtNombreSolicitante.BackColor = Color.White;
             txtNombreSolicitante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreSolicitante.ForeColor = Color.Black;
             txtNombreSolicitante.Location = new Point(357, 52);
             txtNombreSolicitante.Multiline = true;
             txtNombreSolicitante.Name = "txtNombreSolicitante";
@@ -150,6 +153,7 @@
             // 
             txtApellidoPaterno.BackColor = Color.White;
             txtApellidoPaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoPaterno.ForeColor = Color.Black;
             txtApellidoPaterno.Location = new Point(704, 52);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
@@ -160,6 +164,7 @@
             // 
             txtApellidoMaterno.BackColor = Color.White;
             txtApellidoMaterno.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtApellidoMaterno.ForeColor = Color.Black;
             txtApellidoMaterno.Location = new Point(1035, 52);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
@@ -170,6 +175,7 @@
             // 
             txtGrado.BackColor = Color.White;
             txtGrado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrado.ForeColor = Color.Black;
             txtGrado.Location = new Point(24, 119);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
@@ -180,6 +186,7 @@
             // 
             txtGrupo.BackColor = Color.White;
             txtGrupo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGrupo.ForeColor = Color.Black;
             txtGrupo.Location = new Point(357, 119);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
@@ -190,7 +197,7 @@
             // 
             txtCarrera.BackColor = Color.White;
             txtCarrera.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCarrera.ForeColor = SystemColors.WindowText;
+            txtCarrera.ForeColor = Color.Black;
             txtCarrera.Location = new Point(704, 119);
             txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
@@ -201,7 +208,7 @@
             // 
             lblNumeroControl.AutoSize = true;
             lblNumeroControl.BackColor = Color.FromArgb(250, 247, 242);
-            lblNumeroControl.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNumeroControl.ForeColor = Color.Black;
             lblNumeroControl.Location = new Point(24, 29);
             lblNumeroControl.Name = "lblNumeroControl";
             lblNumeroControl.Size = new Size(203, 20);
@@ -212,7 +219,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
-            lblNombre.ForeColor = Color.FromArgb(31, 31, 31);
+            lblNombre.ForeColor = Color.Black;
             lblNombre.Location = new Point(357, 29);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(64, 20);
@@ -223,7 +230,7 @@
             // 
             lblApellidoPaterno.AutoSize = true;
             lblApellidoPaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoPaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoPaterno.ForeColor = Color.Black;
             lblApellidoPaterno.Location = new Point(704, 29);
             lblApellidoPaterno.Name = "lblApellidoPaterno";
             lblApellidoPaterno.Size = new Size(122, 20);
@@ -234,7 +241,7 @@
             // 
             lblApellidoMaterno.AutoSize = true;
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
-            lblApellidoMaterno.ForeColor = Color.FromArgb(31, 31, 31);
+            lblApellidoMaterno.ForeColor = Color.Black;
             lblApellidoMaterno.Location = new Point(1035, 29);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
             lblApellidoMaterno.Size = new Size(126, 20);
@@ -245,7 +252,7 @@
             // 
             lblGrado.AutoSize = true;
             lblGrado.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrado.ForeColor = Color.FromArgb(31, 31, 31);
+            lblGrado.ForeColor = Color.Black;
             lblGrado.Location = new Point(24, 96);
             lblGrado.Name = "lblGrado";
             lblGrado.Size = new Size(50, 20);
@@ -256,7 +263,7 @@
             // 
             lblGrupo.AutoSize = true;
             lblGrupo.BackColor = Color.FromArgb(250, 247, 242);
-            lblGrupo.ForeColor = Color.FromArgb(31, 31, 31);
+            lblGrupo.ForeColor = Color.Black;
             lblGrupo.Location = new Point(357, 96);
             lblGrupo.Name = "lblGrupo";
             lblGrupo.Size = new Size(50, 20);
@@ -267,7 +274,7 @@
             // 
             lblCarrera.AutoSize = true;
             lblCarrera.BackColor = Color.FromArgb(250, 247, 242);
-            lblCarrera.ForeColor = Color.FromArgb(31, 31, 31);
+            lblCarrera.ForeColor = Color.Black;
             lblCarrera.Location = new Point(704, 96);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(102, 20);
@@ -276,26 +283,27 @@
             // 
             // dgvPrestamosActivos
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dgvPrestamosActivos.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvPrestamosActivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPrestamosActivos.Columns.AddRange(new DataGridViewColumn[] { colSeleccionar });
             dgvPrestamosActivos.EnableHeadersVisualStyles = false;
             dgvPrestamosActivos.Location = new Point(25, 167);
             dgvPrestamosActivos.Name = "dgvPrestamosActivos";
             dgvPrestamosActivos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle9;
             dgvPrestamosActivos.Size = new Size(1249, 183);
             dgvPrestamosActivos.TabIndex = 18;
             dgvPrestamosActivos.CellValueChanged += dgvPrestamosActivos_CellValueChanged;
@@ -325,7 +333,7 @@
             // 
             lblFechaDevolucion.AutoSize = true;
             lblFechaDevolucion.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaDevolucion.ForeColor = Color.FromArgb(31, 31, 31);
+            lblFechaDevolucion.ForeColor = Color.Black;
             lblFechaDevolucion.Location = new Point(24, 436);
             lblFechaDevolucion.Name = "lblFechaDevolucion";
             lblFechaDevolucion.Size = new Size(145, 20);
@@ -348,7 +356,7 @@
             // 
             lblLibrosVencidos.AutoSize = true;
             lblLibrosVencidos.BackColor = Color.FromArgb(250, 247, 242);
-            lblLibrosVencidos.ForeColor = Color.FromArgb(31, 31, 31);
+            lblLibrosVencidos.ForeColor = Color.Black;
             lblLibrosVencidos.Location = new Point(24, 588);
             lblLibrosVencidos.Name = "lblLibrosVencidos";
             lblLibrosVencidos.Size = new Size(194, 20);
@@ -359,7 +367,7 @@
             // 
             lblDiasRetraso.AutoSize = true;
             lblDiasRetraso.BackColor = Color.FromArgb(250, 247, 242);
-            lblDiasRetraso.ForeColor = Color.FromArgb(31, 31, 31);
+            lblDiasRetraso.ForeColor = Color.Black;
             lblDiasRetraso.Location = new Point(24, 707);
             lblDiasRetraso.Name = "lblDiasRetraso";
             lblDiasRetraso.Size = new Size(109, 20);
@@ -370,7 +378,7 @@
             // 
             lblMonto.AutoSize = true;
             lblMonto.BackColor = Color.FromArgb(250, 247, 242);
-            lblMonto.ForeColor = Color.FromArgb(31, 31, 31);
+            lblMonto.ForeColor = Color.Black;
             lblMonto.Location = new Point(357, 707);
             lblMonto.Name = "lblMonto";
             lblMonto.Size = new Size(108, 20);
@@ -379,26 +387,27 @@
             // 
             // dgvMultasPendientes
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dgvMultasPendientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvMultasPendientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             dgvMultasPendientes.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvMultasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvMultasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dgvMultasPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMultasPendientes.Columns.AddRange(new DataGridViewColumn[] { colPagarMulta });
             dgvMultasPendientes.EnableHeadersVisualStyles = false;
             dgvMultasPendientes.Location = new Point(25, 611);
             dgvMultasPendientes.Name = "dgvMultasPendientes";
             dgvMultasPendientes.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvMultasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = Color.White;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvMultasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle12;
             dgvMultasPendientes.Size = new Size(1231, 81);
             dgvMultasPendientes.TabIndex = 30;
             dgvMultasPendientes.CellValueChanged += dgvMultasPendientes_CellValueChanged;
@@ -415,6 +424,7 @@
             // 
             txtDiasRetraso.BackColor = Color.White;
             txtDiasRetraso.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDiasRetraso.ForeColor = Color.Black;
             txtDiasRetraso.Location = new Point(24, 731);
             txtDiasRetraso.Multiline = true;
             txtDiasRetraso.Name = "txtDiasRetraso";
@@ -425,6 +435,7 @@
             // 
             txtMonto.BackColor = Color.White;
             txtMonto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMonto.ForeColor = Color.Black;
             txtMonto.Location = new Point(357, 731);
             txtMonto.Multiline = true;
             txtMonto.Name = "txtMonto";
@@ -435,8 +446,8 @@
             // 
             lblMotivo.AutoSize = true;
             lblMotivo.BackColor = Color.FromArgb(250, 247, 242);
-            lblMotivo.ForeColor = Color.FromArgb(31, 31, 31);
-            lblMotivo.Location = new Point(1035, 707);
+            lblMotivo.ForeColor = Color.Black;
+            lblMotivo.Location = new Point(1035, 702);
             lblMotivo.Name = "lblMotivo";
             lblMotivo.Size = new Size(56, 20);
             lblMotivo.TabIndex = 46;
@@ -446,6 +457,7 @@
             // 
             txtMotivo.BackColor = Color.White;
             txtMotivo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMotivo.ForeColor = Color.Black;
             txtMotivo.Location = new Point(1035, 725);
             txtMotivo.Multiline = true;
             txtMotivo.Name = "txtMotivo";
@@ -506,6 +518,8 @@
             // dtpFechaDevolucion
             // 
             dtpFechaDevolucion.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaDevolucion.CalendarForeColor = Color.Black;
+            dtpFechaDevolucion.CalendarMonthBackground = Color.White;
             dtpFechaDevolucion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaDevolucion.Format = DateTimePickerFormat.Short;
             dtpFechaDevolucion.Location = new Point(25, 461);
@@ -518,7 +532,7 @@
             // 
             lblFechaPago.AutoSize = true;
             lblFechaPago.BackColor = Color.FromArgb(250, 247, 242);
-            lblFechaPago.ForeColor = Color.FromArgb(31, 31, 31);
+            lblFechaPago.ForeColor = Color.Black;
             lblFechaPago.Location = new Point(704, 707);
             lblFechaPago.Name = "lblFechaPago";
             lblFechaPago.Size = new Size(107, 20);
@@ -527,6 +541,8 @@
             // 
             // dtpFechaPago
             // 
+            dtpFechaPago.CalendarForeColor = Color.Black;
+            dtpFechaPago.CalendarMonthBackground = Color.White;
             dtpFechaPago.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaPago.Format = DateTimePickerFormat.Short;
             dtpFechaPago.Location = new Point(704, 728);
@@ -537,7 +553,9 @@
             // 
             // cmbEstadoPrestamo
             // 
+            cmbEstadoPrestamo.BackColor = Color.White;
             cmbEstadoPrestamo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbEstadoPrestamo.ForeColor = Color.Black;
             cmbEstadoPrestamo.FormattingEnabled = true;
             cmbEstadoPrestamo.Location = new Point(357, 463);
             cmbEstadoPrestamo.Name = "cmbEstadoPrestamo";
@@ -548,7 +566,7 @@
             // 
             lblEstadoPrestamo.AutoSize = true;
             lblEstadoPrestamo.BackColor = Color.FromArgb(250, 247, 242);
-            lblEstadoPrestamo.ForeColor = Color.FromArgb(31, 31, 31);
+            lblEstadoPrestamo.ForeColor = Color.Black;
             lblEstadoPrestamo.Location = new Point(357, 440);
             lblEstadoPrestamo.Name = "lblEstadoPrestamo";
             lblEstadoPrestamo.Size = new Size(146, 20);

@@ -58,7 +58,7 @@
             lblBuscarNumero.AutoSize = true;
             lblBuscarNumero.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscarNumero.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscarNumero.ForeColor = Color.FromArgb(31, 31, 31);
+            lblBuscarNumero.ForeColor = Color.Black;
             lblBuscarNumero.Location = new Point(123, 102);
             lblBuscarNumero.Name = "lblBuscarNumero";
             lblBuscarNumero.Size = new Size(206, 20);
@@ -69,6 +69,7 @@
             // 
             txtBuscarUsuario.BackColor = Color.White;
             txtBuscarUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarUsuario.ForeColor = Color.Black;
             txtBuscarUsuario.Location = new Point(123, 125);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
@@ -130,6 +131,7 @@
             // dgvUsuarios
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;

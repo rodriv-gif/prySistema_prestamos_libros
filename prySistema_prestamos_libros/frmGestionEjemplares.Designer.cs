@@ -58,7 +58,7 @@
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.FromArgb(250, 247, 242);
             lblBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscar.ForeColor = SystemColors.ControlText;
+            lblBuscar.ForeColor = Color.Black;
             lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(169, 20);
@@ -67,7 +67,9 @@
             // 
             // txtBuscarClave
             // 
+            txtBuscarClave.BackColor = Color.White;
             txtBuscarClave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarClave.ForeColor = Color.Black;
             txtBuscarClave.Location = new Point(123, 125);
             txtBuscarClave.Multiline = true;
             txtBuscarClave.Name = "txtBuscarClave";
@@ -79,6 +81,7 @@
             // dgvEjemplares
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvEjemplares.BackgroundColor = Color.FromArgb(250, 247, 242);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
