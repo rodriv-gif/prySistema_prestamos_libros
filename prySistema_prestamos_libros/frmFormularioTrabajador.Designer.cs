@@ -1,6 +1,6 @@
 ﻿namespace prySistema_prestamos_libros
 {
-    partial class frmFormularioLibross
+    partial class frmFormularioTrabajador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioLibross));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioTrabajador));
             pcbContenedorCaptura = new PictureBox();
             pcbContenedorCompacto = new PictureBox();
             pcbContainerCompacto = new PictureBox();
@@ -467,7 +467,7 @@
             lblMunicipio.TabIndex = 45;
             lblMunicipio.Text = "Municipio";
             // 
-            // frmFormularioLibross
+            // frmFormularioTrabajador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -477,7 +477,7 @@
             Controls.Add(btnLimpiar);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
-            Name = "frmFormularioLibross";
+            Name = "frmFormularioTrabajador";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Trabajador";
             ((System.ComponentModel.ISupportInitialize)pcbContenedorCaptura).EndInit();

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioEjemplares));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             pcbContenedorBusqueda = new PictureBox();
             lblDatosEjemplar = new Label();
             lblSeleccionLibro = new Label();
@@ -82,9 +82,9 @@
             lblSeleccionLibro.ForeColor = SystemColors.ControlText;
             lblSeleccionLibro.Location = new Point(61, 60);
             lblSeleccionLibro.Name = "lblSeleccionLibro";
-            lblSeleccionLibro.Size = new Size(265, 20);
+            lblSeleccionLibro.Size = new Size(171, 20);
             lblSeleccionLibro.TabIndex = 4;
-            lblSeleccionLibro.Text = "Buscar por ISBN o título del libro al que pertenece";
+            lblSeleccionLibro.Text = "Buscar por ISBN o título ";
             // 
             // lblCantidad
             // 
@@ -168,7 +168,7 @@
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
-            //
+            // 
             // btnLimpiar
             // 
             btnLimpiar.Anchor = AnchorStyles.None;
@@ -208,26 +208,26 @@
             // 
             // dgvLibrosPerteneciente
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvLibrosPerteneciente.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvLibrosPerteneciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibrosPerteneciente.Columns.AddRange(new DataGridViewColumn[] { chkSeleccionar });
             dgvLibrosPerteneciente.EnableHeadersVisualStyles = false;
             dgvLibrosPerteneciente.Location = new Point(61, 119);
             dgvLibrosPerteneciente.Name = "dgvLibrosPerteneciente";
             dgvLibrosPerteneciente.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvLibrosPerteneciente.Size = new Size(830, 205);
             dgvLibrosPerteneciente.TabIndex = 19;
             dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
@@ -240,12 +240,12 @@
             chkSeleccionar.Width = 125;
             // 
             // txtLibroPerteneciete
-            //
+            // 
             txtLibroPerteneciete.BackColor = Color.White;
             txtLibroPerteneciete.Location = new Point(61, 83);
             txtLibroPerteneciete.Multiline = true;
             txtLibroPerteneciete.Name = "txtLibroPerteneciete";
-            txtLibroPerteneciete.Size = new Size(265, 30);
+            txtLibroPerteneciete.Size = new Size(245, 30);
             txtLibroPerteneciete.TabIndex = 20;
             txtLibroPerteneciete.TextChanged += txtLibroPerteneciete_TextChanged;
             // 

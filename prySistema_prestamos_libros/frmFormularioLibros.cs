@@ -43,6 +43,7 @@ namespace prySistema_prestamos_libros
             dgvAutor.DataSource = autor.ConsultarAutor();
 
             dgvAutor.Columns["id_autor"].Visible = true;
+            dgvAutor.Columns["id_autor"].HeaderText = "ID Autor";
 
             dgvAutor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -316,6 +317,8 @@ namespace prySistema_prestamos_libros
                 dgvAutor.DataSource = autor.ConsultarAutor();
 
                 dgvAutor.Columns["id_autor"].Visible = true;
+                dgvAutor.Columns["id_autor"].HeaderText = "ID Autor";
+                dgvAutor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {

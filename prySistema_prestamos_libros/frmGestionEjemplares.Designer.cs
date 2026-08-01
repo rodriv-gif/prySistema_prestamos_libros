@@ -61,20 +61,20 @@
             lblBuscar.ForeColor = SystemColors.ControlText;
             lblBuscar.Location = new Point(123, 102);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(117, 20);
+            lblBuscar.Size = new Size(169, 20);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar por clave o título";
-            //
+            // 
             // txtBuscarClave
-            //
+            // 
             txtBuscarClave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscarClave.Location = new Point(123, 125);
             txtBuscarClave.Multiline = true;
             txtBuscarClave.Name = "txtBuscarClave";
             txtBuscarClave.Size = new Size(245, 30);
             txtBuscarClave.TabIndex = 3;
-            txtBuscarClave.KeyPress += txtBuscarClave_KeyPress;
             txtBuscarClave.TextChanged += txtBuscarClave_TextChanged;
+            txtBuscarClave.KeyPress += txtBuscarClave_KeyPress;
             // 
             // dgvEjemplares
             // 
@@ -95,6 +95,7 @@
             dgvEjemplares.Name = "dgvEjemplares";
             dgvEjemplares.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvEjemplares.Size = new Size(1249, 568);
             dgvEjemplares.TabIndex = 6;

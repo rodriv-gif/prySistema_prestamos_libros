@@ -326,15 +326,19 @@ namespace prySistema_prestamos_libros
                 cn = conexion.AbrirConexion();
 
 
+                // nombre/apellidos van dos veces: concatenados en 'Nombre completo' para
+                // mostrar, y por separado (ocultos en el grid) solo por si se llegan a
+                // necesitar después, sin tener que volver a consultar la base de datos.
                 string consulta = @"
                                     SELECT
-                                        b.id_bibliotecario,
-                                        b.numero_control,
-                                        t.nombre,
-                                        t.apellido_paterno,
-                                        t.apellido_materno,
-                                        p.Perfil,
-                                        b.usuario
+                                        b.id_bibliotecario AS 'ID Bibliotecario',
+                                        b.numero_control AS 'Número de Control',
+                                        CONCAT(t.nombre, ' ', t.apellido_paterno, ' ', t.apellido_materno) AS 'Nombre completo',
+                                        t.nombre AS 'Nombre',
+                                        t.apellido_paterno AS 'Apellido Paterno',
+                                        t.apellido_materno AS 'Apellido Materno',
+                                        p.Perfil AS 'Perfil',
+                                        b.usuario AS 'Usuario'
                                     FROM tblbibliotecario b
 
                                     INNER JOIN tbltrabajadores t
@@ -374,13 +378,14 @@ namespace prySistema_prestamos_libros
                 cn = conexion.AbrirConexion();
 
                 string consulta = @" SELECT
-                                        b.id_bibliotecario,
-                                        b.numero_control,
-                                        t.nombre,
-                                        t.apellido_paterno,
-                                        t.apellido_materno,
-                                        p.Perfil,
-                                        b.usuario
+                                        b.id_bibliotecario AS 'ID Bibliotecario',
+                                        b.numero_control AS 'Número de Control',
+                                        CONCAT(t.nombre, ' ', t.apellido_paterno, ' ', t.apellido_materno) AS 'Nombre completo',
+                                        t.nombre AS 'Nombre',
+                                        t.apellido_paterno AS 'Apellido Paterno',
+                                        t.apellido_materno AS 'Apellido Materno',
+                                        p.Perfil AS 'Perfil',
+                                        b.usuario AS 'Usuario'
 
                                     FROM tblbibliotecario b
 

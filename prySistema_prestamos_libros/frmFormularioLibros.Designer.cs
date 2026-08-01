@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioLibros));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             pcbContenendorCaptura = new PictureBox();
             pcbContenedorCompacto = new PictureBox();
             txtNumPaginas = new TextBox();
@@ -91,9 +97,9 @@
             txtNumPaginas.Size = new Size(245, 30);
             txtNumPaginas.TabIndex = 22;
             txtNumPaginas.KeyPress += SoloNumeros_KeyPress;
-            //
+            // 
             // txtTitulo
-            //
+            // 
             txtTitulo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTitulo.Location = new Point(411, 77);
             txtTitulo.MaxLength = 150;
@@ -102,9 +108,9 @@
             txtTitulo.Size = new Size(245, 30);
             txtTitulo.TabIndex = 20;
             txtTitulo.KeyPress += txtTitulo_KeyPress;
-            //
+            // 
             // txtISBN
-            //
+            // 
             txtISBN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtISBN.Location = new Point(61, 77);
             txtISBN.MaxLength = 13;
@@ -290,23 +296,53 @@
             txtBuscarAutor.Size = new Size(322, 30);
             txtBuscarAutor.TabIndex = 39;
             txtBuscarAutor.TextChanged += txtBuscarAutor_TextChanged;
-            // 
+            //
             // dgvAutor
-            // 
+            //
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dgvAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAutor.EnableHeadersVisualStyles = false;
             dgvAutor.Location = new Point(165, 445);
             dgvAutor.Name = "dgvAutor";
             dgvAutor.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAutor.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvAutor.Size = new Size(423, 128);
             dgvAutor.TabIndex = 41;
             dgvAutor.CellDoubleClick += dgvAutor_CellDoubleClick;
-            // 
+            //
             // dgvAlmacenarAutor
-            // 
+            //
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dgvAlmacenarAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvAlmacenarAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvAlmacenarAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvAlmacenarAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlmacenarAutor.EnableHeadersVisualStyles = false;
             dgvAlmacenarAutor.Location = new Point(61, 230);
             dgvAlmacenarAutor.Name = "dgvAlmacenarAutor";
             dgvAlmacenarAutor.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAlmacenarAutor.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvAlmacenarAutor.Size = new Size(370, 95);
             dgvAlmacenarAutor.TabIndex = 42;
             dgvAlmacenarAutor.CellContentDoubleClick += dgvAlmacenarAutor_CellContentDoubleClick;

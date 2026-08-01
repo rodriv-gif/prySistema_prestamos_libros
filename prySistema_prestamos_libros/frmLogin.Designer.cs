@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             pcbLogo = new PictureBox();
             lblUsuario = new Label();
-            lblContraseña = new Label();
+            lblContrasenia = new Label();
             btnAcceder = new Button();
             btnSalir = new Button();
             txtPassword = new TextBox();
@@ -60,16 +60,16 @@
             lblUsuario.TabIndex = 3;
             lblUsuario.Text = "Usuario";
             // 
-            // lblContraseña
+            // lblContrasenia
             // 
-            lblContraseña.AutoSize = true;
-            lblContraseña.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContraseña.ForeColor = Color.FromArgb(17, 30, 71);
-            lblContraseña.Location = new Point(418, 382);
-            lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(134, 31);
-            lblContraseña.TabIndex = 4;
-            lblContraseña.Text = "Contraseña";
+            lblContrasenia.AutoSize = true;
+            lblContrasenia.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblContrasenia.ForeColor = Color.FromArgb(17, 30, 71);
+            lblContrasenia.Location = new Point(418, 382);
+            lblContrasenia.Name = "lblContrasenia";
+            lblContrasenia.Size = new Size(134, 31);
+            lblContrasenia.TabIndex = 4;
+            lblContrasenia.Text = "Contraseña";
             // 
             // btnAcceder
             // 
@@ -129,7 +129,7 @@
             Controls.Add(txtPassword);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
-            Controls.Add(lblContraseña);
+            Controls.Add(lblContrasenia);
             Controls.Add(lblUsuario);
             Controls.Add(pcbLogo);
             Name = "frmLogin";
@@ -143,7 +143,7 @@
         #endregion
         private PictureBox pcbLogo;
         private Label lblUsuario;
-        private Label lblContraseña;
+        private Label lblContrasenia;
         private Button btnAcceder;
         private Button btnSalir;
         private TextBox txtPassword;

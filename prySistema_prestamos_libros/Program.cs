@@ -20,7 +20,6 @@ namespace prySistema_prestamos_libros
                 }
             }
 
-            
         }
     }
 }

@@ -39,7 +39,9 @@ namespace prySistema_prestamos_libros
 
 
                 dgvUsuarios.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.AllCells;
+                    DataGridViewAutoSizeColumnsMode.Fill;
+
+                OcultarColumnas();
 
             }
             catch (Exception ex)
@@ -48,9 +50,24 @@ namespace prySistema_prestamos_libros
             }
         }
 
+        // Cada vez que se reasigna el DataSource de dgvUsuarios (Cargargrid o una
+        // búsqueda), la grid regenera sus columnas y pierde la visibilidad anterior.
+        // Por eso se llama en TODOS los lugares donde se reasigne el DataSource.
+        private void OcultarColumnas()
+        {
+            if (dgvUsuarios.Columns["Nombre"] != null)
+                dgvUsuarios.Columns["Nombre"].Visible = false;
+            if (dgvUsuarios.Columns["Apellido Paterno"] != null)
+                dgvUsuarios.Columns["Apellido Paterno"].Visible = false;
+            if (dgvUsuarios.Columns["Apellido Materno"] != null)
+                dgvUsuarios.Columns["Apellido Materno"].Visible = false;
+        }
+
         private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
         {
             dgvUsuarios.DataSource = usuario.BuscarUsuarios(txtBuscarUsuario.Text);
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            OcultarColumnas();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -71,7 +88,7 @@ namespace prySistema_prestamos_libros
 
             frm.IdBibliotecario =
                 Convert.ToInt32(
-                dgvUsuarios.CurrentRow.Cells["id_bibliotecario"].Value);
+                dgvUsuarios.CurrentRow.Cells["ID Bibliotecario"].Value);
 
 
             frm.ShowDialog();
@@ -90,7 +107,7 @@ namespace prySistema_prestamos_libros
 
             int id =
             Convert.ToInt32(
-            dgvUsuarios.CurrentRow.Cells["id_bibliotecario"].Value);
+            dgvUsuarios.CurrentRow.Cells["ID Bibliotecario"].Value);
 
             DialogResult respuesta =
                 MessageBox.Show(

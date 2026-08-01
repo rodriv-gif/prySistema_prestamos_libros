@@ -124,7 +124,7 @@
             txtBuscarAlumno.Location = new Point(123, 125);
             txtBuscarAlumno.Multiline = true;
             txtBuscarAlumno.Name = "txtBuscarAlumno";
-            txtBuscarAlumno.Size = new Size(245, 31);
+            txtBuscarAlumno.Size = new Size(245, 30);
             txtBuscarAlumno.TabIndex = 3;
             txtBuscarAlumno.TextChanged += txtBuscarAlumno_TextChanged;
             txtBuscarAlumno.KeyPress += txtBuscarAlumno_KeyPress;
@@ -148,6 +148,7 @@
             dgvAlumnos.Name = "dgvAlumnos";
             dgvAlumnos.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAlumnos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvAlumnos.Size = new Size(1249, 568);
             dgvAlumnos.TabIndex = 6;

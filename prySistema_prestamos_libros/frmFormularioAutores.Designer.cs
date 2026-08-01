@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioAutores));
-            lblRegidtroAutor = new Label();
+            lblRegistroAutor = new Label();
             pcbContenedorAutores = new PictureBox();
             lblNombreAutor = new Label();
             lblApellidoPaterno = new Label();
@@ -42,17 +42,17 @@
             ((System.ComponentModel.ISupportInitialize)pcbContenedorAutores).BeginInit();
             SuspendLayout();
             // 
-            // lblRegidtroAutor
+            // lblRegistroAutor
             // 
-            lblRegidtroAutor.AutoSize = true;
-            lblRegidtroAutor.BackColor = Color.FromArgb(250, 247, 242);
-            lblRegidtroAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegidtroAutor.ForeColor = Color.FromArgb(27, 46, 107);
-            lblRegidtroAutor.Location = new Point(34, 34);
-            lblRegidtroAutor.Name = "lblRegidtroAutor";
-            lblRegidtroAutor.Size = new Size(166, 23);
-            lblRegidtroAutor.TabIndex = 0;
-            lblRegidtroAutor.Text = "Registro de autores";
+            lblRegistroAutor.AutoSize = true;
+            lblRegistroAutor.BackColor = Color.FromArgb(250, 247, 242);
+            lblRegistroAutor.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegistroAutor.ForeColor = Color.FromArgb(27, 46, 107);
+            lblRegistroAutor.Location = new Point(34, 34);
+            lblRegistroAutor.Name = "lblRegistroAutor";
+            lblRegistroAutor.Size = new Size(166, 23);
+            lblRegistroAutor.TabIndex = 0;
+            lblRegistroAutor.Text = "Registro de autores";
             // 
             // pcbContenedorAutores
             // 
@@ -90,9 +90,9 @@
             lblApellidoMaterno.BackColor = Color.FromArgb(250, 247, 242);
             lblApellidoMaterno.Location = new Point(46, 144);
             lblApellidoMaterno.Name = "lblApellidoMaterno";
-            lblApellidoMaterno.Size = new Size(122, 20);
+            lblApellidoMaterno.Size = new Size(126, 20);
             lblApellidoMaterno.TabIndex = 4;
-            lblApellidoMaterno.Text = "ApellidoMaterno";
+            lblApellidoMaterno.Text = "Apellido materno";
             // 
             // txtNombreAutor
             // 
@@ -103,9 +103,9 @@
             txtNombreAutor.Size = new Size(245, 30);
             txtNombreAutor.TabIndex = 5;
             txtNombreAutor.KeyPress += SoloLetras_KeyPress;
-            //
+            // 
             // txtApellidoPaterno
-            //
+            // 
             txtApellidoPaterno.Location = new Point(339, 95);
             txtApellidoPaterno.MaxLength = 50;
             txtApellidoPaterno.Multiline = true;
@@ -113,9 +113,9 @@
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 6;
             txtApellidoPaterno.KeyPress += SoloLetras_KeyPress;
-            //
+            // 
             // txtApellidoMaterno
-            //
+            // 
             txtApellidoMaterno.Location = new Point(46, 167);
             txtApellidoMaterno.MaxLength = 50;
             txtApellidoMaterno.Multiline = true;
@@ -172,7 +172,7 @@
             Controls.Add(lblApellidoMaterno);
             Controls.Add(lblApellidoPaterno);
             Controls.Add(lblNombreAutor);
-            Controls.Add(lblRegidtroAutor);
+            Controls.Add(lblRegistroAutor);
             Controls.Add(pcbContenedorAutores);
             Name = "frmFormularioAutores";
             Text = "Formulario de autores";
@@ -183,7 +183,7 @@
 
         #endregion
 
-        private Label lblRegidtroAutor;
+        private Label lblRegistroAutor;
         private PictureBox pcbContenedorAutores;
         private Label lblNombreAutor;
         private Label lblApellidoPaterno;

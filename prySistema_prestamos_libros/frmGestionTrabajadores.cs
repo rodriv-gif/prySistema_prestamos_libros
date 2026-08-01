@@ -66,7 +66,7 @@ namespace prySistema_prestamos_libros
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            var frm = new frmFormularioLibross();
+            var frm = new frmFormularioTrabajador();
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
@@ -85,7 +85,7 @@ namespace prySistema_prestamos_libros
 
             DataGridViewRow fila = dgvTrabajadores.CurrentRow;
 
-            var frm = new frmFormularioLibross(fila);
+            var frm = new frmFormularioTrabajador(fila);
 
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);

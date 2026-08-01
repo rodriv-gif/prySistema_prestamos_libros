@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
             rdbOpcion4 = new RadioButton();
             rdbOpcion3 = new RadioButton();
@@ -38,7 +38,7 @@
             rdbOpcion1 = new RadioButton();
             dgvReportes = new DataGridView();
             btnGenerarPDF = new Button();
-            label1 = new Label();
+            lblReportes = new Label();
             btnVer = new Button();
             gpbOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
@@ -113,25 +113,25 @@
             // 
             // dgvReportes
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvReportes.BackgroundColor = Color.White;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
             dgvReportes.Location = new Point(140, 433);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvReportes.Size = new Size(1199, 340);
             dgvReportes.TabIndex = 13;
             // 
@@ -148,16 +148,16 @@
             btnGenerarPDF.UseVisualStyleBackColor = false;
             btnGenerarPDF.Click += btnGenerarPDF_Click;
             // 
-            // label1
+            // lblReportes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(201, 168, 76);
-            label1.Location = new Point(601, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(286, 81);
-            label1.TabIndex = 1;
-            label1.Text = "Reportes";
+            lblReportes.AutoSize = true;
+            lblReportes.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReportes.ForeColor = Color.FromArgb(201, 168, 76);
+            lblReportes.Location = new Point(601, 20);
+            lblReportes.Name = "lblReportes";
+            lblReportes.Size = new Size(286, 81);
+            lblReportes.TabIndex = 1;
+            lblReportes.Text = "Reportes";
             // 
             // btnVer
             // 
@@ -179,7 +179,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1475, 875);
             Controls.Add(btnVer);
-            Controls.Add(label1);
+            Controls.Add(lblReportes);
             Controls.Add(btnGenerarPDF);
             Controls.Add(dgvReportes);
             Controls.Add(gpbOpciones);
@@ -199,7 +199,7 @@
         private RadioButton rdbOpcion1;
         private DataGridView dgvReportes;
         private Button btnGenerarPDF;
-        private Label label1;
+        private Label lblReportes;
         private RadioButton rdbOpcion3;
         private Button btnVer;
         private RadioButton rdbOpcion4;
