@@ -136,7 +136,7 @@
             btnCancelar.Location = new Point(954, 677);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 72;
+            btnCancelar.TabIndex = 74;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -179,7 +179,7 @@
             cmbCarrera.Location = new Point(29, 540);
             cmbCarrera.Name = "cmbCarrera";
             cmbCarrera.Size = new Size(245, 28);
-            cmbCarrera.TabIndex = 69;
+            cmbCarrera.TabIndex = 67;
             // 
             // lblCodigoPostal
             // 
@@ -388,7 +388,7 @@
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(245, 30);
-            txtApellidoMaterno.TabIndex = 81;
+            txtApellidoMaterno.TabIndex = 59;
             txtApellidoMaterno.KeyPress += SoloLetras_KeyPress;
             // 
             // txtTelefono
@@ -401,7 +401,7 @@
             txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(245, 30);
-            txtTelefono.TabIndex = 82;
+            txtTelefono.TabIndex = 60;
             txtTelefono.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtCorreo
@@ -414,7 +414,7 @@
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(245, 30);
-            txtCorreo.TabIndex = 83;
+            txtCorreo.TabIndex = 61;
             // 
             // txtCalle
             // 
@@ -426,7 +426,7 @@
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(245, 30);
-            txtCalle.TabIndex = 86;
+            txtCalle.TabIndex = 66;
             txtCalle.KeyPress += txtCalle_KeyPress;
             // 
             // txtCodigoPostal
@@ -439,7 +439,7 @@
             txtCodigoPostal.Multiline = true;
             txtCodigoPostal.Name = "txtCodigoPostal";
             txtCodigoPostal.Size = new Size(245, 30);
-            txtCodigoPostal.TabIndex = 88;
+            txtCodigoPostal.TabIndex = 63;
             txtCodigoPostal.TextChanged += txtCodigoPostal_TextChanged;
             txtCodigoPostal.KeyPress += SoloNumeros_KeyPress;
             // 
@@ -453,7 +453,7 @@
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
             txtGrado.Size = new Size(245, 30);
-            txtGrado.TabIndex = 89;
+            txtGrado.TabIndex = 68;
             txtGrado.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtGrupo
@@ -466,7 +466,7 @@
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
             txtGrupo.Size = new Size(245, 30);
-            txtGrupo.TabIndex = 90;
+            txtGrupo.TabIndex = 69;
             txtGrupo.KeyPress += txtGrupo_KeyPress;
             // 
             // dtpFechaRegistro
@@ -479,7 +479,7 @@
             dtpFechaRegistro.MaxDate = new DateTime(2027, 3, 13, 0, 0, 0, 0);
             dtpFechaRegistro.Name = "dtpFechaRegistro";
             dtpFechaRegistro.Size = new Size(245, 27);
-            dtpFechaRegistro.TabIndex = 91;
+            dtpFechaRegistro.TabIndex = 62;
             dtpFechaRegistro.Value = new DateTime(2026, 7, 18, 0, 0, 0, 0);
             // 
             // panel1
@@ -532,7 +532,7 @@
             txtMunicipio.Multiline = true;
             txtMunicipio.Name = "txtMunicipio";
             txtMunicipio.Size = new Size(245, 30);
-            txtMunicipio.TabIndex = 93;
+            txtMunicipio.TabIndex = 64;
             // 
             // lblMunicipio
             // 
@@ -553,7 +553,7 @@
             cmbColonia.Location = new Point(649, 364);
             cmbColonia.Name = "cmbColonia";
             cmbColonia.Size = new Size(245, 28);
-            cmbColonia.TabIndex = 95;
+            cmbColonia.TabIndex = 65;
             // 
             // frmFormularioAlumno
             // 

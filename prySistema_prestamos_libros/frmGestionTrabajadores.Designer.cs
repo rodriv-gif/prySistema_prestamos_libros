@@ -63,7 +63,7 @@
             txtBuscarTrabajador.Multiline = true;
             txtBuscarTrabajador.Name = "txtBuscarTrabajador";
             txtBuscarTrabajador.Size = new Size(245, 30);
-            txtBuscarTrabajador.TabIndex = 16;
+            txtBuscarTrabajador.TabIndex = 12;
             txtBuscarTrabajador.TextChanged += txtBuscarTrabajador_TextChanged;
             txtBuscarTrabajador.KeyPress += txtBuscarTrabajador_KeyPress;
             // 

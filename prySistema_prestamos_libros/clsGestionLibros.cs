@@ -116,11 +116,7 @@ namespace prySistema_prestamos_libros
             }
             return tabla;
         }
-        // Búsqueda específica para el formulario de Préstamos: aquí sí importa el ejemplar
-        // físico (localización, inventario, id_ejemplar), porque lo que se presta es una
-        // copia concreta, no "el libro" en abstracto. Por eso NO reutiliza Consultar() de
-        // arriba (esa es para el catálogo de frmGestionLibros y ya no trae ejemplares) —
-        // son responsabilidades distintas aunque ambas empiecen en tbllibros.
+        // Para Préstamos: a diferencia de Consultar(), esta sí trae el ejemplar físico (localización, id_ejemplar).
         public DataTable BuscarLibrosConEjemplares(string busquedaTexto)
         {
             DataTable tabla = new DataTable();

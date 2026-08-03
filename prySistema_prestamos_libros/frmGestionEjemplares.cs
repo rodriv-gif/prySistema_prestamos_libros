@@ -45,9 +45,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Cada vez que se reasigna el DataSource, la grid regenera sus columnas y pierde
-        // la visibilidad anterior, por eso este método se llama en todos los lugares
-        // donde se asigna dgvEjemplares.DataSource.
+        // Se llama en todo lugar que reasigne el DataSource, porque eso resetea la visibilidad de columnas.
         private void OcultarColumnas()
         {
             if (dgvEjemplares.Columns["id_libro"] != null)
@@ -127,9 +125,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Bloquea cualquier carácter que no sea letra, número o espacio, para que no
-        // se puedan escribir símbolos (%, ', ;, --, etc.) en la barra de búsqueda.
-        // Solo se puede buscar por clave (ID Ejemplar) o por título del libro.
+        // Bloquea símbolos en la búsqueda; solo se puede buscar por ID Ejemplar o título.
         private void txtBuscarClave_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar)) return; // permite backspace

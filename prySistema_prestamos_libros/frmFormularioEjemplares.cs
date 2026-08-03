@@ -16,9 +16,7 @@ namespace prySistema_prestamos_libros
         private int idEjemplarOriginal = 0;
         private int idLibroSeleccionado = 0;
 
-        // Evita que el grid se recargue (y parpadee) con cada tecla presionada: en vez de
-        // buscar de inmediato en cada TextChanged, se reinicia este temporizador; solo se
-        // dispara la búsqueda cuando el usuario deja de escribir por 400 ms.
+        // Temporizador para no buscar en cada tecla: espera 400 ms sin escribir antes de buscar.
         private System.Windows.Forms.Timer timerBusquedaLibro;
 
         public frmFormularioEjemplares()
@@ -54,19 +52,12 @@ namespace prySistema_prestamos_libros
             // al editar uno que ya existe no tiene sentido, así que se deshabilita.
             nudCantidad.Enabled = false;
 
-            // El TextChanged de txtLibroPerteneciete no se dispara solo con asignar .Text
-            // en el mismo orden esperado (y además está bloqueado en modo edición), así que
-            // el grid del libro se cargaba vacío. Se carga manualmente aquí para que se vea
-            // el libro completo, con su checkbox ya marcado.
+            // Asignar .Text no dispara el TextChanged, así que se carga el grid del libro a mano.
             txtLibroPerteneciete.ReadOnly = true;
             CargarLibroEnGrid(txtLibroPerteneciete.Text);
         }
 
-        // Busca el libro por ISBN y lo muestra en el grid para que el bibliotecario
-        // lo marque con el checkbox (así se sabe a qué libro pertenecerán los ejemplares).
-        // En modo edición, además, marca automáticamente el checkbox del libro que ya
-        // tiene asignado este ejemplar, y el grid queda de solo lectura (cambiar el libro
-        // de un ejemplar ya existente no está permitido; ActualizarEjemplar no lo toca).
+        // Busca el libro por ISBN para marcarlo con checkbox; en modo edición ya viene marcado y de solo lectura.
         private void CargarLibroEnGrid(string isbnBuscado)
         {
             if (string.IsNullOrWhiteSpace(isbnBuscado))

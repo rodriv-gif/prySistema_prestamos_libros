@@ -2,9 +2,7 @@ namespace prySistema_prestamos_libros
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+        // Punto de entrada de la aplicación.
         [STAThread]
         static void Main()
         {

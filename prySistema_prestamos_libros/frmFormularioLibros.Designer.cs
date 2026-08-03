@@ -230,7 +230,7 @@
             btnCancelar.Location = new Point(773, 623);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 31;
+            btnCancelar.TabIndex = 34;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -247,7 +247,7 @@
             btnLimpiar.Location = new Point(456, 623);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
-            btnLimpiar.TabIndex = 30;
+            btnLimpiar.TabIndex = 33;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -285,7 +285,7 @@
             cmbEditorial.Location = new Point(61, 168);
             cmbEditorial.Name = "cmbEditorial";
             cmbEditorial.Size = new Size(245, 28);
-            cmbEditorial.TabIndex = 35;
+            cmbEditorial.TabIndex = 23;
             // 
             // cmbCategoria
             // 
@@ -295,7 +295,7 @@
             cmbCategoria.Location = new Point(411, 168);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(245, 28);
-            cmbCategoria.TabIndex = 36;
+            cmbCategoria.TabIndex = 24;
             // 
             // cmbIdioma
             // 
@@ -305,7 +305,7 @@
             cmbIdioma.Location = new Point(755, 168);
             cmbIdioma.Name = "cmbIdioma";
             cmbIdioma.Size = new Size(245, 28);
-            cmbIdioma.TabIndex = 37;
+            cmbIdioma.TabIndex = 25;
             // 
             // txtBuscarAutor
             // 
@@ -315,7 +315,7 @@
             txtBuscarAutor.Multiline = true;
             txtBuscarAutor.Name = "txtBuscarAutor";
             txtBuscarAutor.Size = new Size(322, 30);
-            txtBuscarAutor.TabIndex = 39;
+            txtBuscarAutor.TabIndex = 28;
             txtBuscarAutor.TextChanged += txtBuscarAutor_TextChanged;
             // 
             // dgvAutor
@@ -341,7 +341,7 @@
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAutor.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvAutor.Size = new Size(423, 128);
-            dgvAutor.TabIndex = 41;
+            dgvAutor.TabIndex = 29;
             dgvAutor.CellDoubleClick += dgvAutor_CellDoubleClick;
             // 
             // dgvAlmacenarAutor
@@ -367,7 +367,7 @@
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAlmacenarAutor.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvAlmacenarAutor.Size = new Size(370, 95);
-            dgvAlmacenarAutor.TabIndex = 42;
+            dgvAlmacenarAutor.TabIndex = 26;
             dgvAlmacenarAutor.CellContentDoubleClick += dgvAlmacenarAutor_CellContentDoubleClick;
             // 
             // btnBorrar
@@ -380,7 +380,7 @@
             btnBorrar.Location = new Point(469, 255);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(150, 45);
-            btnBorrar.TabIndex = 43;
+            btnBorrar.TabIndex = 27;
             btnBorrar.Text = "Borrar";
             btnBorrar.TextAlign = ContentAlignment.MiddleRight;
             btnBorrar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -396,7 +396,7 @@
             btnAgregarAutor.Location = new Point(610, 484);
             btnAgregarAutor.Name = "btnAgregarAutor";
             btnAgregarAutor.Size = new Size(150, 45);
-            btnAgregarAutor.TabIndex = 44;
+            btnAgregarAutor.TabIndex = 30;
             btnAgregarAutor.Text = "Agregar";
             btnAgregarAutor.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarAutor.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -413,7 +413,7 @@
             btnNuevoAutor.Location = new Point(810, 484);
             btnNuevoAutor.Name = "btnNuevoAutor";
             btnNuevoAutor.Size = new Size(150, 45);
-            btnNuevoAutor.TabIndex = 45;
+            btnNuevoAutor.TabIndex = 31;
             btnNuevoAutor.Text = "Nuevo";
             btnNuevoAutor.TextAlign = ContentAlignment.MiddleRight;
             btnNuevoAutor.TextImageRelation = TextImageRelation.ImageBeforeText;

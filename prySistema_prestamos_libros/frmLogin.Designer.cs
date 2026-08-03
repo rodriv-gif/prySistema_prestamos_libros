@@ -79,7 +79,7 @@
             btnAcceder.Location = new Point(267, 498);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(150, 45);
-            btnAcceder.TabIndex = 5;
+            btnAcceder.TabIndex = 9;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
             btnAcceder.Click += btnAcceder_Click;
@@ -92,7 +92,7 @@
             btnSalir.Location = new Point(556, 498);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(150, 45);
-            btnSalir.TabIndex = 5;
+            btnSalir.TabIndex = 10;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
@@ -106,7 +106,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(245, 34);
-            txtPassword.TabIndex = 6;
+            txtPassword.TabIndex = 8;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsuario

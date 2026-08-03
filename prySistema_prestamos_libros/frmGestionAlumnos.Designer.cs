@@ -63,7 +63,7 @@
             btnNuevoRegistro.Location = new Point(750, 125);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
             btnNuevoRegistro.Size = new Size(150, 45);
-            btnNuevoRegistro.TabIndex = 1;
+            btnNuevoRegistro.TabIndex = 4;
             btnNuevoRegistro.Text = "Nuevo ";
             btnNuevoRegistro.TextAlign = ContentAlignment.MiddleRight;
             btnNuevoRegistro.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -80,7 +80,7 @@
             btnEditar.Location = new Point(987, 125);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 45);
-            btnEditar.TabIndex = 2;
+            btnEditar.TabIndex = 5;
             btnEditar.Text = "Editar";
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -97,7 +97,7 @@
             btnDarBaja.Location = new Point(1222, 125);
             btnDarBaja.Name = "btnDarBaja";
             btnDarBaja.Size = new Size(150, 45);
-            btnDarBaja.TabIndex = 3;
+            btnDarBaja.TabIndex = 6;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -152,7 +152,7 @@
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvAlumnos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvAlumnos.Size = new Size(1249, 568);
-            dgvAlumnos.TabIndex = 6;
+            dgvAlumnos.TabIndex = 8;
             // 
             // frmGestionAlumnos
             // 

@@ -36,9 +36,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Cada vez que se asigna un DataSource nuevo a dgvAlumnos (CargarGrid o una búsqueda),
-        // la grid regenera sus columnas y pierde la visibilidad anterior. Por eso se creo este método se
-        // llama en TODOS los lugares donde se reasigne el DataSource.
+        // Se llama en todo lugar que reasigne el DataSource, porque eso resetea la visibilidad de columnas.
         private void OcultarColumnas()
         {
             if (dgvAlumnos.Columns["id_carrera"] != null)

@@ -131,7 +131,7 @@
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(556, 30);
-            txtLocalizacion.TabIndex = 11;
+            txtLocalizacion.TabIndex = 22;
             // 
             // dtpFechaAdquisicion
             // 
@@ -142,7 +142,7 @@
             dtpFechaAdquisicion.Location = new Point(61, 435);
             dtpFechaAdquisicion.Name = "dtpFechaAdquisicion";
             dtpFechaAdquisicion.Size = new Size(245, 27);
-            dtpFechaAdquisicion.TabIndex = 13;
+            dtpFechaAdquisicion.TabIndex = 23;
             // 
             // nudCantidad
             // 
@@ -152,7 +152,7 @@
             nudCantidad.Location = new Point(397, 435);
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(245, 27);
-            nudCantidad.TabIndex = 14;
+            nudCantidad.TabIndex = 24;
             // 
             // btnGuardar
             // 
@@ -165,7 +165,7 @@
             btnGuardar.Location = new Point(73, 539);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
-            btnGuardar.TabIndex = 16;
+            btnGuardar.TabIndex = 25;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -184,7 +184,7 @@
             btnLimpiar.Location = new Point(397, 539);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
-            btnLimpiar.TabIndex = 17;
+            btnLimpiar.TabIndex = 26;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -203,7 +203,7 @@
             btnCancelar.Location = new Point(714, 539);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 18;
+            btnCancelar.TabIndex = 27;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvLibrosPerteneciente.Size = new Size(830, 205);
-            dgvLibrosPerteneciente.TabIndex = 19;
+            dgvLibrosPerteneciente.TabIndex = 21;
             dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
             // 
             // chkSeleccionar

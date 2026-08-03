@@ -88,7 +88,18 @@ namespace prySistema_prestamos_libros
 
 
                     txtCarreraTrabajador.Text =
-                        dt.Rows[0]["id_carrera"].ToString();
+                        dt.Rows[0]["nombre_carrera"].ToString();
+
+                    // Solo aplica al registrar uno nuevo; al editar el trabajador ya es el mismo.
+                    if (!EsEdicion && usuario.ExisteBibliotecarioParaTrabajador(Convert.ToInt32(txtNumControl.Text)))
+                    {
+                        MessageBox.Show("Este trabajador ya tiene un usuario asignado. Elige otro número de control.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        LimpiarTrabajador();
+                        txtNumControl.Focus();
+                        return;
+                    }
+
+                    MessageBox.Show("Trabajador vinculado correctamente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
@@ -154,6 +165,12 @@ namespace prySistema_prestamos_libros
 
                 if (!EsEdicion)
                 {
+
+                    if (usuario.ExisteBibliotecarioParaTrabajador(usuario.NumeroControl))
+                    {
+                        MessageBox.Show("Este trabajador ya tiene un usuario asignado. No se puede registrar otro.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
                     if (usuario.ExisteUsuario(txtUsuario.Text))
                     {
@@ -240,15 +257,17 @@ namespace prySistema_prestamos_libros
 
                     txtApellidoMaternoTrabajador.Text = dt.Rows[0]["apellido_materno"].ToString();
 
-                    txtCarreraTrabajador.Text = dt.Rows[0]["id_carrera"].ToString();
+                    txtCarreraTrabajador.Text = dt.Rows[0]["nombre_carrera"].ToString();
 
                     txtUsuario.Text = dt.Rows[0]["usuario"].ToString();
 
-                    txtContrasena.Text = dt.Rows[0]["contrasena"].ToString();
+                    // La contraseña no se muestra ni se puede editar aquí por seguridad.
+                    txtContrasena.Text = "********";
+                    txtContrasena.Enabled = false;
 
                     cmbPerfil.SelectedValue = Convert.ToInt32(dt.Rows[0]["id_perfil"]);
 
-                    // Evita cambiar el trabajador al editar
+                    // Al editar solo se permite cambiar Perfil y Usuario; trabajador y contraseña no.
                     txtNumControl.Enabled = false;
                 }
                 else
@@ -287,7 +306,7 @@ namespace prySistema_prestamos_libros
 
                     txtApellidoMaternoTrabajador.Text = dt.Rows[0]["apellido_materno"].ToString();
 
-                    txtCarreraTrabajador.Text = dt.Rows[0]["id_carrera"].ToString();
+                    txtCarreraTrabajador.Text = dt.Rows[0]["nombre_carrera"].ToString();
                 }
                 else
                 {

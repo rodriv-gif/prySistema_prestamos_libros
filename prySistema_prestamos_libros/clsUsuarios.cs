@@ -76,13 +76,14 @@ namespace prySistema_prestamos_libros
                 cn = conexion.AbrirConexion();
 
 
-                string consulta = @"SELECT 
+                string consulta = @"SELECT
                                     t.numero_control,
                                     t.nombre,
                                     t.apellido_paterno,
                                     t.apellido_materno,
-                                    t.id_carrera
+                                    IFNULL(c.nombre_carrera, 'Sin Carrera / Administrativo') AS nombre_carrera
                                     FROM tbltrabajadores t
+                                    LEFT JOIN tblcarreras c ON t.id_carrera = c.id_carrera
                                     WHERE t.numero_control = @numero_control";
 
 
@@ -152,6 +153,44 @@ namespace prySistema_prestamos_libros
                 conexion.CerrarConexion(cn);
             }
 
+
+            return existe;
+        }
+
+        // Revisa si el trabajador ya tiene un usuario/bibliotecario asignado, para no dejar registrar dos.
+        public bool ExisteBibliotecarioParaTrabajador(int numeroControl)
+        {
+            bool existe = false;
+
+            MySqlConnection cn = null;
+
+            try
+            {
+                cn = conexion.AbrirConexion();
+
+                string consulta = @"SELECT COUNT(*)
+                            FROM tblbibliotecario
+                            WHERE numero_control = @numero_control";
+
+                MySqlCommand cmd = new MySqlCommand(consulta, cn);
+
+                cmd.Parameters.AddWithValue("@numero_control", numeroControl);
+
+                int cantidad = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (cantidad > 0)
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion(cn);
+            }
 
             return existe;
         }
@@ -227,11 +266,11 @@ namespace prySistema_prestamos_libros
                 cn = conexion.AbrirConexion();
 
 
+                // La contraseña no se actualiza aquí por seguridad; solo Perfil y Usuario.
                 string consulta = @"UPDATE tblbibliotecario
                             SET
                                 id_perfil = @id_perfil,
-                                usuario = @usuario,
-                                contrasenia = @contrasenia
+                                usuario = @usuario
                             WHERE id_bibliotecario = @id_bibliotecario";
 
 
@@ -239,7 +278,6 @@ namespace prySistema_prestamos_libros
 
                 cmd.Parameters.AddWithValue("@id_perfil", IdPerfil);
                 cmd.Parameters.AddWithValue("@usuario", Usuario);
-                cmd.Parameters.AddWithValue("@contrasenia", Contrasena);
                 cmd.Parameters.AddWithValue("@id_bibliotecario", IdBibliotecario);
 
                 int filas = cmd.ExecuteNonQuery();
@@ -283,13 +321,15 @@ namespace prySistema_prestamos_libros
                             t.nombre,
                             t.apellido_paterno,
                             t.apellido_materno,
-                            t.id_carrera,
+                            IFNULL(c.nombre_carrera, 'Sin Carrera / Administrativo') AS nombre_carrera,
                             b.usuario,
                             b.contrasenia,
                             b.id_perfil
                             FROM tblbibliotecario b
                             INNER JOIN tbltrabajadores t
                             ON b.numero_control = t.numero_control
+                            LEFT JOIN tblcarreras c
+                            ON t.id_carrera = c.id_carrera
                             WHERE b.id_bibliotecario = @id";
 
 
@@ -326,9 +366,7 @@ namespace prySistema_prestamos_libros
                 cn = conexion.AbrirConexion();
 
 
-                // nombre/apellidos van dos veces: concatenados en 'Nombre completo' para
-                // mostrar, y por separado (ocultos en el grid) solo por si se llegan a
-                // necesitar después, sin tener que volver a consultar la base de datos.
+                // Nombre/apellidos van dos veces: concatenados para mostrar, y ocultos por si se necesitan.
                 string consulta = @"
                                     SELECT
                                         b.id_bibliotecario AS 'ID Bibliotecario',

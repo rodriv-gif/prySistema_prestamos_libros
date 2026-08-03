@@ -59,6 +59,25 @@ namespace prySistema_prestamos_libros
             // al solicitante, pero ahora el bibliotecario puede corregirlo a mano si hace falta.
 
             CargarCombos();
+            CargarTodosLosLibros();
+        }
+
+        // Precarga el grid con todos los ejemplares disponibles, igual que hacen
+        // Alumnos, Trabajadores y Autores; la búsqueda de ISBN/Título solo filtra esta lista.
+        private void CargarTodosLosLibros()
+        {
+            clsGestionLibros libro = new clsGestionLibros();
+            try
+            {
+                DataTable dtLibros = libro.BuscarLibrosConEjemplares("");
+                dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvLibros.DataSource = dtLibros;
+                OcultarColumnas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los libros: " + ex.Message);
+            }
         }
 
         // Llena cmbTipoPrestamo (Biblioteca/Domicilio) y cmbEstadoPrestamo
@@ -80,9 +99,7 @@ namespace prySistema_prestamos_libros
                 cmbEstadoPrestamo.DisplayMember = "estado";
                 cmbEstadoPrestamo.ValueMember = "id_estado";
 
-                // Se preselecciona "Prestado" como valor inicial (lo normal para un préstamo
-                // nuevo), pero el combo queda habilitado por si el bibliotecario necesita
-                // cambiarlo a mano.
+                // Se preselecciona "Prestado", pero el combo sigue habilitado por si se necesita cambiar.
                 foreach (DataRow filaEstado in dtEstados.Rows)
                 {
                     if (filaEstado["estado"].ToString() == "Prestado")
@@ -98,10 +115,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Calcula la fecha límite de devolución. Si el préstamo es "Biblioteca" (se usa y
-        // regresa el mismo día, sin salir del edificio), la devolución es la misma fecha
-        // de préstamo. Si es "Domicilio", aplica el plazo fijo de la política
-        // (15 días para Alumno, 20 para Trabajador).
+        // "Biblioteca" devuelve el mismo día; "Domicilio" aplica el plazo fijo (15 días alumno, 20 trabajador).
         private void ActualizarFechaDevolucion()
         {
             int? diasSolicitante = null;
@@ -119,7 +133,7 @@ namespace prySistema_prestamos_libros
                 dtpFechaDevolucion.Value = dtpFechaPrestamo.Value.Date.AddDays(diasSolicitante.Value);
         }
 
-        // Si el bibliotecario cambia la fecha de préstamo (por ejemplo, para registrar uno atrasado, el plazo se debe recalcular a partir de esa nueva fecha.
+        // Si cambia la fecha de préstamo, el plazo se recalcula a partir de esa nueva fecha.
         private void dtpFechaPrestamo_ValueChanged(object sender, EventArgs e)
         {
             ActualizarFechaDevolucion();
@@ -132,9 +146,7 @@ namespace prySistema_prestamos_libros
             ActualizarFechaDevolucion();
         }
 
-        // Al teclear el número de control / matrícula, se busca primero en Alumnos y,
-        // si no aparece ahí, se busca en Trabajadores. El bibliotecario nunca elige el
-        // tipo a mano, se llena solo según en cuál tabla se encontró.
+        // Busca primero en Alumnos y, si no aparece, en Trabajadores; el tipo se llena solo.
         private void txtNumControlSolicitante_TextChanged(object sender, EventArgs e)
         {
             string texto = txtNumControlSolicitante.Text.Trim();
@@ -206,12 +218,12 @@ namespace prySistema_prestamos_libros
 
             if (string.IsNullOrEmpty(busquedaTexto))
             {
-                dgvLibros.DataSource = null;
                 // Si se limpia la búsqueda, la selección anterior ya no aplica a nada
                 // visible; hay que resetearla para que btnAgregar no la use por error.
                 txtLocalizacion.Clear();
                 txtInventario.Clear();
                 idEjemplarSeleccionado = 0;
+                CargarTodosLosLibros();
                 return;
             }
 
@@ -253,11 +265,13 @@ namespace prySistema_prestamos_libros
                 return;
             }
 
-            // Cuando se retecla en txtISBN muy rápido, dgvLibros.DataSource se reasigna
-            // antes de que termine de procesarse el SelectionChanged anterior; en ese
-            // instante la fila puede seguir "viva" mientras las columnas ya se están
-            // regenerando para el nuevo DataTable. Esta validación evita el
-            // ArgumentException de "columna no encontrada" en ese momento intermedio.
+            // La fila vacía de "agregar nueva" no tiene datos; intentar leerla truena la conversión y esto lo evita.
+            if (fila.IsNewRow)
+            {
+                return;
+            }
+
+            // Evita un error si el grid ya se está regenerando cuando se retecla muy rápido en ISBN.
             if (dgvLibros.Columns["Localización"] == null)
             {
                 return;
@@ -299,6 +313,14 @@ namespace prySistema_prestamos_libros
                 return;
             }
 
+            // Si ya hay un solicitante encontrado, se avisa aquí mismo si este libro haría
+            // que se pase del límite, antes de agregarlo al carrito.
+            if (txtTipoSolicitante.Text == "Alumno" || txtTipoSolicitante.Text == "Trabajador")
+            {
+                if (!ValidarLimitePrestamos(librosAPrestar.Rows.Count + 1))
+                    return;
+            }
+
              librosAPrestar.Rows.Add(
                 filaSeleccionada.Cells["Título"].Value,
                 filaSeleccionada.Cells["ISBN"].Value,
@@ -308,6 +330,36 @@ namespace prySistema_prestamos_libros
                 filaSeleccionada.Cells["Autores"].Value,
                 idEjemplarSeleccionado
             );
+        }
+
+        // Avisa si, con lo del carrito, se pasaría del límite (4 alumno, 6 trabajador). Se usa en Agregar y Registrar.
+        private bool ValidarLimitePrestamos(int totalLibrosAValidar)
+        {
+            int idSolicitante = Convert.ToInt32(txtNumControlSolicitante.Text.Trim());
+            int limitePrestamos = txtTipoSolicitante.Text == "Alumno" ? LimitePrestamosAlumno : LimitePrestamosTrabajador;
+
+            try
+            {
+                clsPrestamo prestamoConsulta = new clsPrestamo();
+                int prestamosActivos = prestamoConsulta.ContarPrestamosActivos(idSolicitante);
+                int totalConEstePrestamo = prestamosActivos + totalLibrosAValidar;
+
+                if (totalConEstePrestamo > limitePrestamos)
+                {
+                    MessageBox.Show(
+                        "No se puede agregar este libro: ya tiene " + prestamosActivos + " de " + limitePrestamos +
+                        " libros prestados como máximo. Debe devolver alguno antes de prestar otro.",
+                        "Límite de préstamos alcanzado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo validar el límite de préstamos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         // Revisa que todo lo necesario para registrar el préstamo esté completo antes de
@@ -327,30 +379,9 @@ namespace prySistema_prestamos_libros
                 return false;
             }
 
-            // Suma préstamos activos + los que se van a agregar, contra el límite.
-            int idSolicitante = Convert.ToInt32(txtNumControlSolicitante.Text.Trim());
-            int limitePrestamos = txtTipoSolicitante.Text == "Alumno" ? LimitePrestamosAlumno : LimitePrestamosTrabajador;
-
-            try
-            {
-                clsPrestamo prestamoConsulta = new clsPrestamo();
-                int prestamosActivos = prestamoConsulta.ContarPrestamosActivos(idSolicitante);
-                int totalConEstePrestamo = prestamosActivos + librosAPrestar.Rows.Count;
-
-                if (totalConEstePrestamo > limitePrestamos)
-                {
-                    MessageBox.Show(
-                        txtTipoSolicitante.Text + " ya tiene " + prestamosActivos + " libro(s) prestado(s) y el límite es de " +
-                        limitePrestamos + ". Con este préstamo llegaría a " + totalConEstePrestamo + ".",
-                        "Límite de préstamos alcanzado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo validar el límite de préstamos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // Validación final por si algo cambió desde que se agregaron los libros al carrito.
+            if (!ValidarLimitePrestamos(librosAPrestar.Rows.Count))
                 return false;
-            }
 
             if (cmbTipoPrestamo.SelectedValue == null)
             {
@@ -430,7 +461,7 @@ namespace prySistema_prestamos_libros
             LimpiarDatosSolicitante();
 
             txtISBN.Clear();
-            dgvLibros.DataSource = null;
+            CargarTodosLosLibros();
             txtLocalizacion.Clear();
             txtInventario.Clear();
             idEjemplarSeleccionado = 0;

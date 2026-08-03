@@ -129,7 +129,7 @@
             btnCerrarSesion.Location = new Point(107, 973);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(212, 52);
-            btnCerrarSesion.TabIndex = 11;
+            btnCerrarSesion.TabIndex = 13;
             btnCerrarSesion.Text = "Cerrar sesión";
             btnCerrarSesion.UseVisualStyleBackColor = false;
             btnCerrarSesion.Click += btnCerrarSesion_Click;
@@ -381,6 +381,7 @@
             Controls.Add(pnlContenedor);
             Controls.Add(pnlSuperior);
             Controls.Add(pnlMenu);
+            ForeColor = Color.Black;
             Name = "frmPrincipal";
             Text = "Pantalla Principal";
             WindowState = FormWindowState.Maximized;

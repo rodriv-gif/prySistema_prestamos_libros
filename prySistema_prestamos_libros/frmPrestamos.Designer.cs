@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             pcbContenendorBusqueda = new PictureBox();
             lblBusquedaLibro = new Label();
             pcbContenedorCompacto = new PictureBox();
@@ -141,33 +141,33 @@
             txtISBN.Multiline = true;
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(245, 30);
-            txtISBN.TabIndex = 11;
+            txtISBN.TabIndex = 63;
             txtISBN.TextChanged += txtISBN_TextChanged;
             // 
             // dgvLibros
             // 
-            dataGridViewCellStyle15.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvLibros.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle16.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle16.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
-            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibros.EnableHeadersVisualStyles = false;
             dgvLibros.Location = new Point(117, 479);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle17.BackColor = Color.White;
-            dataGridViewCellStyle17.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvLibros.Size = new Size(1016, 112);
-            dgvLibros.TabIndex = 12;
+            dgvLibros.TabIndex = 64;
             dgvLibros.SelectionChanged += dgvLibros_SelectionChanged;
             // 
             // lblLocalizacion
@@ -202,8 +202,9 @@
             txtLocalizacion.Location = new Point(117, 617);
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
+            txtLocalizacion.ReadOnly = true;
             txtLocalizacion.Size = new Size(576, 30);
-            txtLocalizacion.TabIndex = 15;
+            txtLocalizacion.TabIndex = 66;
             // 
             // txtInventario
             // 
@@ -213,8 +214,9 @@
             txtInventario.Location = new Point(787, 614);
             txtInventario.Multiline = true;
             txtInventario.Name = "txtInventario";
+            txtInventario.ReadOnly = true;
             txtInventario.Size = new Size(245, 30);
-            txtInventario.TabIndex = 16;
+            txtInventario.TabIndex = 67;
             // 
             // btnAgregar
             // 
@@ -225,7 +227,7 @@
             btnAgregar.Location = new Point(1178, 516);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(150, 45);
-            btnAgregar.TabIndex = 17;
+            btnAgregar.TabIndex = 65;
             btnAgregar.Text = "Agregar";
             btnAgregar.TextAlign = ContentAlignment.MiddleRight;
             btnAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -242,7 +244,7 @@
             btnRegistrar.Location = new Point(338, 867);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(150, 45);
-            btnRegistrar.TabIndex = 18;
+            btnRegistrar.TabIndex = 73;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -259,7 +261,7 @@
             btnLimpiarPrestamo.Location = new Point(680, 867);
             btnLimpiarPrestamo.Name = "btnLimpiarPrestamo";
             btnLimpiarPrestamo.Size = new Size(150, 45);
-            btnLimpiarPrestamo.TabIndex = 19;
+            btnLimpiarPrestamo.TabIndex = 74;
             btnLimpiarPrestamo.Text = "Limpiar";
             btnLimpiarPrestamo.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarPrestamo.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -276,7 +278,7 @@
             btnCancelarPrestamo.Location = new Point(1017, 867);
             btnCancelarPrestamo.Name = "btnCancelarPrestamo";
             btnCancelarPrestamo.Size = new Size(150, 45);
-            btnCancelarPrestamo.TabIndex = 20;
+            btnCancelarPrestamo.TabIndex = 75;
             btnCancelarPrestamo.Text = "Cancelar";
             btnCancelarPrestamo.TextAlign = ContentAlignment.MiddleRight;
             btnCancelarPrestamo.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -341,7 +343,7 @@
             cmbTipoPrestamo.Margin = new Padding(3, 4, 3, 4);
             cmbTipoPrestamo.Name = "cmbTipoPrestamo";
             cmbTipoPrestamo.Size = new Size(245, 28);
-            cmbTipoPrestamo.TabIndex = 47;
+            cmbTipoPrestamo.TabIndex = 68;
             cmbTipoPrestamo.SelectedIndexChanged += cmbTipoPrestamo_SelectedIndexChanged;
             // 
             // dtpFechaPrestamo
@@ -354,7 +356,7 @@
             dtpFechaPrestamo.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPrestamo.Name = "dtpFechaPrestamo";
             dtpFechaPrestamo.Size = new Size(245, 27);
-            dtpFechaPrestamo.TabIndex = 49;
+            dtpFechaPrestamo.TabIndex = 69;
             dtpFechaPrestamo.ValueChanged += dtpFechaPrestamo_ValueChanged;
             // 
             // dtpFechaDevolucion
@@ -367,7 +369,7 @@
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
             dtpFechaDevolucion.Size = new Size(245, 27);
-            dtpFechaDevolucion.TabIndex = 50;
+            dtpFechaDevolucion.TabIndex = 70;
             // 
             // lblCarrera
             // 
@@ -389,8 +391,9 @@
             txtCarrera.Location = new Point(787, 200);
             txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
+            txtCarrera.ReadOnly = true;
             txtCarrera.Size = new Size(245, 30);
-            txtCarrera.TabIndex = 67;
+            txtCarrera.TabIndex = 61;
             // 
             // lblGrupo
             // 
@@ -472,6 +475,7 @@
             txtGrupo.Location = new Point(447, 200);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
+            txtGrupo.ReadOnly = true;
             txtGrupo.Size = new Size(245, 30);
             txtGrupo.TabIndex = 60;
             // 
@@ -483,6 +487,7 @@
             txtGrado.Location = new Point(112, 200);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
+            txtGrado.ReadOnly = true;
             txtGrado.Size = new Size(245, 30);
             txtGrado.TabIndex = 59;
             // 
@@ -494,6 +499,7 @@
             txtApellidoMaterno.Location = new Point(787, 133);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
+            txtApellidoMaterno.ReadOnly = true;
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 58;
             // 
@@ -505,6 +511,7 @@
             txtApellidoPaterno.Location = new Point(447, 133);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
+            txtApellidoPaterno.ReadOnly = true;
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 57;
             // 
@@ -528,6 +535,7 @@
             txtTipoSolicitante.Location = new Point(447, 70);
             txtTipoSolicitante.Multiline = true;
             txtTipoSolicitante.Name = "txtTipoSolicitante";
+            txtTipoSolicitante.ReadOnly = true;
             txtTipoSolicitante.Size = new Size(245, 30);
             txtTipoSolicitante.TabIndex = 55;
             // 
@@ -579,36 +587,36 @@
             // 
             // dgvLibrosPrestar
             // 
-            dataGridViewCellStyle18.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle18.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvLibrosPrestar.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle19.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle19.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPrestar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvLibrosPrestar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = SystemColors.Window;
-            dataGridViewCellStyle20.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle20.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
-            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvLibrosPrestar.DefaultCellStyle = dataGridViewCellStyle6;
             dgvLibrosPrestar.EnableHeadersVisualStyles = false;
             dgvLibrosPrestar.Location = new Point(116, 256);
             dgvLibrosPrestar.Name = "dgvLibrosPrestar";
             dgvLibrosPrestar.RowHeadersWidth = 51;
-            dataGridViewCellStyle21.BackColor = Color.White;
-            dataGridViewCellStyle21.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPrestar.RowsDefaultCellStyle = dataGridViewCellStyle7;
             dgvLibrosPrestar.Size = new Size(1017, 99);
-            dgvLibrosPrestar.TabIndex = 70;
+            dgvLibrosPrestar.TabIndex = 62;
             // 
             // lblLibroPrestar
             // 
@@ -632,7 +640,7 @@
             cmbEstadoPrestamo.Margin = new Padding(3, 4, 3, 4);
             cmbEstadoPrestamo.Name = "cmbEstadoPrestamo";
             cmbEstadoPrestamo.Size = new Size(245, 28);
-            cmbEstadoPrestamo.TabIndex = 72;
+            cmbEstadoPrestamo.TabIndex = 71;
             // 
             // lblEstadoPrestamo
             // 
@@ -665,8 +673,9 @@
             txtBibliotecario.Location = new Point(112, 809);
             txtBibliotecario.Multiline = true;
             txtBibliotecario.Name = "txtBibliotecario";
+            txtBibliotecario.ReadOnly = true;
             txtBibliotecario.Size = new Size(245, 30);
-            txtBibliotecario.TabIndex = 76;
+            txtBibliotecario.TabIndex = 72;
             // 
             // frmPrestamos
             // 

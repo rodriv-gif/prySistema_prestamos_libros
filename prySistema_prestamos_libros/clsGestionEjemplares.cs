@@ -97,10 +97,7 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        // Registra "cantidad" ejemplares nuevos del mismo libro de golpe. A cada uno se le
-        // asigna un número de inventario consecutivo, siguiendo el máximo que ya exista para
-        // ese libro (si ya hay 2 copias, las nuevas se numeran 3, 4, 5...), sin que el
-        // bibliotecario tenga que capturarlo.
+        // Registra varios ejemplares de golpe, numerándolos en automático a partir del máximo existente.
         public string RegistrarEjemplares(int idLibro, string localizacion, DateTime fechaAdquisicion, int cantidad)
         {
             string msj = "";
@@ -191,9 +188,7 @@ namespace prySistema_prestamos_libros
             return msj;
         }
 
-        // Baja lógica: no borra la fila, solo marca estado = 'Inactivo'. Igual que
-        // DarBajaTrabajador()/DarBajaAlumno() — el registro se puede recuperar después
-        // y no rompe referencias de otras tablas (préstamos, etc.).
+        // Baja lógica (estado = 'Inactivo'), igual que en Trabajadores/Alumnos; no borra la fila.
         public string DarBajaEjemplar(int idEjemplar)
         {
             string msj = "";

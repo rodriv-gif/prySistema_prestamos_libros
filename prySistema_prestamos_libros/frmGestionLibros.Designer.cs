@@ -101,7 +101,7 @@
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvLibros.Size = new Size(1249, 568);
-            dgvLibros.TabIndex = 9;
+            dgvLibros.TabIndex = 7;
             // 
             // btnNuevo
             // 
@@ -113,7 +113,7 @@
             btnNuevo.Location = new Point(750, 125);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 45);
-            btnNuevo.TabIndex = 14;
+            btnNuevo.TabIndex = 3;
             btnNuevo.Text = "Nuevo ";
             btnNuevo.TextAlign = ContentAlignment.MiddleRight;
             btnNuevo.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -130,7 +130,7 @@
             btnEditar.Location = new Point(987, 125);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 45);
-            btnEditar.TabIndex = 15;
+            btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.TextAlign = ContentAlignment.MiddleRight;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -147,7 +147,7 @@
             btnDarBaja.Location = new Point(1222, 125);
             btnDarBaja.Name = "btnDarBaja";
             btnDarBaja.Size = new Size(150, 45);
-            btnDarBaja.TabIndex = 16;
+            btnDarBaja.TabIndex = 5;
             btnDarBaja.Text = "Dar de baja";
             btnDarBaja.TextAlign = ContentAlignment.MiddleRight;
             btnDarBaja.TextImageRelation = TextImageRelation.ImageBeforeText;

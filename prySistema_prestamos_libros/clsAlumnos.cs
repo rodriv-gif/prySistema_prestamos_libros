@@ -21,10 +21,7 @@ namespace prySistema_prestamos_libros
         public int IdCarrera { get => idCarrera; set => idCarrera = value; }
         public string Estado { get => estado; set => estado = value; }
 
-        // Registra un alumno nuevo. Son 2 inserts (direccion, luego alumno), igual que en
-        // clsTrabajador.Registrar(), porque tblalumnos.id_direccion depende de que la fila
-        // de tbldireccion ya exista. Van dentro de una transacción para que si el segundo
-        // insert falla, se deshaga el primero.
+        // Inserta dirección y luego alumno en una transacción (si el 2do falla, se deshace el 1ro).
         public string RegistrarAlumno()
         {
             string msj = "";

@@ -153,7 +153,7 @@
             btnAgregarTrabajador.Location = new Point(552, 198);
             btnAgregarTrabajador.Name = "btnAgregarTrabajador";
             btnAgregarTrabajador.Size = new Size(150, 45);
-            btnAgregarTrabajador.TabIndex = 9;
+            btnAgregarTrabajador.TabIndex = 30;
             btnAgregarTrabajador.Text = "Agregar";
             btnAgregarTrabajador.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarTrabajador.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -214,7 +214,7 @@
             cmbPerfil.Location = new Point(57, 364);
             cmbPerfil.Name = "cmbPerfil";
             cmbPerfil.Size = new Size(245, 28);
-            cmbPerfil.TabIndex = 14;
+            cmbPerfil.TabIndex = 31;
             cmbPerfil.SelectedIndexChanged += cmbPerfil_SelectedIndexChanged;
             // 
             // txtUsuario
@@ -226,7 +226,7 @@
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(245, 30);
-            txtUsuario.TabIndex = 15;
+            txtUsuario.TabIndex = 32;
             // 
             // txtContrasena
             // 
@@ -238,7 +238,7 @@
             txtContrasena.Name = "txtContrasena";
             txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new Size(245, 30);
-            txtContrasena.TabIndex = 16;
+            txtContrasena.TabIndex = 33;
             // 
             // btnGuardar
             // 
@@ -250,7 +250,7 @@
             btnGuardar.Location = new Point(174, 470);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
-            btnGuardar.TabIndex = 17;
+            btnGuardar.TabIndex = 34;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGuardar.UseVisualStyleBackColor = false;
@@ -266,7 +266,7 @@
             btnLimpiar.Location = new Point(552, 470);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
-            btnLimpiar.TabIndex = 18;
+            btnLimpiar.TabIndex = 35;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -283,7 +283,7 @@
             btnCancelar.Location = new Point(940, 470);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 19;
+            btnCancelar.TabIndex = 36;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancelar.UseVisualStyleBackColor = false;
@@ -298,7 +298,7 @@
             txtApellidoPaternoTrabajador.Multiline = true;
             txtApellidoPaternoTrabajador.Name = "txtApellidoPaternoTrabajador";
             txtApellidoPaternoTrabajador.Size = new Size(245, 30);
-            txtApellidoPaternoTrabajador.TabIndex = 20;
+            txtApellidoPaternoTrabajador.TabIndex = 27;
             // 
             // txtApellidoMaternoTrabajador
             // 
@@ -309,7 +309,7 @@
             txtApellidoMaternoTrabajador.Multiline = true;
             txtApellidoMaternoTrabajador.Name = "txtApellidoMaternoTrabajador";
             txtApellidoMaternoTrabajador.Size = new Size(245, 30);
-            txtApellidoMaternoTrabajador.TabIndex = 21;
+            txtApellidoMaternoTrabajador.TabIndex = 28;
             // 
             // txtCarreraTrabajador
             // 
@@ -320,7 +320,7 @@
             txtCarreraTrabajador.Multiline = true;
             txtCarreraTrabajador.Name = "txtCarreraTrabajador";
             txtCarreraTrabajador.Size = new Size(245, 30);
-            txtCarreraTrabajador.TabIndex = 23;
+            txtCarreraTrabajador.TabIndex = 29;
             // 
             // txtNombreTrabajador
             // 
@@ -331,7 +331,7 @@
             txtNombreTrabajador.Multiline = true;
             txtNombreTrabajador.Name = "txtNombreTrabajador";
             txtNombreTrabajador.Size = new Size(245, 30);
-            txtNombreTrabajador.TabIndex = 24;
+            txtNombreTrabajador.TabIndex = 26;
             // 
             // txtNumControl
             // 

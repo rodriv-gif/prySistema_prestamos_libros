@@ -222,6 +222,11 @@ namespace prySistema_prestamos_libros
             }
 
             bool procesoAlMenosUno = false;
+
+            // Para saber qué mensaje mostrar al final: si se devolvió libro, si se pagó multa, o ambos.
+            bool seDevolvioLibro = false;
+            bool sePagoMulta = false;
+
             clsDevolucion gestion = new clsDevolucion();
 
             // Fecha real de devolución (por defecto hoy, editable).
@@ -248,6 +253,11 @@ namespace prySistema_prestamos_libros
                     // 1. Devolvemos el libro, con la fecha y el estado que eligió el bibliotecario
                     bool exitoDevolucion = gestion.DevolverLibro(idPrestamo, fechaDevolucionReal, idEstadoSeleccionado);
 
+                    if (exitoDevolucion)
+                    {
+                        seDevolvioLibro = true;
+                    }
+
                     // 2. Si tenía retraso, se guarda la multa (nace "Pendiente").
                     if (exitoDevolucion && dias > 0)
                     {
@@ -257,6 +267,11 @@ namespace prySistema_prestamos_libros
 
                         // Si se palomeó "Pagar" en su vista previa, nace como Pagado.
                         bool sePagaAhora = SePagaLaMultaNuevaDeEsePrestamo(idPrestamo);
+
+                        if (sePagaAhora)
+                        {
+                            sePagoMulta = true;
+                        }
 
                         gestion.GuardarMulta(idPrestamo, multaIndividual, motivo, dias,
                                               sePagaAhora, fechaPagoSeleccionada);
@@ -280,6 +295,7 @@ namespace prySistema_prestamos_libros
                     if (sePaga)
                     {
                         procesoAlMenosUno = true;
+                        sePagoMulta = true;
                         int idMulta = Convert.ToInt32(fila.Cells["id_multa"].Value);
                         gestion.RegistrarPagoMulta(idMulta, fechaPagoSeleccionada);
                     }
@@ -292,7 +308,23 @@ namespace prySistema_prestamos_libros
                 return;
             }
 
-            MessageBox.Show("Devolución procesada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Mensaje distinto según lo que en verdad se procesó, para que quede claro qué pasó.
+            if (seDevolvioLibro && sePagoMulta)
+            {
+                MessageBox.Show("El libro se devolvió y la multa se pagó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (seDevolvioLibro)
+            {
+                MessageBox.Show("El libro se devolvió correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (sePagoMulta)
+            {
+                MessageBox.Show("La multa se pagó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo completar la operación. Intenta de nuevo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
             // Deja el formulario limpio para el siguiente solicitante.
             LimpiarFormularioCompleto();

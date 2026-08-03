@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevolucion));
             pcbContenedorBusqueda = new PictureBox();
             pcbContenedorCaptura = new PictureBox();
@@ -146,6 +146,7 @@
             txtNombreSolicitante.Location = new Point(357, 52);
             txtNombreSolicitante.Multiline = true;
             txtNombreSolicitante.Name = "txtNombreSolicitante";
+            txtNombreSolicitante.ReadOnly = true;
             txtNombreSolicitante.Size = new Size(245, 30);
             txtNombreSolicitante.TabIndex = 5;
             // 
@@ -157,6 +158,7 @@
             txtApellidoPaterno.Location = new Point(704, 52);
             txtApellidoPaterno.Multiline = true;
             txtApellidoPaterno.Name = "txtApellidoPaterno";
+            txtApellidoPaterno.ReadOnly = true;
             txtApellidoPaterno.Size = new Size(245, 30);
             txtApellidoPaterno.TabIndex = 6;
             // 
@@ -168,6 +170,7 @@
             txtApellidoMaterno.Location = new Point(1035, 52);
             txtApellidoMaterno.Multiline = true;
             txtApellidoMaterno.Name = "txtApellidoMaterno";
+            txtApellidoMaterno.ReadOnly = true;
             txtApellidoMaterno.Size = new Size(245, 30);
             txtApellidoMaterno.TabIndex = 7;
             // 
@@ -179,6 +182,7 @@
             txtGrado.Location = new Point(24, 119);
             txtGrado.Multiline = true;
             txtGrado.Name = "txtGrado";
+            txtGrado.ReadOnly = true;
             txtGrado.Size = new Size(245, 30);
             txtGrado.TabIndex = 8;
             // 
@@ -190,6 +194,7 @@
             txtGrupo.Location = new Point(357, 119);
             txtGrupo.Multiline = true;
             txtGrupo.Name = "txtGrupo";
+            txtGrupo.ReadOnly = true;
             txtGrupo.Size = new Size(245, 30);
             txtGrupo.TabIndex = 9;
             // 
@@ -201,6 +206,7 @@
             txtCarrera.Location = new Point(704, 119);
             txtCarrera.Multiline = true;
             txtCarrera.Name = "txtCarrera";
+            txtCarrera.ReadOnly = true;
             txtCarrera.Size = new Size(245, 30);
             txtCarrera.TabIndex = 10;
             // 
@@ -283,29 +289,29 @@
             // 
             // dgvPrestamosActivos
             // 
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvPrestamosActivos.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPrestamosActivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPrestamosActivos.Columns.AddRange(new DataGridViewColumn[] { colSeleccionar });
             dgvPrestamosActivos.EnableHeadersVisualStyles = false;
             dgvPrestamosActivos.Location = new Point(25, 167);
             dgvPrestamosActivos.Name = "dgvPrestamosActivos";
             dgvPrestamosActivos.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvPrestamosActivos.Size = new Size(1249, 183);
-            dgvPrestamosActivos.TabIndex = 18;
+            dgvPrestamosActivos.TabIndex = 11;
             dgvPrestamosActivos.CellValueChanged += dgvPrestamosActivos_CellValueChanged;
             dgvPrestamosActivos.CurrentCellDirtyStateChanged += dgvPrestamosActivos_CurrentCellDirtyStateChanged;
             dgvPrestamosActivos.SelectionChanged += dgvPrestamosActivos_SelectionChanged;
@@ -387,29 +393,29 @@
             // 
             // dgvMultasPendientes
             // 
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvMultasPendientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvMultasPendientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvMultasPendientes.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dgvMultasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvMultasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvMultasPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMultasPendientes.Columns.AddRange(new DataGridViewColumn[] { colPagarMulta });
             dgvMultasPendientes.EnableHeadersVisualStyles = false;
             dgvMultasPendientes.Location = new Point(25, 611);
             dgvMultasPendientes.Name = "dgvMultasPendientes";
             dgvMultasPendientes.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvMultasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvMultasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvMultasPendientes.Size = new Size(1231, 81);
-            dgvMultasPendientes.TabIndex = 30;
+            dgvMultasPendientes.TabIndex = 14;
             dgvMultasPendientes.CellValueChanged += dgvMultasPendientes_CellValueChanged;
             dgvMultasPendientes.CurrentCellDirtyStateChanged += dgvMultasPendientes_CurrentCellDirtyStateChanged;
             // 
@@ -428,8 +434,9 @@
             txtDiasRetraso.Location = new Point(24, 731);
             txtDiasRetraso.Multiline = true;
             txtDiasRetraso.Name = "txtDiasRetraso";
+            txtDiasRetraso.ReadOnly = true;
             txtDiasRetraso.Size = new Size(245, 30);
-            txtDiasRetraso.TabIndex = 31;
+            txtDiasRetraso.TabIndex = 15;
             // 
             // txtMonto
             // 
@@ -439,8 +446,9 @@
             txtMonto.Location = new Point(357, 731);
             txtMonto.Multiline = true;
             txtMonto.Name = "txtMonto";
+            txtMonto.ReadOnly = true;
             txtMonto.Size = new Size(245, 30);
-            txtMonto.TabIndex = 32;
+            txtMonto.TabIndex = 16;
             // 
             // lblMotivo
             // 
@@ -462,7 +470,7 @@
             txtMotivo.Multiline = true;
             txtMotivo.Name = "txtMotivo";
             txtMotivo.Size = new Size(245, 30);
-            txtMotivo.TabIndex = 47;
+            txtMotivo.TabIndex = 18;
             // 
             // btnRegistrarDevolucion
             // 
@@ -474,7 +482,7 @@
             btnRegistrarDevolucion.Location = new Point(341, 819);
             btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
             btnRegistrarDevolucion.Size = new Size(150, 45);
-            btnRegistrarDevolucion.TabIndex = 35;
+            btnRegistrarDevolucion.TabIndex = 19;
             btnRegistrarDevolucion.Text = "Registrar";
             btnRegistrarDevolucion.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrarDevolucion.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -491,7 +499,7 @@
             btnLimpiar.Location = new Point(682, 819);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
-            btnLimpiar.TabIndex = 36;
+            btnLimpiar.TabIndex = 20;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -508,7 +516,7 @@
             btnCancelar.Location = new Point(1019, 819);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 37;
+            btnCancelar.TabIndex = 21;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -526,7 +534,7 @@
             dtpFechaDevolucion.Margin = new Padding(3, 4, 3, 4);
             dtpFechaDevolucion.Name = "dtpFechaDevolucion";
             dtpFechaDevolucion.Size = new Size(245, 27);
-            dtpFechaDevolucion.TabIndex = 38;
+            dtpFechaDevolucion.TabIndex = 12;
             // 
             // lblFechaPago
             // 
@@ -549,7 +557,7 @@
             dtpFechaPago.Margin = new Padding(3, 4, 3, 4);
             dtpFechaPago.Name = "dtpFechaPago";
             dtpFechaPago.Size = new Size(245, 27);
-            dtpFechaPago.TabIndex = 41;
+            dtpFechaPago.TabIndex = 17;
             // 
             // cmbEstadoPrestamo
             // 
@@ -560,7 +568,7 @@
             cmbEstadoPrestamo.Location = new Point(357, 463);
             cmbEstadoPrestamo.Name = "cmbEstadoPrestamo";
             cmbEstadoPrestamo.Size = new Size(245, 28);
-            cmbEstadoPrestamo.TabIndex = 43;
+            cmbEstadoPrestamo.TabIndex = 13;
             // 
             // lblEstadoPrestamo
             // 

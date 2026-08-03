@@ -50,9 +50,7 @@ namespace prySistema_prestamos_libros
             }
         }
 
-        // Cada vez que se reasigna el DataSource de dgvUsuarios (Cargargrid o una
-        // búsqueda), la grid regenera sus columnas y pierde la visibilidad anterior.
-        // Por eso se llama en TODOS los lugares donde se reasigne el DataSource.
+        // Se llama en todo lugar que reasigne el DataSource, porque eso resetea la visibilidad de columnas.
         private void OcultarColumnas()
         {
             if (dgvUsuarios.Columns["Nombre"] != null)
@@ -72,7 +70,9 @@ namespace prySistema_prestamos_libros
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dgvUsuarios.SelectedRows.Count == 0)
+            // CurrentRow se actualiza con solo darle clic a una celda; SelectedRows.Count solo
+            // cuenta cuando se selecciona la fila completa (clic en el encabezado gris de la izquierda).
+            if (dgvUsuarios.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione un usuario.");
                 return;
@@ -99,7 +99,7 @@ namespace prySistema_prestamos_libros
 
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
-            if (dgvUsuarios.SelectedRows.Count == 0)
+            if (dgvUsuarios.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione un usuario.");
                 return;

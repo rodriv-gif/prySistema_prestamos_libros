@@ -14,9 +14,7 @@ namespace prySistema_prestamos_libros
         private MySqlDataAdapter consulta;
         private DataTable tabla;
 
-        //propiedad
-        // Ahora acepta tanto matrícula como nombre (mismo criterio que clsGestionTrabajador),
-        // por eso es string y ya no int: escribir letras ya no truena la búsqueda.
+        // Es string (no int) porque acepta buscar tanto por matrícula como por nombre.
         public string Busqueda { get => busqueda; set => busqueda = value; }
 
 
@@ -129,9 +127,7 @@ namespace prySistema_prestamos_libros
         }
 
 
-        // Búsqueda exacta (no LIKE) para el formulario de préstamos: el bibliotecario teclea
-        // el número/matrícula y necesitamos saber de una vez si existe, sin resultados parciales.
-        // Solo trae alumnos con estado 'Activo' (no tiene sentido prestarle a uno dado de baja).
+        // Búsqueda exacta por matrícula (no LIKE) para Préstamos; solo alumnos 'Activo'.
         public DataTable BuscarPorMatricula(int matriculaBuscada)
         {
             DataTable tabla = new DataTable();

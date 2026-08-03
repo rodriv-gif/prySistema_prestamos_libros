@@ -14,9 +14,7 @@ namespace prySistema_prestamos_libros
         private MySqlDataAdapter consulta;
         private DataTable tabla;
 
-        //propiedad
-        // Ahora acepta tanto número de control como nombre (a pedido del profe),
-        // por eso es string y ya no int: escribir letras ya no truena la búsqueda.
+        // Es string (no int) porque acepta buscar tanto por número de control como por nombre.
         public string Busqueda { get => busqueda; set => busqueda = value; }
 
         public DataTable CargarDataGrid()

@@ -135,7 +135,7 @@
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvReportes.Size = new Size(1199, 340);
-            dgvReportes.TabIndex = 13;
+            dgvReportes.TabIndex = 5;
             // 
             // btnGenerarPDF
             // 
@@ -145,7 +145,7 @@
             btnGenerarPDF.Location = new Point(527, 795);
             btnGenerarPDF.Name = "btnGenerarPDF";
             btnGenerarPDF.Size = new Size(418, 50);
-            btnGenerarPDF.TabIndex = 14;
+            btnGenerarPDF.TabIndex = 6;
             btnGenerarPDF.Text = "Generar PDF";
             btnGenerarPDF.UseVisualStyleBackColor = false;
             btnGenerarPDF.Click += btnGenerarPDF_Click;
@@ -169,7 +169,7 @@
             btnVer.Location = new Point(592, 366);
             btnVer.Name = "btnVer";
             btnVer.Size = new Size(280, 50);
-            btnVer.TabIndex = 15;
+            btnVer.TabIndex = 4;
             btnVer.Text = "Ver";
             btnVer.UseVisualStyleBackColor = false;
             btnVer.Click += btnVer_Click;

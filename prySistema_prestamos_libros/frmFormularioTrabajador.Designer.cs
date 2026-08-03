@@ -135,7 +135,7 @@
             txtCorreo.Multiline = true;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(245, 30);
-            txtCorreo.TabIndex = 24;
+            txtCorreo.TabIndex = 29;
             // 
             // txtNombre
             // 
@@ -160,7 +160,7 @@
             txtTelefono.Multiline = true;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(245, 30);
-            txtTelefono.TabIndex = 22;
+            txtTelefono.TabIndex = 28;
             txtTelefono.KeyPress += SoloNumeros_KeyPress;
             // 
             // txtNumeroControl
@@ -310,7 +310,7 @@
             txtCalle.Multiline = true;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(245, 30);
-            txtCalle.TabIndex = 29;
+            txtCalle.TabIndex = 34;
             txtCalle.KeyPress += txtCalle_KeyPress;
             // 
             // lblArea
@@ -333,7 +333,7 @@
             cmbCarreraArea.Location = new Point(32, 540);
             cmbCarreraArea.Name = "cmbCarreraArea";
             cmbCarreraArea.Size = new Size(245, 28);
-            cmbCarreraArea.TabIndex = 36;
+            cmbCarreraArea.TabIndex = 35;
             // 
             // btnLimpiar
             // 
@@ -362,7 +362,7 @@
             btnCancelar.Location = new Point(954, 677);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
-            btnCancelar.TabIndex = 39;
+            btnCancelar.TabIndex = 42;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -430,7 +430,7 @@
             dtpFechaRegistro.Location = new Point(649, 159);
             dtpFechaRegistro.Name = "dtpFechaRegistro";
             dtpFechaRegistro.Size = new Size(245, 27);
-            dtpFechaRegistro.TabIndex = 44;
+            dtpFechaRegistro.TabIndex = 30;
             dtpFechaRegistro.Value = new DateTime(2026, 7, 5, 22, 46, 15, 0);
             // 
             // panel1
@@ -479,7 +479,7 @@
             cmbColonia.Location = new Point(649, 353);
             cmbColonia.Name = "cmbColonia";
             cmbColonia.Size = new Size(245, 28);
-            cmbColonia.TabIndex = 47;
+            cmbColonia.TabIndex = 33;
             // 
             // txtMunicipio
             // 
@@ -490,7 +490,7 @@
             txtMunicipio.Multiline = true;
             txtMunicipio.Name = "txtMunicipio";
             txtMunicipio.Size = new Size(245, 30);
-            txtMunicipio.TabIndex = 46;
+            txtMunicipio.TabIndex = 32;
             // 
             // lblMunicipio
             // 
