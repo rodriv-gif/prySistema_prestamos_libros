@@ -23,6 +23,9 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
 
+            // Es solo para buscar y marcar con checkbox; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvLibrosPerteneciente.AllowUserToAddRows = false;
+
             timerBusquedaLibro = new System.Windows.Forms.Timer();
             timerBusquedaLibro.Interval = 400;
             timerBusquedaLibro.Tick += TimerBusquedaLibro_Tick;
@@ -165,6 +168,15 @@ namespace prySistema_prestamos_libros
                         return;
                     }
 
+                    // Obliga a generar la vista previa antes de guardar, para que el número
+                    // que se le mostró al bibliotecario sea el mismo que se va a registrar.
+                    if (dgvNumEjemplares.Rows.Count != cantidad)
+                    {
+                        MessageBox.Show("Presiona Agregar para generar la vista previa de los ejemplares antes de guardar.", "Sistema",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     msg = ejemplar.RegistrarEjemplares(idLibroSeleccionado, txtLocalizacion.Text.Trim(), dtpFechaAdquisicion.Value, cantidad);
                 }
 
@@ -217,7 +229,7 @@ namespace prySistema_prestamos_libros
             }
 
             // Limpiar el DataGridView
-            dgvnumejemplares.Rows.Clear();
+            dgvNumEjemplares.Rows.Clear();
 
             string isbn = "";
 
@@ -232,22 +244,32 @@ namespace prySistema_prestamos_libros
                     break;
                 }
             }
-            // Agregar los ejemplares
-            for (int i = 1; i <= (int)nudCantidad.Value; i++)
+            try
             {
-                dgvnumejemplares.Rows.Add(isbn, i);
+                // Se pide el mismo número que usará el guardado real, para que la vista previa no mienta.
+                clsGestionEjemplares gestionEjemplares = new clsGestionEjemplares();
+                int siguienteInventario = gestionEjemplares.ObtenerSiguienteInventario(idLibroSeleccionado);
+
+                for (int i = 0; i < (int)nudCantidad.Value; i++)
+                {
+                    dgvNumEjemplares.Rows.Add(isbn, siguienteInventario + i);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo calcular el número de ejemplar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void frmFormularioEjemplares_Load(object sender, EventArgs e)
         {
-            dgvnumejemplares.Columns.Clear();
+            dgvNumEjemplares.Columns.Clear();
 
-            dgvnumejemplares.Columns.Add("ISBN", "ISBN");
-            dgvnumejemplares.Columns.Add("NumeroEjemplar", "No. Ejemplar");
+            dgvNumEjemplares.Columns.Add("ISBN", "ISBN");
+            dgvNumEjemplares.Columns.Add("NumeroEjemplar", "No. Ejemplar");
 
-            dgvnumejemplares.AllowUserToAddRows = false;
-            dgvnumejemplares.ReadOnly = true;
-            dgvnumejemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvNumEjemplares.AllowUserToAddRows = false;
+            dgvNumEjemplares.ReadOnly = true;
+            dgvNumEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }    
     }

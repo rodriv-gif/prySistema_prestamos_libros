@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioEjemplares));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             pcbContenedorBusqueda = new PictureBox();
             lblDatosEjemplar = new Label();
             lblSeleccionLibro = new Label();
@@ -51,11 +51,11 @@
             chkSeleccionar = new DataGridViewCheckBoxColumn();
             txtLibroPerteneciete = new TextBox();
             btnAgregarejemplar = new Button();
-            dgvnumejemplares = new DataGridView();
+            dgvNumEjemplares = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibrosPerteneciente).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvnumejemplares).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNumEjemplares).BeginInit();
             SuspendLayout();
             // 
             // pcbContenedorBusqueda
@@ -217,26 +217,26 @@
             // 
             // dgvLibrosPerteneciente
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(221, 214, 202);
+            dgvLibrosPerteneciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dgvLibrosPerteneciente.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvLibrosPerteneciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvLibrosPerteneciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibrosPerteneciente.Columns.AddRange(new DataGridViewColumn[] { chkSeleccionar });
             dgvLibrosPerteneciente.EnableHeadersVisualStyles = false;
             dgvLibrosPerteneciente.Location = new Point(61, 119);
             dgvLibrosPerteneciente.Name = "dgvLibrosPerteneciente";
             dgvLibrosPerteneciente.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle9;
             dgvLibrosPerteneciente.Size = new Size(830, 60);
             dgvLibrosPerteneciente.TabIndex = 21;
             dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
@@ -264,9 +264,10 @@
             btnAgregarejemplar.BackColor = Color.FromArgb(27, 46, 107);
             btnAgregarejemplar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregarejemplar.ForeColor = Color.FromArgb(201, 168, 76);
-            btnAgregarejemplar.Location = new Point(490, 296);
+            btnAgregarejemplar.Image = (Image)resources.GetObject("btnAgregarejemplar.Image");
+            btnAgregarejemplar.Location = new Point(506, 312);
             btnAgregarejemplar.Name = "btnAgregarejemplar";
-            btnAgregarejemplar.Size = new Size(125, 45);
+            btnAgregarejemplar.Size = new Size(150, 45);
             btnAgregarejemplar.TabIndex = 32;
             btnAgregarejemplar.Text = "Agregar";
             btnAgregarejemplar.TextAlign = ContentAlignment.MiddleRight;
@@ -274,30 +275,30 @@
             btnAgregarejemplar.UseVisualStyleBackColor = false;
             btnAgregarejemplar.Click += btnAgregarejemplar_Click;
             // 
-            // dgvnumejemplares
+            // dgvNumEjemplares
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvnumejemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgvnumejemplares.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvnumejemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvnumejemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvnumejemplares.EnableHeadersVisualStyles = false;
-            dgvnumejemplares.Location = new Point(61, 269);
-            dgvnumejemplares.Name = "dgvnumejemplares";
-            dgvnumejemplares.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvnumejemplares.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dgvnumejemplares.Size = new Size(423, 128);
-            dgvnumejemplares.TabIndex = 33;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvNumEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dgvNumEjemplares.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvNumEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dgvNumEjemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNumEjemplares.EnableHeadersVisualStyles = false;
+            dgvNumEjemplares.Location = new Point(61, 269);
+            dgvNumEjemplares.Name = "dgvNumEjemplares";
+            dgvNumEjemplares.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = Color.White;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvNumEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dgvNumEjemplares.Size = new Size(423, 128);
+            dgvNumEjemplares.TabIndex = 33;
             // 
             // frmFormularioEjemplares
             // 
@@ -305,7 +306,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(956, 617);
-            Controls.Add(dgvnumejemplares);
+            Controls.Add(dgvNumEjemplares);
             Controls.Add(btnAgregarejemplar);
             Controls.Add(txtLibroPerteneciete);
             Controls.Add(dgvLibrosPerteneciente);
@@ -331,7 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibrosPerteneciente).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvnumejemplares).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNumEjemplares).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -353,6 +354,6 @@
         private TextBox txtLibroPerteneciete;
         private DataGridViewCheckBoxColumn chkSeleccionar;
         private Button btnAgregarejemplar;
-        private DataGridView dgvnumejemplares;
+        private DataGridView dgvNumEjemplares;
     }
 }

@@ -15,6 +15,10 @@ namespace prySistema_prestamos_libros
         public frmGestionAlumnos()
         {
             InitializeComponent();
+
+            // Es solo para consultar; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvAlumnos.AllowUserToAddRows = false;
+
             CargarGrid();
 
             // Solo el Administrador puede dar de baja alumnos; un Bibliotecario no.

@@ -203,7 +203,7 @@
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.ReadOnly = true;
-            txtLocalizacion.Size = new Size(576, 30);
+            txtLocalizacion.Size = new Size(556, 30);
             txtLocalizacion.TabIndex = 66;
             // 
             // txtInventario

@@ -16,6 +16,12 @@ namespace prySistema_prestamos_libros
         public frmFormularioLibros()
         {
             InitializeComponent();
+
+            // Ambos grids son solo para buscar y marcar con checkbox; no se debe poder
+            // agregar filas escribiendo directo en ellos.
+            dgvAutor.AllowUserToAddRows = false;
+            dgvAlmacenarAutor.AllowUserToAddRows = false;
+
             CargarCombos();
             ConfigurarGridAlmacen();
             CargarTodosLosAutores();

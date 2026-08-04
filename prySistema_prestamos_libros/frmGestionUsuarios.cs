@@ -15,6 +15,9 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
 
+            // Es solo para consultar; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvUsuarios.AllowUserToAddRows = false;
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

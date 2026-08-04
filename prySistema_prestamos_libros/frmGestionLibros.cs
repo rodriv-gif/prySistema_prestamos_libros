@@ -14,6 +14,10 @@ namespace prySistema_prestamos_libros
         public frmGestionLibros()
         {
             InitializeComponent();
+
+            // Es solo para consultar; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvLibros.AllowUserToAddRows = false;
+
             CargarGrid();
         }
 

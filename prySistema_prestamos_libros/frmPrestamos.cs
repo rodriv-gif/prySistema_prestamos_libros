@@ -14,6 +14,10 @@ namespace prySistema_prestamos_libros
         {
             InitializeComponent();
 
+            // Ninguno de los dos se debe poder editar escribiendo filas nuevas directo en el grid.
+            dgvLibros.AllowUserToAddRows = false;
+            dgvLibrosPrestar.AllowUserToAddRows = false;
+
             librosAPrestar = new DataTable();
             librosAPrestar.Columns.Add("Título");
             librosAPrestar.Columns.Add("ISBN");
@@ -21,10 +25,12 @@ namespace prySistema_prestamos_libros
             librosAPrestar.Columns.Add("Categoría");
             librosAPrestar.Columns.Add("Idioma");
             librosAPrestar.Columns.Add("Autores");
+            librosAPrestar.Columns.Add("Ejemplar"); // número de ejemplar de ESE libro (1, 2, 3...), no el id interno
             librosAPrestar.Columns.Add("id_ejemplar");
             dgvLibrosPrestar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLibrosPrestar.DataSource = librosAPrestar;
-            dgvLibrosPrestar.Columns["id_ejemplar"].HeaderText = "Ejemplar";
+            // id_ejemplar es solo para identificar internamente el registro; el usuario ve la columna "Ejemplar".
+            dgvLibrosPrestar.Columns["id_ejemplar"].Visible = false;
         }
 
         private int idEjemplarSeleccionado;
@@ -328,6 +334,7 @@ namespace prySistema_prestamos_libros
                 filaSeleccionada.Cells["Categoría"].Value,
                 filaSeleccionada.Cells["Idioma"].Value,
                 filaSeleccionada.Cells["Autores"].Value,
+                filaSeleccionada.Cells["Inventario"].Value,
                 idEjemplarSeleccionado
             );
         }

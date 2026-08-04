@@ -132,7 +132,8 @@ namespace prySistema_prestamos_libros
                                     "idi.nombre_idioma AS 'Idioma', " +
                                     "GROUP_CONCAT(DISTINCT CONCAT(a.nombre, ' ', a.apellido_paterno) SEPARATOR ', ') AS 'Autores', " +
                                     "e.localizacion AS 'Localización', " +
-                                    "(SELECT COUNT(*) FROM tblejemplares e2 WHERE e2.id_libro = l.id_libro) AS 'Inventario', " +
+                                    // Número de ejemplar de ESTE libro en específico (1, 2, 3...), no el conteo total de copias.
+                                    "e.inventario AS 'Inventario', " +
                                     "e.id_ejemplar AS 'id_ejemplar' " +
                                 "FROM tbllibros l " +
                                 "INNER JOIN tblejemplares e ON l.id_libro = e.id_libro " +

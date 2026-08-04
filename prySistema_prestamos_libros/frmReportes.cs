@@ -15,6 +15,9 @@ namespace prySistema_prestamos_libros
         public frmReportes()
         {
             InitializeComponent();
+
+            // Es solo para mostrar resultados; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvReportes.AllowUserToAddRows = false;
         }
 
         private void btnVer_Click(object sender, EventArgs e)

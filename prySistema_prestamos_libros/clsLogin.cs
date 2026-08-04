@@ -80,7 +80,6 @@ namespace prySistema_prestamos_libros
                                 {
                                     throw new Exception("No tiene permisos para acceder");
                                 }
-                                MessageBox.Show("Tu perfil es:" + perfil, "Sistema");
                                 return true;
 
                             }

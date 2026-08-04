@@ -97,6 +97,26 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
+        // Consulta el siguiente número de inventario disponible para un libro. La usan tanto
+        // la vista previa (botón Agregar) como el guardado real, para que nunca se desincronicen.
+        public int ObtenerSiguienteInventario(int idLibro)
+        {
+            int siguiente = 1;
+            clsConexion conexionBD = new clsConexion();
+
+            using (var conexion = conexionBD.AbrirConexion())
+            {
+                string sql = "SELECT IFNULL(MAX(inventario), 0) FROM tblejemplares WHERE id_libro = @idLibro;";
+                using (var comando = new MySqlCommand(sql, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idLibro", idLibro);
+                    siguiente = Convert.ToInt32(comando.ExecuteScalar()) + 1;
+                }
+            }
+
+            return siguiente;
+        }
+
         // Registra varios ejemplares de golpe, numerándolos en automático a partir del máximo existente.
         public string RegistrarEjemplares(int idLibro, string localizacion, DateTime fechaAdquisicion, int cantidad)
         {

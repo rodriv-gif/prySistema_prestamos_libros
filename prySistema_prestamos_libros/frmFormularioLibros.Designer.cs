@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioLibros));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             pcbContenendorCaptura = new PictureBox();
             pcbContenedorCompacto = new PictureBox();
             txtNumPaginas = new TextBox();
@@ -197,7 +197,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.FromArgb(250, 247, 242);
             lblNombre.ForeColor = Color.Black;
-            lblNombre.Location = new Point(165, 412);
+            lblNombre.Location = new Point(216, 412);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(80, 20);
             lblNombre.TabIndex = 27;
@@ -311,61 +311,61 @@
             // 
             txtBuscarAutor.BackColor = Color.White;
             txtBuscarAutor.ForeColor = Color.Black;
-            txtBuscarAutor.Location = new Point(251, 409);
+            txtBuscarAutor.Location = new Point(302, 409);
             txtBuscarAutor.Multiline = true;
             txtBuscarAutor.Name = "txtBuscarAutor";
-            txtBuscarAutor.Size = new Size(322, 30);
+            txtBuscarAutor.Size = new Size(245, 30);
             txtBuscarAutor.TabIndex = 28;
             txtBuscarAutor.TextChanged += txtBuscarAutor_TextChanged;
             // 
             // dgvAutor
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dgvAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAutor.EnableHeadersVisualStyles = false;
             dgvAutor.Location = new Point(165, 445);
             dgvAutor.Name = "dgvAutor";
             dgvAutor.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvAutor.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAutor.RowsDefaultCellStyle = dataGridViewCellStyle9;
             dgvAutor.Size = new Size(423, 128);
             dgvAutor.TabIndex = 29;
             dgvAutor.CellDoubleClick += dgvAutor_CellDoubleClick;
             // 
             // dgvAlmacenarAutor
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvAlmacenarAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAlmacenarAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             dgvAlmacenarAutor.BackgroundColor = Color.FromArgb(250, 247, 242);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvAlmacenarAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvAlmacenarAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dgvAlmacenarAutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAlmacenarAutor.EnableHeadersVisualStyles = false;
             dgvAlmacenarAutor.Location = new Point(61, 230);
             dgvAlmacenarAutor.Name = "dgvAlmacenarAutor";
             dgvAlmacenarAutor.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvAlmacenarAutor.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = Color.White;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvAlmacenarAutor.RowsDefaultCellStyle = dataGridViewCellStyle12;
             dgvAlmacenarAutor.Size = new Size(370, 95);
             dgvAlmacenarAutor.TabIndex = 26;
             dgvAlmacenarAutor.CellContentDoubleClick += dgvAlmacenarAutor_CellContentDoubleClick;

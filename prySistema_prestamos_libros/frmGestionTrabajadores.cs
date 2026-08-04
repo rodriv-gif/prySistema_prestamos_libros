@@ -14,6 +14,10 @@ namespace prySistema_prestamos_libros
         public frmGestionTrabajadores()
         {
             InitializeComponent();
+
+            // Es solo para consultar; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvTrabajadores.AllowUserToAddRows = false;
+
             CargarGrid();
 
             // Solo el Administrador puede dar de baja trabajadores; un Bibliotecario no.

@@ -14,6 +14,10 @@ namespace prySistema_prestamos_libros
         public frmGestionEjemplares()
         {
             InitializeComponent();
+
+            // Es solo para consultar; no se debe poder agregar filas escribiendo directo en el grid.
+            dgvEjemplares.AllowUserToAddRows = false;
+
             CargarGrid();
         }
 
@@ -50,8 +54,14 @@ namespace prySistema_prestamos_libros
         {
             if (dgvEjemplares.Columns["id_libro"] != null)
                 dgvEjemplares.Columns["id_libro"].Visible = false;
-            if (dgvEjemplares.Columns["Inventario"] != null)
-                dgvEjemplares.Columns["Inventario"].Visible = false;
+
+            // "Inventario" sí se muestra, pero como "No. Ejemplar", justo junto al ISBN.
+            if (dgvEjemplares.Columns["Inventario"] != null && dgvEjemplares.Columns["ISBN"] != null)
+            {
+                dgvEjemplares.Columns["Inventario"].HeaderText = "No. Ejemplar";
+                dgvEjemplares.Columns["Inventario"].FillWeight = 55;
+                dgvEjemplares.Columns["Inventario"].DisplayIndex = dgvEjemplares.Columns["ISBN"].DisplayIndex + 1;
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
