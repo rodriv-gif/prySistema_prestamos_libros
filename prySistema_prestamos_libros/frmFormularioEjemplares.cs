@@ -126,7 +126,7 @@ namespace prySistema_prestamos_libros
                     fila.Cells["chkSeleccionar"].Value = false;
             }
 
-            idLibroSeleccionado = marcada ? Convert.ToInt32(filaMarcada.Cells["id_libro"].Value) : 0;
+           idLibroSeleccionado = marcada ? Convert.ToInt32(filaMarcada.Cells["id_libro"].Value) : 0;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -200,5 +200,55 @@ namespace prySistema_prestamos_libros
             Close();
         }
 
+        private void btnAgregarejemplar_Click(object sender, EventArgs e)
+        {
+            if (idLibroSeleccionado == 0)
+            {
+                MessageBox.Show("Seleccione un libro.", "Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (nudCantidad.Value <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser mayor a cero.", "Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Limpiar el DataGridView
+            dgvnumejemplares.Rows.Clear();
+
+            string isbn = "";
+
+            // Obtener el ISBN del libro seleccionado
+            foreach (DataGridViewRow fila in dgvLibrosPerteneciente.Rows)
+            {
+                bool seleccionado = Convert.ToBoolean(fila.Cells["chkSeleccionar"].Value ?? false);
+
+                if (seleccionado)
+                {
+                    isbn = fila.Cells["ISBN"].Value.ToString();
+                    break;
+                }
+            }
+            // Agregar los ejemplares
+            for (int i = 1; i <= (int)nudCantidad.Value; i++)
+            {
+                dgvnumejemplares.Rows.Add(isbn, i);
+            }
+        }
+        private void frmFormularioEjemplares_Load(object sender, EventArgs e)
+        {
+            dgvnumejemplares.Columns.Clear();
+
+            dgvnumejemplares.Columns.Add("ISBN", "ISBN");
+            dgvnumejemplares.Columns.Add("NumeroEjemplar", "No. Ejemplar");
+
+            dgvnumejemplares.AllowUserToAddRows = false;
+            dgvnumejemplares.ReadOnly = true;
+            dgvnumejemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }    
     }
 }

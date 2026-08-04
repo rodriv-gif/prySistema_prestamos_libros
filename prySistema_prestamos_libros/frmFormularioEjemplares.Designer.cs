@@ -32,6 +32,9 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             pcbContenedorBusqueda = new PictureBox();
             lblDatosEjemplar = new Label();
             lblSeleccionLibro = new Label();
@@ -47,9 +50,12 @@
             dgvLibrosPerteneciente = new DataGridView();
             chkSeleccionar = new DataGridViewCheckBoxColumn();
             txtLibroPerteneciete = new TextBox();
+            btnAgregarejemplar = new Button();
+            dgvnumejemplares = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibrosPerteneciente).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvnumejemplares).BeginInit();
             SuspendLayout();
             // 
             // pcbContenedorBusqueda
@@ -92,7 +98,7 @@
             lblCantidad.BackColor = Color.FromArgb(250, 247, 242);
             lblCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCantidad.ForeColor = Color.Black;
-            lblCantidad.Location = new Point(397, 412);
+            lblCantidad.Location = new Point(61, 193);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(69, 20);
             lblCantidad.TabIndex = 5;
@@ -104,7 +110,7 @@
             lblFechaAdquisicion.BackColor = Color.FromArgb(250, 247, 242);
             lblFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblFechaAdquisicion.ForeColor = Color.Black;
-            lblFechaAdquisicion.Location = new Point(61, 412);
+            lblFechaAdquisicion.Location = new Point(61, 417);
             lblFechaAdquisicion.Name = "lblFechaAdquisicion";
             lblFechaAdquisicion.Size = new Size(148, 20);
             lblFechaAdquisicion.TabIndex = 6;
@@ -116,7 +122,7 @@
             lblLocalizacion.BackColor = Color.FromArgb(250, 247, 242);
             lblLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLocalizacion.ForeColor = Color.Black;
-            lblLocalizacion.Location = new Point(61, 337);
+            lblLocalizacion.Location = new Point(335, 417);
             lblLocalizacion.Name = "lblLocalizacion";
             lblLocalizacion.Size = new Size(91, 20);
             lblLocalizacion.TabIndex = 7;
@@ -127,7 +133,7 @@
             txtLocalizacion.BackColor = Color.White;
             txtLocalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLocalizacion.ForeColor = Color.Black;
-            txtLocalizacion.Location = new Point(61, 360);
+            txtLocalizacion.Location = new Point(335, 437);
             txtLocalizacion.Multiline = true;
             txtLocalizacion.Name = "txtLocalizacion";
             txtLocalizacion.Size = new Size(556, 30);
@@ -139,7 +145,7 @@
             dtpFechaAdquisicion.CalendarMonthBackground = Color.White;
             dtpFechaAdquisicion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpFechaAdquisicion.Format = DateTimePickerFormat.Short;
-            dtpFechaAdquisicion.Location = new Point(61, 435);
+            dtpFechaAdquisicion.Location = new Point(61, 440);
             dtpFechaAdquisicion.Name = "dtpFechaAdquisicion";
             dtpFechaAdquisicion.Size = new Size(245, 27);
             dtpFechaAdquisicion.TabIndex = 23;
@@ -149,7 +155,7 @@
             nudCantidad.BackColor = Color.White;
             nudCantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudCantidad.ForeColor = Color.Black;
-            nudCantidad.Location = new Point(397, 435);
+            nudCantidad.Location = new Point(61, 216);
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(245, 27);
             nudCantidad.TabIndex = 24;
@@ -162,7 +168,7 @@
             btnGuardar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.FromArgb(17, 30, 71);
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
-            btnGuardar.Location = new Point(73, 539);
+            btnGuardar.Location = new Point(61, 554);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 25;
@@ -181,7 +187,7 @@
             btnLimpiar.ForeColor = Color.FromArgb(250, 247, 242);
             btnLimpiar.Image = (Image)resources.GetObject("btnLimpiar.Image");
             btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiar.Location = new Point(397, 539);
+            btnLimpiar.Location = new Point(394, 554);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(150, 45);
             btnLimpiar.TabIndex = 26;
@@ -200,7 +206,7 @@
             btnCancelar.ForeColor = Color.FromArgb(122, 32, 32);
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(714, 539);
+            btnCancelar.Location = new Point(714, 554);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 27;
@@ -231,7 +237,7 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvLibrosPerteneciente.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvLibrosPerteneciente.Size = new Size(830, 205);
+            dgvLibrosPerteneciente.Size = new Size(830, 60);
             dgvLibrosPerteneciente.TabIndex = 21;
             dgvLibrosPerteneciente.CellContentClick += dgvLibrosPerteneciente_CellContentClick;
             // 
@@ -253,12 +259,54 @@
             txtLibroPerteneciete.TabIndex = 20;
             txtLibroPerteneciete.TextChanged += txtLibroPerteneciete_TextChanged;
             // 
+            // btnAgregarejemplar
+            // 
+            btnAgregarejemplar.BackColor = Color.FromArgb(27, 46, 107);
+            btnAgregarejemplar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarejemplar.ForeColor = Color.FromArgb(201, 168, 76);
+            btnAgregarejemplar.Location = new Point(490, 296);
+            btnAgregarejemplar.Name = "btnAgregarejemplar";
+            btnAgregarejemplar.Size = new Size(125, 45);
+            btnAgregarejemplar.TabIndex = 32;
+            btnAgregarejemplar.Text = "Agregar";
+            btnAgregarejemplar.TextAlign = ContentAlignment.MiddleRight;
+            btnAgregarejemplar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAgregarejemplar.UseVisualStyleBackColor = false;
+            btnAgregarejemplar.Click += btnAgregarejemplar_Click;
+            // 
+            // dgvnumejemplares
+            // 
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvnumejemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvnumejemplares.BackgroundColor = Color.FromArgb(250, 247, 242);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvnumejemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvnumejemplares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvnumejemplares.EnableHeadersVisualStyles = false;
+            dgvnumejemplares.Location = new Point(61, 269);
+            dgvnumejemplares.Name = "dgvnumejemplares";
+            dgvnumejemplares.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvnumejemplares.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dgvnumejemplares.Size = new Size(423, 128);
+            dgvnumejemplares.TabIndex = 33;
+            // 
             // frmFormularioEjemplares
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(956, 617);
+            Controls.Add(dgvnumejemplares);
+            Controls.Add(btnAgregarejemplar);
             Controls.Add(txtLibroPerteneciete);
             Controls.Add(dgvLibrosPerteneciente);
             Controls.Add(btnCancelar);
@@ -279,9 +327,11 @@
             Name = "frmFormularioEjemplares";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario de Ejemplares";
+            Load += frmFormularioEjemplares_Load;
             ((System.ComponentModel.ISupportInitialize)pcbContenedorBusqueda).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvLibrosPerteneciente).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvnumejemplares).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -302,5 +352,7 @@
         private DataGridView dgvLibrosPerteneciente;
         private TextBox txtLibroPerteneciete;
         private DataGridViewCheckBoxColumn chkSeleccionar;
+        private Button btnAgregarejemplar;
+        private DataGridView dgvnumejemplares;
     }
 }

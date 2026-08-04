@@ -110,9 +110,9 @@ namespace prySistema_prestamos_libros
                 CargarGrid();
                 return;
             }
-            Ejemplar = new clsGestionEjemplares();
-            dgvEjemplares.DataSource = null;
-            dgvEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                Ejemplar = new clsGestionEjemplares();
+                dgvEjemplares.DataSource = null;
+                dgvEjemplares.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 Ejemplar.Busqueda = txtBuscarClave.Text;
