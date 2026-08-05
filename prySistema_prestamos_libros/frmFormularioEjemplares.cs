@@ -215,47 +215,8 @@ namespace prySistema_prestamos_libros
         private void btnAgregarejemplar_Click(object sender, EventArgs e)
         {
             //1. Buscar si el isbn existe y ya tiene ejemplares y si tiene ejemplares obtenr el maximo de ese isbn
-            int max =(int) nudCantidad.Value;
-            
-            /*// Limpiar el DataGridView
-            dgvNumEjemplares.Rows.Clear();
-
-            string isbn = "";
-
-            // Obtener el ISBN del libro seleccionado
-            foreach (DataGridViewRow fila in dgvLibrosPerteneciente.Rows)
-            {
-                bool seleccionado = Convert.ToBoolean(fila.Cells["chkSeleccionar"].Value ?? false);
-
-                if (seleccionado)
-                {
-                    isbn = fila.Cells["ISBN"].Value.ToString();
-                    break;
-                }
-            }
-            try
-            {
-                // Se pide el mismo número que usará el guardado real, para que la vista previa no mienta.
-                clsGestionEjemplares gestionEjemplares = new clsGestionEjemplares();
-                int siguienteInventario = gestionEjemplares.ObtenerSiguienteInventario(idLibroSeleccionado);
-
-                MessageBox.Show("ID Libro: " + idLibroSeleccionado);
-                MessageBox.Show("Siguiente Inventario: " + siguienteInventario);
-
-                for (int i = 0; i < (int)nudCantidad.Value; i++)
-                {
-                    dgvNumEjemplares.Rows.Add(isbn, siguienteInventario + i);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo calcular el número de ejemplar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            for (int inicio = 1; inicio <= max; inicio++)
-            {
-
-            }*/
-
+            //int max =(int) nudCantidad.Value;
+            //valida a que se selccione un libro
             if (idLibroSeleccionado == 0)
             {
                 MessageBox.Show("Seleccione un libro.", "Sistema",

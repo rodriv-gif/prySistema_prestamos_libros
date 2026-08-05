@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
             rdbOpcion4 = new RadioButton();
             rdbOpcion3 = new RadioButton();
@@ -122,26 +122,26 @@
             // 
             // dgvReportes
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvReportes.BackgroundColor = Color.White;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
             dgvReportes.Location = new Point(139, 433);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvReportes.Size = new Size(1199, 340);
             dgvReportes.TabIndex = 5;
             // 
@@ -184,6 +184,8 @@
             // 
             // dtpFechaInicio
             // 
+            dtpFechaInicio.CalendarForeColor = Color.Black;
+            dtpFechaInicio.CalendarMonthBackground = Color.White;
             dtpFechaInicio.Format = DateTimePickerFormat.Short;
             dtpFechaInicio.Location = new Point(185, 385);
             dtpFechaInicio.Name = "dtpFechaInicio";
@@ -192,6 +194,8 @@
             // 
             // dtpFechaFin
             // 
+            dtpFechaFin.CalendarForeColor = Color.Black;
+            dtpFechaFin.CalendarMonthBackground = Color.White;
             dtpFechaFin.Format = DateTimePickerFormat.Short;
             dtpFechaFin.Location = new Point(513, 387);
             dtpFechaFin.Name = "dtpFechaFin";
@@ -202,6 +206,7 @@
             // 
             lblInicio.AutoSize = true;
             lblInicio.Font = new Font("Segoe UI", 12F);
+            lblInicio.ForeColor = Color.Black;
             lblInicio.Location = new Point(145, 389);
             lblInicio.Name = "lblInicio";
             lblInicio.Size = new Size(36, 28);
@@ -212,6 +217,7 @@
             // 
             lblFin.AutoSize = true;
             lblFin.Font = new Font("Segoe UI", 12F);
+            lblFin.ForeColor = Color.Black;
             lblFin.Location = new Point(450, 385);
             lblFin.Name = "lblFin";
             lblFin.Size = new Size(61, 28);
