@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             gpbOpciones = new GroupBox();
             rdbOpcion4 = new RadioButton();
             rdbOpcion3 = new RadioButton();
@@ -40,6 +40,8 @@
             btnGenerarPDF = new Button();
             lblReportes = new Label();
             btnVer = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             gpbOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
             SuspendLayout();
@@ -65,12 +67,12 @@
             rdbOpcion4.AutoSize = true;
             rdbOpcion4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion4.ForeColor = Color.Black;
-            rdbOpcion4.Location = new Point(21, 152);
+            rdbOpcion4.Location = new Point(21, 41);
             rdbOpcion4.Name = "rdbOpcion4";
-            rdbOpcion4.Size = new Size(472, 32);
+            rdbOpcion4.Size = new Size(276, 32);
             rdbOpcion4.TabIndex = 3;
             rdbOpcion4.TabStop = true;
-            rdbOpcion4.Text = "Mostrar reporte de disponibilidad y total de libros";
+            rdbOpcion4.Text = "Mostrar inventario de libros";
             rdbOpcion4.UseVisualStyleBackColor = true;
             // 
             // rdbOpcion3
@@ -78,7 +80,7 @@
             rdbOpcion3.AutoSize = true;
             rdbOpcion3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion3.ForeColor = Color.Black;
-            rdbOpcion3.Location = new Point(21, 114);
+            rdbOpcion3.Location = new Point(21, 155);
             rdbOpcion3.Name = "rdbOpcion3";
             rdbOpcion3.Size = new Size(461, 32);
             rdbOpcion3.TabIndex = 2;
@@ -91,7 +93,7 @@
             rdbOpcion2.AutoSize = true;
             rdbOpcion2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion2.ForeColor = Color.Black;
-            rdbOpcion2.Location = new Point(21, 76);
+            rdbOpcion2.Location = new Point(21, 117);
             rdbOpcion2.Name = "rdbOpcion2";
             rdbOpcion2.Size = new Size(377, 32);
             rdbOpcion2.TabIndex = 1;
@@ -104,7 +106,7 @@
             rdbOpcion1.AutoSize = true;
             rdbOpcion1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion1.ForeColor = Color.Black;
-            rdbOpcion1.Location = new Point(21, 38);
+            rdbOpcion1.Location = new Point(21, 79);
             rdbOpcion1.Name = "rdbOpcion1";
             rdbOpcion1.Size = new Size(492, 32);
             rdbOpcion1.TabIndex = 0;
@@ -114,26 +116,26 @@
             // 
             // dgvReportes
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(221, 214, 202);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(221, 214, 202);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvReportes.BackgroundColor = Color.White;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 46, 107);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(201, 168, 76);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 46, 107);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(201, 168, 76);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.EnableHeadersVisualStyles = false;
             dgvReportes.Location = new Point(140, 433);
             dgvReportes.Name = "dgvReportes";
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvReportes.Size = new Size(1199, 340);
             dgvReportes.TabIndex = 5;
             // 
@@ -166,7 +168,7 @@
             btnVer.BackColor = Color.FromArgb(17, 30, 71);
             btnVer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVer.ForeColor = Color.FromArgb(201, 168, 76);
-            btnVer.Location = new Point(592, 366);
+            btnVer.Location = new Point(796, 367);
             btnVer.Name = "btnVer";
             btnVer.Size = new Size(280, 50);
             btnVer.TabIndex = 4;
@@ -174,12 +176,30 @@
             btnVer.UseVisualStyleBackColor = false;
             btnVer.Click += btnVer_Click;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(150, 390);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(245, 27);
+            dateTimePicker1.TabIndex = 7;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(432, 390);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(245, 27);
+            dateTimePicker2.TabIndex = 8;
+            // 
             // frmReportes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1475, 875);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
             Controls.Add(btnVer);
             Controls.Add(lblReportes);
             Controls.Add(btnGenerarPDF);
@@ -205,5 +225,7 @@
         private RadioButton rdbOpcion3;
         private Button btnVer;
         private RadioButton rdbOpcion4;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
     }
 }

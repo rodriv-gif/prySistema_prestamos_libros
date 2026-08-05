@@ -62,23 +62,23 @@ namespace prySistema_prestamos_libros
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql = "SELECT COALESCE(CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno), " +
-                                    "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno)) AS Solicitante, " +
-                                        "CASE WHEN P.matricula IS NOT NULL THEN 'Alumno' ELSE 'Trabajador' END AS Tipo, " +
-                                        "COALESCE(A.telefono, T.telefono) AS Telefono, " +
-                                        "P.matricula AS Matricula, " +
-                                        "P.numero_control AS 'Numero de Control', " +
-                                        "L.titulo_libro AS 'Titulo del Libro', " +
-                                        "P.fecha_prestamo AS 'Fecha de Préstamo', " +
-                                        "P.fecha_devolucion AS 'Fecha en que Venció', " +
-                                        "DATEDIFF(CURRENT_DATE(), P.fecha_devolucion) AS 'Días de Atraso' " +
-                                    "FROM tblprestamos P " +
-                                    "LEFT JOIN tblalumnos A ON A.matricula = P.matricula " +
-                                    "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
-                                    "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
-                                    "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
-                                    // Vencido = no devuelto y ya pasó su fecha límite (se calcula, no se guarda).
-                                    "WHERE P.fecha_devolucion_real IS NULL " +
-                                    "AND P.fecha_devolucion < CURRENT_DATE(); ";
+                                "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno)) AS Solicitante, " +
+                                "CASE WHEN P.matricula IS NOT NULL THEN 'Alumno' ELSE 'Trabajador' END AS Tipo, " +
+                                "COALESCE(A.telefono, T.telefono) AS Telefono, " +
+                                "P.matricula AS Matricula, " +
+                                "P.numero_control AS 'Numero de Control', " +
+                                "L.titulo_libro AS 'Titulo del Libro', " +
+                                "P.fecha_prestamo AS 'Fecha de Préstamo', " +
+                                "P.fecha_devolucion AS 'Fecha en que Venció', " +
+                                "DATEDIFF(CURRENT_DATE(), P.fecha_devolucion) AS 'Días de Atraso' " +
+                                "FROM tblprestamos P " +
+                                "LEFT JOIN tblalumnos A ON A.matricula = P.matricula " +
+                                "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
+                                "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
+                                "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
+                                "WHERE P.fecha_devolucion_real IS NULL " +
+                                "AND P.fecha_devolucion < CURRENT_DATE() " +
+                                "ORDER BY P.fecha_devolucion DESC;";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
