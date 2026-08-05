@@ -15,43 +15,50 @@ namespace prySistema_prestamos_libros
     {
         DataTable tabla;
         MySqlDataAdapter consulta;
-        public DataTable CategoriasMasSolicitadasMes()
+        public DataTable LibrosMasSolicitadosPorMes(DateTime fechaInicio, DateTime fechaFin)
         {
             tabla = new DataTable();
             try
             {
                 clsConexion conexionBD = new clsConexion();
-                using(var conexion = conexionBD.AbrirConexion())
+                using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT c.nombre AS 'Categoría', " +
-                                    "l.titulo_libro AS 'Libro', " +
-                                    "COUNT(p.id_prestamo) AS 'Total de Préstamos', " +
-                                    "GROUP_CONCAT(DISTINCT COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo') SEPARATOR ', ') AS 'Carreras' " +
-                                "FROM tblprestamos p " +
-                                "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
-                                "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
-                                "INNER JOIN tblcategorias c ON l.id_categoria = c.id_categoria " +
-                                "LEFT JOIN tblalumnos a ON a.matricula = p.matricula " +
-                                "LEFT JOIN tbltrabajadores t ON t.numero_control = p.numero_control " +
-                                "LEFT JOIN tblcarreras ca ON a.id_carrera = ca.id_carrera " +
-                                "LEFT JOIN tblcarreras ct ON t.id_carrera = ct.id_carrera " +
-                                "WHERE MONTH(p.fecha_prestamo) = MONTH(CURRENT_DATE()) " +
-                                "AND YEAR(p.fecha_prestamo) = YEAR(CURRENT_DATE()) " +
-                                "GROUP BY c.nombre, l.titulo_libro " +
-                                "ORDER BY COUNT(p.id_prestamo) DESC; ";
+                    // Agregamos el filtro de días hábiles y limitamos a los 3 primeros resultados
+                    string sql = "SELECT l.titulo_libro AS 'Libro', " +
+                                 "COUNT(p.id_prestamo) AS 'Total de Préstamos', " +
+                                 "GROUP_CONCAT(DISTINCT COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo') SEPARATOR ', ') AS 'Carreras' " +
+                                 "FROM tblprestamos p " +
+                                 "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
+                                 "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
+                                 "LEFT JOIN tblalumnos a ON a.matricula = p.matricula " +
+                                 "LEFT JOIN tbltrabajadores t ON t.numero_control = p.numero_control " +
+                                 "LEFT JOIN tblcarreras ca ON a.id_carrera = ca.id_carrera " +
+                                 "LEFT JOIN tblcarreras ct ON t.id_carrera = ct.id_carrera " +
+                                 "WHERE DATE(p.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin " +
+                                 "AND DAYOFWEEK(p.fecha_prestamo) BETWEEN 2 AND 6 " + //Sin fines de semana
+                                 "GROUP BY l.id_libro, l.titulo_libro " +
+                                 "ORDER BY COUNT(p.id_prestamo) DESC " +
+                                 "LIMIT 3;"; //Muestra solo el Top 3
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Fill(tabla);
+                        cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd"));
+
+                        using (consulta = new MySqlDataAdapter(cmd))
+                        {
+                            consulta.Fill(tabla);
+                        }
                     }
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
-                throw new Exception("Error al consultar las categorias mas solicitadas al mes: " + ex.Message);
+                throw new Exception("Error al consultar los libros más solicitados por fecha: " + ex.Message);
             }
             return tabla;
         }
+
 
         public DataTable ConsultarLibrosVencidos()
         {
@@ -93,7 +100,7 @@ namespace prySistema_prestamos_libros
             return tabla;
         }
 
-        public DataTable LibrosPrestadosEnSemana()
+        public DataTable LibrosPrestadosEnSemana(DateTime fechaInicio, DateTime fechaFin)
         {
             tabla = new DataTable();
             try
@@ -101,27 +108,37 @@ namespace prySistema_prestamos_libros
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT DATE(p.fecha_prestamo) AS `Fecha`, " +
-                                    "l.titulo_libro AS `Libro`, " +
-                                    "c.nombre AS `Categoría`, " +
-                                    "COUNT(p.id_prestamo) AS `Libros Prestados` " +
-                                "FROM tblprestamos p " +
-                                "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
-                                "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
-                                "INNER JOIN tblcategorias c ON l.id_categoria = c.id_categoria " +
-                                "WHERE p.fecha_prestamo >= DATE_SUB(CURRENT_DATE(), INTERVAL 6 DAY) " +
-                                "GROUP BY DATE(p.fecha_prestamo), l.titulo_libro, c.nombre " +
-                                "ORDER BY `Fecha` DESC, `Libros Prestados` DESC; ";
+                    // Usamos BETWEEN para el rango de fechas
+                    // Y DAYOFWEEK para filtrar solo de Lunes (2) a Viernes (6)
+                    string sql = "SELECT DATE(p.fecha_prestamo) AS 'Fecha', " +
+                                 "l.titulo_libro AS 'Libro', " +
+                                 "c.nombre AS 'Categoría', " +
+                                 "COUNT(p.id_prestamo) AS 'Libros Prestados' " +
+                                 "FROM tblprestamos p " +
+                                 "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
+                                 "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
+                                 "INNER JOIN tblcategorias c ON l.id_categoria = c.id_categoria " +
+                                 "WHERE DATE(p.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin " +
+                                 "AND DAYOFWEEK(p.fecha_prestamo) BETWEEN 2 AND 6 " +
+                                 "GROUP BY DATE(p.fecha_prestamo), l.titulo_libro, c.nombre " +
+                                 "ORDER BY `Fecha` ASC, `Libros Prestados` ASC;";
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Fill(tabla);
+                        // Asignamos los parámetros de fecha
+                        cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd"));
+
+                        using (consulta = new MySqlDataAdapter(cmd))
+                        {
+                            consulta.Fill(tabla);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al consultar las categorias mas solicitadas al mes: " + ex.Message);
+                throw new Exception("Error al consultar los libros prestados en la semana: " + ex.Message);
             }
             return tabla;
         }
@@ -216,6 +233,10 @@ namespace prySistema_prestamos_libros
                                 column.Item().PaddingBottom(15).Text(tituloReporte) // <-- DINÁMICO
                                     .FontSize(12).Bold().FontColor(Colors.Black);
 
+                                // Subtítulo con la fecha exacta de generación del reporte
+                                column.Item().PaddingBottom(15).Text("Fecha de generación: " + DateTime.Now.ToString("dd/MM/yyyy"))
+                                    .FontSize(10).FontColor(Colors.Grey.Darken2);
+
                                 // La tabla se construye sola según las columnas que traiga el DataTable
                                 column.Item().Table(table =>
                                 {
@@ -255,9 +276,22 @@ namespace prySistema_prestamos_libros
                                                 celda.AlignCenter();
                                             else
                                                 celda.AlignLeft();
+                                            object valor = fila[i];
+                                            string textoMostrar = "";
 
-                                            celda.Text(fila[i].ToString()).FontSize(9).FontColor(Colors.Black);
+                                            if (valor is DateTime fecha)
+                                            {
+                                                // Muestra únicamente la fecha en formato día/mes/año sin hora
+                                                textoMostrar = fecha.ToString("dd/MM/yyyy");
+                                            }
+                                            else
+                                            {
+                                                textoMostrar = valor.ToString();
+                                            }
+
+                                            celda.Text(textoMostrar).FontSize(9).FontColor(Colors.Black);
                                         }
+
                                         alternarFila = !alternarFila;
                                     }
                                 });

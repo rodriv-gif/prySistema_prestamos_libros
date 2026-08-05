@@ -15,6 +15,9 @@ namespace prySistema_prestamos_libros
         public frmReportes()
         {
             InitializeComponent();
+            // Llamamos a este método para que al abrir la ventana, 
+            // las fechas se oculten o muestren correctamente desde el segundo cero.
+            ConfigurarVisibilidadFechas();
 
             // Es solo para mostrar resultados; no se debe poder agregar filas escribiendo directo en el grid.
             dgvReportes.AllowUserToAddRows = false;
@@ -33,8 +36,17 @@ namespace prySistema_prestamos_libros
             {
                 if (rdbOpcion1.Checked == true)
                 {
-                    //llamar la consulta para cargar el grid
-                    tabla = reportes.CategoriasMasSolicitadasMes();
+                    DateTime fechaInicio = dtpFechaInicio.Value.Date;
+                    DateTime fechaFin = dtpFechaFin.Value.Date;
+
+                    // Validación sencilla para evitar errores lógicos
+                    if (fechaInicio > fechaFin)
+                    {
+                        MessageBox.Show("La fecha de inicio no puede ser mayor a la fecha de fin.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    tabla = reportes.LibrosMasSolicitadosPorMes(fechaInicio, fechaFin);
                     dgvReportes.DataSource = tabla;
 
                 }
@@ -47,13 +59,24 @@ namespace prySistema_prestamos_libros
                 else if (rdbOpcion3.Checked == true)
                 {
                     //llamar la consulta para cargar el grid
-                    tabla = reportes.LibrosPrestadosEnSemana();
+                    DateTime fechaInicio = dtpFechaInicio.Value.Date;
+                    DateTime fechaFin = dtpFechaFin.Value.Date;
+
+                    // Validación para que no pongan una fecha de inicio mayor a la de fin
+                    if (fechaInicio > fechaFin)
+                    {
+                        MessageBox.Show("La fecha de inicio no puede ser mayor a la fecha de fin.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Pasamos las fechas al método
+                    tabla = reportes.LibrosPrestadosEnSemana(fechaInicio, fechaFin);
                     dgvReportes.DataSource = tabla;
                 }
-                else if(rdbOpcion4.Checked == true)
+                else if (rdbOpcion4.Checked == true)
                 {
                     tabla = reportes.DisponibilidadTotalLibros();
-                    dgvReportes.DataSource= tabla;
+                    dgvReportes.DataSource = tabla;
                 }
             }
             catch (Exception ex)
@@ -69,7 +92,7 @@ namespace prySistema_prestamos_libros
             if (rdbOpcion1.Checked == true)
             {
 
-                reportes.ExportarPDF(tabla, "Reporte de las categorias que son más solicitadas al mes", "Categorias solicitadas al mes.pdf");
+                reportes.ExportarPDF(tabla, "Reporte de los libros que son más solicitados al mes", "Libros solicitados al mes.pdf");
             }
             else if (rdbOpcion2.Checked == true)
             {
@@ -83,6 +106,46 @@ namespace prySistema_prestamos_libros
             {
                 reportes.ExportarPDF(tabla, "Reporte del total de libros y la disponibilidad", "Total libros y disponibilidad.pdf");
             }
+        }
+        private void ConfigurarVisibilidadFechas()
+        {
+            // Verificamos si la opción 2 (Mes) o la opción 4 (Semana) están seleccionadas
+            if (rdbOpcion1.Checked == true || rdbOpcion3.Checked == true)
+            {
+                // Si alguna de esas dos está marcada, hacemos visibles (true) los controles
+                dtpFechaInicio.Visible = true;
+                dtpFechaFin.Visible = true;
+                lblInicio.Visible = true;
+                lblFin.Visible = true;
+            }
+            else
+            {
+                // Si seleccionó la opción 1 o 3, ocultamos (false) los controles
+                dtpFechaInicio.Visible = false;
+                dtpFechaFin.Visible = false;
+                lblInicio.Visible = false;
+                lblFin.Visible = false;
+            }
+        }
+       
+        private void rdbOpcion1_CheckedChanged(object sender, EventArgs e)
+        {
+            ConfigurarVisibilidadFechas();
+        }
+
+        private void rdbOpcion2_CheckedChanged(object sender, EventArgs e)
+        {
+            ConfigurarVisibilidadFechas();
+        }
+
+        private void rdbOpcion3_CheckedChanged(object sender, EventArgs e)
+        {
+            ConfigurarVisibilidadFechas();
+        }
+
+        private void rdbOpcion4_CheckedChanged(object sender, EventArgs e)
+        {
+            ConfigurarVisibilidadFechas();
         }
     }
 }
