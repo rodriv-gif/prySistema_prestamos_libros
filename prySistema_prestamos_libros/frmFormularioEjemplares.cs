@@ -216,8 +216,8 @@ namespace prySistema_prestamos_libros
         {
             //1. Buscar si el isbn existe y ya tiene ejemplares y si tiene ejemplares obtenr el maximo de ese isbn
             int max =(int) nudCantidad.Value;
-
-            // Limpiar el DataGridView
+            
+            /*// Limpiar el DataGridView
             dgvNumEjemplares.Rows.Clear();
 
             string isbn = "";
@@ -239,6 +239,9 @@ namespace prySistema_prestamos_libros
                 clsGestionEjemplares gestionEjemplares = new clsGestionEjemplares();
                 int siguienteInventario = gestionEjemplares.ObtenerSiguienteInventario(idLibroSeleccionado);
 
+                MessageBox.Show("ID Libro: " + idLibroSeleccionado);
+                MessageBox.Show("Siguiente Inventario: " + siguienteInventario);
+
                 for (int i = 0; i < (int)nudCantidad.Value; i++)
                 {
                     dgvNumEjemplares.Rows.Add(isbn, siguienteInventario + i);
@@ -248,12 +251,12 @@ namespace prySistema_prestamos_libros
             {
                 MessageBox.Show("No se pudo calcular el número de ejemplar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            for (int inicio=1;inicio<=max;inicio++)
+            for (int inicio = 1; inicio <= max; inicio++)
             {
 
-            }
+            }*/
 
-            /*if (idLibroSeleccionado == 0)
+            if (idLibroSeleccionado == 0)
             {
                 MessageBox.Show("Seleccione un libro.", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -298,7 +301,7 @@ namespace prySistema_prestamos_libros
             {
                 MessageBox.Show("No se pudo calcular el número de ejemplar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
 
 
         }
