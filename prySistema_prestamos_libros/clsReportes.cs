@@ -23,22 +23,43 @@ namespace prySistema_prestamos_libros
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    // Agregamos el filtro de días hábiles y limitamos a los 3 primeros resultados
-                    string sql = "SELECT l.titulo_libro AS 'Libro', " +
-                                 "COUNT(p.id_prestamo) AS 'Total de Préstamos', " +
-                                 "GROUP_CONCAT(DISTINCT COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo') SEPARATOR ', ') AS 'Carreras' " +
-                                 "FROM tblprestamos p " +
-                                 "INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar " +
-                                 "INNER JOIN tbllibros l ON e.id_libro = l.id_libro " +
-                                 "LEFT JOIN tblalumnos a ON a.matricula = p.matricula " +
-                                 "LEFT JOIN tbltrabajadores t ON t.numero_control = p.numero_control " +
-                                 "LEFT JOIN tblcarreras ca ON a.id_carrera = ca.id_carrera " +
-                                 "LEFT JOIN tblcarreras ct ON t.id_carrera = ct.id_carrera " +
-                                 "WHERE DATE(p.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin " +
-                                 "AND DAYOFWEEK(p.fecha_prestamo) BETWEEN 2 AND 6 " + //Sin fines de semana
-                                 "GROUP BY l.id_libro, l.titulo_libro " +
-                                 "ORDER BY COUNT(p.id_prestamo) DESC " +
-                                 "LIMIT 3;"; //Muestra solo el Top 3
+                    // Agregamos la columna 'Total General del Libro' usando una Window Function de MySQL.
+                    // Cambiamos el nombre de la columna individual a 'Préstamos por Carrera' para que sea más claro.
+                    string sql = @"
+                                    SELECT 
+                                        COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo') AS 'Carrera', 
+                                        l.titulo_libro AS 'Libro', 
+                                        COUNT(p.id_prestamo) AS 'Préstamos por Carrera',
+                                        SUM(COUNT(p.id_prestamo)) OVER(PARTITION BY l.id_libro) AS 'Total General del Libro'
+                                    FROM tblprestamos p 
+                                    INNER JOIN tblejemplares e ON p.id_ejemplar = e.id_ejemplar 
+                                    INNER JOIN tbllibros l ON e.id_libro = l.id_libro 
+                                    LEFT JOIN tblalumnos a ON a.matricula = p.matricula 
+                                    LEFT JOIN tbltrabajadores t ON t.numero_control = p.numero_control 
+                                    LEFT JOIN tblcarreras ca ON a.id_carrera = ca.id_carrera 
+                                    LEFT JOIN tblcarreras ct ON t.id_carrera = ct.id_carrera 
+                                    WHERE DATE(p.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin 
+                                    AND DAYOFWEEK(p.fecha_prestamo) BETWEEN 2 AND 6 
+                                    AND l.id_libro IN (
+                                        SELECT top_libros.id_libro FROM (
+                                            SELECT e_sub.id_libro
+                                            FROM tblprestamos p_sub
+                                            INNER JOIN tblejemplares e_sub ON p_sub.id_ejemplar = e_sub.id_ejemplar
+                                            WHERE DATE(p_sub.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin
+                                            AND DAYOFWEEK(p_sub.fecha_prestamo) BETWEEN 2 AND 6
+                                            GROUP BY e_sub.id_libro
+                                            ORDER BY COUNT(p_sub.id_prestamo) DESC
+                                            LIMIT 3
+                                        ) AS top_libros
+                                    )
+                                    GROUP BY 
+                                        COALESCE(ca.nombre_carrera, ct.nombre_carrera, 'Sin Carrera / Administrativo'), 
+                                        l.id_libro, 
+                                        l.titulo_libro 
+                                    ORDER BY 
+                                        SUM(COUNT(p.id_prestamo)) OVER(PARTITION BY l.id_libro) DESC, 
+                                        l.titulo_libro ASC, 
+                                        COUNT(p.id_prestamo) DESC;";
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conexion))
                     {
@@ -60,7 +81,7 @@ namespace prySistema_prestamos_libros
         }
 
 
-        public DataTable ConsultarLibrosVencidos()
+        public DataTable ConsultarLibrosVencidos(DateTime fechaInicio, DateTime fechaFin)
         {
             tabla = new DataTable();
             try
@@ -69,27 +90,34 @@ namespace prySistema_prestamos_libros
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql = "SELECT COALESCE(CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno), " +
-                                "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno)) AS Solicitante, " +
-                                "CASE WHEN P.matricula IS NOT NULL THEN 'Alumno' ELSE 'Trabajador' END AS Tipo, " +
-                                "COALESCE(A.telefono, T.telefono) AS Telefono, " +
-                                "P.matricula AS Matricula, " +
-                                "P.numero_control AS 'Numero de Control', " +
-                                "L.titulo_libro AS 'Titulo del Libro', " +
-                                "P.fecha_prestamo AS 'Fecha de Préstamo', " +
-                                "P.fecha_devolucion AS 'Fecha en que Venció', " +
-                                "DATEDIFF(CURRENT_DATE(), P.fecha_devolucion) AS 'Días de Atraso' " +
-                                "FROM tblprestamos P " +
-                                "LEFT JOIN tblalumnos A ON A.matricula = P.matricula " +
-                                "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
-                                "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
-                                "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
-                                "WHERE P.fecha_devolucion_real IS NULL " +
-                                "AND P.fecha_devolucion < CURRENT_DATE() " +
-                                "ORDER BY P.fecha_devolucion DESC;";
+                                 "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno)) AS Solicitante, " +
+                                 "CASE WHEN P.matricula IS NOT NULL THEN 'Alumno' ELSE 'Trabajador' END AS Tipo, " +
+                                 "COALESCE(A.telefono, T.telefono) AS Telefono, " +
+                                 "P.matricula AS Matricula, " +
+                                 "P.numero_control AS 'Numero de Control', " +
+                                 "L.titulo_libro AS 'Titulo del Libro', " +
+                                 "P.fecha_prestamo AS 'Fecha de Préstamo', " +
+                                 "P.fecha_devolucion AS 'Fecha en que Venció', " +
+                                 "DATEDIFF(CURRENT_DATE(), P.fecha_devolucion) AS 'Días de Atraso' " +
+                                 "FROM tblprestamos P " +
+                                 "LEFT JOIN tblalumnos A ON A.matricula = P.matricula " +
+                                 "LEFT JOIN tbltrabajadores T ON T.numero_control = P.numero_control " +
+                                 "INNER JOIN tblejemplares E ON E.id_ejemplar = P.id_ejemplar " +
+                                 "INNER JOIN tbllibros L ON L.id_libro = E.id_libro " +
+                                 "WHERE P.fecha_devolucion_real IS NULL " +
+                                 "AND P.fecha_devolucion < CURRENT_DATE() " +
+                                 "AND DATE(P.fecha_prestamo) BETWEEN @fechaInicio AND @fechaFin " +
+                                 "ORDER BY P.fecha_prestamo ASC;"; 
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Fill(tabla);
+                        cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd"));
+
+                        using (consulta = new MySqlDataAdapter(cmd))
+                        {
+                            consulta.Fill(tabla);
+                        }
                     }
                 }
             }

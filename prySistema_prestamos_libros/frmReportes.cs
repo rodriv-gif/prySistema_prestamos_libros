@@ -52,8 +52,17 @@ namespace prySistema_prestamos_libros
                 }
                 else if (rdbOpcion2.Checked == true)
                 {
-                    //llamar la consulta para cargar el grid
-                    tabla = reportes.ConsultarLibrosVencidos();
+                    DateTime fechaInicio = dtpFechaInicio.Value.Date;
+                    DateTime fechaFin = dtpFechaFin.Value.Date;
+
+                    if (fechaInicio > fechaFin)
+                    {
+                        MessageBox.Show("La fecha de inicio no puede ser mayor a la fecha de fin.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Le pasamos las fechas al método
+                    tabla = reportes.ConsultarLibrosVencidos(fechaInicio, fechaFin);
                     dgvReportes.DataSource = tabla;
                 }
                 else if (rdbOpcion3.Checked == true)
@@ -110,7 +119,7 @@ namespace prySistema_prestamos_libros
         private void ConfigurarVisibilidadFechas()
         {
             // Verificamos si la opción 2 (Mes) o la opción 4 (Semana) están seleccionadas
-            if (rdbOpcion1.Checked == true || rdbOpcion3.Checked == true)
+            if (rdbOpcion1.Checked == true || rdbOpcion2.Checked == true|| rdbOpcion3.Checked == true)
             {
                 // Si alguna de esas dos está marcada, hacemos visibles (true) los controles
                 dtpFechaInicio.Visible = true;

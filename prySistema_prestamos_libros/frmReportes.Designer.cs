@@ -83,12 +83,12 @@
             rdbOpcion3.AutoSize = true;
             rdbOpcion3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion3.ForeColor = Color.Black;
-            rdbOpcion3.Location = new Point(21, 155);
+            rdbOpcion3.Location = new Point(20, 79);
             rdbOpcion3.Name = "rdbOpcion3";
-            rdbOpcion3.Size = new Size(461, 32);
+            rdbOpcion3.Size = new Size(344, 32);
             rdbOpcion3.TabIndex = 2;
             rdbOpcion3.TabStop = true;
-            rdbOpcion3.Text = "Mostrar reporte de libros prestados en la semana";
+            rdbOpcion3.Text = "Mostrar reporte de libros prestados";
             rdbOpcion3.UseVisualStyleBackColor = true;
             rdbOpcion3.CheckedChanged += rdbOpcion3_CheckedChanged;
             // 
@@ -111,7 +111,7 @@
             rdbOpcion1.AutoSize = true;
             rdbOpcion1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbOpcion1.ForeColor = Color.Black;
-            rdbOpcion1.Location = new Point(21, 79);
+            rdbOpcion1.Location = new Point(21, 155);
             rdbOpcion1.Name = "rdbOpcion1";
             rdbOpcion1.Size = new Size(451, 32);
             rdbOpcion1.TabIndex = 0;
